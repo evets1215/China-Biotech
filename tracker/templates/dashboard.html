@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>China Biotech Deal Tracker</title>
+<meta name="description" content="Tracker of China-to-US biotech out-licensing deals: signed, potential and future.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --surface-2: #f3f2ef;
+  --text: #0b0b0b;
+  --text-2: #52514e;
+  --muted: #6f6e69;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --series: #2a78d6;
+  --series-hover: #1c5cab;
+  --accent-wash: #cde2fb;
+  --good: #0ca30c;
+  --good-text: #006300;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --link: #1c5cab;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --muted: #9a9890;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series: #3987e5;
+    --series-hover: #6da7ec;
+    --accent-wash: #184f95;
+    --good-text: #0ca30c;
+    --link: #86b6ef;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #232321;
+  --text: #f0efec;
+  --text-2: #c3c2b7;
+  --muted: #9a9890;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255,255,255,0.10);
+  --series: #3987e5;
+  --series-hover: #6da7ec;
+  --accent-wash: #184f95;
+  --good-text: #0ca30c;
+  --link: #86b6ef;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--page);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--link); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 24px 16px 48px; }
+header { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; }
+h1 { font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: 15px; margin: 0 0 2px; }
+.sub { color: var(--text-2); margin: 4px 0 0; max-width: 760px; }
+.meta { color: var(--muted); font-size: 12px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 20px 0 16px; }
+.filters input, .filters select, .filters button {
+  font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 6px 8px; min-height: 34px;
+}
+.filters input[type=search] { flex: 1 1 220px; min-width: 0; }
+.filters button { cursor: pointer; color: var(--text-2); }
+.filters label { color: var(--muted); font-size: 12px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.kpi .label { color: var(--text-2); font-size: 12px; }
+.kpi .value { font-size: 26px; font-weight: 600; margin-top: 2px; }
+.kpi .note { color: var(--muted); font-size: 12px; }
+.charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 12px; margin-top: 12px; }
+.chart-sub { color: var(--muted); font-size: 12px; margin: 0 0 8px; }
+.chart svg { display: block; width: 100%; overflow: visible; }
+.chart text { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.chart .lbl { fill: var(--text-2); }
+.chart .val { fill: var(--text); font-weight: 600; }
+.bar { fill: var(--series); cursor: default; }
+.bar:hover, .bar:focus { fill: var(--series-hover); outline: none; }
+.tip {
+  position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12); max-width: 280px; display: none;
+}
+.tip strong { display: block; font-size: 14px; }
+.tip span { color: var(--text-2); }
+.tabs { display: flex; gap: 4px; margin: 28px 0 0; border-bottom: 1px solid var(--grid); overflow-x: auto; }
+.tabs button {
+  font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; color: var(--text-2);
+  padding: 8px 12px; cursor: pointer; white-space: nowrap;
+}
+.tabs button[aria-selected=true] { color: var(--text); border-bottom-color: var(--series); font-weight: 600; }
+.panel { padding-top: 12px; }
+.panel[hidden] { display: none; }
+.panel-intro { color: var(--text-2); margin: 0 0 12px; max-width: 820px; }
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { color: var(--text-2); font-weight: 600; font-size: 12px; position: sticky; top: 0; background: var(--surface); white-space: nowrap; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]::after { content: ""; display: inline-block; width: 1em; color: var(--muted); }
+th.asc::after { content: " ▲"; } th.desc::after { content: " ▼"; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.row { cursor: pointer; }
+tr.row:hover td { background: var(--surface-2); }
+tr.detail td { background: var(--surface-2); }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 6px 24px; }
+.detail-grid div b { color: var(--text-2); font-weight: 600; font-size: 12px; display: block; }
+.small { font-size: 12px; color: var(--text-2); }
+.pill { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 12px; color: var(--text); }
+.pill i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex: none; }
+.pill.active i { background: var(--good); }
+.pill.pending i { background: var(--warning); }
+.pill.completed i { background: var(--series); border-radius: 2px; }
+.pill.terminated i { background: var(--critical); border-radius: 1px; transform: rotate(45deg); }
+.tag { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 4px; background: var(--surface-2); color: var(--text-2); border: 1px solid var(--border); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 12px; }
+.cards .card h3 { font-size: 15px; margin: 0; }
+.cards .card p { margin: 6px 0 0; }
+.cards .card .row2 { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.empty { color: var(--muted); padding: 16px; }
+footer { margin-top: 36px; color: var(--muted); font-size: 12px; }
+footer p { margin: 4px 0; max-width: 900px; }
+.theme-btn { font: inherit; font-size: 12px; background: var(--surface); color: var(--text-2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 8px; cursor: pointer; }
+@media (max-width: 600px) { .kpi .value { font-size: 22px; } h1 { font-size: 19px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>China → US biotech licensing tracker</h1>
+      <p class="sub">Out-licensing deals in which a China-based company grants rights that include the United States: signed deals, deals that may happen next, and assets to watch.</p>
+    </div>
+    <div class="meta"><span id="asof"></span> · <button class="theme-btn" id="theme" type="button">Theme</button></div>
+  </header>
+
+  <div class="filters" role="search">
+    <input type="search" id="q" placeholder="Search company, asset, target…" aria-label="Search deals">
+    <select id="f-status" aria-label="Status"><option value="">All statuses</option></select>
+    <select id="f-area" aria-label="Therapeutic area"><option value="">All areas</option></select>
+    <select id="f-hq" aria-label="Licensee HQ"><option value="">All licensee HQs</option></select>
+    <select id="f-type" aria-label="Deal type"><option value="">All deal types</option></select>
+    <label>From <select id="f-from" aria-label="From year"></select></label>
+    <label>to <select id="f-to" aria-label="To year"></select></label>
+    <button type="button" id="reset">Reset</button>
+  </div>
+
+  <section class="kpis" id="kpis" aria-label="Summary"></section>
+
+  <section class="charts">
+    <div class="card chart"><h2>Deals per year</h2><p class="chart-sub">Signed deals by announcement year. 2025 onward is comprehensive; earlier years hold landmark deals only.</p><div id="c-count"></div></div>
+    <div class="card chart"><h2>Disclosed upfront per year</h2><p class="chart-sub">Upfront cash (incl. equity where reported), US$ billions. Same coverage caveat.</p><div id="c-upfront"></div></div>
+    <div class="card chart"><h2>Deals by therapeutic area</h2><p class="chart-sub">Count of signed deals</p><div id="c-area"></div></div>
+    <div class="card chart"><h2>Most active licensees</h2><p class="chart-sub">Count of signed deals, top 10</p><div id="c-licensee"></div></div>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="deals" aria-selected="true">Signed deals <span id="n-deals" class="tag"></span></button>
+    <button role="tab" data-tab="potential" aria-selected="false">Potential deals <span id="n-pot" class="tag"></span></button>
+    <button role="tab" data-tab="future" aria-selected="false">Future watchlist <span id="n-fut" class="tag"></span></button>
+    <button role="tab" data-tab="events" aria-selected="false">Status changes &amp; catalysts</button>
+    <button role="tab" data-tab="policy" aria-selected="false">Policy watch</button>
+  </nav>
+
+  <section class="panel" id="p-deals">
+    <p class="panel-intro">Click a row for terms, territory, sources and history. Money is in US$ as announced; "total" is the headline "up to" value including milestones, not a risk-adjusted value.</p>
+    <div class="tbl-wrap"><table id="t-deals"><thead><tr>
+      <th data-sort="announced">Announced</th><th data-sort="licensor">Licensor (China)</th><th data-sort="licensee">Licensee</th>
+      <th data-sort="asset">Asset / target</th><th data-sort="therapeutic_area">Area</th><th data-sort="phase_at_deal">Phase at deal</th>
+      <th data-sort="upfront_usd_m" class="num">Upfront</th><th data-sort="total_value_usd_m" class="num">Total</th><th data-sort="status">Status</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="panel" id="p-potential" hidden>
+    <p class="panel-intro">Deals that could be signed or expanded soon: open options a licensee can still exercise, plus reported talks and NewCo formations logged in <code>data/pipeline.yaml</code> (stage: potential). New rumours arrive through the weekly news scan in <code>data/inbox.md</code>.</p>
+    <div class="cards" id="pot-cards"></div>
+  </section>
+
+  <section class="panel" id="p-future" hidden>
+    <p class="panel-intro">Watchlist of Chinese assets with ex-China rights that appear to be unpartnered. Likelihood is an analyst judgement, not reported news; verify partnering status before relying on an entry.</p>
+    <div class="tbl-wrap"><table id="t-future"><thead><tr>
+      <th>Company</th><th>Asset</th><th>Target / modality</th><th>Area</th><th>Phase</th><th>Likelihood</th><th>Why it could be licensed</th>
+    </tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="panel" id="p-events" hidden>
+    <p class="panel-intro">Upcoming catalysts recorded on deals and watchlist items, followed by past events (approvals, terminations, option decisions).</p>
+    <h2 style="margin:8px 0">Upcoming catalysts</h2>
+    <div class="tbl-wrap"><table id="t-cat"><thead><tr><th>Date</th><th>Deal / item</th><th>Event</th></tr></thead><tbody></tbody></table></div>
+    <h2 style="margin:20px 0 8px">History</h2>
+    <div class="tbl-wrap"><table id="t-hist"><thead><tr><th>Date</th><th>Deal</th><th>Event</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section class="panel" id="p-policy" hidden>
+    <p class="panel-intro">Policy and market developments that can change China → US deal structures (licences vs NewCos vs equity).</p>
+    <div class="cards" id="policy-cards"></div>
+  </section>
+
+  <footer>
+    <p><b>Sources.</b> 2025–2026 deals are imported from BioPharma Dive's public China licensing tracker (refreshed weekly with <code>python -m tracker sync</code>) and cross-checked against Vision Lifesciences' tracker; 2011–2024 deals and statuses are curated from company announcements. Figures are as announced and can differ between sources.</p>
+    <p><b>Scope.</b> China-based licensor (including Hong Kong) granting rights that include the US. Licensees can be US, European or Asian. Biosimilars and China-only deals are excluded.</p>
+    <p id="build"></p>
+  </footer>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script id="data" type="application/json">/*__DATA__*/null</script>
+<script>
+(function () {
+  "use strict";
+  var DATA = JSON.parse(document.getElementById("data").textContent);
+  var deals = DATA.deals || [], pipeline = DATA.pipeline || [], policy = DATA.policy || [];
+  var TODAY = DATA.generated;
+
+  // ---------- theme ----------
+  var root = document.documentElement;
+  try { var saved = localStorage.getItem("cbt-theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function () {
+    var dark = root.getAttribute("data-theme") ? root.getAttribute("data-theme") === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var next = dark ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("cbt-theme", next); } catch (e) {}
+  });
+
+  // ---------- helpers ----------
+  function el(tag, attrs, kids) {
+    var n = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (k === "text") n.textContent = attrs[k];
+      else if (k === "cls") n.className = attrs[k];
+      else n.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(function (c) { if (c != null) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+    return n;
+  }
+  function svg(tag, attrs) {
+    var n = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+  function money(v) {
+    if (v == null || v === "") return "n/d";
+    v = +v;
+    if (v >= 1000) return "$" + (v / 1000).toFixed(v >= 10000 ? 1 : 2).replace(/\.?0+$/, "") + "B";
+    return "$" + (v < 10 ? v.toFixed(1).replace(/\.0$/, "") : Math.round(v)) + "M";
+  }
+  function bn(v) { return "$" + (v / 1000).toFixed(1) + "B"; }
+  function year(d) { return parseInt(String(d.announced).slice(0, 4), 10); }
+  function uniq(arr) { return Array.from(new Set(arr.filter(Boolean))).sort(); }
+  function isUrl(s) { return /^https?:\/\//i.test(String(s)); }
+  var STATUS_LABEL = { active: "Active", pending: "Pending close", completed: "Completed", terminated: "Terminated" };
+  function pill(status) {
+    return el("span", { cls: "pill " + status }, [el("i", { "aria-hidden": "true" }), STATUS_LABEL[status] || status]);
+  }
+
+  // ---------- tooltip ----------
+  var tip = document.getElementById("tip");
+  function showTip(evt, value, label) {
+    tip.textContent = "";
+    tip.appendChild(el("strong", { text: value }));
+    tip.appendChild(el("span", { text: label }));
+    tip.style.display = "block";
+    var r = evt.target.getBoundingClientRect();
+    var x = evt.clientX != null && evt.type !== "focus" ? evt.clientX : r.left + r.width / 2;
+    var y = evt.clientY != null && evt.type !== "focus" ? evt.clientY : r.top;
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    tip.style.left = Math.max(8, Math.min(window.innerWidth - w - 8, x + 12)) + "px";
+    tip.style.top = Math.max(8, y - h - 12) + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+
+  // ---------- charts ----------
+  function niceMax(v) {
+    if (v <= 0) return 1;
+    var p = Math.pow(10, Math.floor(Math.log10(v))), n = v / p;
+    var step = n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10;
+    return step * p;
+  }
+  function roundTopRect(x, y, w, h, r) {
+    r = Math.min(r, w / 2, h);
+    if (h <= 0) return "";
+    return "M" + x + "," + (y + h) + "V" + (y + r) + "Q" + x + "," + y + " " + (x + r) + "," + y +
+      "H" + (x + w - r) + "Q" + (x + w) + "," + y + " " + (x + w) + "," + (y + r) + "V" + (y + h) + "Z";
+  }
+  function roundEndRect(x, y, w, h, r) {
+    r = Math.min(r, h / 2, w);
+    if (w <= 0) return "";
+    return "M" + x + "," + y + "H" + (x + w - r) + "Q" + (x + w) + "," + y + " " + (x + w) + "," + (y + r) +
+      "V" + (y + h - r) + "Q" + (x + w) + "," + (y + h) + " " + (x + w - r) + "," + (y + h) + "H" + x + "Z";
+  }
+
+  function columnChart(host, rows, fmtTick, fmtTip, unit) {
+    host.textContent = "";
+    var W = Math.max(280, host.clientWidth), H = 220, m = { t: 18, r: 4, b: 24, l: 40 };
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var max = niceMax(Math.max.apply(null, rows.map(function (r) { return r.value; }).concat([0])));
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, role: "img", "aria-label": host.getAttribute("data-label") || "" });
+    for (var i = 0; i <= 4; i++) {
+      var v = max * i / 4, y = m.t + ih - ih * i / 4;
+      s.appendChild(svg("line", { x1: m.l, x2: W - m.r, y1: y, y2: y, stroke: i === 0 ? "var(--axis)" : "var(--grid)", "stroke-width": 1 }));
+      var t = svg("text", { x: m.l - 6, y: y + 4, "text-anchor": "end" }); t.textContent = fmtTick(v); s.appendChild(t);
+    }
+    var band = iw / Math.max(rows.length, 1), bw = Math.min(24, band - 2);
+    var every = Math.ceil(rows.length / Math.floor(iw / 34));
+    var maxIdx = rows.reduce(function (bi, r, i) { return r.value > rows[bi].value ? i : bi; }, 0);
+    rows.forEach(function (r, i) {
+      var h = max ? ih * r.value / max : 0, x = m.l + band * i + (band - bw) / 2, y = m.t + ih - h;
+      if (h > 0) {
+        var p = svg("path", { d: roundTopRect(x, y, bw, h, 4), class: "bar", tabindex: 0, "aria-label": r.label + ": " + fmtTip(r.value) });
+        var hit = function (e) { showTip(e, fmtTip(r.value) + (unit || ""), r.label + (r.extra ? " · " + r.extra : "")); };
+        p.addEventListener("pointermove", hit); p.addEventListener("focus", hit);
+        p.addEventListener("pointerleave", hideTip); p.addEventListener("blur", hideTip);
+        s.appendChild(p);
+      }
+      if (i % every === 0 || i === rows.length - 1) {
+        var tl = svg("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle" }); tl.textContent = r.short || r.label; s.appendChild(tl);
+      }
+      if (i === maxIdx && r.value > 0) {
+        var vl = svg("text", { x: x + bw / 2, y: y - 5, "text-anchor": "middle", class: "val" }); vl.textContent = fmtTip(r.value); s.appendChild(vl);
+      }
+    });
+    host.appendChild(s);
+  }
+
+  function barChart(host, rows, fmt) {
+    host.textContent = "";
+    if (!rows.length) { host.appendChild(el("div", { cls: "empty", text: "No deals match the filters." })); return; }
+    var W = Math.max(280, host.clientWidth), rowH = 26, labelW = Math.min(170, W * 0.42), m = { t: 4, r: 40, b: 4 };
+    var H = m.t + m.b + rows.length * rowH, iw = W - labelW - m.r;
+    var max = Math.max.apply(null, rows.map(function (r) { return r.value; }));
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, role: "img" });
+    s.appendChild(svg("line", { x1: labelW, x2: labelW, y1: m.t, y2: H - m.b, stroke: "var(--axis)", "stroke-width": 1 }));
+    rows.forEach(function (r, i) {
+      var y = m.t + i * rowH, bh = 16, w = max ? iw * r.value / max : 0;
+      var lbl = r.label.length > 26 ? r.label.slice(0, 25) + "…" : r.label;
+      var t = svg("text", { x: labelW - 8, y: y + rowH / 2 + 4, "text-anchor": "end", class: "lbl" }); t.textContent = lbl; s.appendChild(t);
+      var p = svg("path", { d: roundEndRect(labelW, y + (rowH - bh) / 2, w, bh, 4), class: "bar", tabindex: 0, "aria-label": r.label + ": " + fmt(r.value) });
+      var hit = function (e) { showTip(e, fmt(r.value), r.label + (r.extra ? " · " + r.extra : "")); };
+      p.addEventListener("pointermove", hit); p.addEventListener("focus", hit);
+      p.addEventListener("pointerleave", hideTip); p.addEventListener("blur", hideTip);
+      s.appendChild(p);
+      var v = svg("text", { x: labelW + w + 6, y: y + rowH / 2 + 4, class: "val" }); v.textContent = fmt(r.value); s.appendChild(v);
+    });
+    host.appendChild(s);
+  }
+
+  // ---------- filters ----------
+  var F = {
+    q: document.getElementById("q"), status: document.getElementById("f-status"), area: document.getElementById("f-area"),
+    hq: document.getElementById("f-hq"), type: document.getElementById("f-type"), from: document.getElementById("f-from"), to: document.getElementById("f-to")
+  };
+  function fill(select, values, labeler) {
+    values.forEach(function (v) { select.appendChild(el("option", { value: v, text: labeler ? labeler(v) : v })); });
+  }
+  fill(F.status, ["active", "pending", "completed", "terminated"].filter(function (s) { return deals.some(function (d) { return d.status === s; }); }), function (s) { return STATUS_LABEL[s]; });
+  fill(F.area, uniq(deals.map(function (d) { return d.therapeutic_area; })));
+  fill(F.hq, uniq(deals.map(function (d) { return d.licensee_hq; })));
+  fill(F.type, uniq(deals.map(function (d) { return d.deal_type; })));
+  var years = deals.map(year).filter(Boolean), minY = Math.min.apply(null, years), maxY = Math.max.apply(null, years);
+  for (var y = minY; y <= maxY; y++) { F.from.appendChild(el("option", { value: y, text: y })); F.to.appendChild(el("option", { value: y, text: y })); }
+  F.from.value = minY; F.to.value = maxY;
+
+  function filtered() {
+    var q = F.q.value.trim().toLowerCase(), from = +F.from.value, to = +F.to.value;
+    return deals.filter(function (d) {
+      var y = year(d);
+      if (y < from || y > to) return false;
+      if (F.status.value && d.status !== F.status.value) return false;
+      if (F.area.value && d.therapeutic_area !== F.area.value) return false;
+      if (F.hq.value && d.licensee_hq !== F.hq.value) return false;
+      if (F.type.value && d.deal_type !== F.type.value) return false;
+      if (q && JSON.stringify(d).toLowerCase().indexOf(q) < 0) return false;
+      return true;
+    });
+  }
+
+  // ---------- KPIs ----------
+  function kpi(label, value, note) {
+    return el("div", { cls: "card kpi" }, [el("div", { cls: "label", text: label }), el("div", { cls: "value", text: value }), note ? el("div", { cls: "note", text: note }) : null]);
+  }
+  function sum(rows, f) { return rows.reduce(function (a, d) { return a + (+d[f] || 0); }, 0); }
+
+  function renderKpis(rows) {
+    var host = document.getElementById("kpis"); host.textContent = "";
+    var active = rows.filter(function (d) { return d.status === "active" || d.status === "pending"; }).length;
+    var term = rows.filter(function (d) { return d.status === "terminated"; }).length;
+    var opts = deals.filter(function (d) { return d.deal_type === "Option" && d.status === "active"; }).length;
+    var pot = pipeline.filter(function (p) { return p.stage === "potential"; }).length;
+    var fut = pipeline.filter(function (p) { return p.stage === "future"; }).length;
+    host.appendChild(kpi("Signed deals", rows.length.toLocaleString(), (minY === +F.from.value && maxY === +F.to.value) ? "All years" : F.from.value + "–" + F.to.value));
+    host.appendChild(kpi("Active", active.toLocaleString(), term + " terminated"));
+    host.appendChild(kpi("Disclosed upfront", bn(sum(rows, "upfront_usd_m")), rows.filter(function (d) { return d.upfront_usd_m != null; }).length + " deals disclose it"));
+    host.appendChild(kpi("Headline deal value", bn(sum(rows, "total_value_usd_m")), "Including milestones"));
+    host.appendChild(kpi("Potential deals", (opts + pot).toLocaleString(), opts + " open options, " + pot + " reported talks"));
+    host.appendChild(kpi("Future watchlist", fut.toLocaleString(), "Unpartnered assets"));
+  }
+
+  // ---------- charts render ----------
+  function renderCharts(rows) {
+    var from = +F.from.value, to = +F.to.value, byYear = {};
+    for (var y = from; y <= to; y++) byYear[y] = { n: 0, up: 0 };
+    rows.forEach(function (d) { var b = byYear[year(d)]; if (b) { b.n++; b.up += +d.upfront_usd_m || 0; } });
+    var yrs = Object.keys(byYear).map(Number).sort();
+    var cut = function (yy) { return yrs.length > 10 ? "'" + String(yy).slice(2) : String(yy); };
+    var partial = function (yy) { return String(yy) === TODAY.slice(0, 4) ? "year to date" : ""; };
+    columnChart(document.getElementById("c-count"), yrs.map(function (yy) { return { label: String(yy), short: cut(yy), value: byYear[yy].n, extra: partial(yy) }; }),
+      function (v) { return Math.round(v); }, function (v) { return v + (v === 1 ? " deal" : " deals"); });
+    columnChart(document.getElementById("c-upfront"), yrs.map(function (yy) { return { label: String(yy), short: cut(yy), value: byYear[yy].up / 1000, extra: partial(yy) }; }),
+      function (v) { return "$" + (v % 1 ? v.toFixed(1) : v) + "B"; }, function (v) { return "$" + v.toFixed(2) + "B"; });
+
+    function topBy(field, n) {
+      var c = {};
+      rows.forEach(function (d) { var k = d[field] || "Undisclosed"; c[k] = c[k] || { n: 0, up: 0 }; c[k].n++; c[k].up += +d.upfront_usd_m || 0; });
+      return Object.keys(c).map(function (k) { return { label: k, value: c[k].n, extra: money(c[k].up) + " upfront" }; })
+        .sort(function (a, b) { return b.value - a.value || a.label.localeCompare(b.label); }).slice(0, n);
+    }
+    var cnt = function (v) { return String(v); };
+    barChart(document.getElementById("c-area"), topBy("therapeutic_area", 10), cnt);
+    barChart(document.getElementById("c-licensee"), topBy("licensee", 10), cnt);
+  }
+
+  // ---------- deals table ----------
+  var sortKey = "announced", sortDir = -1, openId = null;
+  function cell(text, cls) { return el("td", { cls: cls || "", text: text == null ? "" : String(text) }); }
+  function detailRow(d) {
+    var fields = [
+      ["Deal type", d.deal_type], ["Territory", d.territory], ["Target", d.target], ["Modality", d.modality],
+      ["Indication", d.indication], ["Licensee HQ", d.licensee_hq], ["Licensee type", d.licensee_type],
+      ["Equity", d.equity_usd_m != null ? money(d.equity_usd_m) : null], ["Milestones", d.milestones_usd_m != null ? money(d.milestones_usd_m) : null],
+      ["Royalties", d.royalties], ["Development status", d.development_status],
+      ["Status note", d.status_note ? d.status_note + (d.status_date ? " (" + d.status_date + ")" : "") : null],
+      ["Notes", d.notes], ["Data source", d.data_source], ["Last verified", d.last_verified], ["ID", d.id]
+    ];
+    var grid = el("div", { cls: "detail-grid" });
+    fields.forEach(function (f) { if (f[1]) grid.appendChild(el("div", null, [el("b", { text: f[0] }), String(f[1])])); });
+    var extra = el("div", { style: "margin-top:10px" });
+    (d.events || []).concat(d.catalysts || []).forEach(function (e) { extra.appendChild(el("div", { cls: "small", text: e.date + " — " + e.event })); });
+    if ((d.sources || []).length) {
+      var src = el("div", { cls: "small", style: "margin-top:6px" }, ["Sources: "]);
+      d.sources.forEach(function (u, i) {
+        if (i) src.appendChild(document.createTextNode(" · "));
+        src.appendChild(isUrl(u) ? el("a", { href: u, target: "_blank", rel: "noopener", text: u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] }) : document.createTextNode(u));
+      });
+      extra.appendChild(src);
+    }
+    return el("tr", { cls: "detail" }, [el("td", { colspan: 9 }, [grid, extra])]);
+  }
+  function renderTable(rows) {
+    var tb = document.querySelector("#t-deals tbody"); tb.textContent = "";
+    rows = rows.slice().sort(function (a, b) {
+      var x = a[sortKey], y = b[sortKey];
+      if (sortKey === "asset") { x = a.asset || a.target; y = b.asset || b.target; }
+      if (x == null || x === "") return 1; if (y == null || y === "") return -1;
+      return (typeof x === "number" ? x - y : String(x).localeCompare(String(y))) * sortDir;
+    });
+    if (!rows.length) { tb.appendChild(el("tr", null, [el("td", { colspan: 9, cls: "empty", text: "No deals match the filters." })])); }
+    rows.forEach(function (d) {
+      var tr = el("tr", { cls: "row", tabindex: 0, "aria-expanded": openId === d.id ? "true" : "false" }, [
+        cell(d.announced), cell(d.licensor), cell(d.licensee),
+        cell(d.asset || d.target || "Undisclosed"), cell(d.therapeutic_area), cell(d.phase_at_deal || ""),
+        cell(money(d.upfront_usd_m), "num"), cell(money(d.total_value_usd_m), "num"), el("td", null, [pill(d.status)])
+      ]);
+      var toggle = function () { openId = openId === d.id ? null : d.id; renderTable(filtered()); };
+      tr.addEventListener("click", toggle);
+      tr.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+      tb.appendChild(tr);
+      if (openId === d.id) tb.appendChild(detailRow(d));
+    });
+    document.querySelectorAll("#t-deals th").forEach(function (th) {
+      th.classList.remove("asc", "desc");
+      if (th.getAttribute("data-sort") === sortKey) th.classList.add(sortDir > 0 ? "asc" : "desc");
+    });
+    document.getElementById("n-deals").textContent = rows.length;
+  }
+  document.querySelectorAll("#t-deals th[data-sort]").forEach(function (th) {
+    th.addEventListener("click", function () {
+      var k = th.getAttribute("data-sort");
+      if (k === sortKey) sortDir = -sortDir; else { sortKey = k; sortDir = /usd|announced/.test(k) ? -1 : 1; }
+      renderTable(filtered());
+    });
+  });
+
+  // ---------- potential / future / events / policy ----------
+  function card(title, lines, tags) {
+    var c = el("div", { cls: "card" }, [el("h3", { text: title })]);
+    lines.forEach(function (l) { if (l) c.appendChild(el("p", { cls: l[1] || "", text: l[0] })); });
+    if (tags && tags.length) c.appendChild(el("div", { cls: "row2" }, tags.filter(Boolean).map(function (t) { return el("span", { cls: "tag", text: t }); })));
+    return c;
+  }
+  function renderPotential() {
+    var host = document.getElementById("pot-cards"); host.textContent = "";
+    var opts = deals.filter(function (d) { return d.deal_type === "Option" && d.status === "active"; });
+    var pots = pipeline.filter(function (p) { return p.stage === "potential"; });
+    opts.forEach(function (d) {
+      host.appendChild(card(d.licensor + " → " + d.licensee, [
+        [(d.asset || d.target || "") + (d.target && d.asset ? " · " + d.target : "")],
+        ["Option signed " + d.announced + ". Licensee can exercise to take the full licence. " + (d.notes || ""), "small"]
+      ], ["Open option", d.therapeutic_area, money(d.upfront_usd_m) + " paid", "up to " + money(d.total_value_usd_m)]));
+    });
+    pots.forEach(function (p) {
+      var last = (p.signals || []).slice(-1)[0];
+      host.appendChild(card(p.company + (p.potential_partners ? " → " + p.potential_partners : ""), [
+        [(p.asset || "") + (p.target ? " · " + p.target : "")],
+        [p.rationale, "small"], last ? ["Latest signal (" + last.date + "): " + last.note, "small"] : null
+      ], ["Reported / potential", p.therapeutic_area, p.phase, p.likelihood ? "likelihood: " + p.likelihood : null]));
+    });
+    if (!host.children.length) host.appendChild(el("div", { cls: "empty", text: "No potential deals recorded." }));
+    document.getElementById("n-pot").textContent = opts.length + pots.length;
+  }
+  function renderFuture() {
+    var tb = document.querySelector("#t-future tbody"); tb.textContent = "";
+    var order = { high: 0, medium: 1, low: 2 };
+    var fut = pipeline.filter(function (p) { return p.stage === "future"; })
+      .sort(function (a, b) { return (order[a.likelihood] || 3) - (order[b.likelihood] || 3) || a.company.localeCompare(b.company); });
+    fut.forEach(function (p) {
+      tb.appendChild(el("tr", null, [cell(p.company), cell(p.asset), cell([p.target, p.modality].filter(Boolean).join(" · ")),
+        cell(p.therapeutic_area), cell(p.phase), cell(p.likelihood), el("td", null, [p.rationale || "", p.ex_china_rights ? el("div", { cls: "small", text: "Ex-China rights: " + p.ex_china_rights }) : null])]));
+    });
+    if (!fut.length) tb.appendChild(el("tr", null, [el("td", { colspan: 7, cls: "empty", text: "Watchlist is empty." })]));
+    document.getElementById("n-fut").textContent = fut.length;
+  }
+  function renderEvents() {
+    var cat = [], hist = [];
+    deals.forEach(function (d) {
+      var label = d.licensor + " → " + d.licensee + (d.asset ? " (" + d.asset + ")" : "");
+      (d.catalysts || []).forEach(function (c) { if (c.date >= TODAY) cat.push([c.date, label, c.event]); });
+      (d.events || []).forEach(function (e) { hist.push([e.date, label, e.event]); });
+      if (d.status === "terminated" || d.status === "completed")
+        hist.push([String(d.status_date || ""), label, (STATUS_LABEL[d.status]) + (d.status_note ? ": " + d.status_note : "")]);
+    });
+    pipeline.forEach(function (p) {
+      (p.catalysts || []).forEach(function (c) { if (c.date >= TODAY) cat.push([c.date, p.company + " (" + p.asset + ")", c.event]); });
+    });
+    function fillT(id, rows, asc) {
+      var tb = document.querySelector(id + " tbody"); tb.textContent = "";
+      rows.sort(function (a, b) { return asc ? a[0].localeCompare(b[0]) : b[0].localeCompare(a[0]); });
+      rows.forEach(function (r) { tb.appendChild(el("tr", null, [cell(r[0]), cell(r[1]), cell(r[2])])); });
+      if (!rows.length) tb.appendChild(el("tr", null, [el("td", { colspan: 3, cls: "empty", text: asc ? "No upcoming catalysts recorded yet — add them with: python -m tracker update <id> --catalyst 'YYYY-MM-DD|event'" : "No events recorded." })]));
+    }
+    fillT("#t-cat", cat, true); fillT("#t-hist", hist, false);
+  }
+  function renderPolicy() {
+    var host = document.getElementById("policy-cards"); host.textContent = "";
+    policy.slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); }).forEach(function (p) {
+      var c = card(p.title, [[p.impact, "small"]], [p.date, p.jurisdiction, p.status]);
+      var src = el("p", { cls: "small" });
+      (p.sources || []).forEach(function (u, i) {
+        if (i) src.appendChild(document.createTextNode(" · "));
+        if (isUrl(u)) src.appendChild(el("a", { href: u, target: "_blank", rel: "noopener", text: u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0] }));
+      });
+      c.appendChild(src); host.appendChild(c);
+    });
+    if (!policy.length) host.appendChild(el("div", { cls: "empty", text: "No policy items recorded." }));
+  }
+
+  // ---------- tabs ----------
+  document.querySelectorAll(".tabs button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tabs button").forEach(function (x) { x.setAttribute("aria-selected", x === b ? "true" : "false"); });
+      document.querySelectorAll(".panel").forEach(function (p) { p.hidden = p.id !== "p-" + b.getAttribute("data-tab"); });
+    });
+  });
+
+  // ---------- wire up ----------
+  function render() { var rows = filtered(); renderKpis(rows); renderCharts(rows); renderTable(rows); }
+  ["input", "change"].forEach(function (ev) { Object.keys(F).forEach(function (k) { F[k].addEventListener(ev, render); }); });
+  document.getElementById("reset").addEventListener("click", function () {
+    F.q.value = ""; F.status.value = ""; F.area.value = ""; F.hq.value = ""; F.type.value = ""; F.from.value = minY; F.to.value = maxY; render();
+  });
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { renderCharts(filtered()); }, 150); });
+
+  document.getElementById("asof").textContent = "Data as of " + TODAY;
+  document.getElementById("build").textContent = "Built " + TODAY + " · " + deals.length + " deals · " + pipeline.length + " pipeline items · tracker v" + DATA.version;
+  render(); renderPotential(); renderFuture(); renderEvents(); renderPolicy();
+})();
+</script>
+</body>
+</html>

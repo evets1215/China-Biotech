@@ -1,0 +1,33 @@
+# Policy and regulatory developments that can change China -> US deal flow.
+# impact: how it could affect licensing / NewCo / M&A structures. Keep entries factual and sourced.
+
+- date: '2026-10-22'
+  jurisdiction: US
+  title: Treasury proposes outbound-investment rules (COINS Act) covering Chinese biotech
+  status: Proposed rule (comment period)
+  impact: >-
+    Would restrict certain US equity investments and joint ventures in Chinese biotech. Conventional
+    licensing is reported to be exempt, but NewCo structures where the Chinese licensor takes equity in a
+    US company, and JV-style collaborations, are where the debate centres.
+  sources:
+    - https://www.statnews.com/2026/10/29/biotech-licensing-deals-treasury-rules-stir-debate/
+    - https://mlex.com/mlex/intellectual-property/articles/2544004
+- date: '2026-10-16'
+  jurisdiction: China
+  title: China proposes adding five biomedical technologies to its export-control list
+  status: Proposed
+  impact: >-
+    The draft list states that restrictions do not apply to licensing, partnerships and contract research
+    services involving the technologies, so out-licensing is expected to continue; watch final text.
+  sources:
+    - https://www.bloomberg.com/news/articles/2026-10-16/china-looks-to-tighten-biotech-exports-allows-licensing-deals
+    - https://qz.com/china-biotech-export-controls-licensing-deals-exemption-101626
+- date: '2026-10-08'
+  jurisdiction: Market
+  title: China out-licensing value passes 2025 full-year record
+  status: Data point
+  impact: >-
+    PharmCube data: ~$139.4B of overseas licensing by Chinese drugmakers through 8 Oct 2026 vs $138.8B
+    for all of 2025; upfronts ~$8B in the first three quarters vs $7.2B in 2025.
+  sources:
+    - https://finance.yahoo.com/news/analysis-china-biotech-licensing-boom-092338804.html

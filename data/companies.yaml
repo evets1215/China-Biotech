@@ -1,0 +1,146 @@
+# Company reference data used to fill licensee_hq / licensee_type and to recognise
+# Chinese companies in news headlines. hq = headquarters country; type is one of
+# Big Pharma | Mid-size Pharma | Biotech | NewCo | Other. Add new names as you go.
+
+# ---------------- Licensees: United States ----------------
+Merck & Co.: {hq: US, type: Big Pharma}
+Pfizer: {hq: US, type: Big Pharma}
+Eli Lilly: {hq: US, type: Big Pharma}
+Bristol Myers Squibb: {hq: US, type: Big Pharma}
+AbbVie: {hq: US, type: Big Pharma}
+Johnson & Johnson: {hq: US, type: Big Pharma}
+Gilead Sciences: {hq: US, type: Big Pharma}
+Regeneron Pharmaceuticals: {hq: US, type: Big Pharma}
+Celgene: {hq: US, type: Big Pharma}
+Incyte: {hq: US, type: Mid-size Pharma}
+Seagen: {hq: US, type: Biotech}
+Neurocrine Biosciences: {hq: US, type: Mid-size Pharma}
+Madrigal Pharmaceuticals: {hq: US, type: Biotech}
+Summit Therapeutics: {hq: US, type: Biotech}
+Coherus BioSciences: {hq: US, type: Biotech}
+Corbus Pharmaceuticals: {hq: US, type: Biotech}
+ArriVent BioPharma: {hq: US, type: Biotech}
+IDEAYA Biosciences: {hq: US, type: Biotech}
+Instil Bio: {hq: US, type: Biotech}
+EQRx: {hq: US, type: Biotech}
+Vor Biopharma: {hq: US, type: Biotech}
+Zenas BioPharma: {hq: US, type: Biotech}
+Dianthus Therapeutics: {hq: US, type: Biotech}
+Crescent Biopharma: {hq: US, type: Biotech}
+Lyell Immunopharma: {hq: US, type: Biotech}
+Travere Therapeutics: {hq: US, type: Biotech}
+Cue Biopharma: {hq: US, type: Biotech}
+Cullinan Therapeutics: {hq: US, type: Biotech}
+NextCure: {hq: US, type: Biotech}
+Nuvectis Pharma: {hq: US, type: Biotech}
+Spero Therapeutics: {hq: US, type: Biotech}
+Calico Life Sciences: {hq: US, type: Biotech}
+Formation Bio: {hq: US, type: Biotech}
+Pathos AI: {hq: US, type: Biotech}
+Climb Bio: {hq: US, type: Biotech}
+Kailera Therapeutics: {hq: US, type: NewCo}
+Braveheart Bio: {hq: US, type: NewCo}
+Verdiva Bio: {hq: US, type: NewCo}
+Candid Therapeutics: {hq: US, type: NewCo}
+Avenzo Therapeutics: {hq: US, type: Biotech}
+Ollin Biosciences: {hq: US, type: NewCo}
+Ouro Medicines: {hq: US, type: NewCo}
+Prolium Bioscience: {hq: US, type: NewCo}
+Timberlyne Therapeutics: {hq: US, type: NewCo}
+Caldera Therapeutics: {hq: US, type: NewCo}
+Radiance Biopharma: {hq: US, type: Biotech}
+Expedition Therapeutics: {hq: US, type: NewCo}
+Kalexo Bio: {hq: US, type: NewCo}
+Tortugas Neuroscience: {hq: US, type: NewCo}
+Solstice Oncology: {hq: US, type: NewCo}
+Sentivera: {hq: US, type: NewCo}
+Boulevard Bio: {hq: US, type: NewCo}
+Biogen: {hq: US, type: Big Pharma}
+Whitehawk Therapeutics: {hq: US, type: Biotech}
+AirNexis Therapeutics: {hq: US, type: NewCo}
+Avere Therapeutics: {hq: US, type: NewCo}
+Photys Therapeutics: {hq: US, type: Biotech}
+Adagene: {hq: China, type: Biotech}
+
+# ---------------- Licensees: Europe ----------------
+Roche: {hq: Switzerland, type: Big Pharma}
+Novartis: {hq: Switzerland, type: Big Pharma}
+CRISPR Therapeutics: {hq: Switzerland, type: Biotech}
+Windward Bio: {hq: Switzerland, type: NewCo}
+BeOne Medicines: {hq: Switzerland, type: Mid-size Pharma}
+Sanofi: {hq: France, type: Big Pharma}
+Ipsen: {hq: France, type: Mid-size Pharma}
+Servier: {hq: France, type: Mid-size Pharma}
+GSK: {hq: UK, type: Big Pharma}
+AstraZeneca: {hq: UK, type: Big Pharma}
+Ellipses Pharma: {hq: UK, type: Biotech}
+Novo Nordisk: {hq: Denmark, type: Big Pharma}
+Genmab: {hq: Denmark, type: Mid-size Pharma}
+Boehringer Ingelheim: {hq: Germany, type: Big Pharma}
+Bayer: {hq: Germany, type: Big Pharma}
+Merck KGaA: {hq: Germany, type: Big Pharma}
+BioNTech: {hq: Germany, type: Mid-size Pharma}
+Menarini Group: {hq: Italy, type: Mid-size Pharma}
+Istituto Gentili: {hq: Italy, type: Other}
+UCB: {hq: Belgium, type: Mid-size Pharma}
+Sotio Biotech: {hq: Czech Republic, type: Biotech}
+
+# ---------------- Licensees: Asia-Pacific ----------------
+Takeda: {hq: Japan, type: Big Pharma}
+Astellas Pharma: {hq: Japan, type: Big Pharma}
+Otsuka Pharmaceutical: {hq: Japan, type: Big Pharma}
+SK Biopharmaceuticals: {hq: South Korea, type: Mid-size Pharma}
+
+# ---------------- Chinese licensors (for news recognition) ----------------
+Hengrui Pharma: {hq: China}
+Hansoh Pharma: {hq: China}
+Innovent Biologics: {hq: China}
+CSPC Pharmaceutical Group: {hq: China}
+Sino Biopharmaceutical: {hq: Hong Kong}
+Akeso: {hq: China}
+BeiGene: {hq: China}
+Hutchmed: {hq: Hong Kong}
+Kelun Biotech: {hq: China}
+Sichuan Biokin: {hq: China}
+DualityBio: {hq: China}
+3SBio: {hq: China}
+Remegen: {hq: China}
+Junshi Biosciences: {hq: China}
+Legend Biotech: {hq: China}
+Harbour BioMed: {hq: China}
+Simcere Pharmaceutical: {hq: China}
+Simcere Zaiming: {hq: China}
+Haisco Pharmaceutical Group: {hq: China}
+InnoCare Pharma: {hq: China}
+Keymed Biosciences: {hq: China}
+Earendil Labs: {hq: China}
+MediLink Therapeutics: {hq: China}
+Insilico Medicine: {hq: Hong Kong}
+Ascentage Pharma: {hq: China}
+Abbisko Therapeutics: {hq: China}
+Dizal: {hq: China}
+Everest Medicines: {hq: China}
+Antengene: {hq: China}
+LaNova Medicines: {hq: China}
+Zai Lab: {hq: China}
+Henlius: {hq: China}
+Ascletis Pharma: {hq: China}
+Allist Pharmaceuticals: {hq: China}
+Argo Biopharma: {hq: China}
+Eccogene: {hq: China}
+Fosun Pharma: {hq: China}
+Biocytogen: {hq: China}
+Mabwell (Shanghai) Bioscience: {hq: China}
+Qyuns Therapeutics: {hq: China}
+Gan & Lee Pharmaceuticals: {hq: China}
+Sciwind Biosciences: {hq: China}
+The United Laboratories International Holdings: {hq: Hong Kong}
+I-Mab: {hq: China}
+CStone Pharmaceuticals: {hq: China}
+Jacobio Pharmaceuticals: {hq: China}
+Gracell Biotechnologies: {hq: China}
+ProfoundBio: {hq: China}
+Biotheus: {hq: China}
+Abogen Biosciences: {hq: China}
+SciBrunch Therapeutics: {hq: China}
+Zelgen: {hq: China}

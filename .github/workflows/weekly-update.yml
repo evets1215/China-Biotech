@@ -1,0 +1,52 @@
+name: Weekly deal update
+
+# Every Monday: pull new deals from BioPharma Dive's public tracker, scan news
+# feeds for new / rumoured / terminated deals, rebuild the dashboard, and open a
+# pull request so a human reviews every change before it lands.
+on:
+  schedule:
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Sync BioPharma Dive tracker
+        id: sync
+        run: |
+          python -m tracker sync | tee sync.log
+          echo "summary=$(tail -n 1 sync.log)" >> "$GITHUB_OUTPUT"
+      - name: Scan news feeds
+        run: python -m tracker scan-news
+      - name: Validate and rebuild dashboard
+        run: |
+          python -m tracker validate
+          python -m tracker build
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: automation/weekly-deal-update
+          delete-branch: true
+          commit-message: "Weekly deal update: ${{ steps.sync.outputs.summary }}"
+          title: "Weekly deal update (${{ steps.sync.outputs.summary }})"
+          body: |
+            Automated weekly refresh.
+
+            * **Sync:** ${{ steps.sync.outputs.summary }} (from BioPharma Dive's public China licensing tracker).
+            * **News scan:** see `data/inbox.md` for headlines that may be new deals, rumoured talks, or terminations.
+
+            Before merging: spot-check new deals against the company press release, fill in asset names,
+            and move anything from the inbox into `deals.yaml` / `pipeline.yaml` with the CLI.
+          add-paths: |
+            data/
+            docs/

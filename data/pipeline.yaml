@@ -1,0 +1,195 @@
+# Deals that have not happened yet.
+#   stage: potential -> reported talks / option decision pending / NewCo forming
+#   stage: future    -> watchlist of unpartnered Chinese assets (analyst judgement, verify before use)
+# Promote an entry to a signed deal with `python -m tracker promote <id> ...`.
+
+- id: FUT-001
+  stage: future
+  company: Akeso
+  company_hq: China
+  asset: cadonilimab (AK104)
+  target: PD-1 x CTLA-4 bispecific
+  modality: Biologics
+  therapeutic_area: Cancer
+  indication: Cervical and gastric cancer
+  phase: Marketed (China)
+  ex_china_rights: No ex-China licensee announced
+  likelihood: medium
+  potential_partners: Summit Therapeutics (existing Akeso partner), big pharma IO players
+  rationale: Approved in China with randomized Phase 3 data; Akeso's ivonescimab deal shows the company
+    will out-license; Western IO bispecific interest is high.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-009
+  stage: future
+  company: Ascentage Pharma
+  company_hq: China
+  asset: lisaftoclax (APG-2575)
+  target: BCL-2 inhibitor
+  modality: Small molecule
+  therapeutic_area: Cancer
+  indication: CLL/SLL, AML, MDS
+  phase: Marketed (China); global Phase 3
+  ex_china_rights: Held by Ascentage (Takeda option covers olverembatinib only)
+  likelihood: medium
+  potential_partners: Takeda (existing partner), haematology players
+  rationale: Differentiated BCL-2 with China approval and global registrational trials; partner could
+    share US launch costs.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-004
+  stage: future
+  company: Ascletis Pharma
+  company_hq: China
+  asset: ASC30
+  target: Oral small-molecule GLP-1R agonist (also injectable)
+  modality: Small molecule
+  therapeutic_area: Metabolic diseases
+  indication: Obesity
+  phase: Phase 2 (US)
+  ex_china_rights: Held by Ascletis
+  likelihood: medium
+  potential_partners: Pharma building obesity portfolios (several bought Chinese GLP-1s in 2024-26)
+  rationale: US-run obesity trials; obesity assets from China have attracted repeated licensing in 2024-26
+    (Merck, AZ, Novo, Regeneron, Pfizer).
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-008
+  stage: future
+  company: CSPC Pharmaceutical Group
+  company_hq: China
+  asset: SYS6010
+  target: EGFR ADC
+  modality: Biologics
+  therapeutic_area: Cancer
+  indication: EGFR-mutant / EGFR-TKI-resistant NSCLC
+  phase: Phase 3 (China); Phase 1 (US)
+  ex_china_rights: Held by CSPC
+  likelihood: medium
+  potential_partners: ADC-focused pharma
+  rationale: CSPC is the most active Chinese licensor of 2025-26 (AstraZeneca x3, Madrigal); a late-stage
+    ADC with US data is a natural next deal.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-007
+  stage: future
+  company: Hansoh Pharma
+  company_hq: China
+  asset: aumolertinib
+  target: EGFR TKI (3rd gen)
+  modality: Small molecule
+  therapeutic_area: Cancer
+  indication: EGFR-mutant NSCLC
+  phase: Marketed (China); ex-China rights returned by EQRx
+  ex_china_rights: Available
+  likelihood: low
+  potential_partners: Regional / mid-size oncology companies
+  rationale: Rights came back after EQRx exited; osimertinib dominance makes a US path hard without differentiated
+    data.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-005
+  stage: future
+  company: Henlius
+  company_hq: China
+  asset: serplulimab (HLX10)
+  target: PD-1
+  modality: Biologics
+  therapeutic_area: Cancer
+  indication: Extensive-stage SCLC
+  phase: Marketed (China, EU); US bridging study
+  ex_china_rights: US partner not announced
+  likelihood: low
+  potential_partners: Mid-size US oncology commercial companies
+  rationale: Only PD-1 with SCLC first-line data ex-US; US entry needs a bridging trial and a commercial
+    partner, but PD-1 pricing pressure limits value.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-006
+  stage: future
+  company: Hutchmed
+  company_hq: Hong Kong
+  asset: sovleplenib (HMPL-523)
+  target: Syk inhibitor
+  modality: Small molecule
+  therapeutic_area: Immune diseases
+  indication: Immune thrombocytopenia
+  phase: NDA / marketed (China)
+  ex_china_rights: Held by Hutchmed
+  likelihood: medium
+  potential_partners: Rare haematology / immunology players
+  rationale: Hutchmed has a track record of ex-China licensing (Takeda, AstraZeneca, GSK in 2026) and
+    has signalled partnering intent for late-stage assets.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-003
+  stage: future
+  company: Keymed Biosciences
+  company_hq: China
+  asset: stapokibart (CM310)
+  target: IL-4Rα
+  modality: Biologics
+  therapeutic_area: Immune diseases
+  indication: Atopic dermatitis, CRSwNP, asthma
+  phase: Marketed (China)
+  ex_china_rights: No ex-China licensee announced
+  likelihood: medium
+  potential_partners: Immunology-focused pharma seeking a Dupixent alternative
+  rationale: Approved in China; Keymed already uses NewCo structures for other assets; would face Dupixent
+    and its biosimilars by the early 2030s.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-010
+  stage: future
+  company: Remegen
+  company_hq: China
+  asset: RC88
+  target: Mesothelin ADC
+  modality: Biologics
+  therapeutic_area: Cancer
+  indication: Ovarian cancer
+  phase: Phase 2
+  ex_china_rights: Held by Remegen
+  likelihood: low
+  potential_partners: Pfizer (holds disitamab vedotin), AbbVie (holds RC148)
+  rationale: Remegen has done three ex-China deals (Seagen/Pfizer, Vor, AbbVie); RC88 is its next ADC
+    but mesothelin has a mixed record.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
+- id: FUT-002
+  stage: future
+  company: Sichuan Biokin
+  company_hq: China
+  asset: BL-M07D1
+  target: HER2 ADC
+  modality: Biologics
+  therapeutic_area: Cancer
+  indication: HER2+ / HER2-low solid tumours
+  phase: Phase 3 (China)
+  ex_china_rights: Not covered by BMS iza-bren deal (verify)
+  likelihood: medium
+  potential_partners: BMS (existing partner), ADC-light big pharma
+  rationale: Late-stage HER2 ADC from the licensor of the $800M-upfront iza-bren deal; crowded HER2 class
+    lowers the odds of a large upfront.
+  added: '2026-10-31'
+  last_reviewed: '2026-10-31'
+  notes: Analyst watchlist judgement as of 2026-10-31, not a reported deal. Verify current partnering
+    status before use.
