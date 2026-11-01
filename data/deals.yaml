@@ -14,6 +14,7 @@
   asset: ADC portfolio
   target: Antibody-drug conjugates (undisclosed targets)
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   territory: Global
   upfront_usd_m: 400
@@ -33,6 +34,7 @@
   deal_type: License
   target: RNAi drug targeting ALK7
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Metabolic diseases
   indication: Obesity and metabolic diseases
   territory: Ex-China or global (confirm in press release)
@@ -53,6 +55,7 @@
   deal_type: License
   target: Molecular glue-based protein degraders
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   territory: Ex-China or global (confirm in press release)
   status: active
@@ -71,6 +74,7 @@
   asset: ABO2203
   target: T-cell engager targeting CD3 and CD19
   modality: mRNA-encoded T-cell engager
+  format: T-cell engager
   therapeutic_area: Immune diseases
   indication: Autoimmune disease
   phase_at_deal: Phase 1
@@ -90,6 +94,7 @@
   licensee: Somnivera
   deal_type: License
   target: Undisclosed
+  format: Undisclosed
   therapeutic_area: CNS disorders
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 11
@@ -111,6 +116,7 @@
   asset: HRS-1596
   target: Dual GLP-1R and GIPR agonist
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   indication: Obesity
   phase_at_deal: Preclinical
@@ -133,6 +139,7 @@
   asset: SPR2015
   target: KRAS G12D (ON) inhibitor, oral
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -152,6 +159,7 @@
   licensee_type: Big Pharma
   deal_type: License
   target: Undisclosed
+  format: Undisclosed
   therapeutic_area: Undisclosed
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 100
@@ -171,6 +179,7 @@
   deal_type: License
   target: Undisclosed
   modality: Biologics
+  format: Other biologic
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 55
@@ -190,6 +199,7 @@
   deal_type: License
   target: Radioligand therapy aimed at an undisclosed target
   modality: Radiopharmaceutical
+  format: Radiopharmaceutical
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -209,6 +219,7 @@
   deal_type: License
   target: Trispecific T-cell engager aimed at undisclosed targets
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -229,6 +240,7 @@
   asset: HMPL-A830
   target: Antibody targeted therapy conjugate targeting EGFR/KRAS
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -250,6 +262,7 @@
   asset: SIM0660
   target: Trispecific antibody targeting CD79a, CD19 and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -270,6 +283,7 @@
   deal_type: License
   target: Next-generation ADCs aimed at undisclosed targets
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 45
@@ -289,6 +303,7 @@
   licensee_type: NewCo
   deal_type: NewCo
   target: Undisclosed
+  format: Undisclosed
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -309,6 +324,7 @@
   deal_type: License
   target: GLP-1 receptor agonist
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   phase_at_deal: Phase 3
   territory: Ex-China or global (confirm in press release)
@@ -330,6 +346,7 @@
   asset: JSKN016
   target: Bispecific ADC targeting TROP2/HER3
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: Breast and lung cancer
   phase_at_deal: Phase 3
@@ -352,6 +369,7 @@
   asset: IBI355 (SP001)
   target: Monoclonal antibody targeting CD40L
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Immune diseases
   indication: IgG4-related disease, Sjogren's disease
   phase_at_deal: Phase 1
@@ -373,6 +391,7 @@
   asset: HS-20118 (AVR-001)
   target: Oral peptide targeting IL-23
   modality: Peptide
+  format: Peptide
   therapeutic_area: Immune diseases
   indication: Psoriasis
   phase_at_deal: Phase 2
@@ -395,6 +414,7 @@
   asset: sunvozertinib (Zegfrovy)
   target: EGFR inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: EGFR exon 20 insertion NSCLC
   phase_at_deal: Marketed
@@ -418,6 +438,7 @@
   asset: TQC3721 (inhaled)
   target: PDE3/4 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Respiratory
   indication: COPD
   phase_at_deal: Phase 3
@@ -439,6 +460,7 @@
   deal_type: License
   target: Bispecific antibodies to be used in making bispecific ADCs
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   status: active
@@ -456,6 +478,7 @@
   deal_type: License
   target: Small interfering RNAs aimed at unspecified targets
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Kidney diseases
   indication: Kidney disease (two renal targets)
   phase_at_deal: Preclinical
@@ -478,6 +501,7 @@
   asset: MTS-128
   target: Trispecific T-cell engager
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Undisclosed
   phase_at_deal: Preclinical
   territory: Global
@@ -495,6 +519,7 @@
   deal_type: License
   target: Dual-targeting CAR-T therapies aimed at CD70/BCMA and CD70/CLL-1
   modality: Cell or gene therapy
+  format: Cell or gene therapy
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   status: active
@@ -511,6 +536,7 @@
   licensee_type: Big Pharma
   deal_type: Collaboration
   target: Discovery collaboration on Lilly-selected targets
+  format: Undisclosed
   therapeutic_area: Undisclosed
   territory: Global
   total_value_usd_m: 1900
@@ -526,6 +552,7 @@
   deal_type: License
   target: In vivo base editing
   modality: Cell or gene therapy
+  format: Cell or gene therapy
   therapeutic_area: Other
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -546,6 +573,7 @@
   asset: NXP100, NXP200
   target: Complement Factor B inhibitor; BRAF inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   phase_at_deal: Phase 3
   territory: Ex-China
@@ -565,6 +593,7 @@
   licensee_type: Mid-size Pharma
   deal_type: Collaboration
   target: AI-designed candidates
+  format: Undisclosed
   therapeutic_area: CNS disorders
   indication: Neuroimmune CNS disease
   territory: Global
@@ -583,6 +612,7 @@
   deal_type: License
   target: Bispecific T-cell engager targeting CDH6 and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -604,6 +634,7 @@
   asset: civorebrutinib
   target: Covalent, reversible BTK inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   indication: Rare kidney disease
   phase_at_deal: Phase 1
@@ -624,6 +655,7 @@
   licensee_type: Big Pharma
   deal_type: License
   target: Undisclosed
+  format: Undisclosed
   therapeutic_area: Undisclosed
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 87
@@ -643,6 +675,7 @@
   deal_type: Collaboration
   target: Antibody-drug conjugates and multi-specific antibodies aimed at undisclosed targets
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 650
@@ -663,6 +696,7 @@
   licensee_type: Big Pharma
   deal_type: Collaboration
   target: Undisclosed
+  format: Undisclosed
   therapeutic_area: Multiple
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 600
@@ -686,6 +720,7 @@
   asset: SA030
   target: Small interfering RNA aimed at ALK7
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Metabolic diseases
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -705,6 +740,7 @@
   deal_type: License
   target: Monoclonal antibody targeting IgE
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -725,6 +761,7 @@
   deal_type: License
   target: Trispecific antibody targeting PD-1, CTLA-4 and VEGF-A
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -745,6 +782,7 @@
   deal_type: NewCo
   target: D2/D3 agonist and 5-HT2A antagonist; GABA receptor positive allosteric modulator
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: CNS disorders
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -762,6 +800,7 @@
   deal_type: License
   target: Antibody-drug conjugate targeting 5T4
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -780,6 +819,7 @@
   deal_type: Collaboration
   target: Undisclosed
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -802,6 +842,7 @@
   asset: rovadicitinib
   target: JAK/ROCK inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   indication: Myelofibrosis; chronic GVHD
   phase_at_deal: Marketed
@@ -824,6 +865,7 @@
   asset: ATG-201
   target: Bispecific antibody targeting CD19 and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Immune diseases
   indication: B-cell-mediated autoimmune disease
   phase_at_deal: Preclinical
@@ -845,6 +887,7 @@
   deal_type: License
   target: GLP-1 agonist
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   phase_at_deal: Marketed
   territory: Ex-China or global (confirm in press release)
@@ -864,6 +907,7 @@
   deal_type: License
   target: Small interfering RNA aimed at undisclosed targets
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -885,6 +929,7 @@
   asset: porustobart (HBM4003)
   target: Monoclonal antibody targeting CTLA-4
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -907,6 +952,7 @@
   asset: GH31
   target: MAT2A-targeting synthetic lethality therapy
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: MTAP-deleted cancers
   phase_at_deal: Preclinical
@@ -928,6 +974,7 @@
   deal_type: License
   target: Small interfering RNA aimed at undisclosed targets
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Metabolic diseases
   indication: MASH
   phase_at_deal: Preclinical
@@ -951,6 +998,7 @@
   deal_type: Collaboration
   target: Undisclosed
   modality: Biologics
+  format: Other biologic
   therapeutic_area: Multiple
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -971,6 +1019,7 @@
   deal_type: License
   target: Undisclosed
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Undisclosed
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 200
@@ -991,6 +1040,7 @@
   asset: SYH2082 + 7 programmes
   target: GLP-1/GIPR agonist
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   indication: Obesity, type 2 diabetes
   phase_at_deal: Preclinical
@@ -1014,6 +1064,7 @@
   deal_type: License
   target: Activator of miR-124
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1034,6 +1085,7 @@
   deal_type: License
   target: Bispecific antibody targeting TL1A and IL23p19
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1053,6 +1105,7 @@
   deal_type: License
   target: Antibody-drug conjugate targeting B7H3
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1069,6 +1122,7 @@
   deal_type: License
   target: MEK1/2 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1087,6 +1141,7 @@
   deal_type: License
   target: Peptide-based radioligand therapy aimed at an undisclosed target
   modality: Peptide
+  format: Peptide
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   upfront_usd_m: 50
@@ -1105,6 +1160,7 @@
   deal_type: License
   target: Amyloid-beta antibody with BBB shuttle
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: CNS disorders
   indication: Alzheimer's disease
   territory: Global
@@ -1125,6 +1181,7 @@
   asset: RC148
   target: Bispecific antibody targeting PD-1 and VEGF
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   indication: Advanced solid tumours
   phase_at_deal: Phase 2
@@ -1147,6 +1204,7 @@
   asset: YL201 (tambotatug pelitecan)
   target: Antibody-drug conjugate targeting B7H3
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 3
   territory: Ex-China
@@ -1167,6 +1225,7 @@
   deal_type: NewCo
   target: Dual PDE3/4 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Other
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -1188,6 +1247,7 @@
   deal_type: License
   target: Bispecific antibodies aimed at unspecified targets
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1209,6 +1269,7 @@
   asset: ZG006 (alveltamig)
   target: Trispecific T-cell engager targeting DLL3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Cancer
   indication: Small cell lung cancer
   phase_at_deal: Phase 3
@@ -1229,6 +1290,7 @@
   deal_type: License
   target: Peptide-drug conjugate targeting PSMA and FRα
   modality: Biologics
+  format: Other biologic
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1250,6 +1312,7 @@
   deal_type: License
   target: Antibody-drug conjugate targeting LRRC15
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1269,6 +1332,7 @@
   deal_type: NewCo
   target: Bispecific antibody targeting TSLP and IL-13
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1289,6 +1353,7 @@
   asset: JAB-23E73
   target: Pan-KRAS inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1309,6 +1374,7 @@
   deal_type: License
   target: Multispecific antibodies against undisclosed targets
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Undisclosed
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1329,6 +1395,7 @@
   deal_type: License
   target: TYK2 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1350,6 +1417,7 @@
   asset: YP05002
   target: GLP-1 agonist
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Metabolic diseases
   indication: Obesity
   phase_at_deal: Phase 1
@@ -1372,6 +1440,7 @@
   deal_type: License
   target: Antibody-drug conjugate targeting ITGB6
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1393,6 +1462,7 @@
   asset: GCC19CART (LYL273)
   target: CAR-T cell therapy targeting guanylyl cyclase-C
   modality: Cell or gene therapy
+  format: Cell or gene therapy
   therapeutic_area: Cancer
   indication: Metastatic colorectal cancer
   phase_at_deal: Phase 1
@@ -1415,6 +1485,7 @@
   deal_type: License
   target: NLRP3 inhibitors
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Undisclosed
   territory: Ex-China or global (confirm in press release)
   total_value_usd_m: 881.5
@@ -1431,6 +1502,7 @@
   deal_type: License
   target: GLP-1/GIP/FGF21 agonist
   modality: Biologics
+  format: Other biologic
   therapeutic_area: Metabolic diseases
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -1453,6 +1525,7 @@
   asset: QX031N
   target: Bispecific antibody targeting TSLP and IL-33
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1475,6 +1548,7 @@
   target: Bispecific antibody fusion protein targeting PD-1/IL-2; ADC targeting Claudin 18.2; Bispecific
     ADC targeting EGFR/B7H3
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 3
   territory: Ex-China or global (confirm in press release)
@@ -1499,6 +1573,7 @@
   asset: HS-20110
   target: Antibody-drug conjugate targeting CDH17
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1519,6 +1594,7 @@
   deal_type: License
   target: Bifunctional BDCA2 and BAFF/APRIL inhibitor
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1540,6 +1616,7 @@
   asset: orelabrutinib (+2 programmes)
   target: BTK inhibitor; IL-17AAF inhibitor; TYK2 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   indication: Multiple sclerosis
   phase_at_deal: Phase 3
@@ -1562,6 +1639,7 @@
   deal_type: NewCo
   target: Dual-targeting, small interfering RNA
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Other
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1583,6 +1661,7 @@
   asset: HRS-1893
   target: Cardiac myosin inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cardiovascular
   indication: Hypertrophic cardiomyopathy
   phase_at_deal: Phase 3
@@ -1606,6 +1685,7 @@
   deal_type: License
   target: Bispecific nanobody targeting c-Met and EGFR
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1626,6 +1706,7 @@
   deal_type: License
   target: Small interfering RNA targeting ANGPTL3 and other cardiovascular targets
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Cardiovascular
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -1644,6 +1725,7 @@
   deal_type: License
   target: Unspecified small molecule inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1664,6 +1746,7 @@
   deal_type: NewCo
   target: DPP-1 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -1686,6 +1769,7 @@
   asset: SYH2086
   target: Oral GLP-1 receptor agonist
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Metabolic diseases
   indication: MASH (combination with resmetirom)
   phase_at_deal: Preclinical
@@ -1709,6 +1793,7 @@
   asset: HRS-9821 + 11 programmes
   target: PDE3/4 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   indication: COPD and others
   phase_at_deal: Phase 1
@@ -1729,6 +1814,7 @@
   deal_type: License
   target: CAR-T cell therapy targeting BCMA and CD19
   modality: Cell or gene therapy
+  format: Cell or gene therapy
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1749,6 +1835,7 @@
   deal_type: License
   target: Undisclosed
   modality: Biologics
+  format: Other biologic
   therapeutic_area: Cancer
   territory: Ex-China or global (confirm in press release)
   status: active
@@ -1766,6 +1853,7 @@
   deal_type: License
   target: Antibody for use in bispecific antibody-drug conjugate programs
   modality: Biologics
+  format: ADC
   therapeutic_area: Undisclosed
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1784,6 +1872,7 @@
   deal_type: License
   target: Monoclonal antibody targeting PD-L1
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Marketed
   territory: Ex-China or global (confirm in press release)
@@ -1804,6 +1893,7 @@
   asset: 9MW1911
   target: Monoclonal antibody targeting IL-11
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Other
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1825,6 +1915,7 @@
   asset: telitacicept
   target: Fusion protein targeting BAFF and APRIL
   modality: Biologics
+  format: Other biologic
   therapeutic_area: Immune diseases
   indication: Generalized myasthenia gravis, IgA nephropathy, other autoimmune
   phase_at_deal: Phase 3
@@ -1850,6 +1941,7 @@
   asset: HBM7020
   target: Bispecific T cell engagers targeting BCMA and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1870,6 +1962,7 @@
   deal_type: License
   target: Antibody-drug conjugate targeting CDH6
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1889,6 +1982,7 @@
   deal_type: Platform
   target: AI-enabled discovery of oral small-molecule candidates
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   phase_at_deal: Preclinical
   territory: Global
@@ -1906,6 +2000,7 @@
   deal_type: License
   target: Bispecific T cell engager targeting BCMA and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1924,6 +2019,7 @@
   deal_type: License
   target: PDE4 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Other
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -1943,6 +2039,7 @@
   asset: HS-20094
   target: GIP/GLP-1 receptor agonist
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   indication: Obesity
   phase_at_deal: Phase 3
@@ -1966,6 +2063,7 @@
   asset: XNW27011
   target: Antibody-drug conjugate targeting CLDN18.2
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -1985,6 +2083,7 @@
   deal_type: License
   target: Bispecific T cell engager targeting KLK2 and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2004,6 +2103,7 @@
   deal_type: License
   target: Menin inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2022,6 +2122,7 @@
   deal_type: License
   target: Small interfering RNA targeting Factor XI
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Other
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2045,6 +2146,7 @@
   asset: SSGJ-707
   target: Bispecific antibody targeting PD-1 and VEGF
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -2068,6 +2170,7 @@
   deal_type: NewCo
   target: Bispecific antibody
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2088,6 +2191,7 @@
   deal_type: NewCo
   target: Bispecific antibody
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Undisclosed
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2108,6 +2212,7 @@
   asset: HXN-1002, HXN-1003
   target: Bispecific antibodies targeting α4β7/TL1A and TL1A/IL23
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2130,6 +2235,7 @@
   asset: SHR7280
   target: GnRH receptor antagonist
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Other
   indication: Assisted reproduction
   phase_at_deal: Phase 3
@@ -2150,6 +2256,7 @@
   deal_type: License
   target: PRMT5 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2169,6 +2276,7 @@
   asset: HRS-5346
   target: Lipoprotein(a) inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cardiovascular
   indication: Elevated Lp(a)
   phase_at_deal: Phase 2
@@ -2192,6 +2300,7 @@
   asset: UBT251
   target: GLP-1/GIP/glucagon receptor agonist
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   indication: Obesity, T2D, MASH
   phase_at_deal: Phase 2
@@ -2214,6 +2323,7 @@
   deal_type: Platform
   target: Multi-specific antibodies (Harbour Mice platform)
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Multiple
   phase_at_deal: Preclinical
   territory: Global
@@ -2233,6 +2343,7 @@
   deal_type: License
   target: Protein degrader targeting IRAK4
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2251,6 +2362,7 @@
   deal_type: License
   target: Antibody-drug conjugate targeting ROR1
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2272,6 +2384,7 @@
   asset: MRG007
   target: Antibody-drug conjugate targeting CDH17
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2292,6 +2405,7 @@
   deal_type: NewCo
   target: Bispecific antibody targeting CD20 and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Multiple
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2312,6 +2426,7 @@
   asset: SIM0500
   target: Trispecific antibody targeting GPRC5D, BCMA and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Cancer
   indication: Multiple myeloma
   phase_at_deal: Phase 1
@@ -2333,6 +2448,7 @@
   asset: ecnoglutide (oral) + amylin programmes
   target: Oral GLP-1 receptor agonist; Oral and injectable amylin receptor agonists
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2354,6 +2470,7 @@
   deal_type: NewCo
   target: Bispecific T cell engager targeting BCMA and CD3
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -2373,6 +2490,7 @@
   asset: HBM9378 / SKB378
   target: Monoclonal antibody targeting TSLP
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Immune diseases
   indication: Asthma, COPD
   phase_at_deal: Phase 1
@@ -2394,6 +2512,7 @@
   deal_type: License
   target: Protein degraders targeting BTK
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Multiple
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2412,6 +2531,7 @@
   deal_type: NewCo
   target: Monoclonal antibody targeting CD38
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Immune diseases
   phase_at_deal: Phase 2
   territory: Ex-China or global (confirm in press release)
@@ -2430,6 +2550,7 @@
   deal_type: License
   target: Antibody for use in antibody-drug conjugate targeting 'novel tumor antigen'
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2448,6 +2569,7 @@
   deal_type: License
   target: Monoclonal antibody targeting APRIL
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2468,6 +2590,7 @@
   asset: DB-1418 (AVZO-1418)
   target: Bispecific antibody-drug conjugate targeting EGFR and HER3
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2489,6 +2612,7 @@
   asset: CND261
   target: Trispecific T cell engager
   modality: Biologics
+  format: T-cell engager
   therapeutic_area: Immune diseases
   phase_at_deal: Preclinical
   territory: Ex-China or global (confirm in press release)
@@ -2509,6 +2633,7 @@
   asset: IBI3009
   target: Antibody-drug conjugate targeting DLL3
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China or global (confirm in press release)
@@ -2530,6 +2655,7 @@
   asset: SHR-4849 (IDE849)
   target: DLL3 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: Small cell lung cancer, NETs
   phase_at_deal: Phase 1
@@ -2549,6 +2675,7 @@
   asset: HS-10535
   target: Oral small-molecule GLP-1R agonist
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Metabolic diseases
   indication: Obesity
   phase_at_deal: Preclinical
@@ -2568,6 +2695,7 @@
   asset: LM-299
   target: PD-1 x VEGF bispecific
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Global
@@ -2587,6 +2715,7 @@
   asset: PM8002 (BNT327)
   target: PD-L1 x VEGF-A bispecific
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   phase_at_deal: Phase 2
   territory: Global (acquisition)
@@ -2608,6 +2737,7 @@
   asset: YS2302018 (AZD0780 programme)
   target: Oral Lp(a) disruptor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cardiovascular
   indication: Elevated Lp(a)
   phase_at_deal: Preclinical
@@ -2627,6 +2757,7 @@
   asset: IMM2510, IMM27M
   target: PD-L1 x VEGF bispecific; CTLA-4
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-Greater China
@@ -2646,6 +2777,7 @@
   asset: olverembatinib (HQP1351)
   target: BCR-ABL TKI (3rd gen)
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: CML, Ph+ ALL
   phase_at_deal: Phase 3
@@ -2667,6 +2799,7 @@
   asset: HRS9531, HRS-7535, HRS-4729
   target: GLP-1/GIP incretin portfolio
   modality: Peptide
+  format: Peptide
   therapeutic_area: Metabolic diseases
   indication: Obesity
   phase_at_deal: Phase 2
@@ -2687,6 +2820,7 @@
   asset: Rina-S (PRO1184)
   target: FRα ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: Ovarian cancer
   phase_at_deal: Phase 2
@@ -2706,6 +2840,7 @@
   deal_type: License
   target: siRNA cardiovascular programmes
   modality: Nucleic acid
+  format: Nucleic acid
   therapeutic_area: Cardiovascular
   phase_at_deal: Phase 1
   territory: Ex-China
@@ -2724,6 +2859,7 @@
   asset: GC012F (AZD0120)
   target: FasTCAR BCMA x CD19 CAR-T
   modality: Cell or gene therapy
+  format: Cell or gene therapy
   therapeutic_area: Multiple
   indication: Multiple myeloma, SLE
   phase_at_deal: Phase 1
@@ -2745,6 +2881,7 @@
   asset: HS-20093 (GSK'227)
   target: B7-H3 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: SCLC, osteosarcoma
   phase_at_deal: Phase 1
@@ -2765,6 +2902,7 @@
   asset: BL-B01D1 (iza-bren)
   target: EGFR x HER3 bispecific ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 2
   territory: Ex-China (US co-development/co-commercialisation)
@@ -2785,6 +2923,7 @@
   asset: pimicotinib (ABSK021)
   target: CSF-1R inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: Tenosynovial giant cell tumour
   phase_at_deal: Phase 3
@@ -2804,6 +2943,7 @@
   asset: ECC5004 (AZD5004)
   target: Oral small-molecule GLP-1R agonist
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Metabolic diseases
   indication: Obesity, T2D
   phase_at_deal: Phase 1
@@ -2823,6 +2963,7 @@
   asset: HS-20089
   target: B7-H4 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: Gynaecologic cancers
   phase_at_deal: Phase 1
@@ -2842,6 +2983,7 @@
   asset: YL202 (BNT326)
   target: HER3 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Global ex-Greater China
@@ -2860,6 +3002,7 @@
   asset: HRS-1167 (+ option on SHR-A1904)
   target: PARP1-selective inhibitor; CLDN18.2 ADC option
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-China
@@ -2879,6 +3022,7 @@
   asset: DB-1303 (BNT323), DB-1311
   target: HER2 ADC; B7-H3 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: Endometrial, breast cancer
   phase_at_deal: Phase 1/2
@@ -2898,6 +3042,7 @@
   asset: SYSA1801 (CRB-701)
   target: Nectin-4 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: US, EU, UK, Canada, Australia and others
@@ -2916,6 +3061,7 @@
   asset: fruquintinib (Fruzaqla)
   target: VEGFR 1/2/3 inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: Metastatic colorectal cancer
   phase_at_deal: NDA
@@ -2939,6 +3085,7 @@
   asset: 7 preclinical ADCs
   target: Undisclosed ADC targets
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Preclinical
   territory: Global / ex-Greater China
@@ -2958,6 +3105,7 @@
   asset: ivonescimab (AK112, SMT112)
   target: PD-1 x VEGF bispecific
   modality: Biologics
+  format: Bispecific / multispecific
   therapeutic_area: Cancer
   indication: NSCLC
   phase_at_deal: Phase 2
@@ -2978,6 +3126,7 @@
   asset: sac-TMT (SKB264, MK-2870)
   target: TROP2 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   phase_at_deal: Phase 2
   territory: Ex-Greater China
@@ -2997,6 +3146,7 @@
   asset: ociperlimab
   target: TIGIT
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Phase 3
   territory: North America, Europe, Japan
@@ -3017,6 +3167,7 @@
   asset: disitamab vedotin (RC48)
   target: HER2 ADC
   modality: Biologics
+  format: ADC
   therapeutic_area: Cancer
   indication: Urothelial cancer
   phase_at_deal: Approved (China)
@@ -3038,6 +3189,7 @@
   asset: orelabrutinib
   target: BTK inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Immune diseases
   indication: Multiple sclerosis
   phase_at_deal: Phase 2
@@ -3059,6 +3211,7 @@
   asset: firmonertinib (furmonertinib)
   target: EGFR TKI (exon 20 / PACC)
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: EGFR-mutant NSCLC
   phase_at_deal: Marketed (China)
@@ -3079,6 +3232,7 @@
   asset: toripalimab (Loqtorzi)
   target: PD-1
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   indication: Nasopharyngeal carcinoma
   phase_at_deal: BLA
@@ -3102,6 +3256,7 @@
   asset: tislelizumab
   target: PD-1
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Phase 3
   territory: North America, Europe, Japan
@@ -3123,6 +3278,7 @@
   asset: sugemalimab, lorlatinib-follow-on (CS1003)
   target: PD-L1; PD-1
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Phase 3
   territory: Ex-Greater China
@@ -3143,6 +3299,7 @@
   asset: lemzoparlimab (TJC4)
   target: CD47
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Global ex-Greater China
@@ -3163,6 +3320,7 @@
   asset: aumolertinib
   target: EGFR TKI (3rd gen)
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Marketed (China)
   territory: Ex-Greater China
@@ -3181,6 +3339,7 @@
   asset: JAB-3068, JAB-3312
   target: SHP2 inhibitors
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Global ex-Greater China
@@ -3201,6 +3360,7 @@
   asset: cilta-cel (LCAR-B38M, Carvykti)
   target: BCMA CAR-T
   modality: Cell or gene therapy
+  format: Cell or gene therapy
   therapeutic_area: Cancer
   indication: Multiple myeloma
   phase_at_deal: Phase 1
@@ -3223,6 +3383,7 @@
   asset: tislelizumab
   target: PD-1
   modality: Biologics
+  format: Monoclonal antibody
   therapeutic_area: Cancer
   phase_at_deal: Phase 1
   territory: Ex-Asia (solid tumours)
@@ -3243,6 +3404,7 @@
   asset: savolitinib (Orpathys)
   target: MET inhibitor
   modality: Small molecule
+  format: Small molecule
   therapeutic_area: Cancer
   indication: MET-altered NSCLC
   phase_at_deal: Phase 1

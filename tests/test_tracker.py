@@ -59,6 +59,13 @@ class TestValidation(TempDataTest):
                               "deal_type": "License", "status": "terminated"})
         self.assertTrue(any("status_date" in e for e in validate(self.db)))
 
+    def test_format_is_optional_but_checked(self):
+        self.db.deals.append({"id": "X-3", "announced": "2026-01-01", "licensor": "A", "licensee": "B",
+                              "deal_type": "License", "status": "active"})
+        self.assertEqual(validate(self.db), [])
+        self.db.deals[-1]["format"] = "Antibody thing"
+        self.assertTrue(any("format 'Antibody thing'" in e for e in validate(self.db)))
+
 
 class TestCli(TempDataTest):
     def test_add_update_terminate(self):

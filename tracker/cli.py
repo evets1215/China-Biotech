@@ -15,6 +15,7 @@ from tracker import stats
 from tracker.store import (
     DEAL_FIELDS,
     DEAL_STATUSES,
+    DEAL_FORMATS,
     DEAL_TYPES,
     LIKELIHOOD,
     PIPELINE_FIELDS,
@@ -155,6 +156,7 @@ def cmd_add(db: Database, a) -> int:
         "asset": a.asset,
         "target": a.target,
         "modality": a.modality,
+        "format": a.format,
         "therapeutic_area": a.area,
         "indication": a.indication,
         "phase_at_deal": a.phase,
@@ -484,6 +486,7 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--asset")
     s.add_argument("--target")
     s.add_argument("--modality")
+    s.add_argument("--format", choices=DEAL_FORMATS, help="Finer molecule type, for comparables")
     s.add_argument("--area", choices=THERAPEUTIC_AREAS)
     s.add_argument("--indication")
     s.add_argument("--phase")

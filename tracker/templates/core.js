@@ -53,70 +53,175 @@
   var STATUS_LABEL = { active: "Active", pending: "Pending close", completed: "Completed", terminated: "Terminated" };
   function assetName(d) { return d.asset || d.target || "Undisclosed"; }
 
-  // ---------- filters (ids shared with the original dashboard) ----------
-  var F = {};
+  // ---------- filters ----------
+  // One filter state for every view. Each facet holds a list of chosen values (empty = all);
+  // "up" is a minimum upfront in $M. Designs either render their own controls and call set()/toggle(),
+  // or keep plain <select>s with the original ids, which are read as single values.
   var listeners = [];
   var years = deals.map(year).filter(Boolean);
   var minY = Math.min.apply(null, years), maxY = Math.max.apply(null, years);
 
+  var PHASES = ["Preclinical", "Phase 1", "Phase 2", "Phase 3", "Filed or approved", "Not disclosed"];
+  function phaseGroup(d) {
+    var p = String(d.phase_at_deal || "");
+    if (!p) return "Not disclosed";
+    if (/preclin/i.test(p)) return "Preclinical";
+    if (/phase\s*1/i.test(p)) return "Phase 1";
+    if (/phase\s*2/i.test(p)) return "Phase 2";
+    if (/phase\s*3/i.test(p)) return "Phase 3";
+    if (/\bNDA\b|\bBLA\b|market|approv|filed/i.test(p)) return "Filed or approved";
+    return "Not disclosed";
+  }
+  // Same order as DEAL_FORMATS in tracker/store.py.
+  var FORMATS = ["ADC", "Bispecific / multispecific", "T-cell engager", "Monoclonal antibody", "Other biologic", "Small molecule",
+    "Peptide", "Nucleic acid", "Cell or gene therapy", "Radiopharmaceutical", "Undisclosed", "Not classified"];
+  function ordered(order) { return function (a, b) { var i = order.indexOf(a), j = order.indexOf(b); return (i < 0 ? 99 : i) - (j < 0 ? 99 : j) || a.localeCompare(b); }; }
+  var FACETS = {
+    status: { label: "Status", get: function (d) { return d.status; }, name: function (v) { return STATUS_LABEL[v] || v; }, sort: ordered(["active", "pending", "completed", "terminated"]) },
+    area: { label: "Therapeutic area", get: function (d) { return d.therapeutic_area || "Undisclosed"; } },
+    format: { label: "Format", get: function (d) { return d.format || "Not classified"; }, sort: ordered(FORMATS) },
+    phase: { label: "Phase at deal", get: phaseGroup, sort: ordered(PHASES) },
+    hq: { label: "Licensee HQ", get: function (d) { return d.licensee_hq || "Undisclosed"; } },
+    type: { label: "Deal type", get: function (d) { return d.deal_type; } },
+    licensee: { label: "Licensee", get: function (d) { return d.licensee; } }
+  };
+  var KEYS = Object.keys(FACETS);
+  var UP_STEPS = [25, 50, 100, 250, 500, 1000];
+  function blank() { var s = { q: "", up: 0, from: minY, to: maxY }; KEYS.forEach(function (k) { s[k] = []; }); return s; }
+  var S = blank();
+
+  // Search reads named fields only, so "phase" or a source domain cannot match every deal.
+  var SEARCH_FIELDS = ["licensor", "licensee", "asset", "target", "indication", "modality", "notes"];
+  var hay = new Map();
+  deals.forEach(function (d) { hay.set(d, SEARCH_FIELDS.map(function (f) { return d[f] || ""; }).join("\n").toLowerCase()); });
+
+  function pass(d, skip) {
+    var y = year(d);
+    if (y < S.from || y > S.to) return false;
+    for (var i = 0; i < KEYS.length; i++) {
+      var k = KEYS[i];
+      if (k !== skip && S[k].length && S[k].indexOf(FACETS[k].get(d)) < 0) return false;
+    }
+    if (skip !== "up" && S.up && !(d.upfront_usd_m >= S.up)) return false;
+    var q = S.q.trim().toLowerCase();
+    if (q && hay.get(d).indexOf(q) < 0) return false;
+    return true;
+  }
+  function filtered() { return deals.filter(function (d) { return pass(d); }); }
+  // Rows that pass every filter except one facet: what a chart of that facet should show.
+  function except(key) { return deals.filter(function (d) { return pass(d, key); }); }
+  // Options for one facet, each counted against every other active filter.
+  function options(key) {
+    var f = FACETS[key], seen = {}, n = {};
+    deals.forEach(function (d) { seen[f.get(d)] = 1; });
+    deals.forEach(function (d) { if (pass(d, key)) { var v = f.get(d); n[v] = (n[v] || 0) + 1; } });
+    return Object.keys(seen).filter(Boolean).sort(f.sort || function (a, b) { return a.localeCompare(b); })
+      .map(function (v) { return { value: v, label: f.name ? f.name(v) : v, n: n[v] || 0, on: S[key].indexOf(v) >= 0 }; });
+  }
+  function upOptions() {
+    var rows = deals.filter(function (d) { return pass(d, "up"); });
+    return [{ value: 0, label: "Any", n: rows.length }].concat(UP_STEPS.map(function (t) {
+      return { value: t, label: money(t) + "+", n: rows.filter(function (d) { return d.upfront_usd_m >= t; }).length };
+    }));
+  }
+  function undisclosedUp() { return deals.filter(function (d) { return pass(d, "up") && d.upfront_usd_m == null; }).length; }
+
+  function set(key, val) {
+    if (key === "q") S.q = String(val || "");
+    else if (key === "up") S.up = +val || 0;
+    else if (key === "from" || key === "to") S[key] = Math.min(maxY, Math.max(minY, +val || (key === "from" ? minY : maxY)));
+    else if (FACETS[key]) S[key] = (val == null ? [] : [].concat(val)).filter(Boolean);
+  }
+  function toggle(key, v) { var a = S[key].slice(), i = a.indexOf(v); if (i < 0) a.push(v); else a.splice(i, 1); S[key] = a; }
+  function state() { var o = {}; Object.keys(S).forEach(function (k) { o[k] = Array.isArray(S[k]) ? S[k].slice() : S[k]; }); return o; }
+  function setFilters(o) {
+    S = blank(); o = o || {};
+    ["q", "up", "from", "to"].forEach(function (k) { if (o[k] != null && o[k] !== "") set(k, o[k]); });
+    KEYS.forEach(function (k) { if (o[k]) set(k, Array.isArray(o[k]) ? o[k] : String(o[k]).split("|")); });
+    syncControls();
+  }
+  function isFiltered() {
+    return !!(S.q.trim() || S.up || S.from !== minY || S.to !== maxY || KEYS.some(function (k) { return S[k].length; }));
+  }
+  function range() { return { from: S.from, to: S.to }; }
+
+  // Plain controls a design may keep: the search box, year and upfront selects, and single-value selects.
+  var F = {};
+  var LEGACY = { "f-status": "status", "f-area": "area", "f-hq": "hq", "f-type": "type", "f-format": "format", "f-phase": "phase" };
   function fill(select, values, labeler) {
     values.forEach(function (v) { select.appendChild(el("option", { value: v, text: labeler ? labeler(v) : v })); });
   }
+  function syncControls() {
+    if (F.q && F.q.value !== S.q) F.q.value = S.q;
+    if (F["f-from"]) F["f-from"].value = S.from;
+    if (F["f-to"]) F["f-to"].value = S.to;
+    if (F["f-up"]) F["f-up"].value = S.up;
+    Object.keys(LEGACY).forEach(function (id) { if (F[id]) F[id].value = S[LEGACY[id]][0] || ""; });
+  }
   function bindFilters() {
-    ["q", "f-status", "f-area", "f-hq", "f-type", "f-from", "f-to"].forEach(function (id) { F[id] = document.getElementById(id); });
+    ["q", "f-from", "f-to", "f-up"].concat(Object.keys(LEGACY)).forEach(function (id) {
+      var n = document.getElementById(id); if (n && (id === "q" || n.tagName === "SELECT")) F[id] = n;
+    });
     if (!F.q) return;
-    fill(F["f-status"], ["active", "pending", "completed", "terminated"].filter(function (s) { return deals.some(function (d) { return d.status === s; }); }), function (s) { return STATUS_LABEL[s]; });
-    fill(F["f-area"], uniq(deals.map(function (d) { return d.therapeutic_area; })));
-    fill(F["f-hq"], uniq(deals.map(function (d) { return d.licensee_hq; })));
-    fill(F["f-type"], uniq(deals.map(function (d) { return d.deal_type; })));
-    for (var y = minY; y <= maxY; y++) { F["f-from"].appendChild(el("option", { value: y, text: y })); F["f-to"].appendChild(el("option", { value: y, text: y })); }
+    Object.keys(LEGACY).forEach(function (id) {
+      if (F[id]) fill(F[id], options(LEGACY[id]).map(function (o) { return o.value; }), FACETS[LEGACY[id]].name);
+    });
+    if (F["f-from"]) for (var y = minY; y <= maxY; y++) { F["f-from"].appendChild(el("option", { value: y, text: y })); F["f-to"].appendChild(el("option", { value: y, text: y })); }
+    if (F["f-up"]) fill(F["f-up"], [0].concat(UP_STEPS), function (v) { return v ? money(v) + "+" : "Any"; });
     readUrl();
-    Object.keys(F).forEach(function (k) {
-      F[k].addEventListener(k === "q" ? "input" : "change", changed);
+    F.q.addEventListener("input", function () { set("q", F.q.value); changed(); });
+    ["f-from", "f-to", "f-up"].forEach(function (id) {
+      if (F[id]) F[id].addEventListener("change", function () { set(id.slice(2), F[id].value); changed(); });
+    });
+    Object.keys(LEGACY).forEach(function (id) {
+      if (F[id]) F[id].addEventListener("change", function () { set(LEGACY[id], F[id].value); changed(); });
     });
     var reset = document.getElementById("reset");
     if (reset) reset.addEventListener("click", function () { setFilters({}); changed(); });
+    window.addEventListener("hashchange", function () { readUrl(); emit(); });
   }
-  function setFilters(o) {
-    F.q.value = o.q || ""; F["f-status"].value = o.status || ""; F["f-area"].value = o.area || "";
-    F["f-hq"].value = o.hq || ""; F["f-type"].value = o.type || "";
-    F["f-from"].value = o.from || minY; F["f-to"].value = o.to || maxY;
-  }
-  // Filter state lives in the URL hash so a view can be shared.
+  // Filter state lives in the URL hash so a view can be shared. Lists join with "|" (company names hold commas).
   function readUrl() {
     var o = {};
     location.hash.replace(/^#/, "").split("&").forEach(function (kv) {
-      var p = kv.split("="); if (p[0]) o[p[0]] = decodeURIComponent(p[1] || "");
+      var p = kv.split("="); if (!p[0]) return;
+      try { o[p[0]] = decodeURIComponent(p[1] || ""); } catch (e) { o[p[0]] = p[1] || ""; }
     });
     setFilters(o);
   }
   function writeUrl() {
-    var o = { q: F.q.value.trim(), status: F["f-status"].value, area: F["f-area"].value, hq: F["f-hq"].value, type: F["f-type"].value,
-      from: +F["f-from"].value === minY ? "" : F["f-from"].value, to: +F["f-to"].value === maxY ? "" : F["f-to"].value };
+    var o = { q: S.q.trim(), up: S.up || "", from: S.from === minY ? "" : S.from, to: S.to === maxY ? "" : S.to };
+    KEYS.forEach(function (k) { o[k] = S[k].join("|"); });
     var s = Object.keys(o).filter(function (k) { return o[k]; }).map(function (k) { return k + "=" + encodeURIComponent(o[k]); }).join("&");
     try { history.replaceState(null, "", s ? "#" + s : location.pathname + location.search); } catch (e) {}
   }
-  function changed() { writeUrl(); listeners.forEach(function (fn) { fn(filtered()); }); }
+  function emit() { var rows = filtered(); listeners.forEach(function (fn) { fn(rows); }); }
+  function changed() { syncControls(); writeUrl(); emit(); }
   function onChange(fn) { listeners.push(fn); }
-  function isFiltered() {
-    return !!(F.q.value.trim() || F["f-status"].value || F["f-area"].value || F["f-hq"].value || F["f-type"].value ||
-      +F["f-from"].value !== minY || +F["f-to"].value !== maxY);
+
+  // ---------- export ----------
+  var CSV_COLS = [
+    ["id", function (d) { return d.id; }], ["announced", function (d) { return d.announced; }],
+    ["licensor", function (d) { return d.licensor; }], ["licensee", function (d) { return d.licensee; }],
+    ["licensee_hq", function (d) { return d.licensee_hq; }], ["asset", function (d) { return d.asset; }],
+    ["target", function (d) { return d.target; }], ["format", function (d) { return d.format; }],
+    ["modality", function (d) { return d.modality; }], ["phase_at_deal", function (d) { return d.phase_at_deal; }],
+    ["therapeutic_area", function (d) { return d.therapeutic_area; }], ["deal_type", function (d) { return d.deal_type; }],
+    ["territory", function (d) { return d.territory; }], ["upfront_usd_m", function (d) { return d.upfront_usd_m; }],
+    ["total_value_usd_m", function (d) { return d.total_value_usd_m; }], ["status", function (d) { return d.status; }],
+    ["source", function (d) { return (d.sources || []).filter(isUrl)[0]; }]
+  ];
+  function cell(v) {
+    if (v == null) return "";
+    if (typeof v === "number") return String(v);
+    v = String(v);
+    if (/^[=+\-@\t\r]/.test(v)) v = "'" + v; // keep spreadsheets from reading a value as a formula
+    return /[",\n\r]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
   }
-  function filtered() {
-    if (!F.q) return deals.slice();
-    var q = F.q.value.trim().toLowerCase(), from = +F["f-from"].value, to = +F["f-to"].value;
-    return deals.filter(function (d) {
-      var y = year(d);
-      if (y < from || y > to) return false;
-      if (F["f-status"].value && d.status !== F["f-status"].value) return false;
-      if (F["f-area"].value && d.therapeutic_area !== F["f-area"].value) return false;
-      if (F["f-hq"].value && d.licensee_hq !== F["f-hq"].value) return false;
-      if (F["f-type"].value && d.deal_type !== F["f-type"].value) return false;
-      if (q && JSON.stringify(d).toLowerCase().indexOf(q) < 0) return false;
-      return true;
-    });
+  function csv(rows) {
+    return "﻿" + [CSV_COLS.map(function (c) { return c[0]; }).join(",")]
+      .concat(rows.map(function (d) { return CSV_COLS.map(function (c) { return cell(c[1](d)); }).join(","); })).join("\r\n");
   }
-  function range() { return { from: +F["f-from"].value || minY, to: +F["f-to"].value || maxY }; }
 
   // ---------- aggregates ----------
   function byYear(rows) {
@@ -159,7 +264,7 @@
   // ---------- deal detail ----------
   function detailFields(d) {
     return [
-      ["Deal type", d.deal_type], ["Territory", d.territory], ["Target", d.target], ["Modality", d.modality],
+      ["Deal type", d.deal_type], ["Territory", d.territory], ["Target", d.target], ["Format", d.format], ["Modality", d.modality],
       ["Indication", d.indication], ["Phase at deal", d.phase_at_deal], ["Licensee HQ", d.licensee_hq], ["Licensee type", d.licensee_type],
       ["Upfront", d.upfront_usd_m != null ? money(d.upfront_usd_m) : null], ["Equity", d.equity_usd_m != null ? money(d.equity_usd_m) : null],
       ["Milestones", d.milestones_usd_m != null ? money(d.milestones_usd_m) : null], ["Headline value", d.total_value_usd_m != null ? money(d.total_value_usd_m) : null],
@@ -243,6 +348,8 @@
     el: el, svg: svg, money: money, bn: bn, year: year, uniq: uniq, isUrl: isUrl, host: host, sum: sum, fmtDate: fmtDate, when: when,
     STATUS_LABEL: STATUS_LABEL, assetName: assetName,
     bindFilters: bindFilters, onChange: onChange, filtered: filtered, isFiltered: isFiltered, range: range, changed: changed, setFilters: setFilters,
+    FACETS: FACETS, options: options, upOptions: upOptions, undisclosedUp: undisclosedUp, set: set, toggle: toggle, state: state, except: except,
+    phaseGroup: phaseGroup, csv: csv,
     byYear: byYear, topBy: topBy, kpis: kpis, sorter: sorter, detailFields: detailFields, sourceLinks: sourceLinks, events: events,
     timeline: timeline, bindTheme: bindTheme, tooltip: tooltip
   };

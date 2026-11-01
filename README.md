@@ -31,7 +31,7 @@ Everything is plain YAML, so changes are reviewed in pull requests and the full 
 
 `docs/index.html` is a self-contained page set as a briefing (no server; the data is embedded, only fonts load
 from Google Fonts). It has a search bar and filters that stay at the top as you scroll (filters are kept in the link,
-so a filtered view can be shared), headline figures, a timeline of every deal by date and upfront, a sortable
+so a filtered view can be shared; Format, Phase and Area take several values, each option shows its deal count, and the matching deals export as CSV), headline figures, a timeline of every deal by date and upfront, a sortable
 register with each deal's terms, history and sources, the market (largest upfronts, top licensees, areas,
 modalities, deals by year), what could sign next (open options and the watchlist), a calendar of status changes and
 catalysts, and policy.
@@ -142,6 +142,7 @@ Signed deal (`data/deals.yaml`):
 | `licensee`, `licensee_hq`, `licensee_type` | Big Pharma / Mid-size Pharma / Biotech / NewCo |
 | `deal_type` | License, Option, Collaboration, NewCo, Acquisition, Platform |
 | `asset`, `target`, `modality`, `therapeutic_area`, `indication`, `phase_at_deal` | What was licensed |
+| `format` | Finer molecule type for comparables: ADC, Bispecific / multispecific, T-cell engager, Monoclonal antibody, Other biologic, Small molecule, Peptide, Nucleic acid, Cell or gene therapy, Radiopharmaceutical, Undisclosed. Optional: `sync` leaves it blank, so fill it in when reviewing the weekly PR (`add --format`, or edit the YAML). |
 | `territory` | e.g. Ex-Greater China, Global, US & Canada |
 | `upfront_usd_m`, `equity_usd_m`, `milestones_usd_m`, `total_value_usd_m`, `royalties` | Economics in US$ millions |
 | `status`, `status_date`, `status_note` | active / pending / completed / terminated |

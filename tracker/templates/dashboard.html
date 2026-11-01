@@ -7,7 +7,7 @@
 <meta name="description" content="Every China-to-US biotech out-licensing deal, set as a briefing: deal flow, the largest upfronts, who is buying, and what could sign next.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
 /* Hallmark · shape: app screen · genre: editorial · theme: Specimen (deal 3/3, seed china-biotech-out-licensing-deal-9515·80039669·2026-10-31·r0) · redesign: full
  * nav: masthead with section contents and a sticky filter rule · signature: the deal-flow timeline, split at 2025 where coverage turns complete · states: full, empty (filters match nothing), no-upfront marks
@@ -19,7 +19,7 @@
   color-scheme: light;
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
   --text-xs: 0.75rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.44rem; --text-2xl: 1.728rem; --text-3xl: 2.074rem;
-  --text-figure: 3rem; --text-display: 4.25rem; --text-section: 2.074rem; --text-title: 1.2rem; --text-lead: 1.2rem;
+  --text-figure: 2.5rem; --text-figure-lead: 3.5rem; --text-display: 4.25rem; --text-primary: 2.75rem; --text-section: 2.074rem; --text-minor: 1.5rem; --text-title: 1.2rem; --text-lead: 1.2rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
   --container: 1280px; --gutter: 64px; --gap-columns: 40px;
@@ -63,9 +63,12 @@ body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-
 a { color: inherit; text-decoration-color: var(--color-accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
 a:hover { text-decoration-thickness: 2px; }
 h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--display-weight); font-synthesis: none; letter-spacing: var(--tracking-display); line-height: 1.02; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
-h1, h2 { font-variation-settings: "opsz" var(--display-optical); }
+h1 { font-variation-settings: "opsz" var(--display-optical); }
+h2 { font-optical-sizing: auto; }
 h1 { max-width: 16ch; font-size: var(--text-display); }
 h2 { max-width: 30ch; font-size: var(--text-section); }
+h2.h-primary { font-size: var(--text-primary); }
+h2.h-minor { font-size: var(--text-minor); line-height: 1.1; }
 h3 { font-optical-sizing: auto; font-size: var(--text-title); line-height: 1.15; }
 p { margin: 0; text-wrap: pretty; }
 button, input, select { font: inherit; color: inherit; }
@@ -95,21 +98,22 @@ button, input, select { font: inherit; color: inherit; }
 
 /* the finder: one search line over a row of facets */
 .filters { position: sticky; top: 0; z-index: var(--z-sticky); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-ink); }
-.finder { display: grid; gap: var(--space-sm); padding-block: var(--space-md) var(--space-md); }
+.finder { display: grid; gap: var(--space-sm); padding-block: var(--space-sm); }
 .search { position: relative; display: flex; align-items: center; border-bottom: var(--rule-hair) solid var(--color-rule-2); transition: border-color var(--dur-short) var(--ease-out); }
 .search:hover { border-color: var(--color-ink-2); }
 .search:focus-within { border-color: var(--color-accent); box-shadow: 0 1px 0 var(--color-accent); }
 .search svg { flex-shrink: 0; width: 20px; height: 20px; stroke: var(--color-muted); fill: none; stroke-width: 1.5; }
 .search:focus-within svg { stroke: var(--color-accent); }
-.search input { flex: 1 1 auto; min-width: 0; min-height: 52px; padding: 0 var(--space-sm); border: 0; background: transparent; font-size: var(--text-xl); letter-spacing: -0.01em; }
+.search input { flex: 1 1 auto; min-width: 0; min-height: 44px; padding: 0 var(--space-sm); border: 0; background: transparent; font-size: var(--text-lg); letter-spacing: -0.01em; }
 .search input::placeholder { color: var(--color-muted); opacity: 1; }
 .search input:focus-visible { outline: none; }
 .search input::-webkit-search-cancel-button { cursor: pointer; }
 .search kbd { flex-shrink: 0; min-width: 24px; padding: 1px var(--space-2xs); border: var(--rule-hair) solid var(--color-rule-2); font-family: var(--font-outlier); font-size: var(--text-xs); color: var(--color-muted); text-align: center; }
 .search:focus-within kbd { visibility: hidden; }
-.facets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.25fr) auto; gap: var(--space-md) var(--space-lg); align-items: end; }
-.facet { display: grid; gap: var(--space-3xs); min-width: 0; }
-.facet > span, .facet legend { padding: 0; font-size: var(--text-xs); color: var(--color-muted); transition: color var(--dur-short) var(--ease-out); }
+.facets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(0, 1.25fr) auto auto; gap: var(--space-sm) var(--space-lg); align-items: end; }
+.facets--more { grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, 2.25fr); padding-top: var(--space-2xs); }
+.facet { position: relative; display: grid; gap: var(--space-3xs); min-width: 0; }
+.facet > span, .facet legend, .facet .flabel { padding: 0; font-size: var(--text-xs); color: var(--color-muted); transition: color var(--dur-short) var(--ease-out); }
 fieldset.facet { margin: 0; padding: 0; border: 0; }
 .pick { position: relative; display: flex; align-items: center; gap: var(--space-xs); min-width: 0; }
 .pick select { appearance: none; width: 100%; min-width: 0; min-height: 36px; padding: 0 var(--space-lg) 0 0; border: 0; border-bottom: var(--rule-hair) solid var(--color-rule); border-radius: 0; background: transparent; color: var(--color-ink); font-size: var(--text-sm); text-overflow: ellipsis; cursor: pointer; transition: border-color var(--dur-short) var(--ease-out); }
@@ -119,10 +123,47 @@ fieldset.facet { margin: 0; padding: 0; border: 0; }
 .pick .sel { position: relative; flex: 1 1 0; min-width: 0; display: flex; }
 .pick .sel::after { content: ""; position: absolute; right: var(--space-2xs); top: calc(50% - 5px); width: 6px; height: 6px; border-right: 1.5px solid var(--color-muted); border-bottom: 1.5px solid var(--color-muted); transform: rotate(45deg); pointer-events: none; }
 .pick .to { font-size: var(--text-sm); color: var(--color-muted); }
-.facet.is-set > span, .facet.is-set legend { color: var(--color-accent); }
+.facet.is-set > span, .facet.is-set legend, .facet.is-set .flabel { color: var(--color-accent); }
+/* multi-select: a plain underlined field that opens a short checklist with counts */
+.mbtn { all: unset; box-sizing: border-box; position: relative; display: block; width: 100%; min-height: 36px; padding: 0 var(--space-lg) 0 0; border-bottom: var(--rule-hair) solid var(--color-rule); color: var(--color-ink); font-size: var(--text-sm); line-height: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; transition: border-color var(--dur-short) var(--ease-out); }
+.mbtn::after { content: ""; position: absolute; right: var(--space-2xs); top: calc(50% - 5px); width: 6px; height: 6px; border-right: 1.5px solid var(--color-muted); border-bottom: 1.5px solid var(--color-muted); transform: rotate(45deg); }
+.mbtn:hover { border-bottom-color: var(--color-ink-2); }
+.mbtn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.mbtn[aria-expanded="true"]::after { transform: translateY(3px) rotate(225deg); }
+.facet.is-set .mbtn { border-bottom: 2px solid var(--color-accent); font-weight: 500; }
+.facet.is-set .mbtn::after { border-color: var(--color-accent); }
+.mpop { position: absolute; top: calc(100% + var(--space-2xs)); left: 0; z-index: var(--z-tooltip); min-width: 100%; width: max-content; max-width: min(320px, calc(100vw - 32px)); max-height: min(360px, 60vh); overflow-y: auto; padding: var(--space-2xs) 0; background: var(--color-paper); border: var(--rule-hair) solid var(--color-ink); box-shadow: 0 6px 18px -6px color-mix(in oklab, var(--color-ink) 28%, transparent); }
+.mpop.flip { left: auto; right: 0; }
+.opt { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--space-xs); min-height: 36px; padding: 0 var(--space-sm); font-size: var(--text-sm); cursor: pointer; }
+.opt:hover, .opt:focus-within { background: var(--color-paper-2); }
+.opt input { width: 16px; height: 16px; margin: 0; accent-color: var(--color-accent); cursor: inherit; }
+.opt input:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.opt b { font-weight: 400; font-family: var(--font-outlier); font-size: var(--text-xs); color: var(--color-muted); font-variant-numeric: tabular-nums; }
+.opt.zero { color: var(--color-muted); }
+.more-toggle { all: unset; align-self: end; min-height: 36px; line-height: 36px; font-size: var(--text-sm); color: var(--color-ink-2); white-space: nowrap; cursor: pointer; text-decoration: underline; text-decoration-color: var(--color-rule-2); text-underline-offset: 0.25em; }
+.more-toggle:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
+.more-toggle:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.more-toggle.is-set { color: var(--color-accent); }
+/* the line of active filters, each one removable */
+.applied { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2xs) var(--space-md); font-size: var(--text-sm); }
+.applied:empty { display: none; }
+.tag { all: unset; display: inline-flex; align-items: baseline; gap: var(--space-2xs); color: var(--color-ink); cursor: pointer; text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.25em; }
+.tag small { color: var(--color-muted); font-size: var(--text-xs); }
+.tag svg { width: 9px; height: 9px; stroke: var(--color-accent); stroke-width: 1.6; fill: none; align-self: center; }
+.tag:hover { text-decoration-thickness: 2px; }
+.tag:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.applied .note { color: var(--color-muted); }
+.applied .clear { font-size: var(--text-sm); }
+.export { all: unset; font-size: var(--text-xs); color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; }
+.export:hover { text-decoration-thickness: 2px; }
+.export:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.export:disabled { color: var(--color-muted); text-decoration: none; cursor: default; }
+.hint { color: var(--color-ink-2); }
+.hint button { all: unset; color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; }
+.hint button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .facet.is-set select { border-bottom: 2px solid var(--color-accent); font-weight: 500; }
 .facet.is-set .sel::after { border-color: var(--color-accent); }
-.tally { display: grid; justify-items: end; gap: var(--space-3xs); white-space: nowrap; }
+.tally { display: grid; justify-items: end; gap: var(--space-3xs); white-space: nowrap; padding-bottom: var(--space-3xs); }
 .match { font-family: var(--font-outlier); font-size: var(--text-sm); color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
 .match b { font-weight: 400; color: var(--color-ink); }
 .clear { all: unset; font-size: var(--text-xs); color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; }
@@ -132,18 +173,30 @@ fieldset.facet { margin: 0; padding: 0; border: 0; }
 
 /* the opening */
 .open { padding-block: var(--space-md) 0; }
-.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: var(--space-lg) 0 0; }
+.figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1.3fr)) repeat(2, minmax(0, 1fr)); align-items: start; margin: var(--space-lg) 0 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
 .figure { padding: var(--space-md) var(--space-lg) var(--space-lg); border-left: var(--rule-hair) solid var(--color-rule); }
 .figure:first-child { border-left: 0; padding-left: 0; }
 .figure dt { font-size: var(--text-sm); color: var(--color-muted); font-weight: 500; }
 .figure dd { margin: 0; }
-.figure .val { display: block; font-family: var(--font-display); font-variation-settings: "opsz" var(--display-optical); font-size: var(--text-figure); line-height: 1.05; letter-spacing: var(--tracking-display); font-variant-numeric: lining-nums tabular-nums; }
+.figure .val { display: block; margin-block: var(--space-2xs) var(--space-3xs); font-family: var(--font-body); font-weight: 600; font-size: var(--text-figure); line-height: 1; letter-spacing: -0.03em; color: var(--color-ink); font-variant-numeric: lining-nums tabular-nums; }
+.figure:nth-child(-n+2) .val { font-size: var(--text-figure-lead); }
+.figure .val .unit { font-size: 0.58em; font-weight: 500; letter-spacing: 0; color: var(--color-ink-2); }
+.figure .val .unit:first-child { margin-right: 0.04em; }
+.figure .val .unit:last-child { margin-left: 0.06em; }
 .figure .note { display: block; font-size: var(--text-sm); color: var(--color-ink-2); }
 
 /* sections */
 .section { padding-block: var(--space-3xl) 0; }
 .section-head { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--gap-columns); align-items: end; margin-bottom: var(--space-lg); }
 .section-head p { color: var(--color-ink-2); max-width: 52ch; }
+.band { background: var(--color-paper-2); box-shadow: 0 0 0 100vmax var(--color-paper-2); clip-path: inset(0 -100vmax); }
+.section.band { padding-block: var(--space-2xl); }
+.band--first { margin-top: var(--space-3xl); }
+.band + .band { border-top: var(--rule-hair) solid var(--color-rule); }
+.band .rule--double, .band .entries, .band .trail { border-top-color: var(--color-rule-2); }
+.band tr.row:hover td, .band .opt:hover { background: var(--color-paper-3); }
+.section--minor { padding-top: var(--space-2xl); }
+.section--minor .section-head p { font-size: var(--text-sm); color: var(--color-muted); }
 .count { font-family: var(--font-outlier); font-size: var(--text-sm); color: var(--color-muted); }
 .rule--double { border: 0; border-top: 3px double var(--color-rule-2); margin: 0; }
 
@@ -210,9 +263,15 @@ dl.detail dd { margin: 0; }
 .market .sub { font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--space-md); }
 .hbars { display: grid; gap: var(--space-2xs); }
 .hbar { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 3rem; align-items: center; gap: var(--space-sm); font-size: var(--text-sm); }
+button.hbar { all: unset; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) 3rem; align-items: center; gap: var(--space-sm); width: 100%; min-height: 24px; font-size: var(--text-sm); cursor: pointer; }
+button.hbar:hover .name { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; }
+button.hbar:hover .fill { background: var(--color-ink-2); }
+button.hbar:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+button.hbar[aria-pressed="true"] .name { color: var(--color-accent); font-weight: 500; }
+button.hbar[aria-pressed="true"] .fill { background: var(--color-accent); }
 .hbar .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .hbar .track { height: 12px; }
-.hbar .fill { display: block; height: 100%; background: var(--color-ink); }
+.hbar .fill { display: block; height: 100%; background: var(--color-ink); transition: background-color var(--dur-short) var(--ease-out); }
 .hbar .v { text-align: right; font-family: var(--font-outlier); font-variant-numeric: tabular-nums; color: var(--color-ink-2); }
 .stack { display: flex; height: 28px; gap: var(--space-3xs); margin-bottom: var(--space-sm); }
 .stack span { display: block; height: 100%; min-width: 2px; }
@@ -249,13 +308,14 @@ dl.detail dd { margin: 0; }
 .policy article:last-child { border-right: 0; }
 .policy .meta { display: flex; gap: var(--space-sm); font-size: var(--text-sm); color: var(--color-muted); }
 
-footer { margin-top: var(--space-3xl); padding-block: var(--space-xl) var(--space-2xl); border-top: var(--rule-hair) solid var(--color-ink); font-size: var(--text-sm); color: var(--color-ink-2); }
+footer { margin-top: var(--space-3xl); padding-block: var(--space-xl) var(--space-2xl); border-top: var(--rule-hair) solid var(--color-ink); background: var(--color-paper-2); font-size: var(--text-sm); color: var(--color-ink-2); }
 footer .container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); }
 footer p + p { margin-top: var(--space-xs); }
 
 @media (max-width: 60rem) {
-  :root { --gutter: 24px; --text-display: 3rem; --text-figure: 2.25rem; --text-section: 1.728rem; }
-  .facets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  :root { --gutter: 24px; --text-display: 3rem; --text-figure: 2rem; --text-figure-lead: 2.5rem; --text-primary: 2.074rem; --text-section: 1.728rem; --text-minor: 1.35rem; }
+  .facets, .facets--more { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .more-toggle { justify-self: start; }
   .facet--years { grid-column: 1 / -1; }
   .tally { grid-column: 1 / -1; grid-auto-flow: column; justify-content: space-between; align-items: baseline; }
   .section-head, .market, .next, .cal, .years { grid-template-columns: minmax(0, 1fr); }
@@ -270,12 +330,12 @@ footer p + p { margin-top: var(--space-xs); }
   .filters { position: static; }
   .search input { font-size: var(--text-lg); }
   .search kbd { display: none; }
-  .hbar { grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) 2.5rem; }
+  .hbar, button.hbar { grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) 2.5rem; }
   .stack-key { grid-template-columns: minmax(0, 1fr); }
   .col-hide { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn, .timeline .dot, .search, .pick select, .facet > span, .facet legend { transition: none; }
+  .btn, .timeline .dot, .search, .pick select, .mbtn, .hbar .fill, .facet > span, .facet legend, .facet .flabel { transition: none; }
 }
 </style>
 </head>
@@ -301,15 +361,23 @@ footer p + p { margin-top: var(--space-xs); }
         <kbd aria-hidden="true">/</kbd>
       </div>
       <div class="facets">
-        <label class="facet" data-for="f-status"><span>Status</span><span class="pick"><span class="sel"><select id="f-status"><option value="">All</option></select></span></span></label>
-        <label class="facet" data-for="f-area"><span>Therapeutic area</span><span class="pick"><span class="sel"><select id="f-area"><option value="">All</option></select></span></span></label>
-        <label class="facet" data-for="f-hq"><span>Licensee HQ</span><span class="pick"><span class="sel"><select id="f-hq"><option value="">All</option></select></span></span></label>
-        <label class="facet" data-for="f-type"><span>Deal type</span><span class="pick"><span class="sel"><select id="f-type"><option value="">All</option></select></span></span></label>
+        <div class="facet" data-multi="area"></div>
+        <div class="facet" data-multi="format"></div>
+        <div class="facet" data-multi="phase"></div>
+        <label class="facet" id="facet-up"><span>Upfront</span><span class="pick"><span class="sel"><select id="f-up"></select></span></span></label>
         <fieldset class="facet facet--years" id="facet-years"><legend>Announced</legend>
           <span class="pick"><span class="sel"><select id="f-from" aria-label="From year"></select></span><span class="to">to</span><span class="sel"><select id="f-to" aria-label="To year"></select></span></span>
         </fieldset>
-        <div class="tally"><span class="match" id="match" role="status"></span><button class="clear" type="button" id="reset">Clear filters</button></div>
+        <button class="more-toggle" type="button" id="more-toggle" aria-expanded="false" aria-controls="more-facets">More filters</button>
+        <div class="tally"><span class="match" id="match"></span><button class="export" type="button" id="export">Export (CSV)</button></div>
       </div>
+      <div class="facets facets--more" id="more-facets" hidden>
+        <div class="facet" data-multi="status"></div>
+        <div class="facet" data-multi="type"></div>
+        <div class="facet" data-multi="hq"></div>
+      </div>
+      <div class="applied" id="applied"></div>
+      <p class="sr-only" id="announce" role="status" aria-live="polite"></p>
     </div>
   </div>
 
@@ -319,7 +387,7 @@ footer p + p { margin-top: var(--space-xs); }
 
   <section class="container section" aria-labelledby="h-flow">
     <div class="section-head">
-      <h2 id="h-flow">Every deal, by date and upfront</h2>
+      <h2 id="h-flow" class="h-primary">Every deal, by date and upfront</h2>
       <p>Each stem is one signed deal, its height the upfront cash. The left panel holds landmark deals only; from 2025 every deal is recorded. Click a mark to open it in the register.</p>
     </div>
     <div class="timeline" id="c-timeline" role="img" aria-label="Deal-flow timeline of upfront payments by announcement date"></div>
@@ -333,7 +401,7 @@ footer p + p { margin-top: var(--space-xs); }
 
   <section class="container section" id="register" aria-labelledby="h-register">
     <div class="section-head">
-      <h2 id="h-register">The register <span class="count" id="n-deals"></span></h2>
+      <h2 id="h-register" class="h-primary">The register <span class="count" id="n-deals"></span></h2>
       <p>Click a row for terms, territory, sources and history. Money is in US$ as announced; the headline value includes milestones and is not risk-adjusted.</p>
     </div>
     <hr class="rule--double">
@@ -342,6 +410,7 @@ footer p + p { margin-top: var(--space-xs); }
       <th data-sort="licensor" scope="col"><button type="button">Licensor (China)</button></th>
       <th data-sort="licensee" scope="col"><button type="button">Licensee</button></th>
       <th data-sort="asset" scope="col"><button type="button">Asset or target</button></th>
+      <th data-sort="format" scope="col" class="col-hide"><button type="button">Format</button></th>
       <th data-sort="therapeutic_area" scope="col" class="col-hide"><button type="button">Area</button></th>
       <th data-sort="phase_at_deal" scope="col" class="col-hide"><button type="button">Phase at deal</button></th>
       <th data-sort="upfront_usd_m" scope="col" class="r"><button type="button">Upfront</button></th>
@@ -351,7 +420,7 @@ footer p + p { margin-top: var(--space-xs); }
     <div class="more"><button class="btn btn--primary" type="button" id="show-all"></button></div>
   </section>
 
-  <section class="container section" id="market" aria-labelledby="h-market">
+  <section class="container section band band--first" id="market" aria-labelledby="h-market">
     <div class="section-head">
       <h2 id="h-market">The market in four views</h2>
       <p>All four follow the filters above.</p>
@@ -365,12 +434,12 @@ footer p + p { margin-top: var(--space-xs); }
       </div>
       <div>
         <h3>Who is buying</h3>
-        <p class="sub">Licensees by number of signed deals, top ten</p>
+        <p class="sub">Licensees by number of signed deals, top ten. Click one to filter by it.</p>
         <div class="hbars" id="c-licensee"></div>
       </div>
       <div>
         <h3>What they license</h3>
-        <p class="sub">Signed deals by therapeutic area</p>
+        <p class="sub">Signed deals by therapeutic area. Click one to filter by it.</p>
         <div class="hbars" id="c-area"></div>
       </div>
       <div>
@@ -386,7 +455,7 @@ footer p + p { margin-top: var(--space-xs); }
     </div>
   </section>
 
-  <section class="container section" id="next" aria-labelledby="h-next">
+  <section class="container section band" id="next" aria-labelledby="h-next">
     <div class="section-head">
       <h2 id="h-next">What could sign next</h2>
       <p>Open options a licensee can still exercise, reported talks, and assets with ex-China rights that look unpartnered. Likelihood is an analyst judgement, not reported news.</p>
@@ -404,16 +473,16 @@ footer p + p { margin-top: var(--space-xs); }
     </div>
   </section>
 
-  <section class="container section" id="calendar" aria-labelledby="h-cal">
-    <div class="section-head"><h2 id="h-cal">Status changes and catalysts</h2><p>Upcoming dates recorded on deals and watchlist items, then the record of approvals, terminations and option decisions.</p></div>
+  <section class="container section section--minor" id="calendar" aria-labelledby="h-cal">
+    <div class="section-head"><h2 id="h-cal" class="h-minor">Status changes and catalysts</h2><p>Upcoming dates recorded on deals and watchlist items, then the record of approvals, terminations and option decisions.</p></div>
     <div class="cal">
       <div><h3>Upcoming</h3><ul class="trail" id="t-cat"></ul></div>
       <div><h3>History</h3><ul class="trail" id="t-hist"></ul></div>
     </div>
   </section>
 
-  <section class="container section" id="policy" aria-labelledby="h-policy">
-    <div class="section-head"><h2 id="h-policy">Policy watch</h2><p>Rules that change how a China to US deal can be structured: licence, NewCo or equity.</p></div>
+  <section class="container section section--minor" id="policy" aria-labelledby="h-policy">
+    <div class="section-head"><h2 id="h-policy" class="h-minor">Policy watch</h2><p>Rules that change how a China to US deal can be structured: licence, NewCo or equity.</p></div>
     <div class="policy" id="policy-cards"></div>
   </section>
 </main>
@@ -444,24 +513,157 @@ footer p + p { margin-top: var(--space-xs); }
      ["Headline value", bn(k.total), "Including milestones"],
      ["Still active", k.active.toLocaleString(), k.terminated + " terminated, " + k.completed + " acquired"]
     ].forEach(function (f) {
-      host.appendChild(el("div", { cls: "figure" }, [el("dt", { text: f[0] }), el("dd", null, [el("span", { cls: "val", text: f[1] }), el("span", { cls: "note", text: f[2] })])]));
+      var m = /^(\$?)([\d.,]+)([A-Z]?)$/.exec(f[1]) || [f[1], "", f[1], ""];
+      var val = el("span", { cls: "val" }, [m[1] ? el("span", { cls: "unit", text: m[1] }) : null, m[2], m[3] ? el("span", { cls: "unit", text: m[3] }) : null]);
+      host.appendChild(el("div", { cls: "figure" }, [el("dt", { text: f[0] }), el("dd", null, [val, el("span", { cls: "note", text: f[2] })])]));
     });
     finder(rows);
   }
 
-  // ---------- the finder: mark the facets in use, count the matches ----------
+  // ---------- the finder ----------
+  // Multi-select facets open a checklist with counts; every active filter shows as a removable tag.
+  var multi = {}, lastAdded = null, announceTimer;
+  function $(id) { return document.getElementById(id); }
+  function closeAll(except) { Object.keys(multi).forEach(function (k) { if (k !== except) multi[k].open(false); }); }
+  function buildMulti(host) {
+    var key = host.getAttribute("data-multi"), id = "m-" + key, boxes = {};
+    var lab = el("span", { cls: "flabel", id: id + "-l", text: C.FACETS[key].label });
+    var val = el("span", { id: id + "-v", text: "All" });
+    var btn = el("button", { cls: "mbtn", type: "button", "aria-expanded": "false", "aria-controls": id + "-p", "aria-labelledby": id + "-l " + id + "-v" }, [val]);
+    var pop = el("div", { cls: "mpop", id: id + "-p", role: "group", "aria-labelledby": id + "-l" });
+    pop.hidden = true;
+    C.options(key).forEach(function (o) {
+      var cb = el("input", { type: "checkbox", value: o.value }), count = el("b", { "aria-hidden": "true" });
+      var row = el("label", { cls: "opt" }, [cb, el("span", { text: o.label }), count]);
+      cb.addEventListener("change", function () {
+        C.toggle(key, o.value);
+        lastAdded = cb.checked ? { key: key, value: o.value, label: o.label } : null;
+        C.changed();
+      });
+      boxes[o.value] = { cb: cb, count: count, row: row, label: o.label };
+      pop.appendChild(row);
+    });
+    function inputs() { return Array.prototype.slice.call(pop.querySelectorAll("input:not(:disabled)")); }
+    function open(v) {
+      if (v) closeAll(key);
+      pop.hidden = !v; btn.setAttribute("aria-expanded", v ? "true" : "false");
+      if (!v) return;
+      pop.classList.remove("flip");
+      if (pop.getBoundingClientRect().right > document.documentElement.clientWidth - 8) pop.classList.add("flip");
+      var first = pop.querySelector("input:checked") || inputs()[0]; if (first) first.focus();
+    }
+    btn.addEventListener("click", function () { open(pop.hidden); });
+    btn.addEventListener("keydown", function (e) { if (e.key === "ArrowDown" && pop.hidden) { e.preventDefault(); open(true); } });
+    pop.addEventListener("keydown", function (e) {
+      var list = inputs(), i = list.indexOf(document.activeElement);
+      if (e.key === "Escape") { e.preventDefault(); open(false); btn.focus(); }
+      else if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); var n = list[(i + (e.key === "ArrowDown" ? 1 : -1) + list.length) % list.length]; if (n) n.focus(); }
+      else if (e.key === "Home" || e.key === "End") { e.preventDefault(); if (list.length) list[e.key === "Home" ? 0 : list.length - 1].focus(); }
+    });
+    host.addEventListener("focusout", function (e) { if (e.relatedTarget && !host.contains(e.relatedTarget)) open(false); });
+    host.appendChild(lab); host.appendChild(btn); host.appendChild(pop);
+    multi[key] = {
+      open: open,
+      inside: function (n) { return host.contains(n); },
+      update: function () {
+        var on = [];
+        C.options(key).forEach(function (o) {
+          var b = boxes[o.value]; if (!b) return;
+          b.cb.checked = o.on; b.count.textContent = o.n;
+          b.cb.disabled = !o.n && !o.on;
+          b.cb.setAttribute("aria-label", o.label + ", " + o.n + (o.n === 1 ? " deal" : " deals"));
+          b.row.classList.toggle("zero", !o.n && !o.on);
+          if (o.on) on.push(o.label);
+        });
+        val.textContent = !on.length ? "All" : on.length === 1 ? on[0] : on[0] + " + " + (on.length - 1);
+        host.classList.toggle("is-set", on.length > 0);
+      }
+    };
+  }
+  document.querySelectorAll("[data-multi]").forEach(buildMulti);
+  document.addEventListener("pointerdown", function (e) {
+    Object.keys(multi).forEach(function (k) { if (!multi[k].inside(e.target)) multi[k].open(false); });
+  });
+
+  $("more-toggle").addEventListener("click", function () {
+    var panel = $("more-facets"), show = panel.hidden;
+    panel.hidden = !show; this.setAttribute("aria-expanded", show ? "true" : "false");
+  });
+
+  function nameOf(key, v) { var f = C.FACETS[key]; return f.name ? f.name(v) : v; }
+  function tag(text, kind, aria, onRemove) {
+    var b = el("button", { cls: "tag", type: "button", "aria-label": aria }, [text, kind ? el("small", { text: kind }) : null]);
+    b.appendChild(svg("svg", { viewBox: "0 0 10 10", "aria-hidden": "true" })).appendChild(svg("path", { d: "M1.5 1.5l7 7M8.5 1.5l-7 7" }));
+    b.addEventListener("click", function () {
+      var next = b.nextElementSibling && b.nextElementSibling.classList.contains("tag") ? b.nextElementSibling.getAttribute("aria-label") : null;
+      onRemove(); C.changed();
+      var t = next && document.querySelector('#applied .tag[aria-label="' + next.replace(/"/g, '\\"') + '"]');
+      (t || $("q")).focus();
+    });
+    return b;
+  }
+  function applied(rows) {
+    var host = $("applied"), st = C.state(); host.textContent = "";
+    if (!C.isFiltered()) return;
+    if (st.q.trim()) host.appendChild(tag("“" + st.q.trim() + "”", "search", "Clear the search " + st.q.trim(), function () { C.set("q", ""); }));
+    ["area", "format", "phase", "licensee", "status", "type", "hq"].forEach(function (k) {
+      st[k].forEach(function (v) {
+        var label = nameOf(k, v), kind = C.FACETS[k].label.toLowerCase();
+        host.appendChild(tag(label, kind, "Remove " + kind + ": " + label, function () { C.toggle(k, v); }));
+      });
+    });
+    if (st.up) host.appendChild(tag(money(st.up) + "+", "upfront", "Remove upfront minimum " + money(st.up), function () { C.set("up", 0); }));
+    if (st.from !== C.minY || st.to !== C.maxY) host.appendChild(tag(st.from === st.to ? String(st.from) : st.from + " to " + st.to, "announced", "Remove year range", function () { C.set("from", C.minY); C.set("to", C.maxY); }));
+    if (st.up) { var nd = C.undisclosedUp(); if (nd) host.appendChild(el("span", { cls: "note", text: "Excludes " + nd + (nd === 1 ? " deal" : " deals") + " with undisclosed upfront." })); }
+    if (!rows.length) {
+      var hint = el("span", { cls: "hint" }, ["No deals match. "]);
+      var last = lastAdded && (lastAdded.key === "q" ? !!st.q.trim() : st[lastAdded.key].indexOf(lastAdded.value) >= 0) ? lastAdded : null;
+      if (last) {
+        var undo = el("button", { type: "button", text: last.key === "q" ? "Clear the search “" + st.q.trim() + "”" : "Remove " + last.label });
+        undo.addEventListener("click", function () {
+          if (last.key === "q") C.set("q", ""); else C.toggle(last.key, last.value);
+          lastAdded = null; C.changed(); $("q").focus();
+        });
+        hint.appendChild(undo);
+      } else hint.appendChild(document.createTextNode("Remove a filter to widen the view."));
+      host.appendChild(hint);
+    }
+    var clear = el("button", { cls: "clear", type: "button", text: "Clear filters" });
+    clear.addEventListener("click", function () { C.setFilters({}); lastAdded = null; C.changed(); $("q").focus(); });
+    host.appendChild(clear);
+  }
   function finder(rows) {
-    var on = C.isFiltered(), m = document.getElementById("match"), r = C.range();
+    var on = C.isFiltered(), st = C.state(), m = $("match"), total = C.deals.length;
+    Object.keys(multi).forEach(function (k) { multi[k].update(); });
+    var up = $("f-up");
+    C.upOptions().forEach(function (o, i) { if (up.options[i]) up.options[i].textContent = o.label + " (" + o.n + ")"; });
+    $("facet-up").classList.toggle("is-set", !!st.up);
+    $("facet-years").classList.toggle("is-set", st.from !== C.minY || st.to !== C.maxY);
+    var hidden = ["status", "type", "hq"].reduce(function (a, k) { return a + st[k].length; }, 0), mt = $("more-toggle");
+    mt.textContent = "More filters" + (hidden ? " (" + hidden + ")" : ""); mt.classList.toggle("is-set", hidden > 0);
     m.textContent = "";
     m.appendChild(el("b", { text: rows.length.toLocaleString() }));
-    m.appendChild(document.createTextNode(on ? " of " + C.deals.length + " deals" : " deals"));
-    document.getElementById("reset").disabled = !on;
-    document.querySelectorAll(".facet[data-for]").forEach(function (f) { f.classList.toggle("is-set", !!document.getElementById(f.dataset.for).value); });
-    document.getElementById("facet-years").classList.toggle("is-set", r.from !== C.minY || r.to !== C.maxY);
+    m.appendChild(document.createTextNode(on ? " of " + total + " deals" : " deals"));
+    var ex = $("export");
+    ex.textContent = !rows.length ? "Nothing to export" : rows.length === total ? "Export all " + total + " (CSV)" : "Export " + rows.length + (rows.length === 1 ? " deal" : " deals") + " (CSV)";
+    ex.disabled = !rows.length;
+    applied(rows);
+    clearTimeout(announceTimer);
+    announceTimer = setTimeout(function () { $("announce").textContent = rows.length + (on ? " of " + total : "") + " deals"; }, 600);
   }
+  $("export").addEventListener("click", function () {
+    var rows = C.filtered().sort(C.sorter(sortKey, sortDir));
+    if (!rows.length) return;
+    var url = URL.createObjectURL(new Blob([C.csv(rows)], { type: "text/csv;charset=utf-8" }));
+    var a = el("a", { href: url, download: "china-licensing-deals-" + C.TODAY + ".csv" });
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    $("announce").textContent = "Downloaded " + rows.length + " deals as CSV";
+  });
+  $("q").addEventListener("input", function () { lastAdded = this.value.trim() ? { key: "q" } : null; });
   document.addEventListener("keydown", function (e) {
     var t = e.target, typing = t.isContentEditable || /^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName);
-    if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); document.getElementById("q").focus(); }
+    if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); $("q").focus(); }
   });
 
   // ---------- signature: split timeline ----------
@@ -549,14 +751,14 @@ footer p + p { margin-top: var(--space-xs); }
     var extra = el("div", { cls: "history" });
     C.events(d).forEach(function (e) { extra.appendChild(el("div", null, [el("span", { cls: "num muted", text: e.date + "  " }), e.event])); });
     if ((d.sources || []).length) extra.appendChild(el("div", null, ["Sources: ", C.sourceLinks(d.sources)]));
-    return el("tr", { cls: "detail" }, [el("td", { colspan: 9 }, [dl, extra])]);
+    return el("tr", { cls: "detail" }, [el("td", { colspan: 10 }, [dl, extra])]);
   }
   function register(rows) {
     var tb = document.querySelector("#t-deals tbody"); tb.textContent = "";
     var sorted = rows.slice().sort(C.sorter(sortKey, sortDir));
     var shown = showAll ? sorted : sorted.slice(0, PAGE);
     var maxUp = Math.max.apply(null, C.deals.map(function (d) { return +d.upfront_usd_m || 0; }));
-    if (!shown.length) tb.appendChild(el("tr", null, [el("td", { colspan: 9, cls: "empty", text: "No deals match the filters. Clear the search or the filters." })]));
+    if (!shown.length) tb.appendChild(el("tr", null, [el("td", { colspan: 10, cls: "empty", text: "No deals match the filters. Remove a filter above to widen the view." })]));
     shown.forEach(function (d) {
       var up = el("td", { cls: "r bar-cell", text: C.money(d.upfront_usd_m) });
       if (d.upfront_usd_m) up.appendChild(el("i", { style: "width:" + Math.max(2, 72 * d.upfront_usd_m / maxUp).toFixed(1) + "px" }));
@@ -565,6 +767,7 @@ footer p + p { margin-top: var(--space-xs); }
         el("td", { cls: "who", text: d.licensor }),
         el("td", { cls: "who" }, [d.licensee, d.licensee_type ? el("small", { text: d.licensee_type }) : null]),
         el("td", null, [C.assetName(d), d.asset && d.target ? el("small", { cls: "muted", text: " " + d.target }) : null]),
+        el("td", { cls: "col-hide" + (d.format ? "" : " muted"), text: d.format || "Not classified" }),
         el("td", { cls: "col-hide", text: d.therapeutic_area || "" }), el("td", { cls: "col-hide", text: d.phase_at_deal || "" }),
         up, el("td", { cls: "r col-hide", text: C.money(d.total_value_usd_m) }),
         el("td", { cls: "st-" + d.status, text: C.STATUS_LABEL[d.status] || d.status })
@@ -609,18 +812,32 @@ footer p + p { margin-top: var(--space-xs); }
       tb.appendChild(tr);
     });
   }
-  function hbars(id, list) {
-    var host = document.getElementById(id); host.textContent = "";
+  // Bars for a facet: counted against every other filter, so choosing one never hides the rest. Click toggles it.
+  function hbars(id, key, field, n) {
+    var host = document.getElementById(id), chosen = C.state()[key];
+    var focused = host.contains(document.activeElement) ? document.activeElement.getAttribute("data-v") : null;
+    var all = C.topBy(C.except(key), field), list = all.slice(0, n);
+    chosen.forEach(function (v) { if (!list.some(function (r) { return r.label === v; })) list.push(all.filter(function (r) { return r.label === v; })[0] || { label: v, n: 0, up: 0 }); });
+    host.textContent = "";
     if (!list.length) { host.appendChild(el("p", { cls: "empty", text: "No deals match the filters." })); return; }
-    var max = list[0].n;
+    var max = Math.max.apply(null, list.map(function (r) { return r.n; })) || 1;
     list.forEach(function (r) {
-      var row = el("div", { cls: "hbar", title: r.label + ": " + r.n + " deals, " + money(r.up) + " upfront" }, [
+      var on = chosen.indexOf(r.label) >= 0;
+      var row = el("button", { cls: "hbar", type: "button", "data-v": r.label, "aria-pressed": on ? "true" : "false",
+        "aria-label": r.label + ", " + r.n + (r.n === 1 ? " deal" : " deals") + ", " + money(r.up) + " upfront. " + (on ? "Remove filter" : "Filter by it"),
+        title: r.label + ": " + r.n + " deals, " + money(r.up) + " upfront" }, [
         el("span", { cls: "name", text: r.label }),
         el("span", { cls: "track" }, [el("span", { cls: "fill", style: "width:" + (100 * r.n / max).toFixed(1) + "%" })]),
         el("span", { cls: "v", text: String(r.n) })
       ]);
+      row.addEventListener("click", function () {
+        C.toggle(key, r.label);
+        lastAdded = on ? null : { key: key, value: r.label, label: r.label };
+        C.changed();
+      });
       host.appendChild(row);
     });
+    if (focused) { var f = host.querySelector('[data-v="' + focused.replace(/"/g, '\\"') + '"]'); if (f) f.focus({ preventScroll: true }); }
   }
   function modality(rows) {
     var list = C.topBy(rows, "modality"), bar = document.getElementById("c-modality-bar"), key = document.getElementById("c-modality-key");
@@ -722,7 +939,7 @@ footer p + p { margin-top: var(--space-xs); }
   // ---------- wire up ----------
   function render(rows) {
     figures(rows); timeline(rows); register(rows); top10(rows);
-    hbars("c-licensee", C.topBy(rows, "licensee", 10)); hbars("c-area", C.topBy(rows, "therapeutic_area", 8)); modality(rows);
+    hbars("c-licensee", "licensee", "licensee", 10); hbars("c-area", "area", "therapeutic_area", 8); modality(rows);
     var yrs = C.byYear(rows);
     columns("c-count", yrs, function (b) { return b.n; }, function (v) { return String(Math.round(v)); });
     columns("c-upfront", yrs, function (b) { return b.up / 1000; }, function (v, axis) { return "$" + (axis ? (v % 1 ? v.toFixed(1) : v) : v.toFixed(2)) + "B"; });

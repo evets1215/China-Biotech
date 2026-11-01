@@ -64,6 +64,22 @@ THERAPEUTIC_AREAS = [
     "Undisclosed",
 ]
 
+# Finer than modality, for comparables: what kind of molecule changed hands.
+# Optional; sync leaves it blank and a reviewer fills it in.
+DEAL_FORMATS = [
+    "ADC",
+    "Bispecific / multispecific",
+    "T-cell engager",
+    "Monoclonal antibody",
+    "Other biologic",
+    "Small molecule",
+    "Peptide",
+    "Nucleic acid",
+    "Cell or gene therapy",
+    "Radiopharmaceutical",
+    "Undisclosed",
+]
+
 # Field order used when writing YAML so diffs stay readable.
 DEAL_FIELDS = [
     "id",
@@ -77,6 +93,7 @@ DEAL_FIELDS = [
     "asset",
     "target",
     "modality",
+    "format",
     "therapeutic_area",
     "indication",
     "phase_at_deal",
@@ -292,6 +309,8 @@ def validate(db: Database) -> list[str]:
             errors.append(f"{where}: status '{d['status']}' not in {sorted(DEAL_STATUSES)}")
         if d.get("deal_type") and d["deal_type"] not in DEAL_TYPES:
             errors.append(f"{where}: deal_type '{d['deal_type']}' not in {DEAL_TYPES}")
+        if d.get("format") and d["format"] not in DEAL_FORMATS:
+            errors.append(f"{where}: format '{d['format']}' not in {DEAL_FORMATS}")
         if d.get("therapeutic_area") and d["therapeutic_area"] not in THERAPEUTIC_AREAS:
             errors.append(f"{where}: therapeutic_area '{d['therapeutic_area']}' not in {THERAPEUTIC_AREAS}")
         for f in ("announced", "status_date", "last_verified"):

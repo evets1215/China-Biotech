@@ -5,3 +5,4 @@ exports/
 .DS_Store
 docs/designs/
 .hallmark/
+.impeccable/
