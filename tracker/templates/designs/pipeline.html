@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>China Licensing Pipeline</title>
+<meta name="description" content="China-to-US biotech out-licensing deals by stage, from the watchlist to signed and ended deals, with who licenses to whom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@700&family=Instrument+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: app screen · genre: modern-minimal · theme: Dose (deal 1/3, seed calm-light-pipeline-view-b7b2·80039669·2026-10-31·r0) · redesign: full
+ * nav: top bar with stage anchors and a sticky filter row · signature: the stage organiser, five tinted compartments from watchlist to ended · states: full, empty (filters match nothing, a stage with no items)
+ * axes: light/grotesk-sans/chromatic-green · posture: committed · dose: white, night as the dark toggle; no window light or grain in app scope · contrast: pass · v2.0.0 */
+/* Hallmark · answered F4 · the base .btn is the theme's clear moulded secondary; only Show all deals takes the green fill */
+/* Hallmark · answered F7 · the pill stays on the stage nav links and the likelihood tags, which the Dose theme sets at 999 on tags */
+/* Hallmark · pre-emit critique: P4 H5 E4 S4 R4 V5 · weakest: S, stage columns are a familiar kanban; the compartments carry each stage's real count and names, and the flow chart shows the buyer network no table can */
+
+:root {
+  color-scheme: light;
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px;
+  --text-xs: 0.75rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.266rem; --text-2xl: 1.602rem; --text-3xl: 2.027rem; --text-count: 2.75rem; --text-display: 3rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms; --dur-short: 220ms;
+  --container: 1360px; --gutter: 48px; --gap-columns: 24px; --bar-h: 64px;
+  --z-raised: 10; --z-sticky: 200; --z-sticky-nav: 300; --z-tooltip: 600;
+  --color-paper: oklch(97.6% 0.011 88); --color-paper-2: oklch(96.5% 0.02 160); --color-paper-3: oklch(93% 0.036 160);
+  --color-surface: oklch(99.4% 0.006 88);
+  --color-ink: oklch(21% 0.025 170); --color-ink-2: oklch(31% 0.02 170); --color-muted: oklch(49% 0.024 165);
+  --color-rule: oklch(86.5% 0.022 140);
+  --color-accent: oklch(50% 0.13 160); --color-accent-deep: oklch(42% 0.11 162); --color-accent-soft: oklch(88% 0.08 160); --color-accent-ink: oklch(99% 0.006 160);
+  --color-ribbon: oklch(50% 0.13 160 / 0.22); --color-ribbon-hot: oklch(50% 0.13 160 / 0.55);
+  --color-focus: oklch(45% 0.14 160);
+  --p-mon: oklch(85% 0.052 22); --p-tue: oklch(87.5% 0.058 64); --p-wed: oklch(91.5% 0.064 98); --p-thu: oklch(86.5% 0.075 160);
+  --p-fri: oklch(87% 0.048 210); --p-sat: oklch(84% 0.045 270); --p-sun: oklch(84% 0.048 322);
+  --glint: oklch(100% 0 0);
+  --font-display: "Schibsted Grotesk", ui-sans-serif, sans-serif; --font-body: "Instrument Sans", ui-sans-serif, sans-serif;
+  --font-outlier: "DM Mono", ui-monospace, monospace;
+  --radius-card: 14px; --radius-input: 10px; --radius-pill: 999px; --radius-bar: 4px; --rule-hair: 1px;
+  --shadow-lift: 0 1px 1px oklch(30% 0.03 165 / 0.10), 8px 18px 28px -14px oklch(36% 0.06 165 / 0.32);
+  --tracking-display: -0.03em;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-paper: oklch(15% 0.012 170); --color-paper-2: oklch(19% 0.016 165); --color-paper-3: oklch(23% 0.022 165);
+  --color-surface: oklch(20% 0.014 168);
+  --color-ink: oklch(96% 0.01 160); --color-ink-2: oklch(87% 0.012 160); --color-muted: oklch(73% 0.016 160);
+  --color-rule: oklch(32% 0.02 160);
+  --color-accent: oklch(74% 0.13 160); --color-accent-deep: oklch(64% 0.12 162); --color-accent-soft: oklch(33% 0.06 160); --color-accent-ink: oklch(16% 0.02 170);
+  --color-ribbon: oklch(74% 0.13 160 / 0.22); --color-ribbon-hot: oklch(74% 0.13 160 / 0.55); --color-focus: oklch(74% 0.13 160);
+  --p-mon: oklch(42% 0.06 22); --p-tue: oklch(44% 0.06 64); --p-wed: oklch(46% 0.06 98); --p-thu: oklch(42% 0.07 160);
+  --p-fri: oklch(42% 0.05 210); --p-sat: oklch(40% 0.05 270); --p-sun: oklch(40% 0.05 322);
+  --glint: oklch(80% 0.02 160);
+  --shadow-lift: 0 1px 1px oklch(5% 0.01 165 / 0.4), 8px 18px 28px -14px oklch(5% 0.01 165 / 0.6);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-paper: oklch(15% 0.012 170); --color-paper-2: oklch(19% 0.016 165); --color-paper-3: oklch(23% 0.022 165);
+    --color-surface: oklch(20% 0.014 168);
+    --color-ink: oklch(96% 0.01 160); --color-ink-2: oklch(87% 0.012 160); --color-muted: oklch(73% 0.016 160);
+    --color-rule: oklch(32% 0.02 160);
+    --color-accent: oklch(74% 0.13 160); --color-accent-deep: oklch(64% 0.12 162); --color-accent-soft: oklch(33% 0.06 160); --color-accent-ink: oklch(16% 0.02 170);
+    --color-ribbon: oklch(74% 0.13 160 / 0.22); --color-ribbon-hot: oklch(74% 0.13 160 / 0.55); --color-focus: oklch(74% 0.13 160);
+    --p-mon: oklch(42% 0.06 22); --p-tue: oklch(44% 0.06 64); --p-wed: oklch(46% 0.06 98); --p-thu: oklch(42% 0.07 160);
+    --p-fri: oklch(42% 0.05 210); --p-sat: oklch(40% 0.05 270); --p-sun: oklch(40% 0.05 322);
+    --glint: oklch(80% 0.02 160);
+    --shadow-lift: 0 1px 1px oklch(5% 0.01 165 / 0.4), 8px 18px 28px -14px oklch(5% 0.01 165 / 0.6);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scrollbar-color: var(--color-muted) var(--color-paper); scroll-padding-top: calc(var(--bar-h) + 72px); }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--text-md); line-height: 1.5; -webkit-font-smoothing: antialiased; caret-color: var(--color-accent); }
+::selection { background: var(--color-accent-soft); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+a { color: inherit; text-underline-offset: 0.18em; }
+a:hover { text-decoration-color: var(--color-accent); }
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1.04; overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+h1 { font-size: var(--text-display); max-width: 18ch; }
+h2 { font-size: var(--text-3xl); max-width: 28ch; }
+h3 { font-size: var(--text-lg); letter-spacing: -0.015em; }
+p { margin: 0; text-wrap: pretty; }
+button, input, select { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.mono { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; }
+.muted { color: var(--color-muted); }
+.small { font-size: var(--text-sm); }
+
+/* top bar */
+.bar { position: sticky; top: 0; z-index: var(--z-sticky-nav); height: var(--bar-h); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.bar .container { height: 100%; display: flex; align-items: center; gap: var(--space-lg); }
+.wordmark { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; font-size: var(--text-lg); text-decoration: none; white-space: nowrap; }
+.bar nav { display: flex; gap: var(--space-2xs); overflow-x: auto; min-width: 0; }
+.bar nav a { padding: var(--space-xs) var(--space-sm); border-radius: var(--radius-pill); text-decoration: none; font-size: var(--text-sm); color: var(--color-ink-2); white-space: nowrap; }
+.bar nav a:hover { background: var(--color-paper-3); color: var(--color-ink); }
+.bar .end { margin-left: auto; display: flex; gap: var(--space-md); align-items: center; font-size: var(--text-sm); color: var(--color-muted); white-space: nowrap; }
+
+/* controls */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 0 var(--space-md); border: 0; border-radius: var(--radius-input); background: var(--color-surface); color: var(--color-ink); font-weight: 500; font-size: var(--text-sm); white-space: nowrap; cursor: pointer; box-shadow: inset 0 1px 0 var(--glint), 0 0 0 1px var(--color-rule), 0 3px 0 var(--color-rule); transition: transform var(--dur-micro) var(--ease-out), background-color var(--dur-short) var(--ease-out); }
+.btn:hover { background: var(--color-paper-2); }
+.btn:active { transform: translateY(3px); box-shadow: inset 0 1px 0 var(--glint), 0 0 0 1px var(--color-rule); }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; }
+.btn--primary { background: var(--color-accent); color: var(--color-accent-ink); box-shadow: 0 0 0 1px var(--color-accent-deep), 0 3px 0 var(--color-accent-deep); }
+.btn--primary:hover { background: var(--color-accent-deep); }
+.btn--primary:active { box-shadow: 0 0 0 1px var(--color-accent-deep); }
+.field { min-height: 40px; padding: 0 var(--space-sm); border: var(--rule-hair) solid var(--color-muted); border-radius: var(--radius-input); background: var(--color-surface); font-size: var(--text-sm); }
+.field:hover { border-color: var(--color-ink-2); }
+.field:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 0; }
+.field:disabled { opacity: 0.55; cursor: not-allowed; }
+input.field { flex: 1 1 260px; min-width: 0; }
+.filters { position: sticky; top: var(--bar-h); z-index: var(--z-sticky); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.filters .container { display: flex; flex-wrap: wrap; gap: var(--space-xs); align-items: center; padding-block: var(--space-sm); }
+.filters label { display: inline-flex; gap: var(--space-2xs); align-items: center; font-size: var(--text-sm); color: var(--color-muted); }
+.match { margin-left: auto; font-size: var(--text-sm); color: var(--color-muted); }
+
+/* opening and the organiser */
+.open { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--space-md) var(--space-2xl); padding-block: var(--space-2xl) var(--space-xl); }
+.open p { max-width: 48ch; color: var(--color-ink-2); font-size: var(--text-lg); }
+.organiser { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-sm); padding-bottom: var(--space-2xl); }
+.plastic { --t: var(--p-thu); position: relative; border-radius: var(--radius-card); background: linear-gradient(color-mix(in oklab, var(--glint) 32%, transparent), transparent 18%), color-mix(in oklab, var(--t) 62%, transparent); box-shadow: inset 0 1.5px 0 var(--glint), inset 0 -24px 36px -28px color-mix(in oklab, var(--t) 45%, var(--color-ink)); }
+.stage { display: grid; grid-template-rows: auto auto 1fr auto; gap: var(--space-xs); padding: var(--space-lg) var(--space-md) var(--space-md); min-height: 300px; text-decoration: none; color: var(--color-ink); transition: transform var(--dur-short) var(--ease-out); }
+.stage:hover { transform: translateY(-3px); }
+.stage:active { transform: translateY(0); }
+.stage .n { font-family: var(--font-display); font-weight: 700; font-size: var(--text-count); letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+.stage .label { font-weight: 500; }
+.stage ul { list-style: none; margin: var(--space-xs) 0 0; padding: 0; display: grid; gap: var(--space-2xs); align-content: start; font-size: var(--text-sm); color: var(--color-ink-2); }
+.stage li { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.stage .go { font-size: var(--text-sm); font-weight: 500; text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; }
+.stage .note { font-family: var(--font-outlier); font-size: var(--text-xs); color: var(--color-ink-2); }
+
+/* sections */
+.section { padding-block: var(--space-3xl) 0; }
+.section-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: var(--space-sm) var(--space-2xl); margin-bottom: var(--space-lg); }
+.section-head p { max-width: 56ch; color: var(--color-ink-2); }
+.count { font-family: var(--font-outlier); font-size: var(--text-md); font-weight: 400; color: var(--color-muted); letter-spacing: 0; }
+.surface { background: var(--color-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-lift); }
+
+/* flow and figures */
+.network { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: var(--gap-columns); }
+.flow { padding: var(--space-lg); }
+.flow svg { display: block; width: 100%; overflow: visible; }
+.flow text { fill: var(--color-ink-2); font-size: 12px; }
+.flow .n { fill: var(--color-muted); font-family: var(--font-outlier); font-size: 11px; }
+.flow .side { fill: var(--color-muted); font-size: 12px; font-weight: 500; }
+.flow .node { fill: var(--color-accent); }
+.flow .node.other { fill: var(--color-muted); }
+.flow .ribbon { fill: var(--color-ribbon); transition: opacity var(--dur-short) var(--ease-out); }
+.flow .hot .ribbon { opacity: 0.25; }
+.flow .hot .ribbon.on { fill: var(--color-ribbon-hot); opacity: 1; }
+.flow .hit { fill: transparent; cursor: pointer; }
+.flow .hit:focus-visible { outline: none; stroke: var(--color-focus); stroke-width: 2; }
+.stats { display: grid; grid-template-rows: repeat(4, auto); align-content: start; }
+.stat { padding: var(--space-md) 0; border-top: var(--rule-hair) solid var(--color-rule); }
+.stat:first-child { border-top: 0; padding-top: 0; }
+.stat dt { font-size: var(--text-sm); color: var(--color-muted); font-weight: 500; }
+.stat dd { margin: 0; }
+.stat .v { display: block; font-family: var(--font-display); font-weight: 700; font-size: var(--text-3xl); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.stat .s { font-size: var(--text-sm); color: var(--color-ink-2); }
+.charts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); margin-top: var(--gap-columns); }
+.chart { padding: var(--space-lg); }
+.chart p { font-size: var(--text-sm); color: var(--color-muted); margin: var(--space-2xs) 0 var(--space-md); }
+.chart svg { display: block; width: 100%; overflow: visible; }
+.chart text { fill: var(--color-muted); font-size: 11px; font-family: var(--font-outlier); }
+.chart .grid { stroke: var(--color-rule); }
+.chart .col { fill: var(--color-accent); }
+.chart .col.partial { fill: var(--color-accent-soft); stroke: var(--color-accent); }
+.chart .col:focus-visible { outline: none; stroke: var(--color-focus); stroke-width: 2; }
+.areas { display: grid; gap: var(--space-xs); }
+.area { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-2xs) var(--space-sm); font-size: var(--text-sm); }
+.area .track { grid-column: 1 / -1; height: 8px; border-radius: var(--radius-bar); background: var(--color-paper-3); }
+.area .fill { display: block; height: 100%; border-radius: var(--radius-bar); background: var(--color-accent); }
+
+/* labels: watchlist and options */
+.labels { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: var(--gap-columns); }
+.label-card { display: grid; gap: var(--space-xs); padding: var(--space-md) var(--space-lg) var(--space-lg); align-content: start; }
+.label-card .tear { display: flex; justify-content: space-between; gap: var(--space-sm); padding-bottom: var(--space-xs); border-bottom: var(--rule-hair) dashed var(--color-rule); font-family: var(--font-outlier); font-size: var(--text-xs); color: var(--color-muted); }
+.label-card dl { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: var(--space-2xs) var(--space-sm); margin: var(--space-2xs) 0 0; font-size: var(--text-sm); }
+.label-card dt { color: var(--color-muted); }
+.label-card dd { margin: 0; font-family: var(--font-outlier); }
+.label-card p { font-size: var(--text-sm); color: var(--color-ink-2); }
+.likely { display: inline-flex; align-items: center; padding: 0 var(--space-xs); border-radius: var(--radius-pill); font-family: var(--font-body); font-weight: 500; font-size: var(--text-xs); }
+.likely.high { background: var(--color-accent); color: var(--color-accent-ink); }
+.likely.medium { background: var(--color-accent-soft); color: var(--color-ink); }
+.likely.low { background: var(--color-paper-3); color: var(--color-ink-2); }
+
+/* register */
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+th, td { padding: var(--space-sm); text-align: left; vertical-align: top; border-bottom: var(--rule-hair) solid var(--color-rule); }
+th { color: var(--color-muted); font-weight: 500; white-space: nowrap; }
+th button { all: unset; cursor: pointer; }
+th button:hover { color: var(--color-ink); }
+th button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+th[aria-sort="ascending"] button::after { content: " \2191"; }
+th[aria-sort="descending"] button::after { content: " \2193"; }
+td.r, th.r { text-align: right; }
+td.m { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.row { cursor: pointer; }
+tr.row:hover td { background: var(--color-paper-2); }
+tr.row[aria-expanded="true"] td { background: var(--color-paper-3); border-bottom-color: transparent; }
+tr.detail td { background: var(--color-paper-3); padding: var(--space-xs) var(--space-lg) var(--space-lg); }
+dl.detail { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--space-sm) var(--space-xl); margin: 0; }
+dl.detail dt { font-size: var(--text-xs); color: var(--color-muted); font-weight: 500; }
+dl.detail dd { margin: 0; }
+.hist { margin-top: var(--space-md); display: grid; gap: var(--space-2xs); }
+.register { padding: var(--space-xs) var(--space-lg) var(--space-lg); }
+.more { display: flex; justify-content: center; padding-top: var(--space-lg); }
+.empty { padding: var(--space-xl) var(--space-md); color: var(--color-muted); }
+
+/* ended, calendar, policy */
+.split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-columns); }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; }
+.timeline li { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: var(--space-md); padding: var(--space-sm) 0; border-top: var(--rule-hair) solid var(--color-rule); font-size: var(--text-sm); }
+.timeline time { font-family: var(--font-outlier); color: var(--color-muted); }
+.timeline b { font-weight: 500; }
+.policy { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); }
+.policy article { padding: var(--space-lg); display: grid; gap: var(--space-sm); align-content: start; }
+.policy .meta { display: flex; flex-wrap: wrap; gap: var(--space-xs); font-size: var(--text-xs); }
+.policy .meta span { padding: 0 var(--space-xs); border-radius: var(--radius-pill); background: var(--color-paper-3); }
+.tip { position: fixed; left: 0; top: 0; z-index: var(--z-tooltip); pointer-events: none; max-width: 300px; padding: var(--space-xs) var(--space-sm); background: var(--color-ink); color: var(--color-paper); border-radius: var(--radius-input); font-size: var(--text-sm); line-height: 1.4; }
+.tip strong { display: block; font-weight: 500; }
+.tip span { display: block; opacity: 0.8; }
+
+footer { margin-top: var(--space-3xl); padding-block: var(--space-xl); background: var(--color-ink); color: var(--color-paper); font-size: var(--text-sm); }
+footer .container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); }
+footer a { color: inherit; }
+
+@media (max-width: 75rem) {
+  .bar nav { display: none; }
+  .organiser { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .organiser .stage:nth-child(4) { grid-column: span 2; }
+  .network { grid-template-columns: minmax(0, 1fr); }
+  .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: none; gap: var(--gap-columns); }
+  .stat { border-top: 0; padding-top: 0; }
+  .charts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 60rem) {
+  :root { --gutter: 24px; --text-display: 2.25rem; --text-3xl: 1.602rem; }
+  .bar nav { display: none; }
+  .organiser { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .organiser .stage:nth-child(4) { grid-column: auto; }
+  .organiser .stage:last-child { grid-column: 1 / -1; }
+  .stage { min-height: 220px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .charts, .split, .policy, footer .container { grid-template-columns: minmax(0, 1fr); }
+  .filters { position: static; }
+}
+@media (max-width: 40rem) {
+  :root { --gutter: 16px; }
+  .col-hide { display: none; }
+  .bar .end time { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .btn, .stage, .flow .ribbon { transition: none; } .stage:hover { transform: none; } }
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="container">
+    <a class="wordmark" href="#top" aria-label="China licensing pipeline, top">China licensing pipeline</a>
+    <nav aria-label="Stages">
+      <a href="#watchlist">Watchlist</a><a href="#options">Options and talks</a><a href="#signed">Signed</a><a href="#ended">Ended</a><a href="#network">Buyers</a><a href="#calendar">Calendar</a><a href="#policy">Policy</a>
+    </nav>
+    <div class="end"><time id="asof"></time><button class="btn" id="theme" type="button" aria-pressed="false">Dark</button></div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="container open" aria-labelledby="h-open">
+    <h1 id="h-open">From watchlist to signed licence</h1>
+    <p>China-based companies granting rights that include the US, set out by stage. Pick a compartment to jump to it.</p>
+  </section>
+  <section class="container organiser" id="organiser" aria-label="Deals by stage"></section>
+
+  <div class="filters" role="search" aria-label="Filter signed deals">
+    <div class="container">
+      <input class="field" type="search" id="q" placeholder="Search company, asset, target" aria-label="Search deals" autocomplete="off">
+      <select class="field" id="f-status" aria-label="Status"><option value="">All statuses</option></select>
+      <select class="field" id="f-area" aria-label="Therapeutic area"><option value="">All areas</option></select>
+      <select class="field" id="f-hq" aria-label="Licensee HQ"><option value="">All licensee HQs</option></select>
+      <select class="field" id="f-type" aria-label="Deal type"><option value="">All deal types</option></select>
+      <label>From <select class="field" id="f-from" aria-label="From year"></select></label>
+      <label>to <select class="field" id="f-to" aria-label="To year"></select></label>
+      <button class="btn" type="button" id="reset">Reset</button>
+      <span class="match" id="match" role="status"></span>
+    </div>
+  </div>
+
+  <section class="container section" id="network" aria-labelledby="h-network">
+    <div class="section-head">
+      <h2 id="h-network">Who licenses to whom</h2>
+      <p>The most active Chinese licensors on the left, the most active licensees on the right; each ribbon is their deals together. Hover or focus a name to trace it.</p>
+    </div>
+    <div class="network">
+      <div class="surface flow" id="c-flow" role="img" aria-label="Flow of signed deals from Chinese licensors to licensees"></div>
+      <dl class="stats" id="kpis"></dl>
+    </div>
+    <div class="charts">
+      <div class="surface chart"><h3>Deals per year</h3><p>Pale columns before 2025 hold landmark deals only</p><div id="c-count"></div></div>
+      <div class="surface chart"><h3>Upfront per year</h3><p>Disclosed upfront, US$ billions, same coverage</p><div id="c-upfront"></div></div>
+      <div class="surface chart"><h3>By therapeutic area</h3><p>Signed deals</p><div class="areas" id="c-area"></div></div>
+    </div>
+  </section>
+
+  <section class="container section" id="watchlist" aria-labelledby="h-watch">
+    <div class="section-head"><h2 id="h-watch">Watchlist <span class="count" id="n-fut"></span></h2><p>Chinese assets with ex-China rights that appear unpartnered. Likelihood is an analyst judgement, not reported news; check partnering status before relying on an entry.</p></div>
+    <div class="labels" id="t-future"></div>
+  </section>
+
+  <section class="container section" id="options" aria-labelledby="h-options">
+    <div class="section-head"><h2 id="h-options">Open options and talks <span class="count" id="n-pot"></span></h2><p>Options a licensee can still exercise, plus reported talks and NewCos in formation from the weekly news scan.</p></div>
+    <div class="labels" id="pot-cards"></div>
+  </section>
+
+  <section class="container section" id="signed" aria-labelledby="h-signed">
+    <div class="section-head"><h2 id="h-signed">Signed deals <span class="count" id="n-deals"></span></h2><p>Select a row for terms, territory, sources and history. Money in US$ as announced; the headline value includes milestones.</p></div>
+    <div class="surface register">
+      <div class="tbl-wrap"><table id="t-deals"><thead><tr>
+        <th data-sort="announced" scope="col"><button type="button">Announced</button></th>
+        <th data-sort="licensor" scope="col"><button type="button">Licensor (China)</button></th>
+        <th data-sort="licensee" scope="col"><button type="button">Licensee</button></th>
+        <th data-sort="asset" scope="col"><button type="button">Asset or target</button></th>
+        <th data-sort="therapeutic_area" scope="col" class="col-hide"><button type="button">Area</button></th>
+        <th data-sort="phase_at_deal" scope="col" class="col-hide"><button type="button">Phase at deal</button></th>
+        <th data-sort="upfront_usd_m" scope="col" class="r"><button type="button">Upfront</button></th>
+        <th data-sort="total_value_usd_m" scope="col" class="r col-hide"><button type="button">Headline</button></th>
+        <th data-sort="status" scope="col"><button type="button">Status</button></th>
+      </tr></thead><tbody></tbody></table></div>
+      <div class="more"><button class="btn btn--primary" type="button" id="show-all"></button></div>
+    </div>
+  </section>
+
+  <section class="container section" id="ended" aria-labelledby="h-ended">
+    <div class="section-head"><h2 id="h-ended">Ended deals</h2><p>Terminations and completed acquisitions, with what happened to the rights.</p></div>
+    <div class="split">
+      <div><h3>Terminated</h3><ul class="timeline" id="t-term"></ul></div>
+      <div><h3>Acquired</h3><ul class="timeline" id="t-done"></ul></div>
+    </div>
+  </section>
+
+  <section class="container section" id="calendar" aria-labelledby="h-cal">
+    <div class="section-head"><h2 id="h-cal">Status changes and catalysts</h2><p>Upcoming dates recorded on deals and watchlist items, then approvals and option decisions.</p></div>
+    <div class="split">
+      <div><h3>Upcoming</h3><ul class="timeline" id="t-cat"></ul></div>
+      <div><h3>History</h3><ul class="timeline" id="t-hist"></ul></div>
+    </div>
+  </section>
+
+  <section class="container section" id="policy" aria-labelledby="h-policy">
+    <div class="section-head"><h2 id="h-policy">Policy watch</h2><p>Rules that change how a deal can be structured: licence, NewCo or equity.</p></div>
+    <div class="policy" id="policy-cards"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p><b>Sources.</b> Deals from 2025 on are imported from BioPharma Dive’s public China licensing tracker and cross-checked against Vision Lifesciences’ tracker; 2011 to 2024 deals and statuses are curated from company announcements. Figures are as announced and can differ between sources.</p>
+    <p><b>Scope.</b> A China-based licensor (Hong Kong included) granting rights that include the US. Licensees can be US, European or Asian. Biosimilars and China-only deals are excluded.</p>
+    <p id="build"></p>
+  </div>
+</footer>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+
+<script id="data" type="application/json">/*__DATA__*/null</script>
+<script>/*__CORE__*/</script>
+<script>
+(function () {
+  "use strict";
+  var C = window.CBT, el = C.el, svg = C.svg, money = C.money, bn = C.bn;
+  var tip = C.tooltip(document.getElementById("tip"));
+  var sortKey = "announced", sortDir = -1, openId = null, showAll = false, PAGE = 20;
+  var short = function (s) { return String(s).replace(/ (Pharmaceuticals?|Pharma|Biotechnology|Biotech|Biologics|Biosciences|Group|Therapeutics|Holdings|International)\b.*$/, ""); };
+
+  // ---------- signature: the stage organiser ----------
+  function organiser() {
+    var k = C.kpis(C.deals), host = document.getElementById("organiser"); host.textContent = "";
+    var signed = C.deals.filter(function (d) { return (d.status === "active" || d.status === "pending") && d.deal_type !== "Option"; });
+    var ended = C.deals.filter(function (d) { return d.status === "terminated" || d.status === "completed"; });
+    var order = { high: 0, medium: 1, low: 2 };
+    var fut = k.future.slice().sort(function (a, b) { return (order[a.likelihood] || 3) - (order[b.likelihood] || 3); });
+    var recent = signed.slice().sort(C.sorter("announced", -1));
+    var stages = [
+      { id: "watchlist", tint: "--p-fri", n: fut.length, label: "On the watchlist", note: "Unpartnered assets", names: fut.map(function (p) { return p.company + ", " + p.asset; }) },
+      { id: "options", tint: "--p-wed", n: k.potential.length, label: "In talks", note: "Reported, not signed", names: k.potential.map(function (p) { return p.company; }), empty: "None reported this week" },
+      { id: "options", tint: "--p-tue", n: k.options.length, label: "Open options", note: "Exercisable", names: k.options.map(function (d) { return d.licensee + " on " + short(d.licensor); }) },
+      { id: "signed", tint: "--p-thu", n: signed.length, label: "Signed and active", note: bn(C.sum(signed, "upfront_usd_m")) + " upfront", names: recent.slice(0, 5).map(function (d) { return d.licensee + " from " + short(d.licensor); }) },
+      { id: "ended", tint: "--p-sat", n: ended.length, label: "Ended", note: ended.filter(function (d) { return d.status === "terminated"; }).length + " terminated, " + ended.filter(function (d) { return d.status === "completed"; }).length + " acquired", names: ended.map(function (d) { return short(d.licensor) + " and " + d.licensee; }) }
+    ];
+    stages.forEach(function (s) {
+      var ul = el("ul");
+      s.names.slice(0, 5).forEach(function (n) { ul.appendChild(el("li", { text: n })); });
+      if (!s.names.length) ul.appendChild(el("li", { cls: "muted", text: s.empty || "None recorded" }));
+      host.appendChild(el("a", { cls: "plastic stage", href: "#" + s.id, style: "--t: var(" + s.tint + ")" }, [
+        el("span", { cls: "n", text: String(s.n) }), el("span", { cls: "label", text: s.label }), ul,
+        el("span", { cls: "note", text: s.note })
+      ]));
+    });
+  }
+
+  // ---------- who licenses to whom ----------
+  function flow(rows) {
+    var host = document.getElementById("c-flow"); host.textContent = "";
+    if (!rows.length) { host.appendChild(el("p", { cls: "empty", text: "No deals match the filters. Press Reset to see every deal." })); return; }
+    var W = Math.max(300, host.clientWidth), narrow = W < 560, N = narrow ? 6 : 9;
+    var lab = narrow ? 104 : 168, H = narrow ? 420 : 520, m = { t: 28, b: 8 }, gap = 6, nodeW = 10;
+    function top(field) {
+      var list = C.topBy(rows, field), keep = list.slice(0, N).map(function (r) { return r.label; });
+      return function (d) { var v = d[field] || "Undisclosed"; return keep.indexOf(v) >= 0 ? v : "Others"; };
+    }
+    var lk = top("licensor"), rk = top("licensee"), L = {}, R = {}, links = {};
+    // deals between two less active companies would swamp the picture; they are counted in the note instead
+    var all = rows;
+    rows = rows.filter(function (d) { return lk(d) !== "Others" || rk(d) !== "Others"; });
+    rows.forEach(function (d) {
+      var a = lk(d), b = rk(d); L[a] = (L[a] || 0) + 1; R[b] = (R[b] || 0) + 1;
+      links[a + "\u0000" + b] = (links[a + "\u0000" + b] || 0) + 1;
+    });
+    function stack(map) {
+      var keys = Object.keys(map).sort(function (a, b) { return (a === "Others") - (b === "Others") || map[b] - map[a]; });
+      var avail = H - m.t - m.b - gap * (keys.length - 1), unit = avail / rows.length, y = m.t, out = {};
+      keys.forEach(function (k) { out[k] = { y: y, h: map[k] * unit, off: 0, n: map[k] }; y += map[k] * unit + gap; });
+      out._unit = unit; out._keys = keys; return out;
+    }
+    var ln = stack(L), rn = stack(R), x0 = lab, x1 = W - lab, unit = ln._unit;
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, "aria-hidden": "true" });
+    s.appendChild(svg("text", { x: x0, y: 14, "class": "side" }, "Licensor (China)"));
+    s.appendChild(svg("text", { x: x1 + nodeW, y: 14, "text-anchor": "end", "class": "side" }, "Licensee"));
+    var g = svg("g", {});
+    var pairs = Object.keys(links).sort(function (a, b) {
+      var pa = a.split("\u0000"), pb = b.split("\u0000");
+      return ln._keys.indexOf(pa[0]) - ln._keys.indexOf(pb[0]) || rn._keys.indexOf(pa[1]) - rn._keys.indexOf(pb[1]);
+    });
+    pairs.forEach(function (key) {
+      var p = key.split("\u0000"), a = ln[p[0]], b = rn[p[1]], h = links[key] * unit;
+      var ya = a.y + a.off, yb = b.y + b.off; a.off += h; b.off += h;
+      var xa = x0 + nodeW, xb = x1, xm = (xa + xb) / 2;
+      var d = "M" + xa + "," + ya + "C" + xm + "," + ya + " " + xm + "," + yb + " " + xb + "," + yb + "V" + (yb + h) + "C" + xm + "," + (yb + h) + " " + xm + "," + (ya + h) + " " + xa + "," + (ya + h) + "Z";
+      g.appendChild(svg("path", { d: d, "class": "ribbon", "data-l": p[0], "data-r": p[1] }));
+    });
+    s.appendChild(g);
+    function node(side, k, n) {
+      var isL = side === "l", x = isL ? x0 : x1;
+      s.appendChild(svg("rect", { x: x, y: n.y, width: nodeW, height: Math.max(1, n.h), rx: 2, "class": "node" + (k === "Others" ? " other" : "") }));
+      var name = k === "Others" ? "Others" : (narrow ? short(k).slice(0, 14) : short(k));
+      var ty = n.y + n.h / 2 + 4;
+      s.appendChild(svg("text", { x: isL ? x - 8 : x + nodeW + 8, y: ty, "text-anchor": isL ? "end" : "start" }, name));
+      if (n.h > 22) s.appendChild(svg("text", { x: isL ? x - 8 : x + nodeW + 8, y: ty + 14, "text-anchor": isL ? "end" : "start", "class": "n" }, n.n + (n.n === 1 ? " deal" : " deals")));
+      var hit = svg("rect", { x: isL ? 0 : x1 - 4, y: n.y - gap / 2, width: lab + nodeW + 4, height: n.h + gap, "class": "hit", tabindex: 0, "aria-label": k + ", " + n.n + " deals" });
+      var on = function () { g.parentNode.classList.add("hot"); g.querySelectorAll(".ribbon").forEach(function (r) { r.classList.toggle("on", r.getAttribute(isL ? "data-l" : "data-r") === k); }); };
+      var off = function () { g.parentNode.classList.remove("hot"); };
+      hit.addEventListener("pointerenter", on); hit.addEventListener("focus", on);
+      hit.addEventListener("pointerleave", off); hit.addEventListener("blur", off);
+      s.appendChild(hit);
+    }
+    ln._keys.forEach(function (k) { node("l", k, ln[k]); });
+    rn._keys.forEach(function (k) { node("r", k, rn[k]); });
+    host.appendChild(s);
+    if (all.length > rows.length) host.appendChild(el("p", { cls: "small muted", text: (all.length - rows.length) + " of " + all.length + " deals are between two companies outside the top " + N + " on both sides and are not drawn." }));
+  }
+
+  function stats(rows) {
+    var k = C.kpis(rows), host = document.getElementById("kpis"); host.textContent = "";
+    [["Signed deals", rows.length.toLocaleString(), C.range().from + " to " + C.range().to],
+     ["Disclosed upfront", bn(k.upfront), k.upfrontN + " deals disclose it"],
+     ["Headline value", bn(k.total), "Including milestones"],
+     ["Still active", k.active.toLocaleString(), k.terminated + " terminated, " + k.completed + " acquired"]
+    ].forEach(function (f) { host.appendChild(el("div", { cls: "stat" }, [el("dt", { text: f[0] }), el("dd", null, [el("span", { cls: "v", text: f[1] }), el("span", { cls: "s", text: f[2] })])])); });
+    document.getElementById("match").textContent = C.isFiltered() ? rows.length + " of " + C.deals.length + " deals match" : "";
+  }
+  function columns(id, data, val, fmt) {
+    var host = document.getElementById(id); host.textContent = "";
+    var W = Math.max(240, host.clientWidth), H = 170, m = { t: 12, r: 2, b: 22, l: 36 }, iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var maxV = Math.max.apply(null, data.map(val).concat([1])), p = Math.pow(10, Math.floor(Math.log10(maxV))), top = Math.ceil(maxV / p) * p;
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, role: "img", "aria-label": id === "c-count" ? "Deals per year" : "Upfront per year" });
+    [0, 0.5, 1].forEach(function (f) { var gy = m.t + ih - ih * f; s.appendChild(svg("line", { x1: m.l, x2: W - m.r, y1: gy, y2: gy, "class": "grid" })); s.appendChild(svg("text", { x: m.l - 6, y: gy + 4, "text-anchor": "end" }, fmt(top * f))); });
+    var band = iw / data.length, bw = Math.min(16, band - 3), every = Math.ceil(data.length / Math.floor(iw / 30));
+    data.forEach(function (b, i) {
+      var v = val(b), h = ih * v / top, x = m.l + band * i + (band - bw) / 2;
+      if (h > 0) { var rc = svg("rect", { x: x, y: m.t + ih - h, width: bw, height: h, rx: 2, "class": "col" + (b.full ? "" : " partial"), tabindex: 0, "aria-label": b.year + ": " + fmt(v) }); tip.bind(rc, fmt(v), b.year + (b.full ? "" : ", landmark deals only")); s.appendChild(rc); }
+      if (i % every === 0 || i === data.length - 1) s.appendChild(svg("text", { x: x + bw / 2, y: H - 6, "text-anchor": "middle" }, "’" + String(b.year).slice(2)));
+    });
+    host.appendChild(s);
+  }
+  function areas(rows) {
+    var host = document.getElementById("c-area"); host.textContent = "";
+    var list = C.topBy(rows, "therapeutic_area", 7);
+    if (!list.length) { host.appendChild(el("p", { cls: "empty", text: "No deals match the filters." })); return; }
+    list.forEach(function (r) {
+      host.appendChild(el("div", { cls: "area" }, [el("span", { text: r.label }), el("span", { cls: "mono muted", text: String(r.n) }),
+        el("span", { cls: "track" }, [el("span", { cls: "fill", style: "width:" + (100 * r.n / list[0].n).toFixed(1) + "%" })])]));
+    });
+  }
+
+  // ---------- stage sections ----------
+  function watchlist() {
+    var k = C.kpis(C.deals), host = document.getElementById("t-future"); host.textContent = "";
+    var order = { high: 0, medium: 1, low: 2 };
+    var fut = k.future.slice().sort(function (a, b) { return (order[a.likelihood] || 3) - (order[b.likelihood] || 3) || a.company.localeCompare(b.company); });
+    fut.forEach(function (p) {
+      host.appendChild(el("article", { cls: "surface label-card" }, [
+        el("div", { cls: "tear" }, [el("span", { text: p.id }), el("span", { text: "reviewed " + (p.last_reviewed || "") })]),
+        el("h3", { text: p.company }),
+        el("dl", null, [
+          el("dt", { text: "Asset" }), el("dd", { text: p.asset }),
+          el("dt", { text: "Target" }), el("dd", { text: p.target || "" }),
+          el("dt", { text: "Phase" }), el("dd", { text: p.phase || "" }),
+          el("dt", { text: "Likelihood" }), el("dd", null, [el("span", { cls: "likely " + (p.likelihood || ""), text: p.likelihood || "n/a" })])
+        ]),
+        el("p", { text: p.rationale || "" }),
+        p.potential_partners ? el("p", { cls: "muted", text: "Possible partners: " + p.potential_partners }) : null
+      ]));
+    });
+    if (!fut.length) host.appendChild(el("p", { cls: "empty", text: "Watchlist is empty. Add an asset with python -m tracker pipeline-add --stage future." }));
+    document.getElementById("n-fut").textContent = String(fut.length);
+  }
+  function options() {
+    var k = C.kpis(C.deals), host = document.getElementById("pot-cards"); host.textContent = "";
+    k.options.forEach(function (d) {
+      host.appendChild(el("article", { cls: "surface label-card" }, [
+        el("div", { cls: "tear" }, [el("span", { text: d.id }), el("span", { text: "option signed " + d.announced })]),
+        el("h3", { text: d.licensee + " option on " + d.licensor }),
+        el("dl", null, [
+          el("dt", { text: "Asset" }), el("dd", { text: C.assetName(d) }),
+          el("dt", { text: "Area" }), el("dd", { text: d.therapeutic_area || "" }),
+          el("dt", { text: "Paid" }), el("dd", { text: money(d.upfront_usd_m) }),
+          el("dt", { text: "Up to" }), el("dd", { text: money(d.total_value_usd_m) })
+        ]),
+        d.notes ? el("p", { text: d.notes }) : null
+      ]));
+    });
+    k.potential.forEach(function (p) {
+      var last = (p.signals || []).slice(-1)[0];
+      host.appendChild(el("article", { cls: "surface label-card" }, [
+        el("div", { cls: "tear" }, [el("span", { text: p.id }), el("span", { text: "in talks" })]),
+        el("h3", { text: p.company + (p.potential_partners ? " with " + p.potential_partners : "") }),
+        el("p", { text: (p.asset || "") + (p.target ? ", " + p.target : "") }),
+        p.rationale ? el("p", { cls: "muted", text: p.rationale }) : null,
+        last ? el("p", { cls: "muted", text: "Latest signal " + last.date + ": " + last.note }) : null
+      ]));
+    });
+    if (!host.children.length) host.appendChild(el("p", { cls: "empty", text: "No open options or reported talks recorded." }));
+    document.getElementById("n-pot").textContent = String(k.options.length + k.potential.length);
+  }
+  function detail(d) {
+    var dl = el("dl", { cls: "detail" });
+    C.detailFields(d).forEach(function (f) { dl.appendChild(el("div", null, [el("dt", { text: f[0] }), el("dd", { text: String(f[1]) })])); });
+    var extra = el("div", { cls: "hist small" });
+    C.events(d).forEach(function (e) { extra.appendChild(el("div", null, [el("span", { cls: "mono muted", text: e.date + "  " }), e.event])); });
+    if ((d.sources || []).length) extra.appendChild(el("div", null, ["Sources: ", C.sourceLinks(d.sources)]));
+    return el("tr", { cls: "detail" }, [el("td", { colspan: 9 }, [dl, extra])]);
+  }
+  function register(rows) {
+    var tb = document.querySelector("#t-deals tbody"); tb.textContent = "";
+    var sorted = rows.slice().sort(C.sorter(sortKey, sortDir)), shown = showAll ? sorted : sorted.slice(0, PAGE);
+    if (!shown.length) tb.appendChild(el("tr", null, [el("td", { colspan: 9, cls: "empty", text: "No deals match the filters. Clear the search or press Reset." })]));
+    shown.forEach(function (d) {
+      var tr = el("tr", { cls: "row", tabindex: 0, "data-id": d.id, "aria-expanded": openId === d.id ? "true" : "false" }, [
+        el("td", { cls: "m", text: d.announced }), el("td", { text: d.licensor }), el("td", { text: d.licensee }), el("td", { text: C.assetName(d) }),
+        el("td", { cls: "col-hide", text: d.therapeutic_area || "" }), el("td", { cls: "col-hide", text: d.phase_at_deal || "" }),
+        el("td", { cls: "m r", text: money(d.upfront_usd_m) }), el("td", { cls: "m r col-hide", text: money(d.total_value_usd_m) }),
+        el("td", { text: C.STATUS_LABEL[d.status] || d.status })
+      ]);
+      var toggle = function () { openId = openId === d.id ? null : d.id; register(C.filtered()); var t = document.querySelector('tr.row[data-id="' + d.id + '"]'); if (t) t.focus({ preventScroll: true }); };
+      tr.addEventListener("click", function (e) { if (e.target.closest("a")) return; toggle(); });
+      tr.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+      tb.appendChild(tr);
+      if (openId === d.id) tb.appendChild(detail(d));
+    });
+    document.querySelectorAll("#t-deals th[data-sort]").forEach(function (th) {
+      th.setAttribute("aria-sort", th.getAttribute("data-sort") === sortKey ? (sortDir > 0 ? "ascending" : "descending") : "none");
+    });
+    document.getElementById("n-deals").textContent = String(rows.length);
+    var more = document.getElementById("show-all");
+    more.hidden = sorted.length <= PAGE;
+    more.textContent = showAll ? "Show the first " + PAGE : "Show all " + sorted.length + " deals";
+  }
+  document.querySelectorAll("#t-deals th[data-sort] button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = b.parentNode.getAttribute("data-sort");
+      if (k === sortKey) sortDir = -sortDir; else { sortKey = k; sortDir = /usd|announced/.test(k) ? -1 : 1; }
+      register(C.filtered());
+    });
+  });
+  document.getElementById("show-all").addEventListener("click", function () { showAll = !showAll; register(C.filtered()); });
+
+  function lists() {
+    function fill(id, list, empty) {
+      var ul = document.getElementById(id); ul.textContent = "";
+      list.forEach(function (e) { ul.appendChild(el("li", null, [el("time", { datetime: e.date, text: e.date }), el("span", null, [el("b", { text: e.label }), ". " + e.event])])); });
+      if (!list.length) ul.appendChild(el("li", null, [el("span", { cls: "muted", text: empty })]));
+    }
+    var t = C.timeline();
+    fill("t-term", t.history.filter(function (e) { return e.status === "terminated"; }), "No terminations recorded.");
+    fill("t-done", t.history.filter(function (e) { return e.status === "completed"; }), "No completed acquisitions recorded.");
+    fill("t-cat", t.upcoming, "No upcoming catalysts recorded yet. Add one with: python -m tracker update <id> --catalyst \"YYYY-MM-DD|event\"");
+    fill("t-hist", t.history.filter(function (e) { return !e.status; }), "No events recorded.");
+    var host = document.getElementById("policy-cards"); host.textContent = "";
+    C.policy.slice().sort(function (a, b) { return String(b.date).localeCompare(String(a.date)); }).forEach(function (p) {
+      var src = el("p", { cls: "small" }); src.appendChild(C.sourceLinks((p.sources || []).filter(C.isUrl)));
+      host.appendChild(el("article", { cls: "surface" }, [
+        el("p", { cls: "meta" }, [el("time", { cls: "mono", datetime: p.date, text: p.date }), el("span", { text: p.jurisdiction }), el("span", { text: p.status })]),
+        el("h3", { text: p.title }), el("p", { cls: "small", text: p.impact }), src
+      ]));
+    });
+    if (!C.policy.length) host.appendChild(el("p", { cls: "empty", text: "No policy items recorded." }));
+  }
+
+  // ---------- wire up ----------
+  function render(rows) {
+    flow(rows); stats(rows); register(rows); areas(rows);
+    var yrs = C.byYear(rows);
+    columns("c-count", yrs, function (b) { return b.n; }, function (v) { return String(Math.round(v)); });
+    columns("c-upfront", yrs, function (b) { return b.up / 1000; }, function (v) { return "$" + (v % 1 ? v.toFixed(1) : v) + "B"; });
+  }
+  C.bindTheme("cbt-pipeline-theme");
+  C.bindFilters();
+  C.onChange(render);
+  document.getElementById("asof").textContent = "Data as of " + C.fmtDate(C.TODAY);
+  document.getElementById("asof").setAttribute("datetime", C.TODAY);
+  document.getElementById("build").textContent = "Built " + C.fmtDate(C.TODAY) + ". " + C.deals.length + " deals and " + C.pipeline.length + " pipeline items, tracker v" + C.DATA.version + ".";
+  organiser(); render(C.filtered()); watchlist(); options(); lists();
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { render(C.filtered()); }, 150); });
+})();
+</script>
+</body>
+</html>

@@ -29,14 +29,21 @@ Everything is plain YAML, so changes are reviewed in pull requests and the full 
 
 ## Dashboard
 
-`docs/index.html` is a self-contained page (no server, no external scripts). It has filters, KPIs,
-charts by year, area and licensee, a sortable deal table with expandable details, and tabs for
-potential deals, the watchlist, status changes and policy.
+`docs/index.html` is a self-contained page set as a briefing (no server; the data is embedded, only fonts load
+from Google Fonts). It has a search bar and filters that stay at the top as you scroll (filters are kept in the link,
+so a filtered view can be shared), headline figures, a timeline of every deal by date and upfront, a sortable
+register with each deal's terms, history and sources, the market (largest upfronts, top licensees, areas,
+modalities, deals by year), what could sign next (open options and the watchlist), a calendar of status changes and
+catalysts, and policy.
 
+* **Online:** GitHub Pages serves `/docs` from the default branch at https://evets1215.github.io/China-Biotech/,
+  so every merged update goes live on its own.
 * **Locally:** open `docs/index.html` in a browser.
-* **Online:** in GitHub, go to *Settings → Pages* and deploy from branch `main`, folder `/docs`.
 
-Rebuild it after any data change with `python -m tracker build`.
+Rebuild it after any data change with `python -m tracker build`. The template is
+`tracker/templates/dashboard.html`; its data layer, `tracker/templates/core.js`, is shared with two alternative
+designs in `tracker/templates/designs/` (build them with `python tracker/templates/designs/build_designs.py`
+into the git-ignored `docs/designs/`).
 
 ## Quick start
 
@@ -85,7 +92,7 @@ python -m tracker update CN-2024-004 --status terminated --date 2026-11-15 \
   --note "Takeda declined option" --source https://example.com/pr
 ```
 
-**3. Upcoming catalysts and events** (these show in the dashboard's *Status changes & catalysts* tab)
+**3. Upcoming catalysts and events** (these show in the dashboard's *Calendar*)
 
 ```bash
 python -m tracker update CN-2022-002 --catalyst "2027-03-31|Phase 3 topline readout"
@@ -119,8 +126,9 @@ Promoting keeps the pre-deal signals in the new deal's history.
    headlines (new deals, "in talks" rumours, terminations) to `data/inbox.md`.
 3. rebuilds the dashboard and **opens a pull request** for review.
 
-For the PR step, enable *Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests"*.
-You can also trigger it by hand from the Actions tab (*Run workflow*).
+The PR step needs *Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests"* (enabled).
+Merging the PR publishes the update through GitHub Pages. Before merging, triage `data/inbox.md`: the news scan
+never adds deals itself. You can also trigger the refresh by hand from the Actions tab (*Run workflow*).
 
 ## Data model
 
@@ -155,8 +163,8 @@ Run `python -m tracker validate` after hand edits. CI runs validation, the unit 
 
 ```
 data/            deals.yaml, pipeline.yaml, companies.yaml, policy.yaml, inbox.md
-docs/index.html  generated dashboard
-tracker/         CLI (cli.py), storage + validation (store.py), stats, dashboard builder,
+docs/index.html  generated dashboard (served by GitHub Pages)
+tracker/         CLI (cli.py), storage + validation (store.py), stats, dashboard builder + templates,
                  BioPharma Dive sync, news scanner
 tests/           unit tests
 .github/         CI + weekly update workflow

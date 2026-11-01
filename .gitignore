@@ -3,3 +3,5 @@ __pycache__/
 .venv/
 exports/
 .DS_Store
+docs/designs/
+.hallmark/
