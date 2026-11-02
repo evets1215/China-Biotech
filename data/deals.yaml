@@ -3,6 +3,42 @@
 # Money is in USD millions as announced (headline "up to" values; not risk-adjusted).
 # Inclusion rule: China-based licensor grants rights that include the United States.
 
+- id: CN-2026-061
+  announced: '2026-11-02'
+  licensor: Brise Pharmaceuticals
+  licensor_hq: China
+  licensee: AbbVie
+  licensee_hq: US
+  licensee_type: Big Pharma
+  deal_type: License
+  target: Undisclosed
+  therapeutic_area: CNS disorders
+  phase_at_deal: Preclinical
+  total_value_usd_m: 757
+  status: active
+  sources:
+    - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
+  data_source: BioPharma Dive China licensing tracker
+  last_verified: '2026-11-02'
+- id: CN-2026-062
+  announced: '2026-10-22'
+  licensor: PepStar Therapeutics
+  licensor_hq: China
+  licensee: Gilead Sciences
+  licensee_hq: US
+  licensee_type: Big Pharma
+  deal_type: License
+  target: Macrocyclic peptide targeting IL-23R
+  modality: Peptide
+  therapeutic_area: Immune diseases
+  phase_at_deal: Phase 1
+  upfront_usd_m: 1275
+  total_value_usd_m: 1275
+  status: active
+  sources:
+    - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
+  data_source: BioPharma Dive China licensing tracker
+  last_verified: '2026-11-02'
 - id: CN-2026-060
   announced: '2026-10-19'
   licensor: Hansoh Pharma
@@ -16,6 +52,7 @@
   modality: Biologics
   format: ADC
   therapeutic_area: Cancer
+  phase_at_deal: Preclinical
   territory: Global
   upfront_usd_m: 400
   total_value_usd_m: 15000
@@ -24,6 +61,21 @@
     - https://visionlifesciences.com/insights/china-biotech-outbound-licensing-tracker
   data_source: Vision Lifesciences tracker
   notes: $400M upfront plus $110M at year one; total 'over $15B'.
+- id: CN-2026-063
+  announced: '2026-10-13'
+  licensor: Wuhan Hitech Biological Pharma
+  licensor_hq: China
+  licensee: Visara
+  deal_type: License
+  target: Recombinant human nerve growth factor therapy
+  modality: Biologics
+  therapeutic_area: Other
+  phase_at_deal: Phase 1
+  status: active
+  sources:
+    - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
+  data_source: BioPharma Dive China licensing tracker
+  last_verified: '2026-11-02'
 - id: CN-2026-059
   announced: '2026-10-13'
   licensor: Rona Therapeutics
@@ -1258,6 +1310,25 @@
     - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
   data_source: BioPharma Dive China licensing tracker
   last_verified: '2026-10-31'
+- id: CN-2025-066
+  announced: '2025-12-31'
+  licensor: Zellgen Biopharmaceuticals
+  licensor_hq: China
+  licensee: AbbVie
+  licensee_hq: US
+  licensee_type: Big Pharma
+  deal_type: License
+  target: Trispecific T-cell engager targeting DLL3
+  modality: Biologics
+  therapeutic_area: Cancer
+  phase_at_deal: Phase 3
+  upfront_usd_m: 100
+  total_value_usd_m: 1235
+  status: active
+  sources:
+    - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
+  data_source: BioPharma Dive China licensing tracker
+  last_verified: '2026-11-02'
 - id: CN-2025-065
   announced: '2025-12-31'
   licensor: Zelgen
@@ -1843,6 +1914,22 @@
     - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
   data_source: BioPharma Dive China licensing tracker
   last_verified: '2026-10-31'
+- id: CN-2025-067
+  announced: '2025-07-08'
+  licensor: CStone Pharmaceuticals
+  licensor_hq: China
+  licensee: Istuto Gentili
+  deal_type: License
+  target: Monoclonal antibody targeting PD-L1
+  modality: Biologics
+  therapeutic_area: Cancer
+  phase_at_deal: Marketed
+  total_value_usd_m: 192.5
+  status: active
+  sources:
+    - https://www.biopharmadive.com/news/china-biotech-drug-licensing-deals-pipeline/758283/
+  data_source: BioPharma Dive China licensing tracker
+  last_verified: '2026-11-02'
 - id: CN-2025-038
   announced: '2025-07-08'
   licensor: ConjugateBio
