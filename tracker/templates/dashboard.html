@@ -7,7 +7,8 @@
 <meta name="description" content="Every China-to-US biotech out-licensing deal, set as a briefing: deal flow, the largest upfronts, who is buying, and what could sign next.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"></noscript>
 <style>
 /* Hallmark · shape: app screen · genre: editorial · theme: Specimen (deal 3/3, seed china-biotech-out-licensing-deal-9515·80039669·2026-10-31·r0) · redesign: full
  * nav: masthead with section contents and a sticky filter rule · signature: the deal-flow timeline, split at 2025 where coverage turns complete · states: full, empty (filters match nothing), no-upfront marks
@@ -26,7 +27,7 @@
   --z-raised: 10; --z-sticky: 200; --z-tooltip: 600;
   --color-paper: oklch(96.5% 0.016 82); --color-paper-2: oklch(93.5% 0.02 80); --color-paper-3: oklch(89% 0.024 78);
   --color-ink: oklch(17% 0.012 60); --color-ink-2: oklch(28% 0.014 60); --color-muted: oklch(49% 0.014 65);
-  --color-rule: oklch(80% 0.018 75); --color-rule-2: oklch(66% 0.02 72);
+  --color-rule: oklch(80% 0.018 75); --color-rule-2: oklch(62% 0.02 72);
   --color-accent: oklch(45% 0.18 262); --color-accent-ink: oklch(97% 0.012 82); --color-focus: oklch(50% 0.18 262);
   --color-guide: oklch(55% 0.16 262 / 0.5);
   --color-mark-soft: oklch(17% 0.012 60 / 0.22);
@@ -39,7 +40,7 @@
   color-scheme: dark;
   --color-paper: oklch(17% 0.012 60); --color-paper-2: oklch(21% 0.014 60); --color-paper-3: oklch(25% 0.016 62);
   --color-ink: oklch(94% 0.016 82); --color-ink-2: oklch(85% 0.016 80); --color-muted: oklch(72% 0.014 75);
-  --color-rule: oklch(32% 0.014 65); --color-rule-2: oklch(46% 0.016 68);
+  --color-rule: oklch(32% 0.014 65); --color-rule-2: oklch(51% 0.016 68);
   --color-accent: oklch(74% 0.12 262); --color-accent-ink: oklch(17% 0.012 60); --color-focus: oklch(74% 0.12 262);
   --color-guide: oklch(70% 0.12 262 / 0.45); --color-mark-soft: oklch(94% 0.016 82 / 0.24);
 }
@@ -48,7 +49,7 @@
     color-scheme: dark;
     --color-paper: oklch(17% 0.012 60); --color-paper-2: oklch(21% 0.014 60); --color-paper-3: oklch(25% 0.016 62);
     --color-ink: oklch(94% 0.016 82); --color-ink-2: oklch(85% 0.016 80); --color-muted: oklch(72% 0.014 75);
-    --color-rule: oklch(32% 0.014 65); --color-rule-2: oklch(46% 0.016 68);
+    --color-rule: oklch(32% 0.014 65); --color-rule-2: oklch(51% 0.016 68);
     --color-accent: oklch(74% 0.12 262); --color-accent-ink: oklch(17% 0.012 60); --color-focus: oklch(74% 0.12 262);
     --color-guide: oklch(70% 0.12 262 / 0.45); --color-mark-soft: oklch(94% 0.016 82 / 0.24);
   }
@@ -56,7 +57,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body { overflow-x: clip; }
-html { scrollbar-color: var(--color-muted) var(--color-paper); scroll-padding-top: var(--space-3xl); }
+html { scrollbar-color: var(--color-muted) var(--color-paper); scroll-padding-top: calc(var(--sticky-h, 0px) + var(--space-md)); }
 body { margin: 0; background: var(--color-paper); color: var(--color-ink); font-family: var(--font-body); font-size: var(--text-md); line-height: 1.55; -webkit-font-smoothing: antialiased; caret-color: var(--color-accent); }
 ::selection { background: color-mix(in oklab, var(--color-accent) 22%, transparent); color: var(--color-ink); }
 :focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
@@ -94,6 +95,8 @@ button, input, select { font: inherit; color: inherit; }
 .btn--primary { background: var(--color-ink); color: var(--color-paper); }
 .btn--primary:hover { background: var(--color-ink-2); }
 .btn--primary:active { background: var(--color-ink); }
+.skip { position: absolute; left: var(--space-md); top: var(--space-xs); z-index: calc(var(--z-sticky) + 1); padding: var(--space-xs) var(--space-md); background: var(--color-ink); color: var(--color-paper); font-size: var(--text-sm); text-decoration: none; transform: translateY(-200%); }
+.skip:focus-visible { transform: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
 /* the finder: one search line over a row of facets */
@@ -116,7 +119,7 @@ button, input, select { font: inherit; color: inherit; }
 .facet > span, .facet legend, .facet .flabel { padding: 0; font-size: var(--text-xs); color: var(--color-muted); transition: color var(--dur-short) var(--ease-out); }
 fieldset.facet { margin: 0; padding: 0; border: 0; }
 .pick { position: relative; display: flex; align-items: center; gap: var(--space-xs); min-width: 0; }
-.pick select { appearance: none; width: 100%; min-width: 0; min-height: 36px; padding: 0 var(--space-lg) 0 0; border: 0; border-bottom: var(--rule-hair) solid var(--color-rule); border-radius: 0; background: transparent; color: var(--color-ink); font-size: var(--text-sm); text-overflow: ellipsis; cursor: pointer; transition: border-color var(--dur-short) var(--ease-out); }
+.pick select { appearance: none; width: 100%; min-width: 0; min-height: 36px; padding: 0 var(--space-lg) 0 0; border: 0; border-bottom: var(--rule-hair) solid var(--color-rule-2); border-radius: 0; background: transparent; color: var(--color-ink); font-size: var(--text-sm); text-overflow: ellipsis; cursor: pointer; transition: border-color var(--dur-short) var(--ease-out); }
 .pick select:hover { border-bottom-color: var(--color-ink-2); }
 .pick select:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .pick select:disabled { opacity: 0.55; cursor: not-allowed; }
@@ -125,7 +128,7 @@ fieldset.facet { margin: 0; padding: 0; border: 0; }
 .pick .to { font-size: var(--text-sm); color: var(--color-muted); }
 .facet.is-set > span, .facet.is-set legend, .facet.is-set .flabel { color: var(--color-accent); }
 /* multi-select: a plain underlined field that opens a short checklist with counts */
-.mbtn { all: unset; box-sizing: border-box; position: relative; display: block; width: 100%; min-height: 36px; padding: 0 var(--space-lg) 0 0; border-bottom: var(--rule-hair) solid var(--color-rule); color: var(--color-ink); font-size: var(--text-sm); line-height: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; transition: border-color var(--dur-short) var(--ease-out); }
+.mbtn { all: unset; box-sizing: border-box; position: relative; display: block; width: 100%; min-height: 36px; padding: 0 var(--space-lg) 0 0; border-bottom: var(--rule-hair) solid var(--color-rule-2); color: var(--color-ink); font-size: var(--text-sm); line-height: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; transition: border-color var(--dur-short) var(--ease-out); }
 .mbtn::after { content: ""; position: absolute; right: var(--space-2xs); top: calc(50% - 5px); width: 6px; height: 6px; border-right: 1.5px solid var(--color-muted); border-bottom: 1.5px solid var(--color-muted); transform: rotate(45deg); }
 .mbtn:hover { border-bottom-color: var(--color-ink-2); }
 .mbtn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
@@ -203,8 +206,9 @@ fieldset.facet { margin: 0; padding: 0; border: 0; }
 /* timeline */
 .timeline { position: relative; }
 .timeline svg { display: block; width: 100%; overflow: visible; }
-.timeline text { fill: var(--color-muted); font-family: var(--font-body); font-size: 11px; font-variant-numeric: tabular-nums; }
-.timeline .lbl { fill: var(--color-ink); font-size: 12px; }
+.timeline text { fill: var(--color-muted); font-family: var(--font-body); font-size: 12px; font-variant-numeric: tabular-nums; }
+.timeline .lbl { fill: var(--color-ink); font-size: 13px; }
+.timeline .lbl, .timeline .lbl-v { paint-order: stroke; stroke: var(--color-paper); stroke-width: 4px; stroke-linejoin: round; }
 .timeline .era { fill: var(--color-ink-2); font-size: 12px; font-weight: 500; }
 .timeline .well { fill: var(--color-paper-2); }
 .timeline .guide { stroke: var(--color-guide); stroke-width: 1; }
@@ -215,6 +219,9 @@ fieldset.facet { margin: 0; padding: 0; border: 0; }
 .timeline .dot.term { fill: var(--color-paper); stroke: var(--color-muted); stroke-dasharray: 2 1.5; }
 .timeline .dot.done { fill: var(--color-accent); stroke: var(--color-paper); }
 .timeline .dot:hover, .timeline .dot:focus-visible { outline: none; stroke: var(--color-accent); stroke-width: 2; }
+.timeline svg:focus-visible { outline: none; }
+.timeline .dot.is-cur { stroke: var(--color-focus); stroke-width: 3; }
+.timeline.static .dot { cursor: default; }
 .timeline .leader { stroke: var(--color-rule-2); stroke-width: 1; }
 .legend { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); margin-top: var(--space-md); font-size: var(--text-sm); color: var(--color-ink-2); }
 .legend span { display: inline-flex; align-items: center; gap: var(--space-xs); }
@@ -230,6 +237,7 @@ fieldset.facet { margin: 0; padding: 0; border: 0; }
 /* tables */
 .tbl-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); }
+#t-deals { font-size: 0.9375rem; }
 th, td { padding: var(--space-xs) var(--space-sm); text-align: left; vertical-align: top; border-bottom: var(--rule-hair) solid var(--color-rule); }
 th:first-child, td:first-child { padding-left: 0; }
 th { font-weight: 500; color: var(--color-muted); white-space: nowrap; border-bottom-color: var(--color-rule-2); }
@@ -244,8 +252,11 @@ td.r { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; whi
 .who { font-weight: 500; }
 .who small { display: block; font-weight: 400; color: var(--color-muted); font-size: var(--text-xs); }
 tr.row { cursor: pointer; }
+.rowbtn { all: unset; cursor: pointer; }
+.rowbtn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.who .rowbtn small { display: block; font-weight: 400; color: var(--color-muted); font-size: var(--text-xs); }
 tr.row:hover td { background: var(--color-paper-2); }
-tr.row[aria-expanded="true"] td { border-bottom-color: transparent; background: var(--color-paper-2); }
+tr.row.is-open td { border-bottom-color: transparent; background: var(--color-paper-2); }
 tr.detail td { background: var(--color-paper-2); padding-top: 0; padding-bottom: var(--space-lg); }
 .st-terminated { color: var(--color-muted); text-decoration: line-through; text-decoration-color: var(--color-rule-2); }
 .bar-cell { position: relative; }
@@ -281,7 +292,7 @@ button.hbar[aria-pressed="true"] .fill { background: var(--color-accent); }
 .stack-key b { margin-left: auto; font-weight: 400; font-family: var(--font-outlier); color: var(--color-ink-2); }
 .years { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-columns); grid-column: 1 / -1; }
 .cols svg { display: block; width: 100%; overflow: visible; }
-.cols text { fill: var(--color-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.cols text { fill: var(--color-muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 .cols .val { fill: var(--color-ink); font-weight: 500; }
 .cols .grid { stroke: var(--color-rule); }
 .cols .col { fill: var(--color-ink); }
@@ -333,6 +344,42 @@ footer p + p { margin-top: var(--space-xs); }
   .hbar, button.hbar { grid-template-columns: minmax(0, 8rem) minmax(0, 1fr) 2.5rem; }
   .stack-key { grid-template-columns: minmax(0, 1fr); }
   .col-hide { display: none; }
+  .tap-hint { display: none; }
+  #t-deals, #t-deals tbody { display: block; }
+  #t-deals thead tr { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-md); padding-block: var(--space-xs); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+  #t-deals thead tr::before { content: "Sort by"; font-size: var(--text-sm); color: var(--color-muted); }
+  #t-deals th { padding: 0; border: 0; font-size: var(--text-sm); }
+  #t-deals th.col-hide { display: none; }
+  #t-deals tr.row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "date status" "lic up" "lee up" "asset asset"; column-gap: var(--space-md); padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  #t-deals tr.row td { display: block; padding: 0; border: 0; text-align: left; }
+  #t-deals tr.row td.col-hide { display: none; }
+  #t-deals tr.row td:nth-child(1) { grid-area: date; font-size: var(--text-sm); color: var(--color-muted); }
+  #t-deals tr.row td:nth-child(2) { grid-area: lic; margin-top: var(--space-2xs); }
+  #t-deals tr.row td:nth-child(3) { grid-area: lee; }
+  #t-deals tr.row td:nth-child(3)::before { content: "to "; font-weight: 400; color: var(--color-muted); }
+  #t-deals tr.row td:nth-child(3) small { display: inline; margin-left: var(--space-2xs); }
+  #t-deals tr.row td:nth-child(4) { grid-area: asset; margin-top: var(--space-2xs); font-size: var(--text-sm); color: var(--color-ink-2); }
+  #t-deals tr.row td:nth-child(8) { grid-area: up; align-self: end; margin-top: var(--space-2xs); text-align: right; font-size: var(--text-md); color: var(--color-ink); }
+  #t-deals tr.row td:nth-child(8) i { display: none; }
+  #t-deals tr.row td:nth-child(10) { grid-area: status; text-align: right; font-size: var(--text-sm); }
+  #t-deals tr.row td:first-child { padding-left: 0; }
+  #t-deals .rowbtn::after { content: ""; position: absolute; inset: 0; }
+  #t-deals .rowbtn:focus-visible { outline: none; }
+  #t-deals tr.row:has(.rowbtn:focus-visible) { outline: 2px solid var(--color-focus); outline-offset: -2px; }
+  #t-deals tr.row.is-open { border-bottom-color: transparent; background: var(--color-paper-2); }
+  #t-deals tr.detail, #t-deals tr.detail td { display: block; }
+  #t-deals tr.detail td { padding: 0 0 var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  #t-deals tr.empty-row td { display: block; }
+  #t-future thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  #t-future, #t-future tbody { display: block; }
+  #t-future tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "who like" "phase phase" "why why"; column-gap: var(--space-md); padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  #t-future td { display: block; padding: 0; border: 0; }
+  #t-future td:nth-child(1) { grid-area: who; }
+  #t-future td:nth-child(2) { grid-area: phase; font-size: var(--text-sm); color: var(--color-muted); }
+  #t-future td:nth-child(3) { grid-area: like; text-align: right; }
+  #t-future td:nth-child(4) { grid-area: why; margin-top: var(--space-2xs); }
+  #t-future td[colspan] { grid-column: 1 / -1; }
+  .mast nav a, .export, .clear, #t-deals th button { display: inline-flex; align-items: center; min-height: 24px; white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   .btn, .timeline .dot, .search, .pick select, .mbtn, .hbar .fill, .facet > span, .facet legend, .facet .flabel { transition: none; }
@@ -340,12 +387,13 @@ footer p + p { margin-top: var(--space-xs); }
 </style>
 </head>
 <body>
+<a class="skip" href="#register">Skip to the register</a>
 <header class="container mast">
   <a class="wordmark" href="#top" aria-label="China licensing briefing, top">China licensing briefing</a>
   <nav aria-label="Sections">
     <a href="#register">Register</a><a href="#market">Market</a><a href="#next">What could sign next</a><a href="#calendar">Calendar</a><a href="#policy">Policy</a>
   </nav>
-  <div class="mast-end"><time id="asof"></time><button class="btn" id="theme" type="button" aria-pressed="false">Dark</button></div>
+  <div class="mast-end"><time id="asof"></time><button class="btn" id="theme" type="button" aria-pressed="false">Dark theme</button></div>
 </header>
 
 <main id="top">
@@ -388,9 +436,10 @@ footer p + p { margin-top: var(--space-xs); }
   <section class="container section" aria-labelledby="h-flow">
     <div class="section-head">
       <h2 id="h-flow" class="h-primary">Every deal, by date and upfront</h2>
-      <p>Each stem is one signed deal, its height the upfront cash. The left panel holds landmark deals only; from 2025 every deal is recorded. Click a mark to open it in the register.</p>
+      <p>Each stem is one signed deal, its height the upfront cash. The left panel holds landmark deals only; from 2025 every deal is recorded.<span class="tap-hint"> Click a mark, or focus the chart and use the arrow keys, to open a deal in the register.</span></p>
     </div>
-    <div class="timeline" id="c-timeline" role="img" aria-label="Deal-flow timeline of upfront payments by announcement date"></div>
+    <div class="timeline" id="c-timeline"></div>
+    <p class="sr-only" id="timeline-sum"></p>
     <div class="legend" aria-hidden="true">
       <span><svg width="10" height="10"><circle class="k-dot" cx="5" cy="5" r="4"/></svg>Active or pending</span>
       <span><svg width="10" height="10"><circle class="k-done" cx="5" cy="5" r="4"/></svg>Acquisition completed</span>
@@ -430,7 +479,7 @@ footer p + p { margin-top: var(--space-xs); }
         <h3>The largest upfronts</h3>
         <p class="sub">Top ten by disclosed upfront cash, equity included where reported</p>
         <hr class="rule--double">
-        <div class="tbl-wrap"><table id="t-top"><thead><tr><th scope="col" class="r">Rank</th><th scope="col">Deal</th><th scope="col" class="r">Upfront</th><th scope="col" class="r col-hide">Headline</th></tr></thead><tbody></tbody></table></div>
+        <div class="tbl-wrap"><table id="t-top"><thead><tr><th scope="col" class="r">Rank</th><th scope="col">Deal <span class="sr-only">(opens it in the register)</span></th><th scope="col" class="r">Upfront</th><th scope="col" class="r col-hide">Headline</th></tr></thead><tbody></tbody></table></div>
       </div>
       <div>
         <h3>Who is buying</h3>
@@ -674,17 +723,20 @@ footer p + p { margin-top: var(--space-xs); }
     var gap = early && late ? 24 : 0, iw = W - m.l - m.r - gap, ih = H - m.t - m.b;
     var wEarly = early ? (late ? iw * 0.34 : iw) : 0, wLate = iw - wEarly;
     var panels = [];
-    if (early) panels.push({ x0: m.l, w: wEarly, from: r.from, to: Math.min(r.to, C.FULL_FROM - 1) + 1, name: r.from + " to " + Math.min(r.to, C.FULL_FROM - 1) + ": landmark deals only" });
-    if (late) panels.push({ x0: m.l + wEarly + gap, w: wLate, from: Math.max(r.from, C.FULL_FROM), to: r.to + 1, name: Math.max(r.from, C.FULL_FROM) + " to " + r.to + ": every deal" });
+    if (early) panels.push({ x0: m.l, w: wEarly, from: r.from, to: Math.min(r.to, C.FULL_FROM - 1) + 1, name: W < 640 && late ? "Landmarks" : r.from + " to " + Math.min(r.to, C.FULL_FROM - 1) + ": landmark deals only" });
+    if (late) panels.push({ x0: m.l + wEarly + gap, w: wLate, from: Math.max(r.from, C.FULL_FROM), to: r.to + 1, name: W < 640 && early ? "Every deal from " + Math.max(r.from, C.FULL_FROM) : Math.max(r.from, C.FULL_FROM) + " to " + r.to + ": every deal" });
     var maxUp = Math.max.apply(null, rows.map(function (d) { return +d.upfront_usd_m || 0; }).concat([100]));
     var step = maxUp > 1000 ? 500 : maxUp > 400 ? 200 : 100, top = Math.ceil(maxUp / step) * step;
     var y = function (v) { return m.t + ih - ih * v / top; };
+    // On a phone the marks are too close to tap; the register below carries the same deals.
+    var live = W >= 640;
+    hostEl.classList.toggle("static", !live);
     var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, "aria-hidden": "true" });
     panels.forEach(function (p, i) {
       if (i === 0 && panels.length > 1) s.appendChild(svg("rect", { x: p.x0, y: m.t, width: p.w, height: ih, "class": "well" }));
       s.appendChild(svg("text", { x: p.x0 + (i === 0 && panels.length > 1 ? 8 : 0), y: m.t - 14, "class": "era" }, p.name));
       s.appendChild(svg("line", { x1: p.x0, x2: p.x0 + p.w, y1: m.t + ih, y2: m.t + ih, "class": "base" }));
-      var span = p.to - p.from, every = span > 8 ? 2 : 1;
+      var span = p.to - p.from, every = Math.max(span > 8 ? 2 : 1, Math.ceil(span / Math.max(1, Math.floor(p.w / 40))));
       for (var yr = p.from; yr < p.to; yr++) {
         if ((yr - p.from) % every) continue;
         var xx = p.x0 + p.w * (yr - p.from) / span;
@@ -702,19 +754,19 @@ footer p + p { margin-top: var(--space-xs); }
     var ranked = rows.filter(function (d) { return d.upfront_usd_m != null; }).sort(function (a, b) { return b.upfront_usd_m - a.upfront_usd_m; });
     var labelled = ranked.filter(function (d) { return C.year(d) < C.FULL_FROM; }).slice(0, panels.length > 1 ? 1 : 4)
       .concat(ranked.filter(function (d) { return C.year(d) >= C.FULL_FROM; }).slice(0, W < 640 ? 2 : 4));
-    var labels = [];
+    var labels = [], marks = [];
     rows.slice().sort(function (a, b) { return (+a.upfront_usd_m || 0) - (+b.upfront_usd_m || 0); }).forEach(function (d) {
       var p = panels.filter(function (pp) { var yr = C.year(d); return yr >= pp.from && yr < pp.to; })[0];
       if (!p) return;
       var x = p.x(d), nd = d.upfront_usd_m == null, v = nd ? 0 : +d.upfront_usd_m, cy = y(v);
       if (!nd) s.appendChild(svg("line", { x1: x, x2: x, y1: m.t + ih, y2: cy, "class": "stem" }));
       var cls = "dot" + (nd ? " nd" : d.status === "terminated" ? " term" : d.status === "completed" ? " done" : "");
-      var dot = svg("circle", { cx: x, cy: cy, r: nd ? 3 : 4.5, "class": cls, tabindex: 0, role: "button",
-        "aria-label": d.licensor + " to " + d.licensee + ", " + (nd ? "upfront not disclosed" : money(v) + " upfront") + ", " + C.fmtDate(d.announced) });
-      tip.bind(dot, d.licensor + " to " + d.licensee, C.assetName(d) + ", " + C.fmtDate(d.announced) + ", " + (nd ? "upfront not disclosed" : money(v) + " upfront") + (d.total_value_usd_m ? ", up to " + money(d.total_value_usd_m) : ""));
-      var go = function () { openDeal(d.id); };
-      dot.addEventListener("click", go);
-      dot.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+      var dot = svg("circle", { cx: x, cy: cy, r: nd ? 3 : 4.5, "class": cls });
+      if (live) {
+        tip.bind(dot, d.licensor + " to " + d.licensee, C.assetName(d) + ", " + C.fmtDate(d.announced) + ", " + (nd ? "upfront not disclosed" : money(v) + " upfront") + (d.total_value_usd_m ? ", up to " + money(d.total_value_usd_m) : ""));
+        dot.addEventListener("click", function () { openDeal(d.id); });
+        marks.push({ d: d, dot: dot, nd: nd, v: v });
+      }
       s.appendChild(dot);
       if (labelled.indexOf(d) >= 0) labels.push({ x: x, y: cy, text: d.licensee + " / " + d.licensor.replace(/ (Pharmaceutical|Pharma|Biotech|Biologics|Group|Therapeutics|Holdings).*$/, ""), up: money(v) });
     });
@@ -723,15 +775,51 @@ footer p + p { margin-top: var(--space-xs); }
     var placed = [];
     labels.forEach(function (l) {
       var ly = l.y - 10;
-      placed.forEach(function (p) { if (Math.abs(p - ly) < 28 && Math.abs(p - ly) >= 0) ly = Math.max(ly, p + 28); });
+      placed.forEach(function (p) { if (Math.abs(p - ly) < 32) ly = Math.max(ly, p + 32); });
       placed.push(ly);
-      var right = l.x > W - 220, tx = right ? l.x - 10 : l.x + 10;
+      var right = W < 640 ? l.x > (m.l + W) / 2 : l.x > W - 220, tx = right ? l.x - 10 : l.x + 10;
       if (Math.abs(ly - (l.y - 10)) > 2) s.appendChild(svg("line", { x1: l.x, x2: tx, y1: l.y, y2: ly + 4, "class": "leader" }));
       s.appendChild(svg("text", { x: tx, y: ly, "text-anchor": right ? "end" : "start", "class": "lbl" }, l.text));
-      s.appendChild(svg("text", { x: tx, y: ly + 14, "text-anchor": right ? "end" : "start" }, l.up + " upfront"));
+      s.appendChild(svg("text", { x: tx, y: ly + 15, "text-anchor": right ? "end" : "start", "class": "lbl-v" }, l.up + " upfront"));
     });
-    if (!rows.length) { hostEl.appendChild(el("p", { cls: "empty", text: "No deals match the filters. Clear filters to see every deal." })); return; }
+    timelineSummary(rows, ranked);
+    if (!rows.length) { hostEl.removeAttribute("tabindex"); hostEl.appendChild(el("p", { cls: "empty", text: "No deals match the filters. Clear filters to see every deal." })); return; }
     hostEl.appendChild(s);
+    // One tab stop for the whole chart; the arrow keys walk the deals in date order and Enter opens one.
+    if (!live) { ["tabindex", "role", "aria-label", "aria-describedby"].forEach(function (a) { hostEl.removeAttribute(a); }); return; }
+    marks.sort(function (a, b) { return String(a.d.announced).localeCompare(String(b.d.announced)); });
+    hostEl.setAttribute("tabindex", "0"); hostEl.setAttribute("role", "application");
+    hostEl.setAttribute("aria-roledescription", "chart");
+    hostEl.setAttribute("aria-label", "Deal-flow timeline, " + marks.length + " deals. Use the arrow keys to move between deals in date order, Enter to open one in the register.");
+    hostEl.setAttribute("aria-describedby", "timeline-sum");
+    var cur = Math.min(tlIndex, marks.length - 1);
+    function say(i) {
+      marks.forEach(function (m) { m.dot.classList.remove("is-cur"); });
+      var m = marks[i]; if (!m) return;
+      m.dot.classList.add("is-cur");
+      $("announce").textContent = (i + 1) + " of " + marks.length + ". " + m.d.licensor + " to " + m.d.licensee + ", " + C.assetName(m.d) + ", " + C.fmtDate(m.d.announced) + ", " + (m.nd ? "upfront not disclosed" : money(m.v) + " upfront") + ".";
+    }
+    hostEl.onfocus = function () { if (hostEl.matches(":focus-visible")) say(cur); };
+    hostEl.onblur = function () { marks.forEach(function (m) { m.dot.classList.remove("is-cur"); }); };
+    hostEl.onkeydown = function (e) {
+      var k = e.key, n = marks.length;
+      if (k === "ArrowRight" || k === "ArrowDown") cur = Math.min(n - 1, cur + 1);
+      else if (k === "ArrowLeft" || k === "ArrowUp") cur = Math.max(0, cur - 1);
+      else if (k === "Home") cur = 0;
+      else if (k === "End") cur = n - 1;
+      else if (k === "Enter" || k === " ") { e.preventDefault(); openDeal(marks[cur].d.id); return; }
+      else return;
+      e.preventDefault(); tlIndex = cur; say(cur);
+    };
+  }
+  var tlIndex = Infinity;
+  function timelineSummary(rows, ranked) {
+    var yrs = rows.map(C.year), first = Math.min.apply(null, yrs), last = Math.max.apply(null, yrs);
+    var t = !rows.length ? "No deals match the filters." :
+      rows.length + " deals from " + first + " to " + last + ", " + ranked.length + " with a disclosed upfront." +
+      (ranked.length ? " Largest upfronts: " + ranked.slice(0, 3).map(function (d) { return d.licensee + " from " + d.licensor + ", " + money(d.upfront_usd_m); }).join("; ") + "." : "") +
+      " Every deal is listed in the register below.";
+    $("timeline-sum").textContent = t;
   }
 
   // ---------- register ----------
@@ -743,7 +831,7 @@ footer p + p { margin-top: var(--space-xs); }
     if (sorted.indexOf(d) >= PAGE) showAll = true;
     openId = id; register(rows);
     var tr = document.querySelector('tr.row[data-id="' + id + '"]');
-    if (tr) { tr.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); tr.focus({ preventScroll: true }); }
+    if (tr) { tr.scrollIntoView({ block: "center", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); rowButton(id).focus({ preventScroll: true }); }
   }
   function detail(d) {
     var dl = el("dl", { cls: "detail" });
@@ -751,19 +839,23 @@ footer p + p { margin-top: var(--space-xs); }
     var extra = el("div", { cls: "history" });
     C.events(d).forEach(function (e) { extra.appendChild(el("div", null, [el("span", { cls: "num muted", text: e.date + "  " }), e.event])); });
     if ((d.sources || []).length) extra.appendChild(el("div", null, ["Sources: ", C.sourceLinks(d.sources)]));
-    return el("tr", { cls: "detail" }, [el("td", { colspan: 10 }, [dl, extra])]);
+    return el("tr", { cls: "detail", id: "detail-" + d.id }, [el("td", { colspan: 10 }, [dl, extra])]);
   }
+  function rowButton(id) { var tr = document.querySelector('tr.row[data-id="' + id + '"]'); return tr && tr.querySelector(".rowbtn"); }
   function register(rows) {
     var tb = document.querySelector("#t-deals tbody"); tb.textContent = "";
     var sorted = rows.slice().sort(C.sorter(sortKey, sortDir));
     var shown = showAll ? sorted : sorted.slice(0, PAGE);
     var maxUp = Math.max.apply(null, C.deals.map(function (d) { return +d.upfront_usd_m || 0; }));
-    if (!shown.length) tb.appendChild(el("tr", null, [el("td", { colspan: 10, cls: "empty", text: "No deals match the filters. Remove a filter above to widen the view." })]));
+    if (!shown.length) tb.appendChild(el("tr", { cls: "empty-row" }, [el("td", { colspan: 10, cls: "empty", text: "No deals match the filters. Remove a filter above to widen the view." })]));
     shown.forEach(function (d) {
       var up = el("td", { cls: "r bar-cell", text: C.money(d.upfront_usd_m) });
       if (d.upfront_usd_m) up.appendChild(el("i", { style: "width:" + Math.max(2, 72 * d.upfront_usd_m / maxUp).toFixed(1) + "px" }));
-      var tr = el("tr", { cls: "row", tabindex: 0, "data-id": d.id, "aria-expanded": openId === d.id ? "true" : "false" }, [
-        el("td", { cls: "num", text: C.fmtDate(d.announced) }),
+      var open = openId === d.id;
+      var btn = el("button", { cls: "rowbtn", type: "button", "aria-expanded": open ? "true" : "false", "aria-controls": "detail-" + d.id,
+        "aria-label": d.licensor + " to " + d.licensee + ", " + C.fmtDate(d.announced) + ". Details", text: C.fmtDate(d.announced) });
+      var tr = el("tr", { cls: "row" + (open ? " is-open" : ""), "data-id": d.id }, [
+        el("td", { cls: "num" }, [btn]),
         el("td", { cls: "who", text: d.licensor }),
         el("td", { cls: "who" }, [d.licensee, d.licensee_type ? el("small", { text: d.licensee_type }) : null]),
         el("td", null, [C.assetName(d), d.asset && d.target ? el("small", { cls: "muted", text: " " + d.target }) : null]),
@@ -772,9 +864,8 @@ footer p + p { margin-top: var(--space-xs); }
         up, el("td", { cls: "r col-hide", text: C.money(d.total_value_usd_m) }),
         el("td", { cls: "st-" + d.status, text: C.STATUS_LABEL[d.status] || d.status })
       ]);
-      var toggle = function () { openId = openId === d.id ? null : d.id; register(C.filtered()); var t = document.querySelector('tr.row[data-id="' + d.id + '"]'); if (t) t.focus({ preventScroll: true }); };
+      var toggle = function () { openId = openId === d.id ? null : d.id; register(C.filtered()); var t = rowButton(d.id); if (t) t.focus({ preventScroll: true }); };
       tr.addEventListener("click", function (e) { if (e.target.closest("a")) return; toggle(); });
-      tr.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
       tb.appendChild(tr);
       if (openId === d.id) tb.appendChild(detail(d));
     });
@@ -801,14 +892,13 @@ footer p + p { margin-top: var(--space-xs); }
     var list = rows.filter(function (d) { return d.upfront_usd_m != null; }).sort(function (a, b) { return b.upfront_usd_m - a.upfront_usd_m; }).slice(0, 10);
     if (!list.length) { tb.appendChild(el("tr", null, [el("td", { colspan: 4, cls: "empty", text: "No disclosed upfronts in this view." })])); return; }
     list.forEach(function (d, i) {
-      var tr = el("tr", { cls: "row", tabindex: 0 }, [
+      var tr = el("tr", { cls: "row" }, [
         el("td", { cls: "r", text: String(i + 1) }),
-        el("td", { cls: "who" }, [d.licensee + " from " + d.licensor, el("small", { text: C.assetName(d) + ", " + C.fmtDate(d.announced) + (d.deal_type === "Acquisition" ? ", acquisition" : "") })]),
+        el("td", { cls: "who" }, [el("button", { cls: "rowbtn", type: "button" }, [d.licensee + " from " + d.licensor, el("small", { text: C.assetName(d) + ", " + C.fmtDate(d.announced) + (d.deal_type === "Acquisition" ? ", acquisition" : "") })])]),
         el("td", { cls: "r", text: money(d.upfront_usd_m) }),
         el("td", { cls: "r col-hide", text: money(d.total_value_usd_m) })
       ]);
       tr.addEventListener("click", function () { openDeal(d.id); });
-      tr.addEventListener("keydown", function (e) { if (e.key === "Enter") openDeal(d.id); });
       tb.appendChild(tr);
     });
   }
@@ -857,7 +947,8 @@ footer p + p { margin-top: var(--space-xs); }
     var iw = W - m.l - m.r, ih = H - m.t - m.b;
     var maxV = Math.max.apply(null, data.map(val).concat([1]));
     var p = Math.pow(10, Math.floor(Math.log10(maxV))), top = Math.ceil(maxV / p) * p;
-    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, role: "img", "aria-label": id === "c-count" ? "Deals per year" : "Upfront per year" });
+    var s = svg("svg", { viewBox: "0 0 " + W + " " + H, height: H, role: "img",
+      "aria-label": (id === "c-count" ? "Deals per year: " : "Upfront per year: ") + data.map(function (b) { return b.year + " " + fmt(val(b)); }).join(", ") });
     for (var i = 0; i <= 2; i++) {
       var gy = m.t + ih - ih * i / 2;
       s.appendChild(svg("line", { x1: m.l, x2: W - m.r, y1: gy, y2: gy, "class": "grid" }));
@@ -867,7 +958,7 @@ footer p + p { margin-top: var(--space-xs); }
     data.forEach(function (b, i) {
       var v = val(b), h = ih * v / top, x = m.l + band * i + (band - bw) / 2;
       if (h > 0) {
-        var rect = svg("rect", { x: x, y: m.t + ih - h, width: bw, height: h, "class": "col" + (b.full ? "" : " partial"), tabindex: 0, "aria-label": b.year + ": " + fmt(v) });
+        var rect = svg("rect", { x: x, y: m.t + ih - h, width: bw, height: h, "class": "col" + (b.full ? "" : " partial") });
         tip.bind(rect, fmt(v), b.year + (b.full ? "" : ", landmark deals only") + (String(b.year) === C.TODAY.slice(0, 4) ? ", year to date" : ""));
         s.appendChild(rect);
       }
@@ -952,6 +1043,13 @@ footer p + p { margin-top: var(--space-xs); }
   document.getElementById("build").textContent = "Built " + C.fmtDate(C.TODAY) + ". " + C.deals.length + " deals and " + C.pipeline.length + " pipeline items, tracker v" + C.DATA.version + ".";
   render(C.filtered()); next(); calendar(); policyList();
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { render(C.filtered()); }, 150); });
+  // Charts measure text and width, so draw them again once the web fonts have settled.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { render(C.filtered()); });
+  // Scrolling to a section or a focused row clears the sticky filter bar, whatever its height.
+  var bar = document.querySelector(".filters");
+  function stickyH() { document.documentElement.style.setProperty("--sticky-h", (getComputedStyle(bar).position === "sticky" ? bar.offsetHeight : 0) + "px"); }
+  if (window.ResizeObserver) new ResizeObserver(stickyH).observe(bar);
+  window.addEventListener("resize", stickyH); stickyH();
 })();
 </script>
 </body>

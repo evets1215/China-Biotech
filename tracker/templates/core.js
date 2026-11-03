@@ -306,7 +306,8 @@
     try { var saved = localStorage.getItem(storageKey); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
     function label() {
       var dark = isDark();
-      if (btn) { btn.setAttribute("aria-pressed", dark ? "true" : "false"); btn.textContent = dark ? "Light" : "Dark"; }
+      // A fixed name with a pressed state: "Dark theme, pressed" means dark is on.
+      if (btn) btn.setAttribute("aria-pressed", dark ? "true" : "false");
     }
     function isDark() {
       var t = root.getAttribute("data-theme");
@@ -319,6 +320,10 @@
       label();
       listeners.forEach(function (fn) { fn(filtered()); });
     });
+    // With no saved choice, follow the system setting when it changes.
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    var follow = function () { if (root.getAttribute("data-theme")) return; label(); listeners.forEach(function (fn) { fn(filtered()); }); };
+    if (mq.addEventListener) mq.addEventListener("change", follow); else if (mq.addListener) mq.addListener(follow);
     label();
   }
 
