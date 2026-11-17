@@ -1,6 +1,6 @@
 # ASCO 2027 abstract: where China leads and where the US leads in new cancer drugs
 
-**Status: preliminary pilot (17 Nov 2026). Numbers are not yet abstract-ready - see "Known problems".**
+**Status: second pass (17 Nov 2026). Numbers are preliminary until China's registry is merged and the validation sample is coded.**
 
 ## Question
 For cancer drugs entering human trials in 2020-2026, which targets and drug types are led by China-based
@@ -18,19 +18,28 @@ The NCI Thesaurus flat file comes from https://evs.nci.nih.gov/ftp1/NCI_Thesauru
 (unzip into `data/raw/ncit/`).
 
 ## Definitions
-- **Cohort:** agents whose first registered trial started Jan 2020 - Sep 2026, industry sponsor (n = 3,361).
+- **Cohort:** agents whose first registered trial started Jan 2020 - Sep 2026, industry sponsor (n = 3,142).
 - **Sponsor country:** headquarters of the sponsor's ultimate parent (China incl. Hong Kong / US / Other),
   from name rules plus hand-curated lists in `sponsor_lists.py`.
-- **Class:** drug type + set of targets. A class is "new" if no agent of that class was registered 2010-2019.
+- **Class:** drug type + one or two targets, industry agents only. A class is "new" if no industry agent of that class was registered 2010-2019.
+- **Target rule:** a target counts only if it is in the first sentence of the agent's NCI Thesaurus definition, or in a
+  sentence naming the agent where the target is described as what the drug acts on (not a patient-selection marker).
 - **Leader:** country of the sponsor of the earliest registered trial in a new class.
 
-## Known problems (must fix before submission)
-1. **Registry coverage.** Only ClinicalTrials.gov. Trials registered only on China's registry
-   (chinadrugtrials.org.cn) are missing, which under-counts China.
-2. **Uneven target coverage.** A target was identified for 55% of China agents vs 65% of US agents; drug type for
-   70% vs 87%. Chinese company code names often have no public description.
-3. **Classification errors.** A spot check of 30 new classes found clear errors (combination partners counted as
-   targets, cell therapies with long target lists, wrong first sponsor). No formal validation has been done.
+## Other files
+- `abstract_draft.md` - draft abstract with the current numbers.
+- `validation/validation_sample_150.csv` - random sample for manual coding (instructions in `validation/README.md`).
+
+## Open problems
+1. **China's registry is missing.** chinadrugtrials.org.cn blocks automated access. A CSV export is being collected
+   separately; put it in `data/raw/` and it will need a merge step (match on drug name and sponsor, keep the earlier date).
+2. **Uneven target coverage.** A target was assigned for 51% of China agents vs 66% of US agents; drug type for 74% vs 91%.
+   Chinese company code names often have no public description. This biases target-level results against China.
+3. **No formal validation yet.** An informal look at 40 new classes found about 5 questionable ones (wrong target or
+   wrong sponsor country). The validation sample must be coded before any accuracy figure is reported.
 4. **"First registered trial" is a proxy** for first-in-human.
-5. **Class analysis mixes sponsors:** the cohort is industry-only, but class novelty is judged against all sponsors.
-6. 2026 covers January-September only.
+5. **Results moved when the rules were tightened.** The first pass gave China 43% of China-plus-US "firsts", rising from
+   24% (2020) to 65% (2025). The second pass gives 38% overall, rising from 32% (2020-2022) to 44% (2023-2026).
+   Treat the trend as sensitive to method until validated.
+6. Tumour-group coding is unreliable (multi-tumour trials are assigned to the first match) and is not reported.
+7. 2026 covers January-September only.
