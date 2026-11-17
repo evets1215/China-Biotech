@@ -1,129 +1,129 @@
 {
- "cohort_n": 2859,
+ "cohort_n": 2969,
  "cohort_by_country": {
-  "China": 1145,
-  "US": 1009,
-  "Other": 705
+  "China": 1180,
+  "US": 1054,
+  "Other": 735
  },
  "new_agents_by_year": {
   "2020": {
-   "China": 84,
-   "US": 121,
-   "Other": 106,
-   "china_share_of_cn_us": 41.0
+   "China": 85,
+   "US": 131,
+   "Other": 110,
+   "china_share_of_cn_us": 39.4
   },
   "2021": {
-   "China": 154,
-   "US": 138,
-   "Other": 92,
-   "china_share_of_cn_us": 52.7
+   "China": 156,
+   "US": 141,
+   "Other": 97,
+   "china_share_of_cn_us": 52.5
   },
   "2022": {
-   "China": 172,
-   "US": 172,
-   "Other": 104,
-   "china_share_of_cn_us": 50.0
+   "China": 186,
+   "US": 174,
+   "Other": 108,
+   "china_share_of_cn_us": 51.7
   },
   "2023": {
-   "China": 184,
-   "US": 168,
-   "Other": 112,
-   "china_share_of_cn_us": 52.3
+   "China": 187,
+   "US": 173,
+   "Other": 117,
+   "china_share_of_cn_us": 51.9
   },
   "2024": {
-   "China": 186,
-   "US": 153,
-   "Other": 109,
-   "china_share_of_cn_us": 54.9
+   "China": 190,
+   "US": 166,
+   "Other": 116,
+   "china_share_of_cn_us": 53.4
   },
   "2025": {
-   "China": 194,
-   "US": 148,
-   "Other": 93,
-   "china_share_of_cn_us": 56.7
+   "China": 202,
+   "US": 156,
+   "Other": 95,
+   "china_share_of_cn_us": 56.4
   },
   "2026": {
-   "China": 171,
-   "US": 109,
-   "Other": 89,
-   "china_share_of_cn_us": 61.1
+   "China": 174,
+   "US": 113,
+   "Other": 92,
+   "china_share_of_cn_us": 60.6
   }
  },
  "by_modality": {
   "Small molecule": {
-   "China": 318,
-   "US": 298,
-   "Other": 178,
-   "china_share_of_cn_us": 51.6
+   "China": 328,
+   "US": 315,
+   "Other": 192,
+   "china_share_of_cn_us": 51.0
   },
   "Unclassified": {
-   "China": 279,
-   "US": 88,
-   "Other": 102,
-   "china_share_of_cn_us": 76.0
-  },
-  "Monoclonal antibody": {
-   "China": 139,
-   "US": 111,
-   "Other": 89,
-   "china_share_of_cn_us": 55.6
+   "China": 317,
+   "US": 110,
+   "Other": 127,
+   "china_share_of_cn_us": 74.2
   },
   "Antibody-drug conjugate": {
-   "China": 138,
-   "US": 104,
+   "China": 140,
+   "US": 103,
    "Other": 71,
-   "china_share_of_cn_us": 57.0
+   "china_share_of_cn_us": 57.6
   },
   "Bispecific / multispecific antibody": {
-   "China": 117,
+   "China": 118,
    "US": 93,
-   "Other": 90,
-   "china_share_of_cn_us": 55.7
+   "Other": 91,
+   "china_share_of_cn_us": 55.9
+  },
+  "Monoclonal antibody": {
+   "China": 121,
+   "US": 98,
+   "Other": 79,
+   "china_share_of_cn_us": 55.3
   },
   "CAR-T / engineered cell therapy": {
-   "China": 79,
-   "US": 129,
-   "Other": 54,
-   "china_share_of_cn_us": 38.0
+   "China": 75,
+   "US": 133,
+   "Other": 52,
+   "china_share_of_cn_us": 36.1
   },
   "Cytokine / fusion protein": {
-   "China": 24,
-   "US": 55,
+   "China": 28,
+   "US": 60,
    "Other": 20,
-   "china_share_of_cn_us": 30.4
+   "china_share_of_cn_us": 31.8
+  },
+  "Protein degrader": {
+   "China": 20,
+   "US": 58,
+   "Other": 12,
+   "china_share_of_cn_us": 25.6
   },
   "Radioligand": {
    "China": 14,
-   "US": 24,
-   "Other": 50,
-   "china_share_of_cn_us": 36.8
-  },
-  "Protein degrader": {
-   "China": 17,
-   "US": 54,
-   "Other": 12,
-   "china_share_of_cn_us": 23.9
-  },
-  "Oncolytic virus": {
-   "China": 9,
-   "US": 16,
-   "Other": 16,
-   "china_share_of_cn_us": 36.0
+   "US": 25,
+   "Other": 49,
+   "china_share_of_cn_us": 35.9
   },
   "Cancer vaccine": {
    "China": 6,
-   "US": 17,
-   "Other": 15,
-   "china_share_of_cn_us": 26.1
+   "US": 19,
+   "Other": 18,
+   "china_share_of_cn_us": 24.0
+  },
+  "Oncolytic virus": {
+   "China": 7,
+   "US": 19,
+   "Other": 16,
+   "china_share_of_cn_us": 26.9
   },
   "Nucleic acid (mRNA/siRNA/ASO)": {
    "China": 3,
-   "US": 20,
+   "US": 21,
    "Other": 8,
-   "china_share_of_cn_us": 13.0
+   "china_share_of_cn_us": 12.5
   },
   "In vivo CAR": {
-   "China": 2,
+   "China": 3,
    "US": 0,
    "Other": 0,
    "china_share_of_cn_us": 100.0
@@ -131,411 +131,548 @@
  },
  "modality_trend_china_share": {
   "Small molecule": {
-   "2020-2022": 53.2,
-   "2023-2026": 50.3
+   "2020-2022": 53.5,
+   "2023-2026": 48.8
   },
   "Bispecific / multispecific antibody": {
-   "2020-2022": 59.6,
-   "2023-2026": 52.6
+   "2020-2022": 59.1,
+   "2023-2026": 53.4
   },
   "CAR-T / engineered cell therapy": {
-   "2020-2022": 29.5,
-   "2023-2026": 44.2
+   "2020-2022": 27.5,
+   "2023-2026": 42.7
   },
   "Monoclonal antibody": {
-   "2020-2022": 53.7,
-   "2023-2026": 57.8
-  },
-  "Cytokine / fusion protein": {
-   "2020-2022": 23.3,
-   "2023-2026": 38.9
-  },
-  "Protein degrader": {
-   "2020-2022": 25.0,
-   "2023-2026": 23.4
-  },
-  "Cancer vaccine": {
-   "2020-2022": 11.1,
-   "2023-2026": 35.7
-  },
-  "Antibody-drug conjugate": {
-   "2020-2022": 60.0,
-   "2023-2026": 55.9
+   "2020-2022": 55.0,
+   "2023-2026": 55.6
   },
   "Unclassified": {
-   "2020-2022": 62.5,
-   "2023-2026": 79.3
+   "2020-2022": 62.8,
+   "2023-2026": 76.8
+  },
+  "Cytokine / fusion protein": {
+   "2020-2022": 22.9,
+   "2023-2026": 42.5
+  },
+  "Protein degrader": {
+   "2020-2022": 25.9,
+   "2023-2026": 25.5
+  },
+  "Antibody-drug conjugate": {
+   "2020-2022": 62.0,
+   "2023-2026": 55.8
   },
   "Oncolytic virus": {
    "2020-2022": 37.5,
-   "2023-2026": 35.3
+   "2023-2026": 22.2
   },
   "Radioligand": {
    "2020-2022": 0.0,
-   "2023-2026": 48.3
+   "2023-2026": 45.2
+  },
+  "Cancer vaccine": {
+   "2020-2022": 10.0,
+   "2023-2026": 33.3
   },
   "Nucleic acid (mRNA/siRNA/ASO)": {
    "2020-2022": 9.1,
-   "2023-2026": 16.7
+   "2023-2026": 15.4
   },
   "In vivo CAR": {
    "2023-2026": 100.0
   }
  },
- "new_classes_primary_1_or_2_targets": {
-  "n": 366,
+ "new_classes_primary_target_set": {
+  "n": 182,
   "leader": {
-   "China": 98,
-   "US": 164,
-   "Other": 104,
-   "china_share_of_cn_us": 37.4
+   "China": 49,
+   "US": 88,
+   "Other": 44,
+   "china_share_of_cn_us": 35.8
   },
-  "tie": 0,
+  "tie": 1,
   "by_year": {
    "2020": {
-    "China": 12,
-    "US": 31,
-    "Other": 18,
-    "china_share_of_cn_us": 27.9
+    "China": 6,
+    "US": 21,
+    "Other": 9,
+    "china_share_of_cn_us": 22.2
    },
    "2021": {
-    "China": 12,
-    "US": 27,
-    "Other": 21,
-    "china_share_of_cn_us": 30.8
+    "China": 8,
+    "US": 10,
+    "Other": 12,
+    "china_share_of_cn_us": 44.4
    },
    "2022": {
-    "China": 15,
-    "US": 27,
-    "Other": 20,
-    "china_share_of_cn_us": 35.7
+    "China": 6,
+    "US": 17,
+    "Other": 9,
+    "china_share_of_cn_us": 26.1
    },
    "2023": {
-    "China": 14,
-    "US": 32,
-    "Other": 16,
-    "china_share_of_cn_us": 30.4
+    "China": 6,
+    "US": 16,
+    "Other": 5,
+    "china_share_of_cn_us": 27.3
    },
    "2024": {
-    "China": 21,
-    "US": 19,
-    "Other": 17,
-    "china_share_of_cn_us": 52.5
+    "China": 9,
+    "US": 11,
+    "Other": 4,
+    "china_share_of_cn_us": 45.0
    },
    "2025": {
-    "China": 7,
-    "US": 13,
-    "Other": 11,
-    "china_share_of_cn_us": 35.0
+    "China": 6,
+    "US": 5,
+    "Other": 4,
+    "china_share_of_cn_us": 54.5
    },
    "2026": {
-    "China": 17,
-    "US": 15,
+    "China": 8,
+    "US": 8,
     "Other": 1,
-    "china_share_of_cn_us": 53.1
+    "china_share_of_cn_us": 50.0
    }
   },
   "by_period": {
    "2020-2022": {
-    "China": 39,
-    "US": 85,
-    "Other": 59,
-    "china_share_of_cn_us": 31.5
+    "China": 20,
+    "US": 48,
+    "Other": 30,
+    "china_share_of_cn_us": 29.4
    },
    "2023-2026": {
-    "China": 59,
-    "US": 79,
-    "Other": 45,
-    "china_share_of_cn_us": 42.8
+    "China": 29,
+    "US": 40,
+    "Other": 14,
+    "china_share_of_cn_us": 42.0
+   }
+  },
+  "by_modality": {
+   "Bispecific / multispecific antibody": {
+    "China": 24,
+    "US": 29,
+    "Other": 19,
+    "china_share_of_cn_us": 45.3
+   },
+   "Small molecule": {
+    "China": 4,
+    "US": 10,
+    "Other": 11,
+    "china_share_of_cn_us": 28.6
+   },
+   "Antibody-drug conjugate": {
+    "China": 9,
+    "US": 11,
+    "Other": 4,
+    "china_share_of_cn_us": 45.0
+   },
+   "CAR-T / engineered cell therapy": {
+    "China": 4,
+    "US": 12,
+    "Other": 4,
+    "china_share_of_cn_us": 25.0
+   },
+   "Cytokine / fusion protein": {
+    "China": 3,
+    "US": 9,
+    "Other": 4,
+    "china_share_of_cn_us": 25.0
+   },
+   "Monoclonal antibody": {
+    "China": 3,
+    "US": 8,
+    "Other": 1,
+    "china_share_of_cn_us": 27.3
+   },
+   "Protein degrader": {
+    "China": 1,
+    "US": 5,
+    "Other": 1,
+    "china_share_of_cn_us": 16.7
+   },
+   "Oncolytic virus": {
+    "China": 1,
+    "US": 1,
+    "Other": 0,
+    "china_share_of_cn_us": 50.0
+   },
+   "Cancer vaccine": {
+    "China": 0,
+    "US": 2,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   },
+   "Radioligand": {
+    "China": 0,
+    "US": 1,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   }
+  },
+  "by_novelty": {
+   "new target": {
+    "China": 4,
+    "US": 23,
+    "Other": 12,
+    "china_share_of_cn_us": 14.8
+   },
+   "new target pair": {
+    "China": 45,
+    "US": 62,
+    "Other": 32,
+    "china_share_of_cn_us": 42.1
+   },
+   "known target, first time as sole target": {
+    "China": 0,
+    "US": 3,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   }
+  },
+  "follower_lag_months": {
+   "China first": {
+    "n": 7,
+    "median": 13
+   },
+   "US first": {
+    "n": 16,
+    "median": 21.5
+   }
+  },
+  "entered_by_both": 24
+ },
+ "new_classes_sensitivity_single_target": {
+  "n": 29,
+  "leader": {
+   "China": 2,
+   "US": 17,
+   "Other": 9,
+   "china_share_of_cn_us": 10.5
+  },
+  "tie": 1,
+  "by_year": {
+   "2020": {
+    "China": 0,
+    "US": 7,
+    "Other": 1,
+    "china_share_of_cn_us": 0.0
+   },
+   "2021": {
+    "China": 0,
+    "US": 4,
+    "Other": 5,
+    "china_share_of_cn_us": 0.0
+   },
+   "2022": {
+    "China": 0,
+    "US": 3,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   },
+   "2023": {
+    "China": 0,
+    "US": 2,
+    "Other": 2,
+    "china_share_of_cn_us": 0.0
+   },
+   "2024": {
+    "China": 0,
+    "US": 1,
+    "Other": 1,
+    "china_share_of_cn_us": 0.0
+   },
+   "2025": {
+    "China": 2,
+    "US": 0,
+    "Other": 0,
+    "china_share_of_cn_us": 100.0
+   }
+  },
+  "by_period": {
+   "2020-2022": {
+    "China": 0,
+    "US": 14,
+    "Other": 6,
+    "china_share_of_cn_us": 0.0
+   },
+   "2023-2026": {
+    "China": 2,
+    "US": 3,
+    "Other": 3,
+    "china_share_of_cn_us": 40.0
+   }
+  },
+  "by_modality": {
+   "Small molecule": {
+    "China": 0,
+    "US": 5,
+    "Other": 5,
+    "china_share_of_cn_us": 0.0
+   },
+   "Monoclonal antibody": {
+    "China": 1,
+    "US": 4,
+    "Other": 1,
+    "china_share_of_cn_us": 20.0
+   },
+   "Protein degrader": {
+    "China": 1,
+    "US": 3,
+    "Other": 0,
+    "china_share_of_cn_us": 25.0
+   },
+   "Antibody-drug conjugate": {
+    "China": 0,
+    "US": 3,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   },
+   "CAR-T / engineered cell therapy": {
+    "China": 0,
+    "US": 1,
+    "Other": 1,
+    "china_share_of_cn_us": 0.0
+   },
+   "Bispecific / multispecific antibody": {
+    "China": 0,
+    "US": 0,
+    "Other": 1,
+    "china_share_of_cn_us": null
+   },
+   "Radioligand": {
+    "China": 0,
+    "US": 1,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   },
+   "Cytokine / fusion protein": {
+    "China": 0,
+    "US": 0,
+    "Other": 1,
+    "china_share_of_cn_us": null
+   }
+  },
+  "by_novelty": {
+   "new target": {
+    "China": 2,
+    "US": 14,
+    "Other": 9,
+    "china_share_of_cn_us": 12.5
+   },
+   "known target, first time as sole target": {
+    "China": 0,
+    "US": 3,
+    "Other": 0,
+    "china_share_of_cn_us": 0.0
+   }
+  },
+  "follower_lag_months": {
+   "China first": {
+    "n": 1,
+    "median": 13
+   },
+   "US first": {
+    "n": 10,
+    "median": 18.0
+   }
+  },
+  "entered_by_both": 12
+ },
+ "new_classes_secondary_target_set_plus_drug_type": {
+  "n": 313,
+  "leader": {
+   "China": 86,
+   "US": 135,
+   "Other": 92,
+   "china_share_of_cn_us": 38.9
+  },
+  "tie": 0,
+  "by_year": {
+   "2020": {
+    "China": 8,
+    "US": 27,
+    "Other": 17,
+    "china_share_of_cn_us": 22.9
+   },
+   "2021": {
+    "China": 12,
+    "US": 18,
+    "Other": 19,
+    "china_share_of_cn_us": 40.0
+   },
+   "2022": {
+    "China": 15,
+    "US": 23,
+    "Other": 17,
+    "china_share_of_cn_us": 39.5
+   },
+   "2023": {
+    "China": 13,
+    "US": 23,
+    "Other": 12,
+    "china_share_of_cn_us": 36.1
+   },
+   "2024": {
+    "China": 15,
+    "US": 19,
+    "Other": 13,
+    "china_share_of_cn_us": 44.1
+   },
+   "2025": {
+    "China": 9,
+    "US": 10,
+    "Other": 13,
+    "china_share_of_cn_us": 47.4
+   },
+   "2026": {
+    "China": 14,
+    "US": 15,
+    "Other": 1,
+    "china_share_of_cn_us": 48.3
+   }
+  },
+  "by_period": {
+   "2020-2022": {
+    "China": 35,
+    "US": 68,
+    "Other": 53,
+    "china_share_of_cn_us": 34.0
+   },
+   "2023-2026": {
+    "China": 51,
+    "US": 67,
+    "Other": 39,
+    "china_share_of_cn_us": 43.2
    }
   },
   "by_modality": {
    "Bispecific / multispecific antibody": {
     "China": 29,
-    "US": 38,
+    "US": 40,
     "Other": 30,
-    "china_share_of_cn_us": 43.3
+    "china_share_of_cn_us": 42.0
    },
    "Antibody-drug conjugate": {
-    "China": 20,
-    "US": 19,
-    "Other": 13,
-    "china_share_of_cn_us": 51.3
+    "China": 17,
+    "US": 18,
+    "Other": 12,
+    "china_share_of_cn_us": 48.6
    },
    "Small molecule": {
-    "China": 11,
-    "US": 23,
-    "Other": 16,
-    "china_share_of_cn_us": 32.4
+    "China": 9,
+    "US": 16,
+    "Other": 13,
+    "china_share_of_cn_us": 36.0
    },
    "CAR-T / engineered cell therapy": {
-    "China": 16,
-    "US": 25,
-    "Other": 8,
-    "china_share_of_cn_us": 39.0
+    "China": 10,
+    "US": 17,
+    "Other": 9,
+    "china_share_of_cn_us": 37.0
    },
-   "Monoclonal antibody": {
-    "China": 7,
-    "US": 14,
-    "Other": 10,
-    "china_share_of_cn_us": 33.3
+   "Protein degrader": {
+    "China": 4,
+    "US": 18,
+    "Other": 4,
+    "china_share_of_cn_us": 18.2
    },
    "Cytokine / fusion protein": {
     "China": 10,
-    "US": 14,
+    "US": 9,
     "Other": 4,
-    "china_share_of_cn_us": 41.7
+    "china_share_of_cn_us": 52.6
    },
-   "Protein degrader": {
-    "China": 3,
-    "US": 20,
-    "Other": 4,
-    "china_share_of_cn_us": 13.0
+   "Monoclonal antibody": {
+    "China": 5,
+    "US": 9,
+    "Other": 7,
+    "china_share_of_cn_us": 35.7
    },
    "Radioligand": {
     "China": 0,
-    "US": 5,
-    "Other": 12,
+    "US": 3,
+    "Other": 7,
     "china_share_of_cn_us": 0.0
+   },
+   "Cancer vaccine": {
+    "China": 1,
+    "US": 3,
+    "Other": 2,
+    "china_share_of_cn_us": 25.0
    },
    "Oncolytic virus": {
     "China": 1,
     "US": 2,
-    "Other": 3,
-    "china_share_of_cn_us": 33.3
-   },
-   "Cancer vaccine": {
-    "China": 1,
-    "US": 3,
     "Other": 1,
-    "china_share_of_cn_us": 25.0
+    "china_share_of_cn_us": 33.3
    },
    "Nucleic acid (mRNA/siRNA/ASO)": {
     "China": 0,
-    "US": 1,
+    "US": 0,
     "Other": 3,
-    "china_share_of_cn_us": 0.0
+    "china_share_of_cn_us": null
    }
   },
   "by_novelty": {
    "new target": {
-    "China": 12,
-    "US": 37,
+    "China": 7,
+    "US": 26,
     "Other": 19,
-    "china_share_of_cn_us": 24.5
+    "china_share_of_cn_us": 21.2
    },
    "new target pair": {
-    "China": 60,
-    "US": 67,
-    "Other": 43,
-    "china_share_of_cn_us": 47.2
+    "China": 59,
+    "US": 64,
+    "Other": 40,
+    "china_share_of_cn_us": 48.0
    },
    "new drug type on known target": {
-    "China": 26,
-    "US": 60,
-    "Other": 42,
-    "china_share_of_cn_us": 30.2
-   }
-  },
-  "follower_lag_months": {
-   "China first": {
-    "n": 18,
-    "median": 13.0
-   },
-   "US first": {
-    "n": 24,
-    "median": 24.0
-   }
-  },
-  "entered_by_both": 44
- },
- "new_classes_sensitivity_single_target": {
-  "n": 176,
-  "leader": {
-   "China": 34,
-   "US": 86,
-   "Other": 56,
-   "china_share_of_cn_us": 28.3
-  },
-  "tie": 0,
-  "by_year": {
-   "2020": {
-    "China": 5,
-    "US": 15,
-    "Other": 8,
-    "china_share_of_cn_us": 25.0
-   },
-   "2021": {
-    "China": 3,
-    "US": 19,
-    "Other": 12,
-    "china_share_of_cn_us": 13.6
-   },
-   "2022": {
-    "China": 6,
-    "US": 13,
-    "Other": 8,
-    "china_share_of_cn_us": 31.6
-   },
-   "2023": {
-    "China": 6,
-    "US": 14,
-    "Other": 10,
-    "china_share_of_cn_us": 30.0
-   },
-   "2024": {
-    "China": 7,
-    "US": 10,
-    "Other": 12,
-    "china_share_of_cn_us": 41.2
-   },
-   "2025": {
-    "China": 3,
-    "US": 7,
-    "Other": 6,
-    "china_share_of_cn_us": 30.0
-   },
-   "2026": {
-    "China": 4,
-    "US": 8,
-    "Other": 0,
-    "china_share_of_cn_us": 33.3
-   }
-  },
-  "by_period": {
-   "2020-2022": {
-    "China": 14,
-    "US": 47,
-    "Other": 28,
-    "china_share_of_cn_us": 23.0
-   },
-   "2023-2026": {
     "China": 20,
-    "US": 39,
-    "Other": 28,
-    "china_share_of_cn_us": 33.9
-   }
-  },
-  "by_modality": {
-   "Small molecule": {
-    "China": 4,
-    "US": 16,
-    "Other": 7,
-    "china_share_of_cn_us": 20.0
-   },
-   "CAR-T / engineered cell therapy": {
-    "China": 8,
-    "US": 12,
-    "Other": 6,
-    "china_share_of_cn_us": 40.0
-   },
-   "Antibody-drug conjugate": {
-    "China": 8,
-    "US": 11,
-    "Other": 7,
-    "china_share_of_cn_us": 42.1
-   },
-   "Protein degrader": {
-    "China": 3,
-    "US": 17,
-    "Other": 2,
-    "china_share_of_cn_us": 15.0
-   },
-   "Monoclonal antibody": {
-    "China": 3,
-    "US": 8,
-    "Other": 10,
-    "china_share_of_cn_us": 27.3
-   },
-   "Bispecific / multispecific antibody": {
-    "China": 1,
-    "US": 11,
-    "Other": 8,
-    "china_share_of_cn_us": 8.3
-   },
-   "Radioligand": {
-    "China": 0,
-    "US": 5,
-    "Other": 9,
-    "china_share_of_cn_us": 0.0
-   },
-   "Cytokine / fusion protein": {
-    "China": 6,
-    "US": 3,
-    "Other": 1,
-    "china_share_of_cn_us": 66.7
-   },
-   "Oncolytic virus": {
-    "China": 0,
-    "US": 1,
-    "Other": 3,
-    "china_share_of_cn_us": 0.0
-   },
-   "Nucleic acid (mRNA/siRNA/ASO)": {
-    "China": 0,
-    "US": 1,
-    "Other": 3,
-    "china_share_of_cn_us": 0.0
-   },
-   "Cancer vaccine": {
-    "China": 1,
-    "US": 1,
-    "Other": 0,
-    "china_share_of_cn_us": 50.0
-   }
-  },
-  "by_novelty": {
-   "new drug type on known target": {
-    "China": 26,
-    "US": 60,
-    "Other": 42,
-    "china_share_of_cn_us": 30.2
-   },
-   "new target": {
-    "China": 8,
-    "US": 26,
-    "Other": 14,
-    "china_share_of_cn_us": 23.5
+    "US": 45,
+    "Other": 33,
+    "china_share_of_cn_us": 30.8
    }
   },
   "follower_lag_months": {
    "China first": {
-    "n": 9,
+    "n": 15,
     "median": 13
    },
    "US first": {
-    "n": 18,
-    "median": 22.0
+    "n": 21,
+    "median": 25
    }
   },
-  "entered_by_both": 29
+  "entered_by_both": 37
  },
  "target_breadth": {
   "China": {
-   "agents_with_target": 605,
-   "unique_targets": 141,
-   "top10_share_pct": 38.0,
-   "hhi": 217,
+   "agents_with_target": 617,
+   "unique_targets": 140,
+   "top10_share_pct": 37.0,
+   "hhi": 206,
    "top10": [
     [
-     "EGFR",
-     46
-    ],
-    [
-     "PD-1",
-     44
-    ],
-    [
      "PD-L1",
-     43
+     45
     ],
     [
-     "HER2",
-     40
+     "EGFR",
+     41
     ],
     [
      "CD3",
-     39
+     40
+    ],
+    [
+     "PD-1",
+     36
+    ],
+    [
+     "HER2",
+     36
     ],
     [
      "Claudin 18.2",
@@ -550,32 +687,28 @@
      18
     ],
     [
-     "TROP2",
-     16
+     "TGF-β",
+     18
     ],
     [
-     "TGF-β",
-     16
+     "B7-H3",
+     17
     ]
    ]
   },
   "US": {
-   "agents_with_target": 685,
-   "unique_targets": 178,
-   "top10_share_pct": 29.2,
-   "hhi": 146,
+   "agents_with_target": 682,
+   "unique_targets": 180,
+   "top10_share_pct": 26.7,
+   "hhi": 132,
    "top10": [
     [
      "CD3",
-     49
-    ],
-    [
-     "PD-1",
-     36
+     46
     ],
     [
      "CD19",
-     31
+     29
     ],
     [
      "EGFR",
@@ -586,24 +719,28 @@
      20
     ],
     [
-     "PD-L1",
+     "PD-1",
      19
     ],
     [
      "HER2",
-     19
+     18
     ],
     [
      "PSMA",
-     17
+     18
     ],
     [
      "IL-12",
+     18
+    ],
+    [
+     "PD-L1",
      17
     ],
     [
      "BCMA",
-     16
+     14
     ]
    ]
   },
@@ -611,7 +748,6 @@
    "Aurora kinase",
    "CD155/PVR",
    "CD37",
-   "CSF1R",
    "CYP11A1",
    "EGFRvIII",
    "FGFR2b",
@@ -624,7 +760,6 @@
    "PI3Kδ",
    "PSCA",
    "PVRIG",
-   "Pol θ",
    "XPO1",
    "pan-KRAS / pan-RAS"
   ],
@@ -661,6 +796,7 @@
    "MALT1",
    "MCL-1",
    "MDM2",
+   "MEK",
    "MICA/B",
    "MYC",
    "Menin",
@@ -707,10 +843,16 @@
    85.7
   ],
   [
+   "TRK",
+   10,
+   2,
+   83.3
+  ],
+  [
    "4-1BB",
    23,
-   4,
-   85.2
+   5,
+   82.1
   ],
   [
    "TROP2",
@@ -719,58 +861,70 @@
    76.2
   ],
   [
-   "TGF-β",
-   16,
-   5,
-   76.2
-  ],
-  [
    "VEGF/VEGFR",
-   15,
-   6,
-   71.4
+   14,
+   5,
+   73.7
   ],
   [
-   "B7-H3",
-   15,
-   6,
-   71.4
+   "DLL3",
+   11,
+   4,
+   73.3
   ],
   [
    "PD-L1",
-   43,
-   19,
-   69.4
+   45,
+   17,
+   72.6
   ],
   [
-   "CD73",
+   "TGF-β",
+   18,
+   7,
+   72.0
+  ],
+  [
+   "B7-H3",
+   17,
+   7,
+   70.8
+  ],
+  [
+   "AKT",
    9,
    4,
    69.2
   ],
   [
-   "DLL3",
-   11,
-   5,
-   68.8
+   "CD73",
+   8,
+   4,
+   66.7
   ],
   [
    "HER2",
-   40,
+   36,
+   18,
+   66.7
+  ],
+  [
+   "GPRC5D",
+   8,
+   4,
+   66.7
+  ],
+  [
+   "PD-1",
+   36,
    19,
-   67.8
+   65.5
   ],
   [
    "CD47",
    13,
    7,
    65.0
-  ],
-  [
-   "EGFR",
-   46,
-   28,
-   62.2
   ],
   [
    "c-MET",
@@ -780,57 +934,51 @@
   ],
   [
    "IL-15",
-   7,
+   8,
    5,
-   58.3
+   61.5
   ],
   [
-   "CDK4/6",
-   14,
-   10,
-   58.3
-  ],
-  [
-   "PD-1",
-   44,
-   36,
-   55.0
-  ],
-  [
-   "BRAF",
-   7,
-   6,
-   53.8
+   "EGFR",
+   41,
+   28,
+   59.4
   ],
   [
    "KRAS G12C",
-   10,
+   12,
    9,
-   52.6
+   57.1
   ],
   [
-   "BCL-2",
-   8,
-   8,
-   50.0
+   "CDK4/6",
+   12,
+   10,
+   54.5
   ],
   [
    "PARP1",
    8,
+   7,
+   53.3
+  ],
+  [
+   "BTK",
+   8,
    8,
    50.0
   ],
   [
-   "CTLA-4",
-   9,
-   10,
-   47.4
+   "FRα",
+   6,
+   6,
+   50.0
   ],
   [
-   "BTK",
-   7,
+   "BCL-2",
    8,
-   46.7
+   9,
+   47.1
   ],
   [
    "Nectin-4",
@@ -840,39 +988,45 @@
   ],
   [
    "CD3",
-   39,
-   49,
-   44.3
+   40,
+   46,
+   46.5
   ],
   [
-   "CD20",
-   10,
-   13,
-   43.5
+   "CTLA-4",
+   9,
+   11,
+   45.0
   ],
   [
    "BCMA",
-   11,
-   16,
-   40.7
+   10,
+   14,
+   41.7
+  ],
+  [
+   "BRAF",
+   5,
+   7,
+   41.7
+  ],
+  [
+   "FLT3",
+   5,
+   7,
+   41.7
+  ],
+  [
+   "CD20",
+   9,
+   13,
+   40.9
   ],
   [
    "CDK2",
    6,
    11,
    35.3
-  ],
-  [
-   "CD19",
-   16,
-   31,
-   34.0
-  ],
-  [
-   "CD38",
-   6,
-   12,
-   33.3
   ],
   [
    "PI3Kα",
@@ -887,28 +1041,40 @@
    33.3
   ],
   [
+   "CD19",
+   14,
+   29,
+   32.6
+  ],
+  [
    "Mesothelin",
    4,
    9,
    30.8
   ],
   [
-   "PSMA",
-   6,
-   17,
-   26.1
+   "CD38",
+   5,
+   12,
+   29.4
   ],
   [
-   "IL-12",
-   5,
-   17,
-   22.7
+   "PSMA",
+   6,
+   18,
+   25.0
   ],
   [
    "KRAS (other/unspecified)",
    4,
-   14,
-   22.2
+   13,
+   23.5
+  ],
+  [
+   "CD28",
+   3,
+   10,
+   23.1
   ],
   [
    "IL-2 pathway",
@@ -917,96 +1083,96 @@
    20.0
   ],
   [
-   "CD28",
-   2,
-   10,
-   16.7
+   "IL-12",
+   4,
+   18,
+   18.2
   ]
  ],
  "by_tumour_group": {
   "Solid tumours (unspecified)": {
-   "China": 700,
-   "US": 279,
-   "Other": 264,
-   "china_share_of_cn_us": 71.5
+   "China": 701,
+   "US": 298,
+   "Other": 261,
+   "china_share_of_cn_us": 70.2
   },
   "Haematological": {
-   "China": 185,
-   "US": 224,
-   "Other": 117,
-   "china_share_of_cn_us": 45.2
+   "China": 191,
+   "US": 231,
+   "Other": 124,
+   "china_share_of_cn_us": 45.3
   },
   "Lung": {
-   "China": 102,
-   "US": 260,
-   "Other": 122,
-   "china_share_of_cn_us": 28.2
+   "China": 109,
+   "US": 265,
+   "Other": 128,
+   "china_share_of_cn_us": 29.1
   },
   "Gastrointestinal": {
-   "China": 47,
-   "US": 64,
-   "Other": 69,
-   "china_share_of_cn_us": 42.3
+   "China": 57,
+   "US": 66,
+   "Other": 71,
+   "china_share_of_cn_us": 46.3
   },
   "Genitourinary": {
    "China": 43,
-   "US": 67,
-   "Other": 54,
-   "china_share_of_cn_us": 39.1
+   "US": 69,
+   "Other": 60,
+   "china_share_of_cn_us": 38.4
   },
   "Breast": {
-   "China": 41,
-   "US": 58,
-   "Other": 32,
-   "china_share_of_cn_us": 41.4
+   "China": 48,
+   "US": 60,
+   "Other": 36,
+   "china_share_of_cn_us": 44.4
   },
   "Other": {
-   "China": 13,
-   "US": 20,
-   "Other": 29,
-   "china_share_of_cn_us": 39.4
+   "China": 15,
+   "US": 25,
+   "Other": 33,
+   "china_share_of_cn_us": 37.5
   },
   "Gynaecological": {
-   "China": 5,
+   "China": 7,
    "US": 24,
-   "Other": 7,
-   "china_share_of_cn_us": 17.2
+   "Other": 9,
+   "china_share_of_cn_us": 22.6
   },
   "CNS": {
    "China": 9,
-   "US": 13,
-   "Other": 11,
-   "china_share_of_cn_us": 40.9
+   "US": 16,
+   "Other": 13,
+   "china_share_of_cn_us": 36.0
   }
  },
  "agents_2020_2022_with_more_than_one_trial": {
   "China": {
-   "n": 410,
-   "multi_trial_pct": 43.7
+   "n": 427,
+   "multi_trial_pct": 52.0
   },
   "US": {
-   "n": 431,
-   "multi_trial_pct": 27.1
+   "n": 446,
+   "multi_trial_pct": 35.7
   }
  },
  "coverage": {
   "China": {
-   "n": 1145,
-   "target_identified_pct": 52.8,
-   "drug_type_identified_pct": 75.6,
-   "ncit_source_pct": 39.0
+   "n": 1180,
+   "target_identified_pct": 52.3,
+   "drug_type_identified_pct": 73.1,
+   "ncit_source_pct": 38.7
   },
   "US": {
-   "n": 1009,
-   "target_identified_pct": 67.9,
-   "drug_type_identified_pct": 91.3,
-   "ncit_source_pct": 61.7
+   "n": 1054,
+   "target_identified_pct": 64.7,
+   "drug_type_identified_pct": 89.6,
+   "ncit_source_pct": 61.0
   },
   "Other": {
-   "n": 705,
-   "target_identified_pct": 58.2,
-   "drug_type_identified_pct": 85.5,
-   "ncit_source_pct": 45.8
+   "n": 735,
+   "target_identified_pct": 54.6,
+   "drug_type_identified_pct": 82.7,
+   "ncit_source_pct": 46.3
   }
  }
 }

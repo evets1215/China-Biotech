@@ -6,7 +6,7 @@ import re
 
 TARGETS = {
     # --- immune checkpoints / co-stimulation ---
-    "PD-1": r"PD-?1(?!\s?H)|PDCD1|CD279|programmed (?:cell )?death(?: protein)?[- ]1(?! ligand)",
+    "PD-1": r"PD-?1(?!\s?H)|PDCD1|CD279|programmed (?:cell )?death(?: protein)?[- ]1(?! ligand| homolog)",
     "PD-L1": r"PD-?L1|CD274|B7-?H1|programmed (?:cell )?death[- ](?:1 )?ligand[- ]1",
     "CTLA-4": r"CTLA-?4|CD152",
     "LAG-3": r"LAG-?3|CD223",
@@ -59,10 +59,10 @@ TARGETS = {
     "CD24": r"CD24\b",
     "Siglec-15": r"Siglec-?15",
     # --- solid tumour surface antigens ---
-    "HER2": r"HER-?2|ERBB2|EGFR2",
-    "EGFR": r"EGFR(?!2|vIII)|ERBB1|HER1|epidermal growth factor receptor(?! 2)",
+    "HER2": r"HER-?2|ERBB2|EGFR2|human epidermal growth factor receptor[- ]2",
+    "EGFR": r"EGFR(?!2|vIII)|ERBB1|HER1|(?<!human )epidermal growth factor receptor(?![- ][234])",
     "EGFRvIII": r"EGFRvIII",
-    "HER3": r"HER-?3|ERBB3",
+    "HER3": r"HER-?3|ERBB3|human epidermal growth factor receptor[- ]3",
     "c-MET": r"c-?MET\b|HGFR|MET exon|(?-i:\bMET\b)(?= (?:inhibitor|amplif|kinase|tyrosine))",
     "TROP2": r"TROP-?2|TACSTD2",
     "B7-H3": r"B7-?H3|CD276",
@@ -193,7 +193,7 @@ TARGETS = {
     "STAT3": r"STAT3",
     "STAT5": r"STAT5",
     "TEAD/YAP": r"TEAD|YAP",
-    "HIF-2α": r"HIF-?2",
+    "HIF-2α": r"HIF-?2|\(HIF\)-?2|hypoxia[- ]inducible factor[- ]2",
     "FGFR": r"FGFR(?!2b)",
     "RET": r"(?-i:\bRET\b)",
     "ALK": r"(?-i:\bALK\b)(?!7)",
@@ -251,7 +251,7 @@ MODALITY_RULES = [
                                 r"vedotin|deruxtecan|tecan\b|mafodotin|tesirine|govitecan|ravtansine|soravtansine"),
     ("Bispecific / multispecific antibody", r"bispecific|bi-specific|trispecific|tri-specific|tetraspecific|multispecific|T[- ]cell engager|\bBiTE\b|"
                                             r"NK[- ]cell engager|dual[- ]targeting antibody|bifunctional (?:fusion|antibody)"),
-    ("Protein degrader", r"degrader|PROTAC|molecular glue|proteolysis[- ]targeting"),
+    ("Protein degrader", r"degrader|PROTAC|molecular glue|proteolysis[- ]targeting|CELMoD|cereblon|E3 ubiquitin ligase"),
     ("Cancer vaccine", r"vaccine"),
     ("Oncolytic virus", r"oncolytic|\bvirus\b|adenovirus|herpes simplex|vaccinia"),
     ("Nucleic acid (mRNA/siRNA/ASO)", r"\bmRNA\b|siRNA|antisense|oligonucleotide|RNAi\b|lipid nanoparticle"),

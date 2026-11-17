@@ -8,8 +8,9 @@ Every number in `abstract_draft.md` is produced by the code in `scripts/` from t
 
 ---
 
-> **Accuracy note.** These methods reproduce the numbers exactly, but an audit (`AUDIT.md`) found that the
-> target and class assignments they produce are not reliable. Reproducible is not the same as correct.
+> **Accuracy note.** These methods reproduce the numbers exactly. That is not the same as the numbers being
+> correct. Version 1 of this pipeline failed an accuracy audit; this is version 2, rebuilt to fix the audit
+> findings (`AUDIT.md`). Version 2 has had the same author's re-check but **no independent validation yet**.
 
 ## 1. Study design
 
@@ -24,11 +25,11 @@ September 2026, which molecular targets and drug types are led by China-based sp
 
 | Source | What it provides | Retrieved | Frozen copy | SHA-256 |
 |---|---|---|---|---|
-| ClinicalTrials.gov API v2 (`https://clinicaltrials.gov/api/v2/studies`) | Trial records | 17 Nov 2026 | `data/snapshot/ctgov_phase1_oncology_2026-11-17.jsonl.gz` | `77fb123f...500fa145` (uncompressed file) |
+| ClinicalTrials.gov API v2 (`https://clinicaltrials.gov/api/v2/studies`) | Trial records | 17 Nov 2026 | `data/snapshot/ctgov_oncology_all_2026-11-17.jsonl.gz.part00` and `.part01` (one gzip file split in two) | `8b023521...632ff9335` (uncompressed file) |
 | NCI Thesaurus flat file (`https://evs.nci.nih.gov/ftp1/NCI_Thesaurus/Thesaurus.FLAT.zip`) | Drug names, synonyms and definitions | 17 Nov 2026 | `data/snapshot/NCI_Thesaurus_FLAT_2026-11-17.zip` | `bbb28631...176d6736` |
 | ClinicalTrials.gov API v2, per-agent count queries | Whether each agent had any trial before 2020 | 17 Nov 2026 | `data/history_check.json` | - |
 
-Full checksums: `77fb123f3f98db706f2d99371a708ba66b5f7a4af37e0d9b271f109b500fa145` and
+Full checksums: `8b023521f6a9b1976718fe10fbd267d81d20f13004f25ed3bb17332632ff9335` and
 `bbb28631799046e1227ac221636c2de6bb1d2b79bf6c8e0a1143a797176d6736`.
 
 China's drug trial registry (chinadrugtrials.org.cn) is **not** included: it blocks automated access. See section 8.
@@ -39,21 +40,26 @@ One API query, paged 1,000 records at a time:
 
 - **Condition (`query.cond`):** `cancer OR neoplasm OR tumor OR tumour OR carcinoma OR lymphoma OR leukemia OR myeloma
   OR sarcoma OR melanoma OR glioma OR glioblastoma OR malignancy OR malignant`
-- **Filter (`filter.advanced`):** `AREA[StudyType]INTERVENTIONAL AND AREA[Phase](EARLY_PHASE1 OR PHASE1) AND
-  AREA[StartDate]RANGE[2010-01-01,MAX]`
+- **Filter (`filter.advanced`):** `AREA[StudyType]INTERVENTIONAL AND AREA[InterventionType](DRUG OR BIOLOGICAL OR
+  GENETIC OR COMBINATION_PRODUCT)`
 
-The phase filter returns phase 1 and combined phase 1/2 trials. Trials from 2010 onward are retrieved so that an
-agent's novelty in 2020-2026 can be judged against ten years of history.
+There is **no phase filter and no date filter**. Sponsors update a trial's phase label as it grows, so a
+first-in-human trial can later be labelled phase 2 (version 1 kept only trials currently labelled phase 1 and
+missed such drugs). All dates are kept so that the history of each target before 2020 is as complete as the
+registry allows.
 
 Fields kept per trial: NCT number, brief and official title, brief summary, detailed description, arm labels and
 descriptions, phase, start date, first-submission date, status, enrolment, lead sponsor name and class,
 collaborators, conditions, keywords, condition and intervention MeSH terms, site countries, and every intervention
 (type, name, other names, description).
 
-**Result:** 21,945 trials (10,410 with an industry lead sponsor).
+**Result:** 72,031 trials.
 
 ## 4. From trials to agents (`scripts/build_agents.py`)
 
+0. **Non-therapeutic trials are dropped first** (title matches healthy volunteers, bioavailability, bioequivalence,
+   biosimilar, mass balance, food effect, drug-drug interaction, supportive care, imaging/PET, dosimetry or
+   microdosing; `NON_THERAPEUTIC`). 69,569 trials remain. The agent is kept if it has other trials.
 1. **Interventions considered:** types `DRUG`, `BIOLOGICAL`, `GENETIC` and `COMBINATION_PRODUCT`.
 2. **Splitting combinations:** text in parentheses is removed, then the intervention name is split on `+ ; , /`,
    and the words *and, plus, with, in combination with, combined with, followed by, or, &*. Each part is a candidate
@@ -73,11 +79,14 @@ collaborators, conditions, keywords, condition and intervention MeSH terms, site
    its brief or official title, provided that trial starts within 12 months of the agent's first trial; otherwise to
    the sponsor of the first trial. This prevents a new drug being attributed to the sponsor of a trial in which it
    is only a combination partner.
-8. **Descriptive text:** for each agent, every sentence that contains the agent's name is collected from the
-   titles, summary, detailed description and arm descriptions of its first 12 trials (maximum 40 sentences), plus
-   the intervention descriptions from trials where it is the only agent in that intervention (maximum 5).
+8. **Descriptive text:** for each agent, sentences that contain the agent's name are collected from the titles,
+   summary and detailed description of its first 12 trials. Each sentence is cut into clauses at words that
+   introduce another drug or an earlier treatment (*in combination with, plus, with or without, followed by,
+   versus, prior, after, resistant to, treated with...*; `CLAUSE`), and **only clauses that name the agent are
+   kept** (maximum 40). The first clause of the intervention description is also kept when the agent is the only
+   drug in that intervention (maximum 5). This stops a partner drug's description being attributed to the agent.
 
-**Result:** 11,757 agents.
+**Result:** 20,722 agents.
 
 ## 5. Classification (`scripts/classify.py`)
 
@@ -85,15 +94,16 @@ collaborators, conditions, keywords, condition and intervention MeSH terms, site
 
 | Step | Rule | Agents removed |
 |---|---|---|
-| a | First trial's title matches a non-therapeutic study (healthy volunteers, bioavailability, bioequivalence, biosimilar, mass balance, food effect, drug-drug interaction, supportive care, imaging/PET, dosimetry, microdosing), or the name is a carbon-14 or imaging isotope label (`EXCLUDE`, `IMAGING_NAME`) | 769 |
-| b | Conditions, MeSH terms and title contain no cancer term (`ONC`) | 321 |
-| c | Name is not an identifiable agent: it has no NCI Thesaurus link, no code-like pattern (letters followed by two or more digits) and no international non-proprietary name suffix (*-mab, -tinib, -cel...*), or it is a dose/arm label | 2,413 |
-| d | Name variants of the same drug merged (5.2) | 358 rows merged |
-| e | Sponsor of the attributed trial is not industry (ClinicalTrials.gov lead sponsor class), or first trial before January 2020 or after September 2026 | leaves 3,024 |
-| f | Any ClinicalTrials.gov trial before 2020 (5.3) | 165 |
+| a | Name is an imaging or carbon-14 isotope label (`IMAGING_NAME`), or is nothing but a target name (e.g. "VEGF-A") | 231 |
+| b | Conditions, MeSH terms and title of the attributed trial contain no cancer term (`ONC`) | 1,196 |
+| c | Name is not an identifiable agent: no NCI Thesaurus link, no code-like pattern (letters followed by two or more digits) and no international non-proprietary name suffix (*-mab, -tinib, -cel...*), or it is a dose/arm label | 7,655 |
+| d | Name variants of the same drug merged (5.2) | 476 rows merged |
+| e | Sponsor of the attributed trial is not industry, or first trial before January 2020 or after September 2026 | - |
+| f | First trial is phase 3, phase 4 or has no phase (mostly biosimilars, generics and new formulations) | 111 |
+| g | Any ClinicalTrials.gov trial before 2020, in any disease (5.3) | 154 |
 
-**Study cohort: 2,859 agents.** Agents from 2010-2019 and non-industry agents stay in `data/cohort.csv` with
-`in_cohort = 0`; industry agents from 2010-2019 are the history against which new classes are judged (section 6).
+**Study cohort: 2,969 agents.** All other agents (10,787 in total after steps a-d) stay in `data/cohort.csv` with
+`in_cohort = 0`; they are the history against which new classes are judged (section 6).
 
 ### 5.2 De-duplication
 
@@ -137,8 +147,8 @@ molecule. Each is a regular expression of defining terms (for example *antibody-
 deruxtecan* for antibody-drug conjugates).
 
 The rules are applied to, in order: (1) the first sentence of the NCI Thesaurus definition, up to the words "with
-potential"; (2) the agent's own descriptive text (section 4, step 8); (3) the agent name. Agents matching none are
-"Unclassified".
+potential"; (2) the whole NCI definition; (3) the agent's own descriptive text (section 4, step 8); (4) the agent
+name. Agents matching none are "Unclassified".
 
 ### 5.6 Molecular target (`TARGETS` in `scripts/lexicon.py`)
 
@@ -146,6 +156,8 @@ A curated lexicon of 221 oncology targets, each with a regular expression of ali
 ERBB2, EGFR2*). Targets are accepted from only two kinds of text:
 
 1. **NCI Thesaurus definition, first sentence** (up to "with potential"): every lexicon target mentioned is accepted.
+   If the first sentence names none, the **second sentence** is used, but a target counts only if it follows a verb
+   saying the drug acts on it (*binds to, targets, directed against, inhibits, blocks, degrades...*; `ACTS_ON`).
 2. **Only if (1) gives none - the agent's own descriptive text:** a target is accepted only if it appears in a
    drug-describing context:
    - *preceded* within 40 characters by a term such as *anti-, against, targeting, directed against, inhibitor of,
@@ -164,7 +176,7 @@ than three targets are treated as having no clean target assignment.
 
 ## 6. Outcomes (`scripts/analyse.py`)
 
-All outcomes use industry-sponsored agents only.
+Cohort outcomes use industry-sponsored agents only.
 
 | Outcome | Definition |
 |---|---|
@@ -173,13 +185,16 @@ All outcomes use industry-sponsored agents only.
 | **Per-target share** | Same ratio per target, reported for targets with at least 12 China-plus-US agents |
 | **Target breadth** | Number of distinct lexicon targets among a country's agents |
 | **Target concentration** | Share of all target assignments accounted for by the country's 10 most common targets; Herfindahl-Hirschman index |
-| **Class** | A drug type plus a set of one or two targets (for example "Antibody-drug conjugate \| B7-H3"). Agents with unclassified drug type, no target, or more than two targets are not assigned to a class |
-| **New class** | A class whose earliest industry agent has a first trial in January 2020 or later, i.e. no industry agent of that class was registered in 2010-2019 |
-| **Leader** | Sponsor country of the earliest agent in a new class. If agents from different countries share the earliest month, the class is a tie (none occurred) |
-| **Novelty type** | *New target*: at least one of the class's targets was not carried by any industry agent before 2020. *New target pair*: two targets, each seen before 2020. *New drug type on known target*: one target, seen before 2020 in another drug type |
+| **Class (primary)** | A target set of one or two targets, **regardless of drug type** (e.g. "B7-H3", or "PD-1 + VEGF"). Agents with no target or more than two targets are not assigned to a class |
+| **New class** | A class for which **no agent of any sponsor type** (industry, academic or government) has a registered trial before January 2020 |
+| **Leader** | Sponsor country of the earliest cohort agent in a new class. If cohort agents from different countries share the earliest month, the class is a tie (one occurred) |
+| **Novelty type** | *New target*: at least one target was not carried by any agent before 2020. *New target pair*: two targets, each seen before 2020 but not together. *Known target, first time as sole target*: one target, seen before 2020 only alongside others |
 | **Follower lag** | For new classes entered by both countries, months between the first China agent and the first US agent |
 
-**Sensitivity analysis:** the new-class analysis is repeated with single-target classes only.
+**Sensitivity analysis:** single-target classes only.
+
+**Secondary analysis:** the class is defined as target set **plus drug type** (the version 1 definition). It is
+reported for comparison only, because it counts the same target set again whenever the drug type label differs.
 
 No hypothesis tests were performed; all results are descriptive counts and proportions.
 
@@ -193,25 +208,34 @@ and Cohen's kappa between automated and manual coding for country and drug type;
 agents with an exact match and the proportion of automated targets confirmed. Two independent coders are preferred,
 so that inter-coder agreement can also be reported.
 
-**Until this is done, no accuracy figure can be stated.**
+A second sheet, `results/new_classes_review.csv`, lists every new class with its first agent, sponsor and trial, the
+author's own doubts pre-filled (`author_flag`), and blank columns for a reviewer to confirm the targets, whether
+the class really was new before 2020, and the originator's country.
+
+**Until both are done, no accuracy figure can be stated.**
 
 ## 8. Limitations that affect interpretation
 
 1. **Single registry.** Trials registered only on China's registry are missing, which under-counts China-based
    sponsors.
-2. **Uneven annotation.** A target was assigned for 53% of China agents and 68% of US agents; a drug type for 76%
-   and 91%. Target-level and class-level results therefore describe a smaller share of China's agents.
-3. **"First registered trial" is a proxy** for first-in-human. A drug first tested in an unregistered trial, or on
-   another registry, has a later apparent date here.
-4. **Cohort size is an upper bound.** The same drug under two companies' code names (after licensing) is not merged.
-5. **The history check is loose.** It matches names as phrases, so a few new agents with short code names are
+2. **Uneven annotation.** A target was assigned for 52% of China agents and 65% of US agents; a drug type for 73%
+   and 90%. Target and class results therefore describe a smaller share of China's agents, and China's targets
+   rely more often on trial text, the weaker source.
+3. **False novelty remains possible.** If an older drug's target was not extracted, its class looks new. The
+   author's re-check of the 182 new classes found about a dozen doubtful ones (`results/new_classes_review.csv`).
+4. **Sponsor names reflect the current owner.** After an acquisition or licence the registry renames the sponsor on
+   old trials, so some agents are credited to the acquirer's country, not the originator's.
+5. **"First registered trial" is a proxy** for first-in-human.
+6. **Cohort size is an upper bound.** The same drug under two companies' code names is not merged, and renamed
+   drugs are linked only when the NCI Thesaurus lists both names.
+7. **The history check is loose.** It matches names as phrases, so a few new agents with short code names are
    wrongly excluded.
-6. **Target lexicon is finite.** Targets outside the 221 in the lexicon are not counted, which understates breadth
-   for both countries and under-counts truly novel targets.
-7. **Sponsor country lists are hand-curated** by one person and unvalidated.
-8. **Partial final year.** 2026 covers January to September, and trials are sometimes registered after they start.
-9. **Sensitivity to rules.** An earlier, looser version of the target rules gave a materially different trend in
-   China's share of new classes; see `README.md`.
+8. **Target lexicon is finite** (221 targets). Targets outside it are not counted, which understates breadth for
+   both countries and under-counts truly novel targets.
+9. **Sponsor country lists are hand-curated** by one person and unvalidated.
+10. **Partial final year.** 2026 covers January to September.
+11. **Results have moved with each revision of the rules** (see `AUDIT.md`), which is itself a warning about
+    how far to trust any single figure before validation.
 
 ## 9. Reproducing the results
 
@@ -227,14 +251,15 @@ cd research/asco2027
 
 This unpacks the frozen inputs, runs the five steps in order (`build_agents.py`, `classify.py`,
 `history_check.py`, `classify.py` again, `analyse.py`), draws the validation sample, and prints checksums.
-It takes a few minutes. The output files should have these SHA-256 checksums:
+It takes about ten minutes. The output files should have these SHA-256 checksums:
 
 | File | SHA-256 |
 |---|---|
-| `data/cohort.csv` | `8c0d47feda981e571fae20baa7c9baaa74340d81afce8157dd339290cd0f75ca` |
-| `results/summary.json` | `57178629d1d96725fdc5bc5487915db3feb3a78b940441402a9a57d4661b5d24` |
-| `results/new_classes.csv` | `1a428bc5a3269590eccb12cfa5424394bbc06790abfec2c0ad4b4e938b9de39d` |
-| `validation/validation_sample_150.csv` | `9ebe1866fa2503fe93f5f733d8ecc1d44c1b182bbddad6ce76a2a62cf048e984` |
+| `data/cohort.csv` | `71b2529251b83cb444fcafcee569fc433aa7a35f10f992f970d83e3926d6301a` |
+| `results/summary.json` | `e1977ff43c9c6f2186ebbb1c9b7d2698df3c7ad37b34e8953f08ca0d1ab3a382` |
+| `results/new_classes.csv` | `50a3950310b58921563d0d35da067132f173c83bef73c4b8e2d320d55d333b06` |
+| `results/new_classes_review.csv` | `e567aebfe82293548277ec887acbdaef5afd13c34102df8b59a0c88629972c1e` |
+| `validation/validation_sample_150.csv` | `b5eacefad7dea5194f7804bbc19e98706eae627be56a029b345b65d3e93f5664` |
 
 The pipeline was run twice from the frozen inputs with different Python hash seeds and gave identical checksums.
 
@@ -248,14 +273,14 @@ To repeat the study on current data instead (numbers will differ, because the re
 
 | Abstract statement | Key in `results/summary.json` |
 |---|---|
-| 2,859 agents; 1,145 China; 1,009 US | `cohort_n`, `cohort_by_country` |
+| 2,969 agents; 1,180 China; 1,054 US | `cohort_n`, `cohort_by_country` |
 | Yearly counts | `new_agents_by_year` |
-| Drug type shares (57%, 56%, ...) | `by_modality[*].china_share_of_cn_us` |
-| Target assigned for 53% vs 68% | `coverage[*].target_identified_pct` |
-| 178 vs 141 targets; top-10 share 29% vs 38% | `target_breadth` |
-| 366 new classes; 164 US, 98 China, 104 other | `new_classes_primary_1_or_2_targets.leader` |
-| 32% rising to 43% | `new_classes_primary_1_or_2_targets.by_period` |
-| New targets 37 vs 12; new target pairs 67 vs 60 | `new_classes_primary_1_or_2_targets.by_novelty` |
+| Drug type shares | `by_modality[*].china_share_of_cn_us` |
+| Target assigned for 52% vs 65% | `coverage[*].target_identified_pct` |
+| 180 vs 140 targets; top-10 share 27% vs 37% | `target_breadth` |
+| 182 new classes; 88 US, 49 China, 44 other, 1 tie | `new_classes_primary_target_set.leader`, `.tie` |
+| 29% rising to 42% | `new_classes_primary_target_set.by_period` |
+| New targets 23 vs 4; new target pairs 62 vs 45 | `new_classes_primary_target_set.by_novelty` |
 
 The list of new classes, with the first agent, sponsor and trial for each, is `results/new_classes.csv`.
 The agent-level dataset, one row per agent with every assigned value and its source, is `data/cohort.csv`.

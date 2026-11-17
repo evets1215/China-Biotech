@@ -24,10 +24,12 @@ START, END = "2020-01", "2026-09"
 CODE = re.compile(r"[A-Za-z]{1,10}[- ]?\d{2,}|\d{2,}[A-Za-z]{2,}")
 INN = re.compile(r"\w{4,}(?:mab|tug|nib|tinib|ciclib|rasib|parib|lisib|cel|leucel|gene|vec|stat|tide|mig|bart|fusp|cept|kin|tecan|dotin|degib|clax|mide)\b", re.I)
 BAD_NAME = re.compile(r"x ?10\^|\bgroup\b|\bcohort\b|\barm\b|^\W*$|^[A-D]:", re.I)
-EXCLUDE = re.compile(r"healthy (?:volunteer|subject|participant|male|adult)|bioavailab|bioequivalen|biosimilar|pk similarity|"
-                     r"mass balance|\bADME\b|food effect|drug[- ]drug interaction|cachexia|mucositis|neutropenia|nausea|imaging agent|"
-                     r"diagnostic|PET imaging|PET/CT|\bPET\b|dosimetry and biodistribution|microdos", re.I)
-IMAGING_NAME = re.compile(r"\b(?:68|18|64|89|99m|124|111)\]?-?(?:Ga|F|Cu|Zr|Tc|I|In)\b|\[?(?:68Ga|18F|64Cu|89Zr|99mTc|124I|111In)", re.I)
+IMAGING_NAME = re.compile(r"\b(?:68|18|64|89|99m|124|111|11|14)\]?-?(?:Ga|F|Cu|Zr|Tc|I|In|C)\b|\[?(?:68Ga|18F|64Cu|89Zr|99mTc|124I|111In|11C|14C)", re.I)
+# The cohort needs a first trial that could be a first-in-human study. Phase 3/4 first trials are mostly
+# biosimilars, generics and new formulations.
+EARLY_PHASES = {"EARLY_PHASE1", "PHASE1", "PHASE2"}
+# In the second sentence of an NCI definition, a target counts only after a verb saying the drug acts on it.
+ACTS_ON = re.compile(r"(?:binds? to|binds|targets?|directed against|inhibits?|blocks?|degrad\w+|antagoni[sz]es?|activates?)\b[^.;]{0,90}$", re.I)
 ONC = re.compile(r"cancer|tumou?r|neoplasm|carcinoma|lymphoma|leuk[ae]{1,2}mi|myeloma|sarcoma|melanoma|gliom|glioblastoma|malignan|"
                  r"myelodysplas|NSCLC|SCLC|\bAML\b|mesothelioma|blastoma|myelofibrosis", re.I)
 
@@ -74,6 +76,21 @@ def targets_free(text):
     return {name for name, rx in TARGET_RX.items() if rx.search(text)}
 
 
+def targets_acted_on(text):
+    found = set()
+    for name, rx in TARGET_RX.items():
+        for m in rx.finditer(text):
+            if ACTS_ON.search(text[max(0, m.start() - 110):m.start()]):
+                found.add(name)
+                break
+    return found
+
+
+def sentence_n(text, n):
+    parts = re.split(r"(?<=[a-z0-9\)])\.\s+(?=[A-Z])", text or "")
+    return parts[n] if len(parts) > n else ""
+
+
 def targets_in_context(text):
     found = set()
     for name, rx in TARGET_RX.items():
@@ -118,8 +135,8 @@ def main():
     rows, dropped = [], collections.Counter()
     for a in agents:
         name = a["agent"]
-        if EXCLUDE.search(" ".join(filter(None, [a["title"], a["official_title"]]))) or "14C" in name or IMAGING_NAME.search(name):
-            dropped["healthy-volunteer / PK / biosimilar / imaging / supportive-care"] += 1
+        if IMAGING_NAME.search(name) or any(rx.fullmatch(name.strip()) for rx in TARGET_RX.values()):
+            dropped["imaging tracer, or a name that is only a target"] += 1
             continue
         if not ONC.search(" ".join((a["conditions"] or []) + (a["cond_mesh"] or []) + [a["title"] or ""])):
             dropped["not oncology"] += 1
@@ -132,7 +149,7 @@ def main():
         own = " . ".join(a["iv_descs"] + a["texts"])
         # drug type
         modality, m_src = None, ""
-        for src, txt in (("NCI Thesaurus", ncit1), ("Trial text naming the agent", own)):
+        for src, txt in (("NCI Thesaurus", ncit1), ("NCI Thesaurus", a["ncit_def"] or ""), ("Trial text naming the agent", own)):
             if txt:
                 modality = find_modality(txt)
                 if modality:
@@ -144,6 +161,8 @@ def main():
         targets, t_src = set(), ""
         if ncit1:
             targets = tidy(targets_free(ncit1), modality)
+            if not targets:
+                targets = tidy(targets_acted_on(sentence_n(a["ncit_def"], 1).split(" with potential ")[0]), modality)
             t_src = "NCI Thesaurus" if targets else ""
         if not targets and own:
             targets = tidy(targets_in_context(own), modality)
@@ -162,6 +181,8 @@ def main():
             "agent": name, "canon": canonical(name, a["ncit_name"]), "query_name": query_name(name, a["ncit_name"]),
             "agent_id": a["agent_id"], "ncit_name": a["ncit_name"] or "", "first_start": a["first_start"],
             "year": a["first_start"][:4], "nct": a["attr_nct"], "sponsor": a["sponsor"], "sponsor_class": a["sponsor_class"],
+            "first_phase": "|".join(a.get("first_phases") or []),
+            "early_first_trial": int(bool(set(a.get("first_phases") or []) & EARLY_PHASES)),
             "in_cohort": int(a["sponsor_class"] == "INDUSTRY" and a["first_start"] >= START), "country": country,
             "site_countries": "|".join(a["countries"]), "modality": modality, "modality_source": m_src,
             "targets": "|".join(sorted(targets)), "n_targets": len(targets), "target_source": t_src,
@@ -187,6 +208,9 @@ def main():
         keep["n_trials"] = max(int(r["n_trials"]) for r in g)
         keep["reached_phase2_3"] = max(r["reached_phase2_3"] for r in g)
         keep["in_cohort"] = int(keep["sponsor_class"] == "INDUSTRY" and keep["first_start"] >= START)
+        if keep["in_cohort"] and not keep["early_first_trial"]:
+            keep["in_cohort"] = 0
+            dropped["first trial is phase 3/4 or has no phase (not a first-in-human candidate)"] += 1
         merged.append(keep)
     dropped["duplicate name variants merged"] = len(rows) - len(merged)
     rows = merged

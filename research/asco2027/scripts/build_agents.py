@@ -85,6 +85,18 @@ def agents_in(name: str):
     return out
 
 
+# Trials that are not therapeutic studies of the agent are ignored when building agents (the agent itself is kept
+# if it has other trials).
+NON_THERAPEUTIC = re.compile(
+    r"healthy (?:volunteer|subject|participant|male|adult)|bioavailab|bioequivalen|biosimilar|pk similarity|"
+    r"mass balance|\bADME\b|food effect|drug[- ]drug interaction|cachexia|mucositis|neutropenia|nausea|imaging agent|"
+    r"diagnostic|PET imaging|PET/CT|\bPET\b|dosimetry and biodistribution|microdos", re.I)
+# Words that separate the agent from other drugs given with it; text is cut into clauses at these points and only
+# clauses that name the agent are kept, so a partner drug's description is not attributed to the agent.
+CLAUSE = re.compile(r"\b(?:in combination with|combination with|combined with|co-?administ\w+ with|together with|"
+                    r"with or without|plus|followed by|alone or|and/or|versus|vs\.?|compared (?:with|to)|"
+                    r"prior|previous\w*|after|resistant to|refractory to|progress\w+ on|treated with|failed)\b|\+|;", re.I)
+
 SENT = re.compile(r"(?<=[a-z0-9\)\]])[.;]\s+(?=[A-Z\[])|\n+")
 
 
@@ -92,7 +104,10 @@ def sentences(text):
     return [s.strip() for s in SENT.split(text or "") if s and s.strip()]
 
 
-rows = [json.loads(l) for l in (BASE / "data/raw/ctgov_phase1_oncology.jsonl").open()]
+rows = [json.loads(l) for l in (BASE / "data/raw/ctgov_oncology_all.jsonl").open()]
+n_all = len(rows)
+rows = [r for r in rows if not NON_THERAPEUTIC.search(" ".join(filter(None, [r["title"], r["official_title"]])))]
+print("trials", n_all, "| after dropping non-therapeutic studies", len(rows))
 rows.sort(key=lambda r: (r["start"] or r["first_submit"] or "9999-99"))
 trials_of = collections.defaultdict(list)   # agent id -> [(start, nct, raw name, intervention)]
 names_of = collections.defaultdict(set)     # agent id -> normalised name keys
@@ -148,20 +163,19 @@ for aid, tl in trials_of.items():
     for start, nct, _, iv in tl[:12]:
         tr = by_nct[nct]
         if iv and iv.get("desc"):
-            iv_descs.append(iv["desc"])
+            iv_descs.append(CLAUSE.split(iv["desc"])[0].strip()[:400])
         for field in ("title", "official_title", "summary", "detail"):
             for s in sentences(tr.get(field)):
                 if any(k in norm(s) for k in keys):
-                    texts.append(s[:600])
-        for arm in tr.get("arms") or []:
-            if any(k in norm(arm) for k in keys):
-                texts.append(arm[:400])
+                    for clause in CLAUSE.split(s):
+                        if clause and any(k in norm(clause) for k in keys):
+                            texts.append(clause.strip()[:500])
     n = ncit.get(aid)
     agents.append({
         "agent_id": aid, "agent": raw, "first_start": first_start, "first_nct": first_nct, "n_trials": len(tl),
         "attr_nct": attr[1], "ncit_name": n and n["name"], "ncit_def": n and n["definition"],
         "sponsor": t["sponsor"], "sponsor_class": t["sponsor_class"], "countries": t["countries"],
-        "phases": t["phases"], "title": t["title"], "conditions": t["conditions"], "cond_mesh": t["cond_mesh"],
+        "phases": t["phases"], "first_phases": by_nct[first_nct]["phases"], "title": t["title"], "conditions": t["conditions"], "cond_mesh": t["cond_mesh"],
         "official_title": t["official_title"],
         "texts": list(dict.fromkeys(texts))[:40], "iv_descs": list(dict.fromkeys(iv_descs))[:5],
         "later_phase": sorted({ph for _, nct, _, _ in tl for ph in (by_nct[nct]["phases"] or [])}),

@@ -4,6 +4,7 @@ CN = re.compile(r"(china|chinese|shanghai|beijing|suzhou|jiangsu|hangzhou|zhejia
 # Manual overrides (case-insensitive substring of the registered sponsor name). Classification is by the
 # headquarters country of the sponsor's ultimate parent company. Curated by hand; see methods note.
 CHINA_EXTRA = [
+    "evopoint",
     "accendatech", "acerand", "adlai nortye", "arbele", "ascletis", "asieris", "askgene", "beone medicines", "casi pharma",
     "changchun", "chimagen", "conjupro", "curon bio", "fbd biologics", "fortvita", "forward pharmaceuticals",
     "full-life technologies", "gan and lee", "highfield bio", "huabo bio", "huahui health", "immvira", "impact therapeutics",
@@ -20,6 +21,7 @@ US_OVERRIDE = [  # would otherwise be caught by a China rule or default to Other
     "glycyx", "petra pharma", "mingsight", "genzada", "anwita", "eilean", "ocellaris", "recurv", "kymathera", "radalliance",
 ]
 OTHER = [  # non-US, non-China parent, even though the trial has US sites
+    "bergenbio", "artios", "peptomyc", "nelum", "oncopeptides", "novalgen", "immatics bio", "light chain bio", "txinno",
     "3b pharmaceuticals", "ab science", "abivax", "abl bio", "adc therapeutics", "adcendo", "affimed", "alentis", "amphista",
     "anaveon", "apollo therapeutics", "ariceum", "artios", "ascendis", "astellas", "astrazeneca", "medimmune", "alexion",
     "autolus", "avacta", "axcynsis", "basilea", "bavarian nordic", "bayer", "vividion", "bicycletx", "biofrontera", "bioinvent",

@@ -1,6 +1,11 @@
-"""Download oncology Phase 1 (incl. Phase 1/2) interventional trials from ClinicalTrials.gov API v2.
+"""Download all interventional oncology trials that test a drug, biological or genetic intervention (any phase,
+any start date) from ClinicalTrials.gov API v2.
 
-Output: data/raw/ctgov_phase1_oncology.jsonl (one trimmed study per line).
+All phases are needed because sponsors update a trial's phase label as it grows, so a first-in-human trial can
+later be labelled phase 2. All dates are needed so that a drug class's history before 2020 is as complete as the
+registry allows.
+
+Output: data/raw/ctgov_oncology_all.jsonl (one trimmed study per line).
 """
 import json
 import sys
@@ -9,11 +14,11 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parent.parent / "data" / "raw" / "ctgov_phase1_oncology.jsonl"
+OUT = Path(__file__).resolve().parent.parent / "data" / "raw" / "ctgov_oncology_all.jsonl"
 COND = ("cancer OR neoplasm OR tumor OR tumour OR carcinoma OR lymphoma OR leukemia OR myeloma OR sarcoma "
         "OR melanoma OR glioma OR glioblastoma OR malignancy OR malignant")
-ADV = ("AREA[StudyType]INTERVENTIONAL AND AREA[Phase](EARLY_PHASE1 OR PHASE1) "
-       "AND AREA[StartDate]RANGE[2010-01-01,MAX]")
+ADV = ("AREA[StudyType]INTERVENTIONAL AND "
+       "AREA[InterventionType](DRUG OR BIOLOGICAL OR GENETIC OR COMBINATION_PRODUCT)")
 FIELDS = ",".join([
     "NCTId", "BriefTitle", "OfficialTitle", "BriefSummary", "DetailedDescription", "ArmGroupDescription", "ArmGroupLabel", "Phase", "StartDate", "StartDateType",
     "OverallStatus", "EnrollmentCount", "LeadSponsorName", "LeadSponsorClass", "CollaboratorName",

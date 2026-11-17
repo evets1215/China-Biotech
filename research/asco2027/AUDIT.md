@@ -70,3 +70,53 @@ history that make old classes look new.
    validation agreement for the whole cohort.
 5. Or replace steps 1-3 with a licensed pipeline database (Citeline, Cortellis, GlobalData, PharmCube), which
    curates target and drug type by hand.
+
+---
+
+# Version 2 rebuild (same day)
+
+## What changed
+| Audit finding | Change in version 2 |
+|---|---|
+| A. First-in-human trials missed | All interventional cancer drug trials are downloaded, with no phase or date filter (72,031 trials, up from 21,945). The cohort takes each agent's first trial of any phase, and requires it to be phase 1 or 2 |
+| B. Partner-drug and patient-selection targets | Trial text is cut into clauses and only clauses naming the agent are used |
+| B. EGFR added to HER3 drugs; PD-1 added to VISTA drugs | Lexicon patterns corrected |
+| B. Targets in the second sentence of the NCI definition missed | Second sentence is used when the first names no target, if the drug is said to act on the target |
+| C. Same idea split across drug-type labels | Primary class is now the target set alone; the old definition is kept as a secondary analysis |
+| C. Cereblon modulators mislabelled | Added to the protein degrader rule |
+| E. One excluded trial removes a drug | Non-therapeutic trials are dropped before agents are built, so the drug is kept |
+| E. Imaging tracers and target-only names | Carbon-11 added; names that are only a target are dropped |
+| D. Individual country errors seen | Corrected in the sponsor lists |
+
+## Re-test of the drugs that exposed the problems
+Now correct: patritumab deruxtecan (HER3 only), vadastuximab talirine (CD33), AZD9592 (present; EGFR + c-MET),
+iberdomide (degrader), ART4215 (Pol theta), PF-07248144 (present, 2020, KAT6), afamitresgene autoleucel (now dated
+2019), lutetium dotatate (SSTR2, 2004), surzetoclax and XNW5004 (small molecules; Evopoint coded China).
+
+Still wrong or incomplete: TQB3602 (a proteasome inhibitor coded PD-1), gecacitinib (drug type), PF-06873600 and
+CC-90009 (no target, because their NCI definitions do not name one), FS120 and KSQ-4279 (credited to the current
+owner's country).
+
+## Effect on results
+| Result | Version 1 | Version 2 |
+|---|---|---|
+| Cohort | 2,859 | 2,969 |
+| China / US agents | 1,145 / 1,009 | 1,180 / 1,054 |
+| New classes (primary definition) | 366 | 182 |
+| First: US / China / other | 164 / 98 / 104 | 88 / 49 / 44 (1 tie) |
+| China share of China-plus-US firsts, 2020-22 to 2023-26 | 32% to 43% | 29% to 42% |
+| Previously undrugged targets, US vs China | 37 vs 12 | 23 vs 4 |
+| New target pairs, US vs China | 67 vs 60 | 62 vs 45 |
+
+The direction of every finding is unchanged; the counts of "firsts" halved because classes are no longer split by
+drug type and the pre-2020 history is fuller.
+
+## Author's re-check of the 182 new classes
+Read one by one, as before. About 12 are doubtful and are flagged in the `author_flag` column of
+`results/new_classes_review.csv`. This is again the author's own reading, not independent validation, and it can
+only catch drugs the author recognises.
+
+## Still required
+1. A person checks `results/new_classes_review.csv` (182 rows) against company sources.
+2. A person codes `validation/validation_sample_150.csv`.
+3. China's registry is merged when the export is available.

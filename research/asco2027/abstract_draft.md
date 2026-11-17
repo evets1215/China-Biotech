@@ -1,45 +1,36 @@
-# ASCO 2027 abstract - DRAFT (preliminary numbers, not for submission)
+# ASCO 2027 abstract - DRAFT v2 (not for submission)
 
-> **AUDIT WARNING (17 Nov 2026): do not use the target or "new class" numbers in this draft.**
-> An accuracy audit (`AUDIT.md`) found that the arithmetic is correct but the underlying target and class
-> assignments are not reliable: trial-text targets were wrong about half the time, at least 70 of the 366 "new
-> classes" are visibly wrong, and the trial download misses first-in-human trials that were later relabelled.
-> Volume and drug-type figures are less affected but still unvalidated.
-
-> Every number below comes from `results/summary.json` (run of 17 Nov 2026, ClinicalTrials.gov only, after de-duplication and removal of drugs with any registered trial before 2020).
-> They will change once China's registry is merged and the validation sample is coded.
-> Fields in [brackets] are still to be filled.
+> **Status, 17 Nov 2026.** Numbers come from the rebuilt pipeline (version 2, `results/summary.json`), which fixes
+> the problems found in the accuracy audit (`AUDIT.md`). They use ClinicalTrials.gov only and have **not been
+> independently validated**. The class-level results ("firsts") must not be submitted until a person has checked
+> `results/new_classes_review.csv`. Fields in [brackets] are still to be filled.
 
 **Title:** Where China leads and where the United States leads: targets and drug types of investigational cancer
-agents entering first-in-human trials, 2020-2026
+agents entering clinical trials, 2020-2026
 
 **Background:** China now starts as many early-phase oncology trials as the United States, but volume alone does
-not show where each country is first. We mapped the targets and drug types of investigational cancer agents entering the clinic
-and identified which country reached each new target-drug type combination first.
+not show where each country is first. We mapped the drug types and molecular targets of investigational cancer
+agents entering the clinic and identified which country first reached each newly drugged target or target pair.
 
-**Methods:** We identified all investigational agents in industry-sponsored phase 1 or 1/2 oncology trials on
-ClinicalTrials.gov [and China's drug trial registry] whose first registered trial started January 2020-September
-2026, merging name variants and excluding agents with any registered trial before 2020. Agents were assigned to the headquarters country of the sponsor's parent company. Drug type and molecular
-target were coded from NCI Thesaurus definitions and trial text using prespecified rules; [agreement with manual
-coding of a random sample of 150 agents was X% for drug type and Y% for target]. A "class" was a drug type plus one
-or two targets; a class was new if no industry agent of that class was registered in 2010-2019. The leader was the
-country whose sponsor registered the first trial.
+**Methods:** From all interventional oncology drug trials on ClinicalTrials.gov [and China's drug trial registry],
+we identified investigational agents whose first registered trial (phase 1 or 2) started January 2020-September
+2026 under an industry sponsor, merging name variants and excluding agents with any earlier trial. Agents were
+assigned to the headquarters country of the sponsor's parent company. Drug type and target were coded from NCI
+Thesaurus definitions and trial text using prespecified rules; [agreement with manual coding of a random sample of
+150 agents was X% for drug type and Y% for target]. A class was a set of one or two targets; it was new if no agent
+from any sponsor had a registered trial before 2020. The leader was the country of the first industry sponsor.
 
-**Results:** Of 2,859 agents, 1,145 (40%) came from China-based and 1,009 (35%) from US-based sponsors; China
-matched or exceeded the US in every year from 2021. China accounted for more than half of China-plus-US agents among
-antibody-drug conjugates (57%), bispecific antibodies (56%) and monoclonal antibodies (56%), was level for small
-molecules (52%), and trailed for cell therapies (38%), radioligands (37%), cytokines (30%), protein degraders (24%)
-and nucleic acid therapeutics (13%). A target could be assigned for 53% of China and 68% of US agents. US agents
-covered more targets (178 vs 141) and were less concentrated (top 10 targets: 29% vs 38% of assignments). Among 366
-new classes, US sponsors were first in 164 (45%), China-based sponsors in 98 (27%) and others in 104 (28%). China's
-share of China-plus-US firsts rose from 32% in 2020-2022 to 43% in 2023-2026. US sponsors led new targets (37 vs
-12), whereas new target pairs were close (67 vs 60).
+**Results:** Of 2,969 agents, 1,180 (40%) came from China-based and 1,054 (35%) from US-based sponsors; China led
+in every year from 2021. China accounted for more than half of China-plus-US agents among antibody-drug conjugates
+(58%), bispecific antibodies (56%) and monoclonal antibodies (55%), was level for small molecules (51%), and trailed
+for cell therapies (36%), radioligands (36%), cytokines (32%), protein degraders (26%) and nucleic acid therapeutics
+(13%). A target could be assigned for 52% of China and 65% of US agents. US agents covered more targets (180 vs 140)
+and were less concentrated (top 10 targets: 27% vs 37% of assignments). Of 182 new classes, US sponsors were first
+in 88 (48%), China-based sponsors in 49 (27%) and others in 44 (24%), with one tie. China's share of China-plus-US
+firsts rose from 29% in 2020-2022 to 42% in 2023-2026. US sponsors led for previously undrugged targets (23 vs 4);
+new pairings of established targets were closer (62 vs 45).
 
-**Conclusions:** China leads the US in the number of investigational cancer agents entering the clinic and in antibody-based
-drug types, and is closing the gap in first-to-clinic combinations, mainly through new pairings of established
-targets. The US remains ahead in drugs against previously undrugged targets and in degraders, radioligands and
-nucleic acid therapeutics.
-
----
-Body length: see character count printed by the check below; ASCO's limit (about 2,600 characters, confirm for
-2027) includes title, body and table.
+**Conclusions:** China leads the US in the number of investigational cancer agents entering the clinic and in
+antibody-based drug types, and is narrowing the gap in first-to-clinic target classes, almost entirely through new
+pairings of established targets. The US remains ahead in previously undrugged targets and in degraders, cytokines,
+cell therapies and nucleic acid therapeutics.

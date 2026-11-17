@@ -1,9 +1,10 @@
 """Leadership analysis: China vs US in new oncology agents, targets and drug types, 2020-2026.
 
-Everything here is restricted to industry-sponsored agents.
-A "class" is a drug type plus its target set (1 or 2 targets), e.g. "Antibody-drug conjugate | B7-H3".
-A class is "new" if no industry agent of that class was registered in 2010-2019.
-The "leader" is the country of the sponsor whose agent entered the registry first.
+Cohort results use industry-sponsored agents only.
+A "class" is a target set of one or two targets, regardless of drug type (e.g. "B7-H3", or "PD-1 + VEGF").
+A class is "new" if no agent of any sponsor with that target set has a registered trial before 2020.
+The "leader" is the country of the sponsor of the first industry agent in a new class.
+A secondary analysis defines the class as target set plus drug type.
 """
 import collections
 import csv
@@ -12,10 +13,11 @@ import statistics
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent
-R = [r for r in csv.DictReader((BASE / "data/cohort.csv").open(encoding="utf-8")) if r["sponsor_class"] == "INDUSTRY"]
-for r in R:
+EVERY = list(csv.DictReader((BASE / "data/cohort.csv").open(encoding="utf-8")))
+for r in EVERY:
     r["in_cohort"] = int(r["in_cohort"])
     r["tset"] = tuple(r["targets"].split("|")) if r["targets"] else ()
+R = [r for r in EVERY if r["sponsor_class"] == "INDUSTRY"]
 coh = [r for r in R if r["in_cohort"]]
 out = {"cohort_n": len(coh), "cohort_by_country": dict(collections.Counter(r["country"] for r in coh))}
 
@@ -50,29 +52,39 @@ for r in coh:
 out["modality_trend_china_share"] = {m: {p: pct(c["China"], c["China"] + c["US"]) for p, c in sorted(d.items())} for m, d in trend.items()}
 
 # 3. first-to-clinic classes
-def classes(max_targets):
-    known = [r for r in R if r["tset"] and len(r["tset"]) <= max_targets and r["modality"] != "Unclassified"]
+def classes(max_targets, by_drug_type=False):
+    def key(r):
+        return (r["modality"], r["tset"]) if by_drug_type else r["tset"]
+
+    def usable(r):
+        return r["tset"] and len(r["tset"]) <= max_targets and (not by_drug_type or r["modality"] != "Unclassified")
+
+    # history: every sponsor, every year before 2020
+    old_keys = {key(r) for r in EVERY if usable(r) and r["first_start"] < "2020-01"}
+    old_targets = {t for r in EVERY if r["first_start"] < "2020-01" for t in r["tset"]}
     by_class = collections.defaultdict(list)
-    for r in known:
-        by_class[(r["modality"], r["tset"])].append(r)
-    seen_targets = {t for r in R if r["first_start"] < "2020-01" for t in r["tset"]}
+    for r in R:                       # industry agents
+        if usable(r) and r["first_start"] >= "2020-01" and r["in_cohort"] and key(r) not in old_keys:
+            by_class[key(r)].append(r)
     res = []
-    for key, members in by_class.items():
-        members.sort(key=lambda r: r["first_start"])
+    for k, members in by_class.items():
+        members.sort(key=lambda r: (r["first_start"], r["agent"]))
         first = members[0]
-        if first["first_start"] < "2020-01":
-            continue
         tie = {m["country"] for m in members if m["first_start"] == first["first_start"]}
         def first_of(c):
             return next((m["first_start"] for m in members if m["country"] == c), "")
-        ts = key[1]
-        novelty = ("new target" if any(t not in seen_targets for t in ts)
-                   else "new target pair" if len(ts) > 1 else "new drug type on known target")
-        res.append({"modality": key[0], "targets": "|".join(ts), "novelty": novelty, "first_start": first["first_start"],
-                    "leader": first["country"] if len(tie) == 1 else "Tie", "first_agent": first["agent"],
-                    "first_sponsor": first["sponsor"], "first_nct": first["nct"], "n_agents": len(members),
+        ts = first["tset"]
+        novelty = ("new target" if any(t not in old_targets for t in ts)
+                   else "new target pair" if len(ts) > 1
+                   else "new drug type on known target" if by_drug_type else "known target, first time as sole target")
+        res.append({"targets": "|".join(ts), "modality": first["modality"], "novelty": novelty,
+                    "first_start": first["first_start"], "leader": first["country"] if len(tie) == 1 else "Tie",
+                    "first_agent": first["agent"], "first_agent_ncit_name": first["ncit_name"],
+                    "first_sponsor": first["sponsor"], "first_nct": first["nct"],
+                    "target_source": first["target_source"], "n_agents": len(members),
                     "n_china": sum(m["country"] == "China" for m in members), "n_us": sum(m["country"] == "US" for m in members),
-                    "china_first": first_of("China"), "us_first": first_of("US")})
+                    "china_first": first_of("China"), "us_first": first_of("US"),
+                    "other_agents": "; ".join(f"{m['agent']} ({m['country']}, {m['first_start']})" for m in members[1:6])})
     return sorted(res, key=lambda c: c["first_start"])
 
 
@@ -106,8 +118,9 @@ def summarise(cl):
 
 
 primary = classes(2)
-out["new_classes_primary_1_or_2_targets"] = summarise(primary)
+out["new_classes_primary_target_set"] = summarise(primary)
 out["new_classes_sensitivity_single_target"] = summarise(classes(1))
+out["new_classes_secondary_target_set_plus_drug_type"] = summarise(classes(2, by_drug_type=True))
 
 # 4. breadth and concentration
 br = {}
@@ -162,4 +175,28 @@ with (BASE / "results/new_classes.csv").open("w", newline="", encoding="utf-8") 
     w = csv.DictWriter(fh, fieldnames=list(primary[0]))
     w.writeheader()
     w.writerows(primary)
+
+# Review sheet for a human checker: one row per new class, with the author's own doubts pre-filled.
+AUTHOR_FLAGS = {
+    "4-1BB|KRAS (other/unspecified)": "Target looks wrong: AFNT-211 is a KRAS-directed TCR T-cell product; 4-1BB is part of the construct",
+    "4-1BB|OX40": "Country: FS120 originated at F-star (UK); registry now shows the acquirer (China)",
+    "CD19|EGFR": "EGFR is probably a safety switch, not a target",
+    "CD22|CD47": "CD47 is over-expressed on the cells, not targeted",
+    "CDK2|CDK4/6": "Probably not new: PF-06873600 (Pfizer, 2018) has the same targets but none were extracted",
+    "GSPT1": "Probably not new: CC-90009 (Celgene, 2016) is a GSPT1 degrader with no target extracted",
+    "USP1": "Country: originated at KSQ Therapeutics (US); registry now shows the licensee (Roche)",
+    "HER2|PD-L1": "May be a co-formulation of two drugs, not one agent with two targets",
+    "CD3|Claudin 18.2": "Check AMG 910 (Amgen, about 2020), which is not in the dataset",
+    "ROS1": "ROS1 inhibitors existed before 2020 with ALK/TRK; 'new' only as a sole target",
+    "CD155/PVR": "Tie between sponsors in the same month",
+}
+with (BASE / "results/new_classes_review.csv").open("w", newline="", encoding="utf-8") as fh:
+    cols = ["targets", "novelty", "first_start", "leader", "first_agent", "first_agent_ncit_name", "first_sponsor", "first_nct",
+            "modality", "target_source", "n_agents", "other_agents", "author_flag",
+            "reviewer_targets_correct_yes_no", "reviewer_truly_new_before_2020_yes_no", "reviewer_earlier_agent_if_not_new",
+            "reviewer_originator_country", "reviewer_source", "reviewer_notes"]
+    w = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
+    w.writeheader()
+    for c in sorted(primary, key=lambda c: c["targets"]):
+        w.writerow({**c, "first_nct": "https://clinicaltrials.gov/study/" + c["first_nct"], "author_flag": AUTHOR_FLAGS.get(c["targets"], "")})
 print(json.dumps(out, indent=1, ensure_ascii=False))

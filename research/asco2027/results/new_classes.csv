@@ -1,367 +1,183 @@
-modality,targets,novelty,first_start,leader,first_agent,first_sponsor,first_nct,n_agents,n_china,n_us,china_first,us_first
-Bispecific / multispecific antibody,CD3|MUC17,new target,2020-01,US,AMG 199,Amgen,NCT04117958,1,0,1,,2020-01
-Small molecule,CDK7|CDK9,new target pair,2020-01,US,BTX-A51,Edgewood Oncology Inc.,NCT04243785,1,0,1,,2020-01
-Cytokine / fusion protein,CTLA-4,new drug type on known target,2020-01,China,KN044,Changchun Intellicrown Pharmaceutical Co. LTD,NCT04126590,1,1,0,2020-01,
-Bispecific / multispecific antibody,FAP,new drug type on known target,2020-01,US,NG-641,Akamis Bio,NCT04053283,1,0,1,,2020-01
-Bispecific / multispecific antibody,c-MET,new drug type on known target,2020-01,US,REGN5093,Regeneron Pharmaceuticals,NCT04077099,2,0,2,,2020-01
-CAR-T / engineered cell therapy,PSMA,new drug type on known target,2020-01,Other,UniCAR02-T,AvenCell Europe GmbH,NCT04230265,6,0,4,,2020-02
-Bispecific / multispecific antibody,CD3|PRAME,new target pair,2020-02,Other,Brenetafusp,Immunocore Ltd,NCT04262466,1,0,0,,
-CAR-T / engineered cell therapy,BTK,new drug type on known target,2020-02,US,IOV-2001,"Iovance Biotherapeutics, Inc.",NCT04155710,1,0,1,,2020-02
-CAR-T / engineered cell therapy,CD123|EGFR,new target pair,2020-02,US,MB-102,Mustang Bio,NCT04109482,1,0,1,,2020-02
-Oncolytic virus,IL-2 pathway,new drug type on known target,2020-02,Other,TILT-123,TILT Biotherapeutics Ltd.,NCT04217473,1,0,0,,
-Bispecific / multispecific antibody,CD3|STEAP1,new target pair,2020-03,US,AMG 509,Amgen,NCT04221542,1,0,1,,2020-03
-Small molecule,KIF18A,new target,2020-03,US,AMG 650,"Volastra Therapeutics, Inc.",NCT04293094,5,1,4,2025-01,2020-03
-Bispecific / multispecific antibody,CDH17,new target,2020-03,Other,BI 905711,Boehringer Ingelheim,NCT04137289,1,0,0,,
-Bispecific / multispecific antibody,CD37,new drug type on known target,2020-03,Other,GEN3009,Genmab,NCT04358458,1,0,0,,
-Bispecific / multispecific antibody,IL-15,new drug type on known target,2020-03,Other,XmAb24306,"Genentech, Inc.",NCT04250155,2,0,0,,
-Bispecific / multispecific antibody,CD16A|EGFR,new target pair,2020-04,Other,AFM24,Affimed GmbH,NCT04259450,1,0,0,,
-Small molecule,DNA-PK|PI3Kδ,new target pair,2020-04,Other,BR101801,"Boryung Pharmaceutical Co., Ltd",NCT04018248,1,0,0,,
-Oncolytic virus,IL-12|PD-1,new target pair,2020-04,China,T3011,ImmVira Pharma Co. Ltd,NCT05602792,2,2,0,2020-04,
-Bispecific / multispecific antibody,CD3|Survivin,new target pair,2020-05,US,ABBV-184,AbbVie,NCT04272203,1,0,1,,2020-05
-Cytokine / fusion protein,IL-2 pathway|PD-1,new target pair,2020-05,Other,Eciskafusp Alfa,Hoffmann-La Roche,NCT04303858,4,1,1,2022-12,2024-09
-Small molecule,PTPN2/PTPN1,new target,2020-06,US,ABBV-CLS-579,AbbVie,NCT04417465,2,0,2,,2020-06
-Cytokine / fusion protein,EGFR|TGF-β,new target pair,2020-06,US,BCA101,Bicara Therapeutics,NCT04429542,1,0,1,,2020-06
-Small molecule,CDK2|CDK4/6,new target pair,2020-06,China,BPI-1178,"Beta Pharma (Suzhou) Co., Ltd.",NCT04282031,5,3,2,2020-06,2020-12
-CAR-T / engineered cell therapy,CD70,new drug type on known target,2020-06,Other,CTX130,CRISPR Therapeutics AG,NCT04438083,5,1,2,2025-09,2021-02
-Cytokine / fusion protein,CD40|SIRPα,new target pair,2020-06,US,SL-172154,"Shattuck Labs, Inc.",NCT04406623,1,0,1,,2020-06
-Small molecule,CSF1R|FGFR,new target pair,2020-06,China,Simmitinib,"CSPC ZhongQi Pharmaceutical Technology Co., Ltd.",NCT04058587,1,1,0,2020-06,
-Antibody-drug conjugate,ITGB6,new target,2020-06,US,sigvotatug vedotin,"Seagen, a wholly owned subsidiary of Pfizer",NCT04389632,3,0,3,,2020-06
-Monoclonal antibody,Nectin-4,new drug type on known target,2020-07,Other,BT8009,BicycleTx Limited,NCT04561362,1,0,0,,
-CAR-T / engineered cell therapy,HER2,new drug type on known target,2020-07,China,CCT303-406,"Shanghai PerHum Therapeutics Co., Ltd.",NCT04511871,5,1,4,2020-07,2021-02
-Bispecific / multispecific antibody,5T4|CD3,new target pair,2020-07,Other,GEN1044 is an immunoglobulin G1   bispecific antibody targeting CD3,Genmab,NCT04424641,2,0,0,,
-Bispecific / multispecific antibody,CD47|PD-L1,new target pair,2020-07,China,IBI322,Innovent Biologics (Suzhou) Co. Ltd.,NCT04328831,5,3,1,2020-07,2021-08
-Monoclonal antibody,HER2|TLR7/8,new target pair,2020-07,US,SBT6050,Silverback Therapeutics,NCT04460456,1,0,1,,2020-07
-Monoclonal antibody,HLA-G,new target,2020-07,US,TTX-080,"Tizona Therapeutics, Inc",NCT04485013,1,0,1,,2020-07
-CAR-T / engineered cell therapy,CD22|PD-L1,new target pair,2020-08,China,Autologous aPD-L1 armored anti-CD22 CAR T cells,"Hebei Senlang Biotechnology Inc., Ltd.",NCT04556669,1,1,0,2020-08,
-Bispecific / multispecific antibody,CD27|PD-L1,new target pair,2020-08,US,CDX-527,Celldex Therapeutics,NCT04440943,1,0,1,,2020-08
-Small molecule,HPK1,new target,2020-08,US,CFI-402411,"Treadwell Therapeutics, Inc",NCT04521413,8,3,3,2021-03,2020-08
-Cytokine / fusion protein,IL-21|PD-1,new target pair,2020-09,US,AMG 256,Amgen,NCT04362748,1,0,1,,2020-09
-CAR-T / engineered cell therapy,Claudin 6,new drug type on known target,2020-09,Other,CLDN6 CAR-T,BioNTech Cell & Gene Therapies GmbH,NCT04503278,1,0,0,,
-Cytokine / fusion protein,PD-1|PD-L1,new target pair,2020-09,US,Isunakinra,Buzzard Pharmaceuticals,NCT04121442,1,0,1,,2020-09
-Small molecule,AXL|FLT3,new target pair,2020-09,China,KC1036,"Beijing Konruns Pharmaceutical Co., Ltd.",NCT04387916,2,2,0,2020-09,
-Protein degrader,ERK|MEK,new target pair,2020-09,Other,SPYK04,Chugai Pharmaceutical,NCT04511845,3,0,2,,2023-12
-CAR-T / engineered cell therapy,Claudin 18.2,new drug type on known target,2020-10,China,CT041 autologous CAR T-cell injection,"CARsgen Therapeutics Co., Ltd.",NCT04581473,6,5,1,2020-10,2023-08
-Cytokine / fusion protein,4-1BB|SIRPα,new target pair,2020-10,Other,DSP107,Kahr Medical,NCT04440735,1,0,0,,
-Antibody-drug conjugate,ADAM9,new target,2020-10,US,IMGC936,"ImmunoGen, Inc.",NCT04622774,4,2,2,2025-09,2020-10
-Monoclonal antibody,TREM2,new target,2020-10,US,PY314,Ikena Oncology,NCT04691375,2,0,2,,2020-10
-Small molecule,p53 (mutant reactivator),new drug type on known target,2020-10,US,rezatapopt,"PMV Pharmaceuticals, Inc",NCT04585750,3,2,1,2024-07,2020-10
-Small molecule,Aurora kinase|FLT3,new target pair,2020-11,Other,EP0042,Ellipses Pharma,NCT04581512,1,0,0,,
-Bispecific / multispecific antibody,4-1BB|OX40,new target pair,2020-11,China,FS120,invoX Pharma Limited,NCT04648202,1,1,0,2020-11,
-Radioligand,KLK2,new target,2020-11,US,JNJ-69086420,"Janssen Research & Development, LLC",NCT04644770,1,0,1,,2020-11
-Bispecific / multispecific antibody,CD22|CD3,new target pair,2020-11,US,JNJ-75348780,"Janssen Research & Development, LLC",NCT04540796,1,0,1,,2020-11
-Bispecific / multispecific antibody,CD3|KLK2,new target,2020-11,US,JNJ-78278343,"Janssen Research & Development, LLC",NCT04898634,1,0,1,,2020-11
-Nucleic acid (mRNA/siRNA/ASO),BCL-2,new drug type on known target,2020-11,US,L-Bcl-2 antisense oligonucleotide,"Bio-Path Holdings, Inc.",NCT04072458,1,0,1,,2020-11
-Small molecule,AXL|CSF1R,new target pair,2020-11,Other,Q702,"Qurient Co., Ltd.",NCT04648254,1,0,0,,
-Bispecific / multispecific antibody,CD3|WT1,new target pair,2020-11,Other,RO7283420,Hoffmann-La Roche,NCT04580121,1,0,0,,
-Cytokine / fusion protein,IL-18,new target,2020-12,US,AEVI-007,"Avalo Therapeutics, Inc.",NCT04671251,3,0,2,,2020-12
-Antibody-drug conjugate,Claudin 18.2,new drug type on known target,2020-12,China,CMG901,Keymed Biosciences Co.Ltd,NCT04805307,17,12,2,2020-12,2022-02
-Monoclonal antibody,Galectin,new drug type on known target,2020-12,US,LYT-200,PureTech,NCT04666688,1,0,1,,2020-12
-Cytokine / fusion protein,IL-15|PD-1,new target pair,2020-12,US,PF-07209960,Pfizer,NCT04628780,5,2,1,2023-08,2020-12
-Bispecific / multispecific antibody,CD28|MUC16,new target pair,2020-12,US,REGN5668,Regeneron Pharmaceuticals,NCT04590326,1,0,1,,2020-12
-Bispecific / multispecific antibody,CD28|EGFR,new target pair,2020-12,US,REGN7075,Regeneron Pharmaceuticals,NCT04626635,1,0,1,,2020-12
-CAR-T / engineered cell therapy,CD5,new target,2020-12,China,anti-CD5 CAR T cells,iCell Gene Therapeutics,NCT04594135,2,1,1,2020-12,2021-12
-Monoclonal antibody,TNFR2,new target,2021-01,Other,BI-1808,BioInvent International AB,NCT04752826,6,2,2,2022-03,2022-03
-Nucleic acid (mRNA/siRNA/ASO),IL-2 pathway,new drug type on known target,2021-01,Other,BNT151,BioNTech SE,NCT04455620,3,0,0,,
-Antibody-drug conjugate,EGFR|MUC1,new target pair,2021-01,Other,M1231,"EMD Serono Research & Development Institute, Inc.",NCT04695847,2,0,1,,2026-04
-Antibody-drug conjugate,BCL-XL|EGFR,new target pair,2021-02,US,ABBV-637,AbbVie,NCT04721015,1,0,1,,2021-02
-Oncolytic virus,CTLA-4,new drug type on known target,2021-02,US,BT-001,Transgene,NCT04725331,1,0,1,,2021-02
-CAR-T / engineered cell therapy,GPRC5D,new drug type on known target,2021-02,US,CC-95266,"Juno Therapeutics, a Subsidiary of Celgene",NCT04674813,3,2,1,2023-10,2021-02
-Monoclonal antibody,AXL,new drug type on known target,2021-02,US,Tilvestamab,BerGenBio ASA,NCT04893551,1,0,1,,2021-02
-Cytokine / fusion protein,FLT3,new drug type on known target,2021-03,US,GS-3583,Gilead Sciences,NCT04747470,1,0,1,,2021-03
-Cytokine / fusion protein,PD-L1,new drug type on known target,2021-03,China,HB0025,"Huabo Biopharm Co., Ltd.",NCT04678908,1,1,0,2021-03,
-Bispecific / multispecific antibody,PD-L1|VEGF/VEGFR,new target pair,2021-03,China,PM8002,Biotheus Inc.,NCT05918445,4,3,1,2021-03,2025-09
-Bispecific / multispecific antibody,CD3|EGFR,new target pair,2021-03,Other,TAK-186,Takeda,NCT04844073,4,0,3,,2022-05
-Small molecule,TEAD/YAP,new target,2021-03,US,VT3989,"Vivace Therapeutics, Inc",NCT04665206,9,3,4,2023-04,2021-03
-Bispecific / multispecific antibody,4-1BB|PD-1,new target pair,2021-04,China,IBI319,Innovent Biologics (Suzhou) Co. Ltd.,NCT04708210,1,1,0,2021-04,
-Small molecule,MAT2A,new target,2021-04,US,IDE397,IDEAYA Biosciences,NCT04794699,4,2,1,2024-10,2021-04
-Small molecule,PKMYT1,new target,2021-04,Other,Lunresertib,Debiopharm International SA,NCT04855656,2,0,1,,2024-10
-Cytokine / fusion protein,IL-15|IL-2 pathway,new target pair,2021-04,US,NL-201,Neurogene Inc.,NCT04659629,1,0,1,,2021-04
-Small molecule,MYC,new drug type on known target,2021-04,Other,OMO-103,Peptomyc S.L.,NCT04808362,1,0,0,,
-Monoclonal antibody,CCR8,new target,2021-05,US,BMS-986340,Bristol-Myers Squibb,NCT04895709,13,5,4,2022-03,2021-05
-Small molecule,SMARCA2,new target,2021-05,US,FHD-286,Foghorn Therapeutics Inc.,NCT04879017,2,0,2,,2021-05
-Bispecific / multispecific antibody,CD3|ROR1,new target pair,2021-05,Other,NVG-111,NovalGen Ltd.,NCT04763083,3,1,0,2023-03,
-Protein degrader,BTK,new drug type on known target,2021-05,US,NX-2127,"Nurix Therapeutics, Inc.",NCT04830137,8,3,5,2021-08,2021-05
-Bispecific / multispecific antibody,Claudin 18.2|PD-L1,new target pair,2021-05,China,Q-1802,QureBio Ltd.,NCT04856150,1,1,0,2021-05,
-Small molecule,CD40|FAP,new target pair,2021-05,Other,RO7300490,Hoffmann-La Roche,NCT04857138,1,0,0,,
-CAR-T / engineered cell therapy,B7-H3,new drug type on known target,2021-05,China,Targeting CD276 CAR T,"PersonGen BioTherapeutics (Suzhou) Co., Ltd.",NCT04864821,4,3,1,2021-05,2024-09
-Nucleic acid (mRNA/siRNA/ASO),IL-7,new drug type on known target,2021-06,Other,BNT152,BioNTech SE,NCT04710043,1,0,0,,
-Bispecific / multispecific antibody,4-1BB|PSMA,new target pair,2021-06,Other,CB307,Crescendo Biologics Ltd.,NCT04839991,2,0,1,,2026-07
-Bispecific / multispecific antibody,4-1BB|Claudin 18.2,new target pair,2021-06,China,TJ033721,I-Mab Biopharma US Limited,NCT04900818,2,2,0,2021-06,
-Radioligand,FAP,new drug type on known target,2021-07,Other,177Lu-FAP-2286,Novartis Pharmaceuticals,NCT04939610,6,0,5,,2022-07
-CAR-T / engineered cell therapy,CLL-1,new drug type on known target,2021-07,US,KITE-222,"Kite, A Gilead Company",NCT04789408,4,1,3,2024-03,2021-07
-Bispecific / multispecific antibody,4-1BB|FAP,new target pair,2021-07,Other,RO7122290,Hoffmann-La Roche,NCT04826003,2,0,0,,
-Protein degrader,BCL-XL,new drug type on known target,2021-08,US,DT2216,"Dialectic Therapeutics, Inc",NCT04886622,1,0,1,,2021-08
-Monoclonal antibody,PD-1|mTOR,new target pair,2021-08,US,RAPA-201 Rapamycin Resistant T Cells,Rapa Therapeutics LLC,NCT05144698,1,0,1,,2021-08
-Small molecule,USP1,new target,2021-08,Other,RO7623066,Hoffmann-La Roche,NCT05240898,5,2,2,2024-03,2023-12
-Small molecule,HPV antigens,new drug type on known target,2021-08,US,SQZ-AAC-HPV,SQZ Biotechnologies,NCT04892043,1,0,1,,2021-08
-Monoclonal antibody,CD47|SIRPα,new target pair,2021-08,China,TQB2928 Injection,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",NCT04854681,1,1,0,2021-08,
-Monoclonal antibody,EZH2/PRC2,new drug type on known target,2021-08,Other,XNW5004,Evopoint Biosciences Inc.,NCT06558513,1,0,0,,
-Small molecule,ATM|DNA-PK,new target pair,2021-08,US,XRD-0394,XRad Therapeutics Inc,NCT05002140,1,0,1,,2021-08
-Radioligand,B7-H3,new drug type on known target,2021-09,US,177Lu-DTPA-omburtamab,Y-mAbs Therapeutics,NCT04167618,4,0,2,,2021-09
-CAR-T / engineered cell therapy,KLK2,new target,2021-09,US,JNJ-75229414,"Janssen Research & Development, LLC",NCT05022849,1,0,1,,2021-09
-Small molecule,CTLA-4,new drug type on known target,2021-09,Other,NLM-001,Nelum Corp,NCT04827953,1,0,0,,
-Small molecule,CBL-B,new target,2021-09,US,NX-1607,"Nurix Therapeutics, Inc.",NCT05107674,2,0,2,,2021-09
-Bispecific / multispecific antibody,TIGIT,new drug type on known target,2021-10,US,AGEN1777,Agenus Inc.,NCT05025085,1,0,1,,2021-10
-Small molecule,DGK,new target,2021-10,Other,ASP1570,"Astellas Pharma Global Development, Inc.",NCT05083481,7,1,3,2023-07,2022-08
-Antibody-drug conjugate,B7-H4,new drug type on known target,2021-10,Other,AZD8205,AstraZeneca,NCT05123482,5,2,1,2022-01,2022-01
-Bispecific / multispecific antibody,CD38,new drug type on known target,2021-10,US,BHV-1100,"Biohaven Pharmaceuticals, Inc.",NCT04634435,2,0,2,,2021-10
-Bispecific / multispecific antibody,BCMA,new drug type on known target,2021-10,US,CC-92328,Celgene,NCT04975399,1,0,1,,2021-10
-Monoclonal antibody,MICA/B|NKG2D,new target,2021-10,US,CLN-619,Cullinan Therapeutics Inc.,NCT05117476,2,0,2,,2021-10
-Bispecific / multispecific antibody,CD3|HLA-G,new target,2021-10,US,JNJ-78306358,"Janssen Research & Development, LLC",NCT04991740,2,0,1,,2021-10
-Bispecific / multispecific antibody,CD40|FAP,new target pair,2021-10,Other,MP0317,Molecular Partners AG,NCT05098405,1,0,0,,
-Bispecific / multispecific antibody,B7-H4|CD3,new target pair,2021-10,US,PF-07260437,Pfizer,NCT05067972,2,0,1,,2021-10
-Bispecific / multispecific antibody,CD3|Claudin 18.2,new target pair,2021-10,China,QLS31905,"Qilu Pharmaceutical Co., Ltd.",NCT05278832,4,2,0,2021-10,
-Small molecule,4-1BB|Nectin-4,new target pair,2021-11,Other,BT7480,BicycleTx Limited,NCT05163041,1,0,0,,
-Bispecific / multispecific antibody,FRα|PSMA,new target pair,2021-11,China,CBP-1018,"Coherent Biopharma (Suzhou) Co., Ltd.",NCT04928612,1,1,0,2021-11,
-CAR-T / engineered cell therapy,BCMA|CD38,new target pair,2021-11,US,FT576,Fate Therapeutics,NCT05182073,1,0,1,,2021-11
-Small molecule,CCR8,new target,2021-11,China,IPG7236,"Nanjing Immunophage Biotech Co., Ltd",NCT05142592,1,1,0,2021-11,
-Bispecific / multispecific antibody,PD-1|TGF-β,new target pair,2021-11,China,LBL-015 for Injections,"Nanjing Leads Biolabs Co.,Ltd",NCT05107011,3,2,1,2021-11,2023-07
-Monoclonal antibody,CD20|CD37,new target pair,2021-11,China,PSB202,Qilu Puget Sound Biotherapeutics (dba Sound Biologics),NCT05003141,1,1,0,2021-11,
-CAR-T / engineered cell therapy,WT1,new drug type on known target,2021-12,US,2: NTLA-5001,Intellia Therapeutics,NCT05066165,1,0,1,,2021-12
-Monoclonal antibody,NY-ESO-1,new drug type on known target,2021-12,Other,ASP0739,"Astellas Pharma Global Development, Inc.",NCT04939701,1,0,0,,
-Bispecific / multispecific antibody,CD3|PD-1,new target pair,2021-12,Other,ONO-4685,"Ono Pharmaceutical Co., Ltd.",NCT05079282,1,0,0,,
-Nucleic acid (mRNA/siRNA/ASO),Claudin 18.2,new drug type on known target,2022-01,Other,BNT141,BioNTech SE,NCT04683939,1,0,0,,
-Bispecific / multispecific antibody,CD20|CD47,new target pair,2022-01,US,CC-96673,Celgene,NCT04860466,1,0,1,,2022-01
-Small molecule,ROS1,new drug type on known target,2022-01,US,Zidesamtinib,Nuvalent Inc.,NCT05118789,3,2,1,2022-05,2022-01
-CAR-T / engineered cell therapy,CD20|CD79b,new target pair,2022-01,US,bbT369,Regeneron Pharmaceuticals,NCT05169489,1,0,1,,2022-01
-Bispecific / multispecific antibody,4-1BB|EGFR,new target pair,2022-02,US,BNA035,"Binacea Pharma, Inc.",NCT05150457,2,0,1,,2022-02
-Bispecific / multispecific antibody,CD19|CD28,new target pair,2022-02,Other,RO7443904,Hoffmann-La Roche,NCT05219513,1,0,0,,
-Bispecific / multispecific antibody,CD3|Claudin 6,new target pair,2022-03,Other,BNT142,BioNTech SE,NCT05262530,6,1,3,2025-03,2023-02
-CAR-T / engineered cell therapy,GUCY2C,new drug type on known target,2022-03,China,IM96 CAR-T,"Beijing Immunochina Medical Science & Technology Co., Ltd.",NCT05287165,1,1,0,2022-03,
-CAR-T / engineered cell therapy,ROR1,new drug type on known target,2022-03,US,LYL797,"Lyell Immunopharma, Inc.",NCT05274451,3,0,3,,2022-03
-Monoclonal antibody,Nectin-4|TLR7/8,new target pair,2022-03,US,SBT6290,Silverback Therapeutics,NCT05234606,1,0,1,,2022-03
-Small molecule,HDAC|LSD1,new target pair,2022-04,Other,JBI-802,Jubilant Therapeutics Inc.,NCT05268666,1,0,0,,
-Bispecific / multispecific antibody,CD47|Mesothelin,new target pair,2022-04,Other,NI-1801,Light Chain Bioscience - Novimmune SA,NCT05403554,1,0,0,,
-Bispecific / multispecific antibody,PD-L1|TIGIT,new target pair,2022-04,China,PM1022,Biotheus Inc.,NCT05867771,3,3,0,2022-04,
-Antibody-drug conjugate,ALPP,new target,2022-04,US,SGN-ALPV,Seagen Inc.,NCT05229900,1,0,1,,2022-04
-Antibody-drug conjugate,CCR2/5|STING,new target pair,2022-04,Other,TAK-500,Takeda,NCT05070247,1,0,0,,
-CAR-T / engineered cell therapy,CD73,new drug type on known target,2022-05,China,CD73 Antigen,Biotheus Inc.,NCT05950815,1,1,0,2022-05,
-Bispecific / multispecific antibody,4-1BB|B7-H4,new target pair,2022-05,China,CLN-418,"Harbour BioMed US, Inc.",NCT05306444,2,1,0,2022-05,
-Bispecific / multispecific antibody,CD3|CDH17,new target,2022-05,China,Cabotamig,Arbele Pty Ltd,NCT05411133,1,1,0,2022-05,
-Cytokine / fusion protein,Claudin 18.2,new drug type on known target,2022-05,China,DR30303,"Zhejiang Doer Biologics Co., Ltd.",NCT05639153,1,1,0,2022-05,
-CAR-T / engineered cell therapy,CD38|MICA/B,new target pair,2022-05,US,FT536,Fate Therapeutics,NCT05395052,1,0,1,,2022-05
-Protein degrader,STAT3,new drug type on known target,2022-05,US,KT-333,"Kymera Therapeutics, Inc.",NCT05225584,1,0,1,,2022-05
-Small molecule,KRAS (other/unspecified),new drug type on known target,2022-05,US,RMC-6236,"Revolution Medicines, Inc.",NCT05379985,15,4,10,2024-11,2022-05
-Cytokine / fusion protein,IL-2 pathway|WT1,new target pair,2022-06,US,CUE-102,Cue Biopharma,NCT05360680,1,0,1,,2022-06
-Bispecific / multispecific antibody,IL-15|PD-1,new target pair,2022-06,China,IAP0971,"SUNHO（China）BioPharmaceutical CO., Ltd.",NCT05396391,1,1,0,2022-06,
-Protein degrader,IKZF1/3 (CELMoD)|IRAK4,new target,2022-06,US,KT-413,"Kymera Therapeutics, Inc.",NCT05233033,1,0,1,,2022-06
-Protein degrader,KRAS G12D,new drug type on known target,2022-06,Other,Setidegrasib,Astellas Pharma Inc,NCT05382559,5,1,2,2026-07,2024-12
-Antibody-drug conjugate,CD22|TLR9,new target pair,2022-06,US,TAC-001,Tallac Therapeutics,NCT05399654,1,0,1,,2022-06
-Antibody-drug conjugate,B7-H3|VEGF/VEGFR,new target pair,2022-06,Other,VEGF-A,BioNTech SE,NCT05142189,1,0,0,,
-Bispecific / multispecific antibody,CD3|ENPP3,new target pair,2022-06,US,XmAb819,"Xencor, Inc.",NCT05433142,2,0,2,,2022-06
-Radioligand,PARP1,new drug type on known target,2022-06,Other,[11C]AZ1419 3391,AstraZeneca,NCT05417594,1,0,0,,
-Small molecule,ENPP1,new target,2022-07,US,RBS2418,"Riboscience, LLC.",NCT05270213,2,0,2,,2022-07
-Protein degrader,BET/BRD4,new drug type on known target,2022-07,China,RNK05047,"Ranok Therapeutics (Hangzhou) Co., Ltd.",NCT05487170,2,1,0,2022-07,
-Bispecific / multispecific antibody,4-1BB|CEACAM5,new target pair,2022-08,China,BGB-B167,BeiGene,NCT05494762,2,2,0,2022-08,
-Bispecific / multispecific antibody,IL-2 pathway|PD-1,new target pair,2022-08,China,IBI363,Innovent Biologics (Suzhou) Co. Ltd.,NCT05290597,3,1,1,2022-08,2023-09
-CAR-T / engineered cell therapy,FRα,new drug type on known target,2022-08,US,ITIL-306,Instil Bio,NCT05397093,1,0,1,,2022-08
-CAR-T / engineered cell therapy,CD19|GUCY2C,new target pair,2022-08,US,LYL273,"Lyell Immunopharma, Inc.",NCT05319314,1,0,1,,2022-08
-Bispecific / multispecific antibody,4-1BB|HER2,new target pair,2022-08,Other,YH32367,Yuhan Corporation,NCT05523947,1,0,0,,
-Small molecule,CD47,new drug type on known target,2022-09,Other,AUR103,Aurigene Discovery Technologies Limited,NCT05607199,1,0,0,,
-Small molecule,KRAS G12D,new drug type on known target,2022-09,China,HRS-4642,"Jiangsu HengRui Medicine Co., Ltd.",NCT05533463,15,5,9,2022-09,2023-03
-Bispecific / multispecific antibody,CD38|CD47,new target pair,2022-09,Other,ISB 1442 SC injection escalating doses,Ichnos Sciences SA,NCT05427812,1,0,0,,
-CAR-T / engineered cell therapy,CD155/PVR|HER2,new target pair,2022-09,China,NK510,"Base Therapeutics (Shanghai) Co., Ltd.",NCT06117878,1,1,0,2022-09,
-Monoclonal antibody,CD155/PVR,new drug type on known target,2022-09,Other,NTX-1088,Nectin Therapeutics Ltd,NCT05378425,1,0,0,,
-Monoclonal antibody,GPC3,new drug type on known target,2022-09,Other,SAR444200,Sanofi,NCT05450562,1,0,0,,
-Cancer vaccine,IDO1|PD-L1,new target pair,2022-09,US,mRNA-4359,"ModernaTX, Inc.",NCT05533697,1,0,1,,2022-09
-Cytokine / fusion protein,CTLA-4|IL-15,new target pair,2022-10,China,JK08,Salubris Biotherapeutics Inc,NCT05620134,1,1,0,2022-10,
-Protein degrader,GSPT1,new target,2022-10,US,MRT-2359,"Monte Rosa Therapeutics, Inc",NCT05546268,1,0,1,,2022-10
-Antibody-drug conjugate,FAP,new drug type on known target,2022-10,Other,OMTX705,Oncomatryx Biopharma S.L.,NCT05547321,2,0,0,,
-Protein degrader,GSPT1|HER2,new target,2022-10,Other,ORM-5029,"Orum Therapeutics USA, Inc.",NCT05511844,1,0,0,,
-Antibody-drug conjugate,PD-L1,new drug type on known target,2022-10,US,PF-08046054,"Seagen, a wholly owned subsidiary of Pfizer",NCT05208762,3,1,2,2023-11,2022-10
-Radioligand,SSTR2,new drug type on known target,2022-10,US,RYZ101 Dose Level 1,"RayzeBio, Inc.",NCT05595460,3,0,2,,2022-10
-Bispecific / multispecific antibody,EGFR,new drug type on known target,2022-11,US,DF9001,Dragonfly Therapeutics,NCT05597839,3,0,2,,2022-11
-Cytokine / fusion protein,GD2,new drug type on known target,2022-11,US,GD2-SADA,Y-mAbs Therapeutics,NCT05130255,1,0,1,,2022-11
-CAR-T / engineered cell therapy,CD20|CD22,new target pair,2022-11,Other,UCART20x22,Cellectis S.A.,NCT05607420,1,0,0,,
-Oncolytic virus,IL-15,new drug type on known target,2022-11,Other,VG2025,Virogin Biotech Canada Ltd,NCT05266612,1,0,0,,
-Bispecific / multispecific antibody,TGF-β|VEGF/VEGFR,new target pair,2022-11,China,ZGGS18 for Injection,"Suzhou Zelgen Biopharmaceuticals Co.,Ltd",NCT05584800,1,1,0,2022-11,
-Bispecific / multispecific antibody,4-1BB|5T4,new target pair,2022-12,US,ALG.APV-527,Aptevo Therapeutics,NCT05934539,2,1,1,2025-05,2022-12
-Small molecule,PLK1|TTK/MPS1,new target pair,2022-12,Other,BAL0891,"SillaJen, Inc.",NCT05768932,1,0,0,,
-Protein degrader,BRAF,new drug type on known target,2022-12,US,CFT1946,"C4 Therapeutics, Inc.",NCT05668585,1,0,1,,2022-12
-Small molecule,BET/BRD4|CBP/p300,new target pair,2022-12,US,EP31670,"Epigenetix, Inc.",NCT05488548,1,0,1,,2022-12
-Cytokine / fusion protein,TIGIT,new drug type on known target,2022-12,China,HLX53,Shanghai Henlius Biotech,NCT05394168,1,1,0,2022-12,
-Cancer vaccine,CEACAM5|HER2,new target pair,2022-12,Other,OSE2101,OSE Immunotherapeutics,NCT05751798,1,0,0,,
-Bispecific / multispecific antibody,B7-H3|CD28,new target pair,2022-12,US,XmAb®808,"Xencor, Inc.",NCT05585034,1,0,1,,2022-12
-Cancer vaccine,5T4|STEAP1,new target pair,2023-01,US,ChAdOx1-PCAQ,Barinthus Biotherapeutics,NCT05617040,2,0,2,,2023-01
-Cytokine / fusion protein,IL-15|PD-L1,new target pair,2023-01,US,IGM-7354,"IGM Biosciences, Inc.",NCT05702424,3,1,1,2023-03,2023-01
-Bispecific / multispecific antibody,4-1BB|CD228,new target pair,2023-01,US,PF-08046049,"Seagen, a wholly owned subsidiary of Pfizer",NCT05571839,1,0,1,,2023-01
-Bispecific / multispecific antibody,IL-2 pathway,new drug type on known target,2023-01,US,STAR0602,"Marengo Therapeutics, Inc.",NCT05592626,1,0,1,,2023-01
-Antibody-drug conjugate,HER2|STING,new target pair,2023-01,US,XMT-2056,"Day One Biopharmaceuticals, Inc.",NCT05514717,1,0,1,,2023-01
-Bispecific / multispecific antibody,TGF-β|TIGIT,new target pair,2023-02,China,AK130,Akeso,NCT05653284,1,1,0,2023-02,
-Cytokine / fusion protein,CD39|TGF-β,new target pair,2023-02,China,ES014,"Elpiscience (Suzhou) Biopharma, Ltd.",NCT05717348,1,1,0,2023-02,
-Cytokine / fusion protein,4-1BB|CD40,new target pair,2023-02,China,IMB071703 injection,"Beijng Immunoah Pharma Tech Co., Ltd.",NCT06292858,1,1,0,2023-02,
-Antibody-drug conjugate,CD38,new drug type on known target,2023-02,US,STI-6129,"Sorrento Therapeutics, Inc.",NCT05308225,2,0,2,,2023-02
-Bispecific / multispecific antibody,CD123|CD16A,new target pair,2023-03,Other,AFM28,Affimed GmbH,NCT05817058,1,0,0,,
-CAR-T / engineered cell therapy,FLT3,new drug type on known target,2023-03,US,AMG 553,Amgen,NCT03904069,2,0,2,,2023-03
-Bispecific / multispecific antibody,4-1BB,new drug type on known target,2023-03,Other,ASP1002,"Astellas Pharma Global Development, Inc.",NCT05719558,1,0,0,,
-Small molecule,EGFR|FGFR,new target pair,2023-03,US,BBI-355,"Boundless Bio, Inc.",NCT05827614,1,0,1,,2023-03
-Bispecific / multispecific antibody,CD47|Claudin 18.2,new target pair,2023-03,US,Spevatamig,Phanes Therapeutics,NCT05482893,3,2,1,2023-05,2023-03
-Radioligand,CA9,new drug type on known target,2023-03,Other,[177Lu]Lu-DPI-4452,Lumara Bio Oncologics GmbH,NCT05706129,3,0,0,,
-CAR-T / engineered cell therapy,CEACAM5,new drug type on known target,2023-04,US,A2B530,A2 Biotherapeutics Inc.,NCT05736731,1,0,1,,2023-04
-Small molecule,DLL3,new drug type on known target,2023-04,US,IDE-161,IDEAYA Biosciences,NCT05787587,1,0,1,,2023-04
-Small molecule,AR|BET/BRD4,new target pair,2023-04,US,JNJ-101556143,"Janssen Research & Development, LLC",NCT05818683,1,0,1,,2023-04
-Cytokine / fusion protein,NKG2D,new target,2023-04,Other,QEQ278,Novartis Pharmaceuticals,NCT05462873,1,0,0,,
-Bispecific / multispecific antibody,CD22|CD28,new target pair,2023-04,US,REGN5837,Regeneron Pharmaceuticals,NCT05685173,1,0,1,,2023-04
-Oncolytic virus,CTLA-4|IL-12,new target pair,2023-04,US,TG6050,Transgene,NCT05788926,1,0,1,,2023-04
-Monoclonal antibody,LILRB2|PD-1,new target pair,2023-05,US,CDX-585,Celldex Therapeutics,NCT05788484,1,0,1,,2023-05
-Small molecule,FAP,new drug type on known target,2023-05,US,FOG-001,"Parabilis Medicines, Inc.",NCT05919264,1,0,1,,2023-05
-Protein degrader,MDM2,new drug type on known target,2023-05,US,KT-253,"Kymera Therapeutics, Inc.",NCT05775406,1,0,1,,2023-05
-Protein degrader,SMARCA2,new target,2023-05,US,PRT3789,Prelude Therapeutics Incorporated,NCT05639751,3,0,3,,2023-05
-CAR-T / engineered cell therapy,CD19|CD47,new target pair,2023-05,US,SC291,Sana Biotechnology,NCT05878184,1,0,1,,2023-05
-Small molecule,WRN,new target,2023-06,Other,HRO761,Novartis Pharmaceuticals,NCT05838768,7,0,4,,2025-03
-Monoclonal antibody,HER2|PD-L1,new target pair,2023-06,US,LP-184,Lantern Pharma Inc.,NCT05933265,1,0,1,,2023-06
-CAR-T / engineered cell therapy,NY-ESO-1|PD-L1,new target pair,2023-06,China,TC-N201,TCRCure Biopharma Ltd.,NCT05881525,1,1,0,2023-06,
-Small molecule,KRAS (other/unspecified)|PD-1,new target pair,2023-06,US,TNG260,"Tango Therapeutics, Inc.",NCT05887492,1,0,1,,2023-06
-Monoclonal antibody,EpCAM,new drug type on known target,2023-07,Other,AM-928,AcadeMab Biomedical Inc.,NCT05687682,1,0,0,,
-Bispecific / multispecific antibody,BRAF,new drug type on known target,2023-07,China,HS-20117,Hansoh BioMedical R&D Company,NCT05940116,1,1,0,2023-07,
-Antibody-drug conjugate,ENPP1|TROP2,new target,2023-07,Other,TXN10128,Txinno Bioscience Inc.,NCT05978492,1,0,0,,
-Bispecific / multispecific antibody,LAG-3|TIGIT,new target pair,2023-07,China,ZGGS15,"Suzhou Zelgen Biopharmaceuticals Co.,Ltd",NCT05864573,1,1,0,2023-07,
-Small molecule,PD-L1|TIGIT,new target pair,2023-08,Other,AUR106,Aurigene Discovery Technologies Limited,NCT05861947,1,0,0,,
-Antibody-drug conjugate,CD33,new drug type on known target,2023-08,China,BL-M11D1,"Sichuan Baili Pharmaceutical Co., Ltd.",NCT05924750,1,1,0,2023-08,
-Antibody-drug conjugate,MUC1,new drug type on known target,2023-08,Other,DS-3939a,Daiichi Sankyo,NCT05875168,1,0,0,,
-Bispecific / multispecific antibody,PRAME,new drug type on known target,2023-08,Other,IMA402,Immatics Biotechnologies GmbH,NCT05958121,1,0,0,,
-CAR-T / engineered cell therapy,MAGE-A4,new drug type on known target,2023-09,US,Afamitresgene autoleucel,"USWM CT, LLC",NCT05642455,1,0,1,,2023-09
-Bispecific / multispecific antibody,CD47|HER2,new target pair,2023-09,China,D3L-001,"D3 Bio (Wuxi) Co., Ltd",NCT05957536,1,1,0,2023-09,
-Bispecific / multispecific antibody,CD3|CD30,new target pair,2023-09,Other,GEN3017,Genmab,NCT06018129,1,0,0,,
-Bispecific / multispecific antibody,PD-L1,new drug type on known target,2023-09,US,IMGS-001,ImmunoGenesis,NCT06014502,2,0,1,,2023-09
-Monoclonal antibody,Mutant CALR,new target,2023-09,US,INCA033989,Incyte Corporation,NCT05936359,1,0,1,,2023-09
-Bispecific / multispecific antibody,CD47|DLL3,new target pair,2023-09,US,Peluntamig,Phanes Therapeutics,NCT05652686,1,0,1,,2023-09
-Small molecule,KRAS G12C|KRAS G12D,new target pair,2023-09,China,YL-17231,Shanghai YingLi Pharmaceutical Co. Ltd.,NCT06078800,4,1,3,2023-09,2024-10
-Oncolytic virus,CD19,new drug type on known target,2023-10,Other,CF33-CD19 IT Monotherapy,Imugene Limited,NCT06063317,1,0,0,,
-Cytokine / fusion protein,SIRPα,new drug type on known target,2023-10,China,HCB101,FBD Biologics Limited,NCT05892718,1,1,0,2023-10,
-Antibody-drug conjugate,BET/BRD4|CD33,new target pair,2023-11,US,ABBV-787,AbbVie,NCT06068868,1,0,1,,2023-11
-Bispecific / multispecific antibody,4-1BB|EpCAM,new target pair,2023-11,Other,BNT314,BioNTech SE,NCT06150183,1,0,0,,
-CAR-T / engineered cell therapy,CD19|CD38,new target pair,2023-11,US,FT522,Fate Therapeutics,NCT05950334,1,0,1,,2023-11
-CAR-T / engineered cell therapy,BRAF|MEK,new target pair,2023-11,China,GC101 TIL,Shanghai Juncell Therapeutics,NCT06120712,1,1,0,2023-11,
-Cancer vaccine,GPC3,new drug type on known target,2023-11,China,NWRD06 administered by electroporation,"Newish Technology (Beijing) Co., Ltd.",NCT06088459,2,1,0,2023-11,
-CAR-T / engineered cell therapy,EGFR,new drug type on known target,2023-11,US,PF-08046052,"Seagen, a wholly owned subsidiary of Pfizer",NCT05983133,2,0,1,,2023-11
-Radioligand,ITGB6,new target,2023-11,Other,RAD301,"Radiopharm Theranostics, Ltd",NCT05799274,1,0,0,,
-Radioligand,CDK4/6|GRPR,new target pair,2023-11,Other,[177Lu]Lu-NeoB,Novartis Pharmaceuticals,NCT05870579,1,0,0,,
-Monoclonal antibody,CD24,new target,2023-12,China,ATG-031,Antengene Biologics Limited,NCT06028373,3,2,1,2023-12,2025-03
-Antibody-drug conjugate,GPRC5D,new drug type on known target,2023-12,Other,AZD0305,AstraZeneca,NCT06106945,1,0,0,,
-Protein degrader,BCL6,new target,2023-12,US,BMS-986458,Bristol-Myers Squibb,NCT06090539,4,0,4,,2023-12
-Cytokine / fusion protein,IL-12|IL-2 pathway,new target pair,2023-12,US,CLN-617,Cullinan Therapeutics Inc.,NCT06035744,1,0,1,,2023-12
-Antibody-drug conjugate,CD3,new drug type on known target,2023-12,US,JNJ-87801493,"Janssen Research & Development, LLC",NCT06139406,1,0,1,,2023-12
-Bispecific / multispecific antibody,CD3|Mutant CALR,new target,2023-12,US,JNJ-88549968,"Janssen Research & Development, LLC",NCT06150157,2,0,2,,2023-12
-Antibody-drug conjugate,LILRB4,new drug type on known target,2023-12,China,SG2918,"Hangzhou Sumgen Biotech Co., Ltd.",NCT06167486,1,1,0,2023-12,
-Bispecific / multispecific antibody,CD73|PD-1,new target pair,2024-01,China,AK131,Akeso,NCT06166888,1,1,0,2024-01,
-CAR-T / engineered cell therapy,BCMA|GPRC5D,new target pair,2024-01,US,BMS-986453,"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",NCT06153251,1,0,1,,2024-01
-Protein degrader,IKZF1/3 (CELMoD),new target,2024-01,China,GLB-002,"Hangzhou GluBio Pharmaceutical Co., Ltd.",NCT06219356,2,1,1,2024-01,2025-02
-Bispecific / multispecific antibody,CD40|EpCAM,new target pair,2024-01,Other,KK2269,"Kyowa Kirin Co., Ltd.",NCT06266299,1,0,0,,
-Monoclonal antibody,VISTA,new drug type on known target,2024-01,Other,PMC-309,PharmAbcine,NCT05957081,1,0,0,,
-Small molecule,CDK4/6|HER2,new target pair,2024-01,China,TYK-00540,"TYK Medicines, Inc",NCT06950086,2,1,0,2024-01,
-CAR-T / engineered cell therapy,CA9|PSMA,new target pair,2024-02,US,AB-2100,"Arsenal Biosciences, Inc.",NCT06245915,1,0,1,,2024-02
-Small molecule,CD117|FLT3,new target pair,2024-02,Other,ETN101,Etnova Therapeutics Corp.,NCT06326502,1,0,0,,
-Small molecule,RET|TRK,new target pair,2024-02,China,ND-003 tablets,"Shenzhen NewDEL Biotech, Co., Ltd",NCT06169579,1,1,0,2024-02,
-Monoclonal antibody,NKG2D,new target,2024-03,US,23ME-01473,"23andMe, Inc.",NCT06290388,1,0,1,,2024-03
-Antibody-drug conjugate,PSMA|STEAP1,new target pair,2024-03,US,ABBV-969,AbbVie,NCT06318273,1,0,1,,2024-03
-CAR-T / engineered cell therapy,KRAS (other/unspecified),new drug type on known target,2024-03,US,AFNT-211,"Affini-T Therapeutics, Inc.",NCT06105021,1,0,1,,2024-03
-CAR-T / engineered cell therapy,STEAP2,new target,2024-03,Other,AZD0754,AstraZeneca,NCT06267729,1,0,0,,
-Radioligand,STEAP2,new target,2024-03,Other,AZD2287,AstraZeneca,NCT06267729,2,0,0,,
-Bispecific / multispecific antibody,4-1BB|CD24,new target,2024-03,China,IBD0333,"SUNHO（China）BioPharmaceutical CO., Ltd.",NCT06292208,1,1,0,2024-03,
-CAR-T / engineered cell therapy,CD20|NKp46,new target,2024-03,Other,IPH6501,Innate Pharma,NCT06088654,1,0,0,,
-CAR-T / engineered cell therapy,KRAS G12D,new drug type on known target,2024-03,Other,NT-112: Autologous,AstraZeneca,NCT06218914,1,0,0,,
-CAR-T / engineered cell therapy,Nectin-4,new drug type on known target,2024-03,China,XKDCT293,"Shenzhen Celconta Life Science Co., Ltd.",NCT06724835,1,1,0,2024-03,
-Antibody-drug conjugate,EpCAM,new drug type on known target,2024-04,US,CX-2051,CytomX Therapeutics,NCT06265688,1,0,1,,2024-04
-CAR-T / engineered cell therapy,CD22|CD47,new target pair,2024-04,US,SC262,Sana Biotechnology,NCT06285422,1,0,1,,2024-04
-CAR-T / engineered cell therapy,CD33|FLT3,new target pair,2024-04,US,SENTI-202,Senti Biosciences,NCT06325748,1,0,1,,2024-04
-Protein degrader,CD33|GSPT1,new target,2024-05,US,BMS-986497,Bristol-Myers Squibb,NCT06419634,1,0,1,,2024-05
-CAR-T / engineered cell therapy,CDH17,new target,2024-05,Other,CHM-2101 CAR-T cells,Chimeric Therapeutics,NCT06055439,1,0,0,,
-Cytokine / fusion protein,FLT3|IRAK4,new target pair,2024-05,US,ZE46-0134,"Lomond Therapeutics Holdings, Inc.",NCT06366789,2,1,1,2026-04,2024-05
-Radioligand,PD-L1,new drug type on known target,2024-06,Other,177Lu-RAD204,"Radiopharm Theranostics, Ltd",NCT06305962,1,0,0,,
-Cytokine / fusion protein,IL-15|STING,new target pair,2024-06,US,ACTM-838,"Actym Therapeutics, Inc.",NCT06336148,1,0,1,,2024-06
-Antibody-drug conjugate,CDH17,new target,2024-06,China,AMT-676,Multitude Therapeutics Inc.,NCT06400485,8,6,1,2024-06,2025-07
-Antibody-drug conjugate,CDH3,new drug type on known target,2024-06,US,BC3195,"Biocity Biopharmaceutics Co., Ltd.",NCT06548672,1,0,1,,2024-06
-Small molecule,PKMYT1|WEE1,new target,2024-06,US,SGR-3515,"Schrödinger, Inc.",NCT06463340,2,0,2,,2024-06
-Antibody-drug conjugate,TM4SF1,new target,2024-07,US,AGX101,"Angiex, Inc.",NCT06440005,1,0,1,,2024-07
-Bispecific / multispecific antibody,4-1BB|GPC3,new target pair,2024-07,China,BGB-B2033,BeOne Medicines,NCT06427941,1,1,0,2024-07,
-Protein degrader,CDK4/6,new drug type on known target,2024-07,US,BTX-9341,"Biotheryx, Inc.",NCT06515470,1,0,1,,2024-07
-Small molecule,CDK2|HER2,new target pair,2024-07,China,CG-7321,"Chengdu Cynogen Bio-pharmaceutical Tech. Co., Ltd.",NCT07923214,1,1,0,2024-07,
-Monoclonal antibody,PD-1|VEGF/VEGFR,new target pair,2024-07,China,MRG006A,"Lepu Biopharma Co., Ltd.",NCT07093970,1,1,0,2024-07,
-Bispecific / multispecific antibody,CD20,new drug type on known target,2024-07,Other,SAR448501,Sanofi,NCT06392477,1,0,0,,
-Radioligand,EGFR|c-MET,new target pair,2024-07,Other,[225Ac]-FPI-2068,AstraZeneca,NCT06147037,1,0,0,,
-Antibody-drug conjugate,HER2|HER3,new target pair,2024-08,China,SYS6023,"CSPC Megalith Biopharmaceutical Co.,Ltd.",NCT07110883,1,1,0,2024-08,
-Bispecific / multispecific antibody,CD16A|MUC1,new target pair,2024-09,China,BGB-B3227,BeiGene,NCT06540066,1,1,0,2024-09,
-Protein degrader,WEE1,new drug type on known target,2024-09,US,BMS-986463,Bristol-Myers Squibb,NCT06476808,1,0,1,,2024-09
-Antibody-drug conjugate,B7-H3|PD-L1,new target pair,2024-09,China,DB-1419,DualityBio Inc.,NCT06554795,1,1,0,2024-09,
-Antibody-drug conjugate,CD73,new drug type on known target,2024-09,China,HB0052,"Shanghai Huaota Biopharmaceutical Co., Ltd.",NCT06992687,1,1,0,2024-09,
-Protein degrader,CDK2,new drug type on known target,2024-09,US,NKT3964,"NiKang Therapeutics, Inc.",NCT06586957,1,0,1,,2024-09
-Bispecific / multispecific antibody,LILRB2,new drug type on known target,2024-09,US,PF-07826390,Pfizer,NCT06546553,1,0,1,,2024-09
-Small molecule,EGFRvIII,new drug type on known target,2024-09,China,WSD0922-FU,"Wayshine Biopharm, Inc.",NCT06631989,1,1,0,2024-09,
-Radioligand,FRα,new drug type on known target,2024-09,Other,[177Lu]Lu-EVS459,Novartis Pharmaceuticals,NCT06376253,1,0,0,,
-Cytokine / fusion protein,IL-18|PD-1,new target,2024-10,Other,BPT567,Bright Peak Therapeutics Inc,NCT06779851,1,0,0,,
-Antibody-drug conjugate,EGFR|TROP2,new target pair,2024-10,China,DM001,"Xadcera Biopharmaceutical (Suzhou) Co., Ltd.",NCT06475937,1,1,0,2024-10,
-Antibody-drug conjugate,EGFR|c-MET,new target pair,2024-10,China,DM005,"Doma Biopharmaceutical（Suzhou）Co., Ltd.",NCT06515990,7,5,1,2024-10,2025-07
-Small molecule,KAT6,new target,2024-10,US,MEN2312,"Stemline Therapeutics, Inc.",NCT06638307,5,1,4,2025-12,2024-10
-Monoclonal antibody,GPRC5D,new drug type on known target,2024-10,Other,SAR446523,Sanofi,NCT06630806,1,0,0,,
-Radioligand,HER2,new drug type on known target,2024-10,Other,[177Lu]Lu-NNS309,Novartis Pharmaceuticals,NCT06562192,4,0,0,,
-Antibody-drug conjugate,PD-L1|VEGF/VEGFR,new target pair,2024-11,China,CVL006,"Convalife (Shanghai) Co., Ltd.",NCT06621615,1,1,0,2024-11,
-Bispecific / multispecific antibody,NY-ESO-1,new drug type on known target,2024-11,Other,DS-2243a,Daiichi Sankyo,NCT06644755,1,0,0,,
-Antibody-drug conjugate,GD2,new drug type on known target,2024-11,Other,M3554,"EMD Serono Research & Development Institute, Inc.",NCT06641908,1,0,0,,
-Small molecule,Pol θ,new target,2024-11,China,SYN818,"Hangzhou SynRx Therapeutics Biomedical Technology Co., Ltd",NCT06666270,2,2,0,2024-11,
-Bispecific / multispecific antibody,CD73|LAG-3,new target pair,2024-12,China,AK137,Akeso,NCT06691360,1,1,0,2024-12,
-Antibody-drug conjugate,FGFR2b,new drug type on known target,2024-12,China,BG-C137,BeOne Medicines,NCT06625593,3,3,0,2024-12,
-Bispecific / multispecific antibody,CD39|PD-1,new target pair,2025-01,Other,BNT317 DL1,BioNTech SE,NCT06750185,1,0,0,,
-Antibody-drug conjugate,B7-H3|EGFR,new target pair,2025-01,China,IBI3001,Fortvita Biologics (USA)Inc.,NCT06349408,2,2,0,2025-01,
-Radioligand,GPC3,new drug type on known target,2025-02,Other,BAY 3547926,Bayer,NCT06764316,1,0,0,,
-Antibody-drug conjugate,CD74|MCL-1,new target pair,2025-02,Other,S227928,Servier Bio-Innovation LLC,NCT06563804,1,0,0,,
-Radioligand,DLL3,new drug type on known target,2025-03,US,225Ac-ABD147,Abdera Therapeutics Inc.,NCT06736418,2,0,1,,2025-03
-Monoclonal antibody,STEAP2,new target,2025-03,Other,AZD2275,AstraZeneca,NCT06879041,2,0,0,,
-CAR-T / engineered cell therapy,HPV antigens|Survivin,new target pair,2025-03,US,NEXI-003 T cells,NexImmune Inc.,NCT05582590,1,0,1,,2025-03
-Protein degrader,CDK2|CDK4/6,new target pair,2025-03,US,NKT5097 CDK2,"NiKang Therapeutics, Inc.",NCT07029399,1,0,1,,2025-03
-Antibody-drug conjugate,GPC3,new drug type on known target,2025-04,US,ABBV-324,AbbVie,NCT06858813,2,0,1,,2025-04
-Bispecific / multispecific antibody,CD73,new drug type on known target,2025-04,Other,GI-108,"GI Innovation, Inc.",NCT07172802,1,0,0,,
-Cytokine / fusion protein,PD-L1|TGF-β,new target pair,2025-04,China,HCB301,FBD Biologics Limited,NCT06487624,1,1,0,2025-04,
-Monoclonal antibody,MUC17,new target,2025-04,China,SSS59,"Shenyang Sunshine Pharmaceutical Co., LTD.",NCT06944444,1,1,0,2025-04,
-Bispecific / multispecific antibody,NKG2A|PD-L1,new target pair,2025-05,US,XB628,Exelixis,NCT06952010,1,0,1,,2025-05
-Protein degrader,PRMT5,new drug type on known target,2025-06,US,ERAS-0015,"Erasca, Inc.",NCT06983743,1,0,1,,2025-06
-Protein degrader,PI3Kα,new drug type on known target,2025-06,US,ETX-636 dose escalation,Ensem Therapeutics,NCT06993844,1,0,1,,2025-06
-CAR-T / engineered cell therapy,EGFR|Mesothelin,new target pair,2025-06,US,OPB-101,"Outpace Bio, Inc.",NCT07030907,1,0,1,,2025-06
-Antibody-drug conjugate,Nectin-4|TROP2,new target pair,2025-07,China,AK146D1,Akeso,NCT06929663,3,2,1,2025-07,2025-10
-Protein degrader,KRAS (other/unspecified),new drug type on known target,2025-07,Other,ASP5834,Astellas Pharma Inc,NCT07094204,2,0,1,,2025-11
-Monoclonal antibody,BCL-2,new drug type on known target,2025-07,US,Surzetoclax,AbbVie,NCT06953960,1,0,1,,2025-07
-Cancer vaccine,PRAME,new drug type on known target,2025-07,US,mRNA-4203,"Immatics US, Inc.",NCT06946225,1,0,1,,2025-07
-Bispecific / multispecific antibody,CD3|STEAP2,new target,2025-09,Other,AZD6621,AstraZeneca,NCT07192614,1,0,0,,
-Antibody-drug conjugate,VEGF/VEGFR,new drug type on known target,2025-09,China,YL242,"MediLink Therapeutics (Suzhou) Co., Ltd.",NCT07197827,1,1,0,2025-09,
-Antibody-drug conjugate,STEAP2,new target,2025-10,Other,AZD0516,AstraZeneca,NCT07181161,1,0,0,,
-Monoclonal antibody,pan-KRAS / pan-RAS,new target,2025-10,China,HRS-2329,"Jiangsu HengRui Medicine Co., Ltd.",NCT07189949,1,1,0,2025-10,
-Bispecific / multispecific antibody,CD40|MUC1,new target pair,2025-10,Other,M0324,"EMD Serono Research & Development Institute, Inc.",NCT07166601,1,0,0,,
-Small molecule,SSTR2,new drug type on known target,2025-11,US,CRN09682,Crinetics Pharmaceuticals Inc.,NCT07129252,1,0,1,,2025-11
-Bispecific / multispecific antibody,CD3|NKG2D,new target,2025-11,US,EVOLVE104,"EvolveImmune United, Inc",NCT07217171,1,0,1,,2025-11
-Antibody-drug conjugate,EGFR|HER2,new target pair,2025-11,China,GenSci139,"Changchun GeneScience Pharmaceutical Co., Ltd.",NCT07230977,1,1,0,2025-11,
-Bispecific / multispecific antibody,CD28|Nectin-4,new target pair,2025-11,US,RNDO-564,Rondo Therapeutics,NCT07218003,1,0,1,,2025-11
-Antibody-drug conjugate,CCR8,new target,2025-11,Other,TAK-188,Takeda,NCT07205718,1,0,0,,
-Radioligand,PD-1|PD-L1,new target pair,2025-11,Other,[225Ac]Ac-A9-3408,Alpha-9 Oncology USA Inc.,NCT07076550,1,0,0,,
-Bispecific / multispecific antibody,CD3|LY6G6D,new target,2026-01,US,CBI-1214,Cartography Biosciences,NCT07321106,1,0,1,,2026-01
-Bispecific / multispecific antibody,IL-12|PD-1,new target pair,2026-01,China,IBI3026,Innovent Biologics Technology Limited (Shanghai R&D Center),NCT07327632,1,1,0,2026-01,
-Bispecific / multispecific antibody,CD3|CD70,new target pair,2026-01,US,INCA036873,Incyte Corporation,NCT07195916,1,0,1,,2026-01
-Bispecific / multispecific antibody,CD79b,new drug type on known target,2026-01,US,LTZ-301,"LTZ Therapeutics, Inc.",NCT07121946,1,0,1,,2026-01
-Antibody-drug conjugate,STING|TROP2,new target pair,2026-02,Other,ASP2998,"Astellas Pharma Global Development, Inc.",NCT07287995,1,0,0,,
-Protein degrader,HER2,new drug type on known target,2026-02,US,BBI-940,"Boundless Bio, Inc.",NCT07408089,1,0,1,,2026-02
-CAR-T / engineered cell therapy,MUC1|Mesothelin,new target pair,2026-02,China,EB-DNK101 dual-targeting CAR-NK,Beijing Biotech,NCT07480928,1,1,0,2026-02,
-CAR-T / engineered cell therapy,Claudin 18.2|MUC1,new target pair,2026-02,China,EB-DNK102 dual-targeting CAR-NK,Beijing Biotech,NCT07480928,1,1,0,2026-02,
-Antibody-drug conjugate,B7-H3|PTK7,new target pair,2026-02,US,IDE034,IDEAYA Biosciences,NCT07503808,1,0,1,,2026-02
-Radioligand,LRRC15,new drug type on known target,2026-02,US,LNTH2403 Phase 1 dose,Lantheus Medical Imaging,NCT07357519,1,0,1,,2026-02
-Antibody-drug conjugate,ATR|HER2,new target pair,2026-03,US,CLIO-8221,Callio Therapeutics,NCT07300943,1,0,1,,2026-03
-CAR-T / engineered cell therapy,HER2|Nectin-4,new target pair,2026-03,China,EB-DT-NK-UC101,Beijing Biotech,NCT07492628,1,1,0,2026-03,
-CAR-T / engineered cell therapy,TROP2,new drug type on known target,2026-03,China,EB-NK-301,Beijing Biotech,NCT07589530,1,1,0,2026-03,
-CAR-T / engineered cell therapy,PSCA|PSMA,new target pair,2026-03,China,ETB-DualNK-01,Beijing Biotech,NCT07641049,1,1,0,2026-03,
-Antibody-drug conjugate,HER3|TROP2,new target pair,2026-03,China,JSKN016HC,"Jiangsu Alphamab Biopharmaceuticals Co., Ltd",NCT07475559,1,1,0,2026-03,
-Protein degrader,c-MET,new drug type on known target,2026-03,China,TPD3310,"TAIBIDI PHARMACEUTICAL TECHNOLOGY(SHIJIAZHUANG) CO.,LTD.",NCT07368127,1,1,0,2026-03,
-Protein degrader,ALK,new drug type on known target,2026-03,US,TRI-611,"TRIANA Biomedicines, Inc.",NCT07491497,1,0,1,,2026-03
-Antibody-drug conjugate,HER3,new drug type on known target,2026-04,China,KHN922,"Chengdu Kanghong Biotech Co., Ltd.",NCT07514975,1,1,0,2026-04,
-Antibody-drug conjugate,B7-H3|ROR1,new target pair,2026-04,US,NEOK001,"NEOK Bio, Inc.",NCT07612176,1,0,1,,2026-04
-Bispecific / multispecific antibody,ALPP|CD3,new target,2026-05,China,EMB-15,"Shanghai EpimAb Biotherapeutics Co., Ltd.",NCT07607054,1,1,0,2026-05,
-Cytokine / fusion protein,B7-H3,new drug type on known target,2026-05,China,HLX316,Shanghai Henlius Biotech,NCT07541534,1,1,0,2026-05,
-Protein degrader,BCL-2,new drug type on known target,2026-05,US,JNJ-95804306,"Janssen Research & Development, LLC",NCT07572006,1,0,1,,2026-05
-Bispecific / multispecific antibody,CD3|FRα,new target pair,2026-06,US,NTB-928,"TeneoSeven, Inc.",NCT07690189,1,0,1,,2026-06
-Protein degrader,HPK1,new target,2026-07,US,ARV-6723,Arvinas Inc.,NCT07749586,1,0,1,,2026-07
-Bispecific / multispecific antibody,PVRIG|TIGIT,new target pair,2026-07,China,D3L-002,"D3 Bio (Wuxi) Co., Ltd",NCT07667842,1,1,0,2026-07,
-Monoclonal antibody,CD3|PSMA,new target pair,2026-07,China,QLF4113,"Qilu Pharmaceutical Co., Ltd.",NCT07636707,1,1,0,2026-07,
-Antibody-drug conjugate,KLK2,new target,2026-08,US,JNJ-98768111,"Janssen Research & Development, LLC",NCT07746713,1,0,1,,2026-08
-Bispecific / multispecific antibody,CD24|CD3,new target,2026-08,US,ONC-783,"OncoC4, Inc.",NCT07408258,1,0,1,,2026-08
-Antibody-drug conjugate,CDH17|EGFR,new target,2026-08,China,VBC117,VelaVigo Bio Inc,NCT07772934,1,1,0,2026-08,
-Bispecific / multispecific antibody,CD47|EpCAM,new target pair,2026-09,China,3SC009,"Shenyang Sunshine Pharmaceutical Co., LTD.",NCT07815002,1,1,0,2026-09,
-Antibody-drug conjugate,CEACAM5|EGFR,new target pair,2026-09,China,AN4035,"Adlai Nortye Biopharma Co., Ltd.",NCT07686445,1,1,0,2026-09,
-Bispecific / multispecific antibody,Nectin-4,new drug type on known target,2026-09,US,CT-202,Context Therapeutics Inc.,NCT07545122,1,0,1,,2026-09
-Antibody-drug conjugate,CDH6|FRα,new target pair,2026-09,China,TJ102,Phrontline Biopharma,NCT07778498,1,1,0,2026-09,
+targets,modality,novelty,first_start,leader,first_agent,first_agent_ncit_name,first_sponsor,first_nct,target_source,n_agents,n_china,n_us,china_first,us_first,other_agents
+CD3|MUC17,Bispecific / multispecific antibody,new target,2020-01,US,AMG 199,Vepsitamab,Amgen,NCT04117958,NCI Thesaurus,1,0,1,,2020-01,
+CDK7|CDK9,Small molecule,new target pair,2020-01,US,BTX-A51,CK1alpha/CDK7/CDK9 Inhibitor BTX-A51,Edgewood Oncology Inc.,NCT04243785,NCI Thesaurus,1,0,1,,2020-01,
+CD3|PRAME,Bispecific / multispecific antibody,new target pair,2020-02,Other,Brenetafusp,Brenetafusp,Immunocore Ltd,NCT04262466,NCI Thesaurus,1,0,0,,,
+CD3|STEAP1,Bispecific / multispecific antibody,new target pair,2020-03,US,AMG 509,Xaluritamig,Amgen,NCT04221542,NCI Thesaurus,1,0,1,,2020-03,
+KIF18A,Small molecule,new target,2020-03,US,AMG 650,Sovilnesib,"Volastra Therapeutics, Inc.",NCT04293094,NCI Thesaurus,5,1,4,2025-01,2020-03,"VLS-1488 (US, 2023-10); GenSci122 (China, 2025-01); ATX-295 (US, 2025-03); MEN2501 (US, 2026-01)"
+CDH17,Bispecific / multispecific antibody,new target,2020-03,Other,BI 905711,Anti-TRAILR2/CDH17 Tetravalent Bispecific Antibody BI 905711,Boehringer Ingelheim,NCT04137289,NCI Thesaurus,10,6,1,2024-06,2025-07,"CHM-2101 CAR-T cells (Other, 2024-05); AMT-676 (China, 2024-06); HS-20110 (China, 2025-02); MRG007 (US, 2025-07); YL217 (China, 2025-07)"
+CD16A|EGFR,Bispecific / multispecific antibody,new target pair,2020-04,Other,AFM24,Anti-EGFR/CD16A Bispecific Antibody AFM24,Affimed GmbH,NCT04259450,NCI Thesaurus,1,0,0,,,
+DNA-PK|PI3Kδ,Small molecule,new target pair,2020-04,Other,BR101801,Bosmolisib,"Boryung Pharmaceutical Co., Ltd",NCT04018248,NCI Thesaurus,1,0,0,,,
+IL-12|PD-1,Oncolytic virus,new target pair,2020-04,China,T3011,Oncolytic HSV-1 Expressing IL-12 and Anti-PD-1 Antibody T3011,ImmVira Pharma Co. Ltd,NCT05602792,NCI Thesaurus,3,3,0,2020-04,,"C5252 (China, 2023-03); IBI3026 (China, 2026-01)"
+CD3|Survivin,Bispecific / multispecific antibody,new target pair,2020-05,US,ABBV-184,Anti-survivin T-cell Receptor/Anti-CD3 Bispecific Therapeutic ABBV-184,AbbVie,NCT04272203,NCI Thesaurus,1,0,1,,2020-05,
+IL-2 pathway|PD-1,Cytokine / fusion protein,new target pair,2020-05,Other,Eciskafusp Alfa,Eciskafusp Alfa,Hoffmann-La Roche,NCT04303858,NCI Thesaurus,7,2,2,2022-08,2023-09,"IBI363 (China, 2022-08); KY-0118 (China, 2022-12); AWT020 (US, 2023-09); ANV600 (Other, 2024-07); TEV-56278 (Other, 2024-07)"
+EGFR|TGF-β,Cytokine / fusion protein,new target pair,2020-06,US,BCA101,Ficerafusp Alfa,Bicara Therapeutics,NCT04429542,NCI Thesaurus,1,0,1,,2020-06,
+CDK2|CDK4/6,Small molecule,new target pair,2020-06,China,BPI-1178,Eciruciclib,"Beta Pharma (Suzhou) Co., Ltd.",NCT04282031,NCI Thesaurus,6,3,3,2020-06,2020-12,"NUV-422 (US, 2020-12); RGT-419B (China, 2022-03); SYH2043 (China, 2023-03); PF-07224826 (US, 2024-01); NKT5097 CDK2 (US, 2025-03)"
+CD40|SIRPα,Cytokine / fusion protein,new target pair,2020-06,US,SL-172154,SIRPa-Fc-CD40L Fusion Protein SL-172154,"Shattuck Labs, Inc.",NCT04406623,NCI Thesaurus,1,0,1,,2020-06,
+CSF1R|FGFR,Small molecule,new target pair,2020-06,China,Simmitinib,Simmitinib,"CSPC ZhongQi Pharmaceutical Technology Co., Ltd.",NCT04058587,NCI Thesaurus,1,1,0,2020-06,,
+ITGB6,Antibody-drug conjugate,new target,2020-06,US,sigvotatug vedotin,Sigvotatug Vedotin,"Seagen, a wholly owned subsidiary of Pfizer",NCT04389632,NCI Thesaurus,4,0,3,,2020-06,"RAD301 (Other, 2023-11); PF-08046876 (US, 2025-08); PF-08052667 (US, 2025-11)"
+5T4|CD3,Bispecific / multispecific antibody,new target pair,2020-07,Other,GEN1044 is an immunoglobulin G1   bispecific antibody targeting CD3,Anti-CD3/Anti-5T4 Bispecific Antibody GEN1044,Genmab,NCT04424641,NCI Thesaurus,2,0,0,,,"CBA-1535 (Other, 2022-06)"
+CD47|PD-L1,Bispecific / multispecific antibody,new target pair,2020-07,China,IBI322,Simridarlimab,Innovent Biologics (Suzhou) Co. Ltd.,NCT04328831,NCI Thesaurus,5,3,1,2020-07,2021-08,"PF-07257876 (US, 2021-08); BAT7104 injection (China, 2022-01); 6MW3211 injection (China, 2022-07); LB101 (Other, 2023-03)"
+HER2|TLR7/8,Monoclonal antibody,new target pair,2020-07,US,SBT6050,Pertuzumab Zuvotolimod,Silverback Therapeutics,NCT04460456,NCI Thesaurus,1,0,1,,2020-07,
+HLA-G,Monoclonal antibody,new target,2020-07,US,TTX-080,Anti-HLA-G Antibody TTX-080,"Tizona Therapeutics, Inc",NCT04485013,NCI Thesaurus,1,0,1,,2020-07,
+CD27|PD-L1,Bispecific / multispecific antibody,new target pair,2020-08,US,CDX-527,Anti-PD-L1/CD27 Bispecific Antibody CDX-527,Celldex Therapeutics,NCT04440943,NCI Thesaurus,1,0,1,,2020-08,
+IL-21|PD-1,Cytokine / fusion protein,new target pair,2020-09,US,AMG 256,Latikafusp,Amgen,NCT04362748,NCI Thesaurus,1,0,1,,2020-09,
+AXL|FLT3,Small molecule,new target pair,2020-09,China,KC1036,AXL/FLT3/VEGFR2 Inhibitor KC1036,"Beijing Konruns Pharmaceutical Co., Ltd.",NCT04387916,NCI Thesaurus,2,2,0,2020-09,,"HH30134 (China, 2021-04)"
+4-1BB|SIRPα,Cytokine / fusion protein,new target pair,2020-10,Other,DSP107,SIRPa-4-1BBL Fusion Protein DSP107,Kahr Medical,NCT04440735,NCI Thesaurus,1,0,0,,,
+ADAM9,Antibody-drug conjugate,new target,2020-10,US,IMGC936,Izeltabart Tapatansine,"ImmunoGen, Inc.",NCT04622774,NCI Thesaurus,4,2,2,2025-09,2020-10,"MGC028 (US, 2025-02); DB-1317 (China, 2025-09); BG-C0979 (China, 2026-04)"
+TREM2,Monoclonal antibody,new target,2020-10,US,PY314,Anti-TREM2 Monoclonal Antibody PY314,Ikena Oncology,NCT04691375,NCI Thesaurus,2,0,2,,2020-10,"EOS006215 (US, 2025-04)"
+4-1BB|OX40,Bispecific / multispecific antibody,new target pair,2020-11,China,FS120,Anti-OX40/CD137 Bispecific Antibody FS120,invoX Pharma Limited,NCT04648202,NCI Thesaurus,1,1,0,2020-11,,
+KLK2,Radioligand,new target,2020-11,US,JNJ-69086420,Actinium Ac 225 Alpitatug Satetraxetan,"Janssen Research & Development, LLC",NCT04644770,NCI Thesaurus,3,0,3,,2020-11,"JNJ-75229414 (US, 2021-09); JNJ-98768111 (US, 2026-08)"
+CD22|CD3,Bispecific / multispecific antibody,new target pair,2020-11,US,JNJ-75348780,Rezetamig,"Janssen Research & Development, LLC",NCT04540796,Trial text naming the agent,1,0,1,,2020-11,
+CD3|KLK2,Bispecific / multispecific antibody,new target,2020-11,US,JNJ-78278343,Pasritamig,"Janssen Research & Development, LLC",NCT04898634,NCI Thesaurus,1,0,1,,2020-11,
+KAT6,Small molecule,new target,2020-11,US,PF-07248144,Prifetrastat,Pfizer,NCT04606446,NCI Thesaurus,6,1,5,2025-12,2020-11,"MEN2312 (US, 2024-10); OP-3136 (US, 2024-12); BG-75202 (China, 2025-12); PF-08032562 (US, 2025-12); IDE574 (US, 2026-03)"
+AXL|CSF1R,Small molecule,new target pair,2020-11,Other,Q702,Adrixetinib,"Qurient Co., Ltd.",NCT04648254,NCI Thesaurus,1,0,0,,,
+CD3|WT1,Bispecific / multispecific antibody,new target pair,2020-11,Other,RO7283420,Anti-HLA-A2-WT1/Anti-CD3 T-cell Engaging Bispecific Antibody RO7283420,Hoffmann-La Roche,NCT04580121,NCI Thesaurus,1,0,0,,,
+IL-15|PD-1,Cytokine / fusion protein,new target pair,2020-12,US,PF-07209960,PD-1 Targeted IL-15 Mutein Fusion Protein PF-07209960,Pfizer,NCT04628780,NCI Thesaurus,6,3,1,2022-06,2020-12,"IAP0971 (China, 2022-06); SAR445877 (Other, 2022-11); ASKG915 (China, 2023-08); SOT201 (Other, 2024-05); JMT108 (China, 2025-04)"
+CD28|MUC16,Bispecific / multispecific antibody,new target pair,2020-12,US,REGN5668,Anti-MUC16/CD28 Bispecific Antibody REGN5668,Regeneron Pharmaceuticals,NCT04590326,NCI Thesaurus,1,0,1,,2020-12,
+CD28|EGFR,Bispecific / multispecific antibody,new target pair,2020-12,US,REGN7075,Marlotamig,Regeneron Pharmaceuticals,NCT04626635,NCI Thesaurus,1,0,1,,2020-12,
+TNFR2,Monoclonal antibody,new target,2021-01,Other,BI-1808,Zimlekitug,BioInvent International AB,NCT04752826,NCI Thesaurus,6,2,2,2022-03,2022-03,"HFB200301 (US, 2022-03); SIM1811-03 (China, 2022-03); NBL-020 for Injection (China, 2023-08); BI-1910 (Other, 2023-12); BITR2101 (US, 2025-08)"
+EGFR|MUC1,Antibody-drug conjugate,new target pair,2021-01,Other,M1231,Anti-MUC1/EGFR Bispecific Antibody-drug Conjugate M1231,"EMD Serono Research & Development Institute, Inc.",NCT04695847,NCI Thesaurus,2,0,1,,2026-04,"NEOK002 (US, 2026-04)"
+BCL-XL|EGFR,Antibody-drug conjugate,new target pair,2021-02,US,ABBV-637,Anti-EGFR Antibody-drug Conjugate ABBV-637,AbbVie,NCT04721015,NCI Thesaurus,1,0,1,,2021-02,
+GPRC5D,CAR-T / engineered cell therapy,"known target, first time as sole target",2021-02,US,CC-95266,Arlocabtagene Autoleucel,"Juno Therapeutics, a Subsidiary of Celgene",NCT04674813,NCI Thesaurus,5,2,1,2023-10,2021-02,"OriCAR-017 (China, 2023-10); AZD0305 (Other, 2023-12); CT071 (China, 2024-04); SAR446523 (Other, 2024-10)"
+PD-L1|VEGF/VEGFR,Bispecific / multispecific antibody,new target pair,2021-03,China,PM8002,Pumitamig,Biotheus Inc.,NCT05918445,NCI Thesaurus,5,4,1,2021-03,2025-09,"B1962 (China, 2022-12); CVL006 (China, 2024-11); AXN-2510 (US, 2025-09); HLX37 (China, 2025-12)"
+CD19|EGFR,CAR-T / engineered cell therapy,new target pair,2021-03,Other,RPM CD19-mbIL15-CAR-T cells,Autologous CD19-CD8-CD28-CAR-mbIL15-HER1t T Cells,Eden BioCell Ltd.,NCT04844086,NCI Thesaurus,1,0,0,,,
+CD3|EGFR,Bispecific / multispecific antibody,new target pair,2021-03,Other,TAK-186,EGFR/CD3-targeting T-cell Engaging Molecule TAK-186,Takeda,NCT04844073,NCI Thesaurus,5,1,3,2026-08,2022-05,"CX-904 (US, 2022-05); JANX008 (US, 2023-04); VIR-5525 (US, 2025-07); KGX105 (China, 2026-08)"
+TEAD/YAP,Small molecule,new target,2021-03,US,VT3989,TEAD Inhibitor VT3989,"Vivace Therapeutics, Inc",NCT04665206,NCI Thesaurus,9,3,4,2023-04,2021-03,"IAG933 (Other, 2021-10); IK-930 (US, 2022-01); BPI-460372 (China, 2023-04); ODM-212 (Other, 2023-10); BGC515 (US, 2024-06)"
+4-1BB|PD-1,Bispecific / multispecific antibody,new target pair,2021-04,China,IBI319,Anti-PD-1/Anti-4-1BB Bispecific Antibody IBI-319,Innovent Biologics (Suzhou) Co. Ltd.,NCT04708210,NCI Thesaurus,1,1,0,2021-04,,
+PKMYT1,Small molecule,new target,2021-04,Other,Lunresertib,Lunresertib,Debiopharm International SA,NCT04855656,NCI Thesaurus,2,0,1,,2024-10,"XL495 (US, 2024-10)"
+CCR8,Monoclonal antibody,new target,2021-05,US,BMS-986340,Imzokitug,Bristol-Myers Squibb,NCT04895709,NCI Thesaurus,15,6,4,2021-11,2021-05,"Denikitug (US, 2021-08); IPG7236 (China, 2021-11); LM-108 (China, 2022-03); S-531011 (Other, 2022-05); BAY3375968 (Other, 2022-10)"
+CD3|ROR1,Bispecific / multispecific antibody,new target pair,2021-05,Other,NVG-111,Anti-ROR1/CD3 T-cell Engager NVG-111,NovalGen Ltd.,NCT04763083,NCI Thesaurus,3,1,0,2023-03,,"EMB07 (China, 2023-03); NM32-2668 (Other, 2024-05)"
+Claudin 18.2|PD-L1,Bispecific / multispecific antibody,new target pair,2021-05,China,Q-1802,Anti-PD-L1/Claudin18.2 Bispecific Antibody Q-1802,QureBio Ltd.,NCT04856150,NCI Thesaurus,1,1,0,2021-05,,
+CD40|FAP,Small molecule,new target pair,2021-05,Other,RO7300490,FAPa-targeted CD40 Agonist RO7300490,Hoffmann-La Roche,NCT04857138,NCI Thesaurus,3,1,0,2023-03,,"MP0317 (Other, 2021-10); SHR-7367 (China, 2023-03)"
+4-1BB|PSMA,Bispecific / multispecific antibody,new target pair,2021-06,Other,CB307,CD137/PSMA/HSA Trispecific-targeting Agent CB 307,Crescendo Biologics Ltd.,NCT04839991,NCI Thesaurus,2,0,1,,2026-07,"REGN15505 (US, 2026-07)"
+4-1BB|Claudin 18.2,Bispecific / multispecific antibody,new target pair,2021-06,China,TJ033721,Givastomig,I-Mab Biopharma US Limited,NCT04900818,NCI Thesaurus,2,2,0,2021-06,,"PM1032 injection (China, 2022-07)"
+BCL-XL,Protein degrader,"known target, first time as sole target",2021-08,US,DT2216,Bcl-XL Proteolysis Targeting Chimera DT2216,"Dialectic Therapeutics, Inc",NCT04886622,NCI Thesaurus,1,0,1,,2021-08,
+USP1,Small molecule,new target,2021-08,Other,RO7623066,USP1 inhibitor KSQ-4279,Hoffmann-La Roche,NCT05240898,NCI Thesaurus,5,2,2,2024-03,2023-12,"TNG348 (US, 2023-12); HSK39775 Monotherapy (China, 2024-03); SIM0501 Tablets (China, 2024-03); XL309 (US, 2024-04)"
+ATM|DNA-PK,Small molecule,new target pair,2021-08,US,XRD-0394,ATM Kinase/DNA-PK Inhibitor XRD-0394,XRad Therapeutics Inc,NCT05002140,NCI Thesaurus,1,0,1,,2021-08,
+Pol θ,Small molecule,new target,2021-09,Other,ART4215,Pol Theta Inhibitor ART4215,Artios Pharma Ltd,NCT04991480,NCI Thesaurus,8,2,1,2024-11,2024-08,"ART6043 (Other, 2023-06); GSK4524101 (Other, 2023-10); MOMA-313 (US, 2024-08); RP-3467 at assigned dose (Other, 2024-09); SYN818 (China, 2024-11)"
+DGK,Small molecule,new target,2021-10,Other,ASP1570,Alcudacigib,"Astellas Pharma Global Development, Inc.",NCT05083481,NCI Thesaurus,7,1,3,2023-07,2022-08,"BMS-986408 (US, 2022-08); BAY2965501 (Other, 2022-11); BGB-30813 (China, 2023-07); BAY2862789 (Other, 2023-08); GS-9911 (US, 2023-10)"
+MICA/B|NKG2D,Monoclonal antibody,new target,2021-10,US,CLN-619,Isuventatug,Cullinan Therapeutics Inc.,NCT05117476,NCI Thesaurus,2,0,2,,2021-10,"DM919 (US, 2024-04)"
+CD3|HLA-G,Bispecific / multispecific antibody,new target,2021-10,US,JNJ-78306358,Anti-HLA-G/CD3 Bispecific Antibody JNJ-78306358,"Janssen Research & Development, LLC",NCT04991740,NCI Thesaurus,2,0,1,,2021-10,"RO7515629 (Other, 2023-06)"
+B7-H4|CD3,Bispecific / multispecific antibody,new target pair,2021-10,US,PF-07260437,Anti-B7-H4/Anti-CD3 Bispecific Antibody PF-07260437,Pfizer,NCT05067972,NCI Thesaurus,2,0,1,,2021-10,"GEN1047 is a bispecific antibody that induces T-cell mediated cytotoxicity of B7H4-positive tumor cells (Other, 2021-12)"
+CD3|Claudin 18.2,Bispecific / multispecific antibody,new target pair,2021-10,China,QLS31905,Anti-Claudin18.2/Anti-CD3 Bispecific Antibody QLS31905,"Qilu Pharmaceutical Co., Ltd.",NCT05278832,NCI Thesaurus,4,2,0,2021-10,,"IBI 389 Injection (China, 2022-03); ASP2138 (Other, 2022-06); AZD5863 (Other, 2023-07)"
+4-1BB|Nectin-4,Small molecule,new target pair,2021-11,Other,BT7480,CD137/Nectin-4 Bispecific-targeting Agent BT7480,BicycleTx Limited,NCT05163041,NCI Thesaurus,1,0,0,,,
+FRα|PSMA,Bispecific / multispecific antibody,new target pair,2021-11,China,CBP-1018,PSMA/FRa Bispecific Peptide-drug Conjugate CBP-1018,"Coherent Biopharma (Suzhou) Co., Ltd.",NCT04928612,NCI Thesaurus,1,1,0,2021-11,,
+BCMA|CD38,CAR-T / engineered cell therapy,new target pair,2021-11,US,FT576,iPSC-derived Anti-BCMA CAR/CD16/IL-15RF-expressing CD38-eliminated NK Cells FT576,Fate Therapeutics,NCT05182073,NCI Thesaurus,1,0,1,,2021-11,
+PD-1|TGF-β,Bispecific / multispecific antibody,new target pair,2021-11,China,LBL-015 for Injections,Anti-PD-1/TGFbRII Fusion Protein LBL-015,"Nanjing Leads Biolabs Co.,Ltd",NCT05107011,NCI Thesaurus,3,2,1,2021-11,2023-07,"TQB2868 Injection (China, 2022-04); INCA33890 (US, 2023-07)"
+CD20|CD37,Monoclonal antibody,new target pair,2021-11,China,PSB202,Anti-CD20/CD37 Monoclonal Antibody Combination PSB202,Qilu Puget Sound Biotherapeutics (dba Sound Biologics),NCT05003141,NCI Thesaurus,1,1,0,2021-11,,
+CD20|CD47,Bispecific / multispecific antibody,new target pair,2022-01,US,CC-96673,Anti-CD47/CD20 Bispecific Antibody CC-96673,Celgene,NCT04860466,NCI Thesaurus,1,0,1,,2022-01,
+ROS1,Small molecule,"known target, first time as sole target",2022-01,US,Zidesamtinib,Zidesamtinib,Nuvalent Inc.,NCT05118789,NCI Thesaurus,3,2,1,2022-05,2022-01,"JYP0322 50 mg qd (China, 2022-05); ANS03 (China, 2025-03)"
+CD20|CD79b,CAR-T / engineered cell therapy,new target pair,2022-01,US,bbT369,Autologous Anti-CD79a/anti-CD20 CAR T-cells bbT369,Regeneron Pharmaceuticals,NCT05169489,NCI Thesaurus,1,0,1,,2022-01,
+4-1BB|EGFR,Bispecific / multispecific antibody,new target pair,2022-02,US,BNA035,Anti-EGFR/Anti-4-1BB Bispecific Antibody HLX35,"Binacea Pharma, Inc.",NCT05150457,NCI Thesaurus,2,0,1,,2022-02,"YH32364 (Other, 2025-06)"
+CD19|CD28,Bispecific / multispecific antibody,new target pair,2022-02,Other,RO7443904,Anti-CD19/CD28 Bispecific Antibody RO7443904,Hoffmann-La Roche,NCT05219513,NCI Thesaurus,1,0,0,,,
+CD3|Claudin 6,Bispecific / multispecific antibody,new target pair,2022-03,Other,BNT142,mRNA-encoded Anti-CD3/Anti-CLDN6 Bispecific Antibody BNT142,BioNTech SE,NCT05262530,NCI Thesaurus,6,1,3,2025-03,2023-02,"AMG 794 (US, 2023-02); SAIL66 (Other, 2023-04); XmAb541 (US, 2024-04); CTIM-76 (US, 2024-07); BGB-B455 (China, 2025-03)"
+Nectin-4|TLR7/8,Monoclonal antibody,new target pair,2022-03,US,SBT6290,Nectin-4-directed TLR8 Agonist SBT6290,Silverback Therapeutics,NCT05234606,NCI Thesaurus,1,0,1,,2022-03,
+HDAC|LSD1,Small molecule,new target pair,2022-04,Other,JBI-802,LSD1/HDAC6 Inhibitor JBI-802,Jubilant Therapeutics Inc.,NCT05268666,NCI Thesaurus,1,0,0,,,
+CD47|Mesothelin,Bispecific / multispecific antibody,new target pair,2022-04,Other,NI-1801,Anti-CD47/Anti-mesothelin Bispecific Antibody NI-1801,Light Chain Bioscience - Novimmune SA,NCT05403554,NCI Thesaurus,1,0,0,,,
+PD-L1|TIGIT,Bispecific / multispecific antibody,new target pair,2022-04,China,PM1022,Anti-PD-L1/Anti-TIGIT Bispecific Antibody PM1022,Biotheus Inc.,NCT05867771,NCI Thesaurus,4,3,0,2022-04,,"HLX301 (China, 2022-05); HB0036 (China, 2022-08); AUR106 (Other, 2023-08)"
+CCR2/5|STING,Antibody-drug conjugate,new target pair,2022-04,Other,TAK-500,Plozalizumab Plevistinag,Takeda,NCT05070247,NCI Thesaurus,1,0,0,,,
+4-1BB|B7-H4,Bispecific / multispecific antibody,new target pair,2022-05,China,CLN-418,Anti-B7-H4/Anti-4-1BB Bispecific Antibody CLN-418,"Harbour BioMed US, Inc.",NCT05306444,NCI Thesaurus,2,1,0,2022-05,,"ABL103 (Other, 2023-11)"
+CD3|CDH17,Bispecific / multispecific antibody,new target,2022-05,China,Cabotamig,Cabotamig,Arbele Pty Ltd,NCT05411133,NCI Thesaurus,1,1,0,2022-05,,
+CD38|MICA/B,CAR-T / engineered cell therapy,new target pair,2022-05,US,FT536,Allogeneic iPSC-derived Anti-MICA/B CAR/CD16/IL-15RF-expressing CD38-eliminated NK Cells FT536,Fate Therapeutics,NCT05395052,NCI Thesaurus,1,0,1,,2022-05,
+IL-2 pathway|WT1,Cytokine / fusion protein,new target pair,2022-06,US,CUE-102,WT1-targeted IL-2-based Fusion Protein CUE-102,Cue Biopharma,NCT05360680,NCI Thesaurus,1,0,1,,2022-06,
+IKZF1/3 (CELMoD)|IRAK4,Protein degrader,new target pair,2022-06,US,KT-413,Zomiradomide,"Kymera Therapeutics, Inc.",NCT05233033,NCI Thesaurus,1,0,1,,2022-06,
+CD22|TLR9,Antibody-drug conjugate,new target pair,2022-06,US,TAC-001,Mozistobart Zoratolimod,Tallac Therapeutics,NCT05399654,NCI Thesaurus,1,0,1,,2022-06,
+CD3|ENPP3,Bispecific / multispecific antibody,new target pair,2022-06,US,XmAb819,Anti-ENPP3/Anti-CD3 Bispecific Antibody XmAb819,"Xencor, Inc.",NCT05433142,NCI Thesaurus,2,0,2,,2022-06,"JNJ-87890387 (US, 2023-12)"
+ENPP1,Small molecule,new target,2022-07,US,RBS2418,ENPP1 Inhibitor RBS2418,"Riboscience, LLC.",NCT05270213,NCI Thesaurus,3,0,2,,2022-07,"TXN10128 (Other, 2023-07); SR-8541A (US, 2023-10)"
+4-1BB|CEACAM5,Bispecific / multispecific antibody,new target pair,2022-08,China,BGB-B167,Anti-CEA/Anti-4-1BB Bispecific Antibody BGB-B167,BeiGene,NCT05494762,NCI Thesaurus,2,2,0,2022-08,,"LM-24C5 (China, 2023-12)"
+CD19|GUCY2C,CAR-T / engineered cell therapy,new target pair,2022-08,US,LYL273,Autologous GCC-targeting CAR T-cells LYL273,"Lyell Immunopharma, Inc.",NCT05319314,NCI Thesaurus,1,0,1,,2022-08,
+CD38|CD47,Bispecific / multispecific antibody,new target pair,2022-09,Other,ISB 1442 SC injection escalating doses,Anti-CD38/Anti-CD47 Bispecific Antibody ISB 1442,Ichnos Sciences SA,NCT05427812,NCI Thesaurus,1,0,0,,,
+CD155/PVR,CAR-T / engineered cell therapy,"known target, first time as sole target",2022-09,Tie,NK510,Base Edited Natural Killer Cells NK510,"Base Therapeutics (Shanghai) Co., Ltd.",NCT06117878,Trial text naming the agent,2,1,0,2022-09,,"NTX-1088 (Other, 2022-09)"
+IDO1|PD-L1,Cancer vaccine,new target pair,2022-09,US,mRNA-4359,mRNA-derived IDO/PD-L1-targeted Vaccine mRNA-4359,"ModernaTX, Inc.",NCT05533697,NCI Thesaurus,1,0,1,,2022-09,
+CTLA-4|IL-15,Cytokine / fusion protein,new target pair,2022-10,China,JK08,Anti-CTLA-4 Monoclonal Antibody-IL-15/IL-15Ra Fusion Protein JK08,Salubris Biotherapeutics Inc,NCT05620134,NCI Thesaurus,1,1,0,2022-10,,
+GSPT1,Protein degrader,new target,2022-10,US,MRT-2359,GSPT1 MGD MRT-2359,"Monte Rosa Therapeutics, Inc",NCT05546268,NCI Thesaurus,1,0,1,,2022-10,
+GSPT1|HER2,Protein degrader,new target,2022-10,Other,ORM-5029,Anti-HER2 GSPT1 Degrader ORM-5029,"Orum Therapeutics USA, Inc.",NCT05511844,NCI Thesaurus,1,0,0,,,
+Claudin 18.2|IL-10,Cytokine / fusion protein,new target pair,2022-11,China,LB4330,,"L & L Bio Co., Ltd., Ningbo, China",NCT05707676,Trial text naming the agent,1,1,0,2022-11,,
+CD20|CD22,CAR-T / engineered cell therapy,new target pair,2022-11,Other,UCART20x22,Etivelcabtagene Erigedleucel,Cellectis S.A.,NCT05607420,NCI Thesaurus,1,0,0,,,
+4-1BB|5T4,Bispecific / multispecific antibody,new target pair,2022-12,US,ALG.APV-527,Anti-4-1BB/5T4 Bispecific Antibody ALG.APV-527,Aptevo Therapeutics,NCT05934539,NCI Thesaurus,2,1,1,2025-05,2022-12,"FTL008.16 (China, 2025-05)"
+PLK1|TTK/MPS1,Small molecule,new target pair,2022-12,Other,BAL0891,TTK/PLK1 Inhibitor BAL0891,"SillaJen, Inc.",NCT05768932,NCI Thesaurus,1,0,0,,,
+BET/BRD4|CBP/p300,Small molecule,new target pair,2022-12,US,EP31670,BET/CBP/p300 Inhibitor EP31670,"Epigenetix, Inc.",NCT05488548,NCI Thesaurus,1,0,1,,2022-12,
+B7-H3|CD28,Bispecific / multispecific antibody,new target pair,2022-12,US,XmAb®808,Anti-B7-H3/CD28 Bispecific Antibody XmAb808,"Xencor, Inc.",NCT05585034,NCI Thesaurus,1,0,1,,2022-12,
+5T4|STEAP1,Cancer vaccine,new target pair,2023-01,US,ChAdOx1-PCAQ,ChAdOx1-PSA/PAP/STEAP1/5T4 Prostate Cancer Vaccine ChAdOx1-PCAQ,Barinthus Biotherapeutics,NCT05617040,NCI Thesaurus,2,0,2,,2023-01,"MVA-PCAQ (US, 2023-01)"
+IL-15|PD-L1,Cytokine / fusion protein,new target pair,2023-01,US,IGM-7354,Anti-PD-L1 Antibody/IL-15 Fusion Protein IGM-7354,"IGM Biosciences, Inc.",NCT05702424,NCI Thesaurus,3,1,1,2023-03,2023-01,"KD033 (Other, 2023-03); SIM0237 (China, 2023-03)"
+4-1BB|CD228,Bispecific / multispecific antibody,new target pair,2023-01,US,PF-08046049,Tonobafusp Alfa,"Seagen, a wholly owned subsidiary of Pfizer",NCT05571839,NCI Thesaurus,1,0,1,,2023-01,
+HER2|STING,Antibody-drug conjugate,new target pair,2023-01,US,XMT-2056,Calotatug Ginistinag,"Day One Biopharmaceuticals, Inc.",NCT05514717,NCI Thesaurus,1,0,1,,2023-01,
+TGF-β|TIGIT,Bispecific / multispecific antibody,new target pair,2023-02,China,AK130,Lucorafusp Alfa,Akeso,NCT05653284,NCI Thesaurus,1,1,0,2023-02,,
+CD39|TGF-β,Cytokine / fusion protein,new target pair,2023-02,China,ES014,Anti-CD39 Antibody/TGF-beta RII Ectodomain Fusion Protein ES014,"Elpiscience (Suzhou) Biopharma, Ltd.",NCT05717348,NCI Thesaurus,1,1,0,2023-02,,
+CD123|CD16A,Bispecific / multispecific antibody,new target pair,2023-03,Other,AFM28,Anti-CD123/CD16A Bispecific Antibody AFM28,Affimed GmbH,NCT05817058,NCI Thesaurus,1,0,0,,,
+CD47|Claudin 18.2,Bispecific / multispecific antibody,new target pair,2023-03,US,Spevatamig,Spevatamig,Phanes Therapeutics,NCT05482893,NCI Thesaurus,3,2,1,2023-05,2023-03,"SG1906 (China, 2023-05); AK132 (China, 2023-12)"
+AR|BET/BRD4,Small molecule,new target pair,2023-04,US,JNJ-101556143,Androgen Receptor-targeting Regulated Induced Proximity Targeting Chimera HLD-0915,"Janssen Research & Development, LLC",NCT05818683,NCI Thesaurus,1,0,1,,2023-04,
+NKG2D,Cytokine / fusion protein,new target,2023-04,Other,QEQ278,NKG2D-Fc Fusion Protein QEQ278,Novartis Pharmaceuticals,NCT05462873,NCI Thesaurus,2,0,1,,2024-03,"23ME-01473 (US, 2024-03)"
+CD22|CD28,Bispecific / multispecific antibody,new target pair,2023-04,US,REGN5837,Anti-CD22/Anti-CD28 Bispecific Antibody REGN5837,Regeneron Pharmaceuticals,NCT05685173,NCI Thesaurus,1,0,1,,2023-04,
+CTLA-4|IL-12,Oncolytic virus,new target pair,2023-04,US,TG6050,IL-12/Anti-CTLA-4 Monoclonal Antibody-expressing Oncolytic Viral Vector TG6050,Transgene,NCT05788926,NCI Thesaurus,1,0,1,,2023-04,
+LILRB2|PD-1,Monoclonal antibody,new target pair,2023-05,US,CDX-585,Anti-PD-1/Anti-ILT4 Bispecific Antibody CDX-585,Celldex Therapeutics,NCT05788484,NCI Thesaurus,1,0,1,,2023-05,
+WRN,Small molecule,new target,2023-06,Other,HRO761,Romoverlib,Novartis Pharmaceuticals,NCT05838768,NCI Thesaurus,7,0,4,,2025-03,"VVD-133214 (Other, 2024-01); GSK4418959 (Other, 2024-12); NDI-219216 (US, 2025-03); MOMA-341 (US, 2025-07); EIK1005 (US, 2026-01)"
+NY-ESO-1|PD-L1,CAR-T / engineered cell therapy,new target pair,2023-06,China,TC-N201,,TCRCure Biopharma Ltd.,NCT05881525,Trial text naming the agent,1,1,0,2023-06,,
+B7-H3|IL-10,Bispecific / multispecific antibody,new target pair,2023-07,China,IBB0979,,"SUNHO（China）BioPharmaceutical CO., Ltd.",NCT05991583,Trial text naming the agent,1,1,0,2023-07,,
+LAG-3|TIGIT,Bispecific / multispecific antibody,new target pair,2023-07,China,ZGGS15,Anti-LAG-3/TIGIT Bispecific Antibody ZGGS15,"Suzhou Zelgen Biopharmaceuticals Co.,Ltd",NCT05864573,NCI Thesaurus,1,1,0,2023-07,,
+CD47|HER2,Bispecific / multispecific antibody,new target pair,2023-09,China,D3L-001,Anti-CD47/Anti-HER2 Bispecific Antibody D3L-001,"D3 Bio (Wuxi) Co., Ltd",NCT05957536,NCI Thesaurus,1,1,0,2023-09,,
+CD3|CD30,Bispecific / multispecific antibody,new target pair,2023-09,Other,GEN3017,Anti-CD30/CD3 Bispecific Antibody GEN3017,Genmab,NCT06018129,NCI Thesaurus,1,0,0,,,
+Mutant CALR,Monoclonal antibody,new target,2023-09,US,INCA033989,Anti-mutant Calreticulin Monoclonal Antibody INCA033989,Incyte Corporation,NCT05936359,NCI Thesaurus,1,0,1,,2023-09,
+CD47|DLL3,Bispecific / multispecific antibody,new target pair,2023-09,US,Peluntamig,Peluntamig,Phanes Therapeutics,NCT05652686,NCI Thesaurus,1,0,1,,2023-09,
+BET/BRD4|CD33,Antibody-drug conjugate,new target pair,2023-11,US,ABBV-787,Anti-CD33/BET Degrader ADC ABBV-787,AbbVie,NCT06068868,NCI Thesaurus,1,0,1,,2023-11,
+4-1BB|EpCAM,Bispecific / multispecific antibody,new target pair,2023-11,Other,BNT314,Anti-EpCAM/Anti-4-1BB Bispecific Antibody BNT314,BioNTech SE,NCT06150183,NCI Thesaurus,1,0,0,,,
+CD19|CD38,CAR-T / engineered cell therapy,new target pair,2023-11,US,FT522,iPSC-derived Anti-CD19 CAR/CD16/IL-15RF/ADR-expressing CD38-eliminated NK Cells FT522,Fate Therapeutics,NCT05950334,NCI Thesaurus,1,0,1,,2023-11,
+BCL6,Protein degrader,new target,2023-12,US,BMS-986458,Toviblideg,Bristol-Myers Squibb,NCT06090539,NCI Thesaurus,4,0,4,,2023-12,"ARV-393 (US, 2024-09); TLN-121 (US, 2025-06); LY4584180 (US, 2026-04)"
+IL-12|IL-2 pathway,Cytokine / fusion protein,new target pair,2023-12,US,CLN-617,IL-2/IL-12-based Fusion Protein CLN-617,Cullinan Therapeutics Inc.,NCT06035744,NCI Thesaurus,1,0,1,,2023-12,
+CD3|Mutant CALR,Bispecific / multispecific antibody,new target,2023-12,US,JNJ-88549968,Anti-CALRmut/Anti-CD3 Bispecific Antibody JNJ-88549968,"Janssen Research & Development, LLC",NCT06150157,NCI Thesaurus,2,0,2,,2023-12,"INCA035784 (US, 2025-10)"
+BCMA|GPRC5D,CAR-T / engineered cell therapy,new target pair,2024-01,US,BMS-986453,Tunlucabtagene Autoleucel,"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",NCT06153251,NCI Thesaurus,1,0,1,,2024-01,
+HER2|PD-L1,Antibody-drug conjugate,new target pair,2024-01,China,JSKN033,,"Jiangsu Alphamab Biopharmaceuticals Co., Ltd",NCT06226766,Trial text naming the agent,1,1,0,2024-01,,
+CD40|EpCAM,Bispecific / multispecific antibody,new target pair,2024-01,Other,KK2269,Anti-EpCAM/Anti-CD40 Bispecific Antibody KK2269,"Kyowa Kirin Co., Ltd.",NCT06266299,NCI Thesaurus,1,0,0,,,
+CA9|PSMA,CAR-T / engineered cell therapy,new target pair,2024-02,US,AB-2100,Autologous PSMA-inducible Anti-CA9 CAR T-cells AB-2100,"Arsenal Biosciences, Inc.",NCT06245915,NCI Thesaurus,1,0,1,,2024-02,
+RET|TRK,Small molecule,new target pair,2024-02,China,ND-003 tablets,TRK/RET Inhibitor ND-003,"Shenzhen NewDEL Biotech, Co., Ltd",NCT06169579,NCI Thesaurus,1,1,0,2024-02,,
+PSMA|STEAP1,Antibody-drug conjugate,new target pair,2024-03,US,ABBV-969,Anti-PSMA/STEAP1 Antibody-drug Conjugate ABBV-969,AbbVie,NCT06318273,NCI Thesaurus,1,0,1,,2024-03,
+4-1BB|KRAS (other/unspecified),Cytokine / fusion protein,new target pair,2024-03,US,AFNT-211,Autologous HLA-A*11:01 KRASG12V-specific TCR-expressing CD8- and CD4-positive T-lymphocytes AFNT-211,"Affini-T Therapeutics, Inc.",NCT06105021,NCI Thesaurus,1,0,1,,2024-03,
+STEAP2,CAR-T / engineered cell therapy,new target,2024-03,Other,AZD0754,Autologous dnTGF-BRII-armored Anti-STEAP2 CAR T-cells AZD0754,AstraZeneca,NCT06267729,NCI Thesaurus,6,0,0,,,"AZD2287 (Other, 2024-03); AZD2275 (Other, 2025-03); AZD2284 (Other, 2025-03); AZD0516 (Other, 2025-10); AZD8359 (Other, 2026-05)"
+4-1BB|CD24,Bispecific / multispecific antibody,new target pair,2024-03,China,IBD0333,Anti-CD24/Anti-4-1BB Bispecific Monoclonal Antibody IBD0333,"SUNHO（China）BioPharmaceutical CO., Ltd.",NCT06292208,NCI Thesaurus,1,1,0,2024-03,,
+CD20|NKp46,CAR-T / engineered cell therapy,new target,2024-03,Other,IPH6501,Zemlikafusp Alfa,Innate Pharma,NCT06088654,NCI Thesaurus,1,0,0,,,
+HER3|TROP2,Antibody-drug conjugate,new target pair,2024-04,China,JSKN016,,"Jiangsu Alphamab Biopharmaceuticals Co., Ltd",NCT06592417,Trial text naming the agent,2,2,0,2024-04,,"JSKN016HC (China, 2026-03)"
+CD22|CD47,CAR-T / engineered cell therapy,new target pair,2024-04,US,SC262,Allogeneic Hypoimmune Anti-CD22 CAR T-cells SC262,Sana Biotechnology,NCT06285422,NCI Thesaurus,1,0,1,,2024-04,
+CD33|FLT3,CAR-T / engineered cell therapy,new target pair,2024-04,US,SENTI-202,Allogeneic Calibrated Release IL-15-expressing Logic-Gated Gene Circuit Anti-CD33/FLT3 CAR-NK Cells SENTI-202,Senti Biosciences,NCT06325748,NCI Thesaurus,1,0,1,,2024-04,
+CD33|GSPT1,Protein degrader,new target,2024-05,US,BMS-986497,Anti-CD33 GSPT1 Degrader BMS-986497,Bristol-Myers Squibb,NCT06419634,NCI Thesaurus,1,0,1,,2024-05,
+IL-15|STING,Cytokine / fusion protein,new target pair,2024-06,US,ACTM-838,Attenuated S. typhimurium Carrying IL-15/IL-15Ra and Engineered STING-encoding DNA Plasmid ACTM-838,"Actym Therapeutics, Inc.",NCT06336148,NCI Thesaurus,1,0,1,,2024-06,
+PKMYT1|WEE1,Small molecule,new target,2024-06,US,SGR-3515,Wee1/Myt1 Inhibitor SGR-3515,"Schrödinger, Inc.",NCT06463340,NCI Thesaurus,2,0,2,,2024-06,"ACR-2316 (US, 2024-10)"
+TM4SF1,Antibody-drug conjugate,new target,2024-07,US,AGX101,Anti-TM4SF1 Antibody-drug Conjugate AGX101,"Angiex, Inc.",NCT06440005,NCI Thesaurus,1,0,1,,2024-07,
+4-1BB|GPC3,Bispecific / multispecific antibody,new target pair,2024-07,China,BGB-B2033,Anti-GPC3/Anti-4-1BB Bispecific Antibody BGB-B2033,BeOne Medicines,NCT06427941,NCI Thesaurus,1,1,0,2024-07,,
+CD16A|MUC1,Bispecific / multispecific antibody,new target pair,2024-09,China,BGB-B3227,Anti-mucin-1/CD16A Bispecific Antibody BGB-B3227,BeiGene,NCT06540066,NCI Thesaurus,1,1,0,2024-09,,
+B7-H3|PD-L1,Antibody-drug conjugate,new target pair,2024-09,China,DB-1419,Anti-B7-H3/PD-L1-P1003 Bispecific Antibody-drug Conjugate DB-1419,DualityBio Inc.,NCT06554795,NCI Thesaurus,1,1,0,2024-09,,
+IL-18|PD-1,Cytokine / fusion protein,new target pair,2024-10,Other,BPT567,Anti-PD-1 Antibody/IL-18 Variant Immunocytokine BPT567,Bright Peak Therapeutics Inc,NCT06779851,NCI Thesaurus,1,0,0,,,
+EGFR|TROP2,Antibody-drug conjugate,new target pair,2024-10,China,DM001,Anti-TROP2/EGFR Bispecific Antibody-drug Conjugate DM001,"Xadcera Biopharmaceutical (Suzhou) Co., Ltd.",NCT06475937,NCI Thesaurus,1,1,0,2024-10,,
+CD73|LAG-3,Bispecific / multispecific antibody,new target pair,2024-12,China,AK137,,Akeso,NCT06691360,Trial text naming the agent,1,1,0,2024-12,,
+CD28|CD38,Bispecific / multispecific antibody,new target pair,2024-12,US,REGN7945,,Regeneron Pharmaceuticals,NCT06669247,Trial text naming the agent,1,0,1,,2024-12,
+CD39|PD-1,Bispecific / multispecific antibody,new target pair,2025-01,Other,BNT317 DL1,Anti-PD-1/Anti-CD39 Bispecific Antibody BNT317,BioNTech SE,NCT06750185,NCI Thesaurus,1,0,0,,,
+B7-H3|EGFR,Antibody-drug conjugate,new target pair,2025-01,China,IBI3001,Anti-B7-H3/Anti-EGFR Bispecific Antibody-drug Conjugate IBI3001,Fortvita Biologics (USA)Inc.,NCT06349408,NCI Thesaurus,2,2,0,2025-01,,"TJ101 (China, 2025-08)"
+HER3|MUC1,Antibody-drug conjugate,new target pair,2025-02,China,DM002,Anti-HER3/Anti-MUC1 Bispecific Antibody-drug Conjugate DM002,"Xadcera Biopharmaceutical (Suzhou) Co., Ltd.",NCT06751329,NCI Thesaurus,1,1,0,2025-02,,
+CD74|MCL-1,Antibody-drug conjugate,new target pair,2025-02,Other,S227928,,Servier Bio-Innovation LLC,NCT06563804,Trial text naming the agent,1,0,0,,,
+pan-KRAS / pan-RAS,Protein degrader,new target,2025-03,China,JYP0015,Pan-RAS Molecular Glue ERAS-0015,"Guangzhou JOYO Pharma Co., Ltd",NCT06895031,Trial text naming the agent,2,2,0,2025-03,,"HRS-2329 (China, 2025-10)"
+HPV antigens|Survivin,CAR-T / engineered cell therapy,new target pair,2025-03,US,NEXI-003 T cells,Autologous HPV16/HPV18/Survivin-specific CD8+ T-cells NEXI-003,NexImmune Inc.,NCT05582590,NCI Thesaurus,1,0,1,,2025-03,
+MUC17,Monoclonal antibody,new target,2025-04,China,SSS59,,"Shenyang Sunshine Pharmaceutical Co., LTD.",NCT06944444,Trial text naming the agent,1,1,0,2025-04,,
+NKG2A|PD-L1,Bispecific / multispecific antibody,new target pair,2025-05,US,XB628,Anti-NKG2A/Anti-PD-L1 Bispecific Antibody XB628,Exelixis,NCT06952010,NCI Thesaurus,1,0,1,,2025-05,
+EGFR|Mesothelin,CAR-T / engineered cell therapy,new target pair,2025-06,US,OPB-101,Autologous IL-2-expressing Anti-mesothelin CAR T-cells OPB-101,"Outpace Bio, Inc.",NCT07030907,NCI Thesaurus,1,0,1,,2025-06,
+Nectin-4|TROP2,Antibody-drug conjugate,new target pair,2025-07,China,AK146D1,,Akeso,NCT06929663,Trial text naming the agent,3,2,1,2025-07,2025-10,"AVZO-103 (US, 2025-10); VBC103 (China, 2025-12)"
+B7-H3|IL-15,Monoclonal antibody,new target pair,2025-07,China,SPGL008,,"Shenyang Sunshine Pharmaceutical Co., LTD.",NCT07038005,Trial text naming the agent,1,1,0,2025-07,,
+CD3|STEAP2,Bispecific / multispecific antibody,new target,2025-09,Other,AZD6621,Anti-STEAP2/Anti-CD3/Anti-CD8 Trispecific Antibody AZD6621,AstraZeneca,NCT07192614,NCI Thesaurus,1,0,0,,,
+CD40|MUC1,Bispecific / multispecific antibody,new target pair,2025-10,Other,M0324,Anti-MUC-1/Anti-CD40 Bispecific Antibody M0324,"EMD Serono Research & Development Institute, Inc.",NCT07166601,NCI Thesaurus,1,0,0,,,
+CD3|NKG2D,Bispecific / multispecific antibody,new target,2025-11,US,EVOLVE104,Anti-ULBP2/5/6/CD3/CD2 Trispecific T-cell Engager EVOLVE104,"EvolveImmune United, Inc",NCT07217171,NCI Thesaurus,1,0,1,,2025-11,
+CD28|Nectin-4,Bispecific / multispecific antibody,new target pair,2025-11,US,RNDO-564,Anti-nectin-4/CD28 Bispecific Antibody RNDO-564,Rondo Therapeutics,NCT07218003,NCI Thesaurus,1,0,1,,2025-11,
+CD3|LY6G6D,Bispecific / multispecific antibody,new target,2026-01,US,CBI-1214,Anti-LY6G6D/Anti-CD3 T-cell Engager CBI-1214,Cartography Biosciences,NCT07321106,NCI Thesaurus,1,0,1,,2026-01,
+CD3|CD70,Bispecific / multispecific antibody,new target pair,2026-01,US,INCA036873,Anti-CD70/CD3 Bispecific Antibody INCA036873,Incyte Corporation,NCT07195916,NCI Thesaurus,1,0,1,,2026-01,
+STING|TROP2,Antibody-drug conjugate,new target pair,2026-02,Other,ASP2998,Anti-TROP2/Topoisomerase I Inhibitor-STING Agonist Immunostimulatory ADC ASP2998,"Astellas Pharma Global Development, Inc.",NCT07287995,NCI Thesaurus,1,0,0,,,
+MUC1|Mesothelin,CAR-T / engineered cell therapy,new target pair,2026-02,China,EB-DNK101 dual-targeting CAR-NK,,Beijing Biotech,NCT07480928,Trial text naming the agent,1,1,0,2026-02,,
+Claudin 18.2|MUC1,CAR-T / engineered cell therapy,new target pair,2026-02,China,EB-DNK102 dual-targeting CAR-NK,,Beijing Biotech,NCT07480928,Trial text naming the agent,1,1,0,2026-02,,
+B7-H3|PTK7,Antibody-drug conjugate,new target pair,2026-02,US,IDE034,Anti-B7-H3/Anti-PTK7-TOP1i Bispecific Antibody-drug Conjugate IDE034,IDEAYA Biosciences,NCT07503808,NCI Thesaurus,1,0,1,,2026-02,
+ATR|HER2,Antibody-drug conjugate,new target pair,2026-03,US,CLIO-8221,Anti-HER2/Topoisomerase I Inhibitor/ATR Inhibitor Antibody-drug Conjugate CLIO-8221,Callio Therapeutics,NCT07300943,NCI Thesaurus,1,0,1,,2026-03,
+HER2|Nectin-4,CAR-T / engineered cell therapy,new target pair,2026-03,China,EB-DT-NK-UC101,,Beijing Biotech,NCT07492628,Trial text naming the agent,1,1,0,2026-03,,
+CD28|GPRC5D,Bispecific / multispecific antibody,new target pair,2026-03,US,REGN17372,,Regeneron Pharmaceuticals,NCT07455851,Trial text naming the agent,1,0,1,,2026-03,
+B7-H3|ROR1,Antibody-drug conjugate,new target pair,2026-04,US,NEOK001,Anti-B7-H3/Anti-ROR1-Exatecan Bispecific Antibody-drug Conjugate NEOK001,"NEOK Bio, Inc.",NCT07612176,NCI Thesaurus,1,0,1,,2026-04,
+ALPP|CD3,Bispecific / multispecific antibody,new target pair,2026-05,China,EMB-15,,"Shanghai EpimAb Biotherapeutics Co., Ltd.",NCT07607054,Trial text naming the agent,1,1,0,2026-05,,
+CD3|FRα,Bispecific / multispecific antibody,new target pair,2026-06,US,NTB-928,Anti-FRa/Anti-CD3 Bispecific TCE NTB-928,"TeneoSeven, Inc.",NCT07690189,NCI Thesaurus,1,0,1,,2026-06,
+PVRIG|TIGIT,Bispecific / multispecific antibody,new target pair,2026-07,China,D3L-002,,"D3 Bio (Wuxi) Co., Ltd",NCT07667842,Trial text naming the agent,1,1,0,2026-07,,
+CD24|CD3,Bispecific / multispecific antibody,new target pair,2026-08,US,ONC-783,Anti-CD24/Anti-CD3 Bispecific Antibody ONC-783,"OncoC4, Inc.",NCT07408258,NCI Thesaurus,1,0,1,,2026-08,
+CDH17|EGFR,Antibody-drug conjugate,new target,2026-08,China,VBC117,,VelaVigo Bio Inc,NCT07772934,Trial text naming the agent,1,1,0,2026-08,,
+CD47|EpCAM,Bispecific / multispecific antibody,new target pair,2026-09,China,3SC009,,"Shenyang Sunshine Pharmaceutical Co., LTD.",NCT07815002,Trial text naming the agent,1,1,0,2026-09,,
+CDH6|FRα,Antibody-drug conjugate,new target pair,2026-09,China,TJ102,,Phrontline Biopharma,NCT07778498,Trial text naming the agent,1,1,0,2026-09,,
