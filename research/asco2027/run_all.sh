@@ -22,4 +22,5 @@ python3 scripts/history_check.py     # 3. pre-2020 trial history (uses the cache
 python3 scripts/classify.py          # 4. final classification, applying the history exclusion
 python3 scripts/analyse.py > /dev/null   # 5. results/summary.json and results/new_classes.csv
 python3 scripts/make_validation_sample.py
+python3 scripts/make_figures.py          # figures/*.svg
 sha256sum data/cohort.csv results/summary.json results/new_classes.csv results/new_classes_review.csv validation/validation_sample_150.csv

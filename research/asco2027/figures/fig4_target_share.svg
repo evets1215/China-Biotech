@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 1006" width="760" height="1006" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
+<rect width="100%" height="100%" fill="#fcfcfb"/>
+<text x="24.0" y="34.0" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600">Where each country leads, by molecular target</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Targets with 15 or more China-plus-US agents. A target was identified for 52% of China and 65% of US agents.</text>
+<rect x="24" y="71" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="39.0" y="80.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400">China-based sponsors ahead</text>
+<rect x="244.20000000000002" y="71" width="10" height="10" rx="2" fill="#eb6834"/>
+<text x="259.2" y="80.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400">US-based sponsors ahead</text>
+<line x1="170.0" y1="106.0" x2="170.0" y2="944.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="170.0" y="100.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">100% US</text>
+<line x1="300.0" y1="106.0" x2="300.0" y2="944.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="300.0" y="100.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">75% US</text>
+<line x1="430.0" y1="106.0" x2="430.0" y2="944.0" stroke="#c3c2b7" stroke-width="1"/>
+<text x="430.0" y="100.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">even</text>
+<line x1="560.0" y1="106.0" x2="560.0" y2="944.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="560.0" y="100.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">75% China</text>
+<line x1="690.0" y1="106.0" x2="690.0" y2="944.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="690.0" y="100.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">100% China</text>
+<text x="158.0" y="129.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Claudin 18.2</text>
+<path d="M430.0,117.0 H615.7 Q619.7,117.0 619.7,121.0 V129.0 Q619.7,133.0 615.7,133.0 H430.0 Z" fill="#2a78d6"><title>Claudin 18.2: China 32, US 5 (86% China)</title></path>
+<text x="625.7" y="129.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">86% China</text>
+<text x="736.0" y="129.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 37</text>
+<text x="158.0" y="155.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">TIGIT</text>
+<path d="M430.0,143.0 H611.7 Q615.7,143.0 615.7,147.0 V155.0 Q615.7,159.0 611.7,159.0 H430.0 Z" fill="#2a78d6"><title>TIGIT: China 18, US 3 (86% China)</title></path>
+<text x="621.7" y="155.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">86% China</text>
+<text x="736.0" y="155.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 21</text>
+<text x="158.0" y="181.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">4-1BB</text>
+<path d="M430.0,169.0 H593.1 Q597.1,169.0 597.1,173.0 V181.0 Q597.1,185.0 593.1,185.0 H430.0 Z" fill="#2a78d6"><title>4-1BB: China 23, US 5 (82% China)</title></path>
+<text x="603.1" y="181.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">82% China</text>
+<text x="736.0" y="181.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 28</text>
+<text x="158.0" y="207.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">TROP2</text>
+<path d="M430.0,195.0 H562.2 Q566.2,195.0 566.2,199.0 V207.0 Q566.2,211.0 562.2,211.0 H430.0 Z" fill="#2a78d6"><title>TROP2: China 16, US 5 (76% China)</title></path>
+<text x="572.2" y="207.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">76% China</text>
+<text x="736.0" y="207.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 21</text>
+<text x="158.0" y="233.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">VEGF/VEGFR</text>
+<path d="M430.0,221.0 H549.2 Q553.2,221.0 553.2,225.0 V233.0 Q553.2,237.0 549.2,237.0 H430.0 Z" fill="#2a78d6"><title>VEGF/VEGFR: China 14, US 5 (74% China)</title></path>
+<text x="559.2" y="233.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">74% China</text>
+<text x="736.0" y="233.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 19</text>
+<text x="158.0" y="259.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">DLL3</text>
+<path d="M430.0,247.0 H547.3 Q551.3,247.0 551.3,251.0 V259.0 Q551.3,263.0 547.3,263.0 H430.0 Z" fill="#2a78d6"><title>DLL3: China 11, US 4 (73% China)</title></path>
+<text x="557.3" y="259.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">73% China</text>
+<text x="736.0" y="259.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 15</text>
+<text x="158.0" y="285.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">PD-L1</text>
+<path d="M430.0,273.0 H543.4 Q547.4,273.0 547.4,277.0 V285.0 Q547.4,289.0 543.4,289.0 H430.0 Z" fill="#2a78d6"><title>PD-L1: China 45, US 17 (73% China)</title></path>
+<text x="553.4" y="285.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">73% China</text>
+<text x="736.0" y="285.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 62</text>
+<text x="158.0" y="311.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">TGF-β</text>
+<path d="M430.0,299.0 H540.4 Q544.4,299.0 544.4,303.0 V311.0 Q544.4,315.0 540.4,315.0 H430.0 Z" fill="#2a78d6"><title>TGF-β: China 18, US 7 (72% China)</title></path>
+<text x="550.4" y="311.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">72% China</text>
+<text x="736.0" y="311.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 25</text>
+<text x="158.0" y="337.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">B7-H3</text>
+<path d="M430.0,325.0 H534.3 Q538.3,325.0 538.3,329.0 V337.0 Q538.3,341.0 534.3,341.0 H430.0 Z" fill="#2a78d6"><title>B7-H3: China 17, US 7 (71% China)</title></path>
+<text x="544.3" y="337.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">71% China</text>
+<text x="736.0" y="337.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 24</text>
+<text x="158.0" y="363.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">HER2</text>
+<path d="M430.0,351.0 H512.7 Q516.7,351.0 516.7,355.0 V363.0 Q516.7,367.0 512.7,367.0 H430.0 Z" fill="#2a78d6"><title>HER2: China 36, US 18 (67% China)</title></path>
+<text x="522.7" y="363.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">67% China</text>
+<text x="736.0" y="363.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 54</text>
+<text x="158.0" y="389.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">PD-1</text>
+<path d="M430.0,377.0 H506.4 Q510.4,377.0 510.4,381.0 V389.0 Q510.4,393.0 506.4,393.0 H430.0 Z" fill="#2a78d6"><title>PD-1: China 36, US 19 (65% China)</title></path>
+<text x="516.4" y="389.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">65% China</text>
+<text x="736.0" y="389.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 55</text>
+<text x="158.0" y="415.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CD47</text>
+<path d="M430.0,403.0 H504.0 Q508.0,403.0 508.0,407.0 V415.0 Q508.0,419.0 504.0,419.0 H430.0 Z" fill="#2a78d6"><title>CD47: China 13, US 7 (65% China)</title></path>
+<text x="514.0" y="415.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">65% China</text>
+<text x="736.0" y="415.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 20</text>
+<text x="158.0" y="441.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">c-MET</text>
+<path d="M430.0,429.0 H487.9 Q491.9,429.0 491.9,433.0 V441.0 Q491.9,445.0 487.9,445.0 H430.0 Z" fill="#2a78d6"><title>c-MET: China 13, US 8 (62% China)</title></path>
+<text x="497.9" y="441.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">62% China</text>
+<text x="736.0" y="441.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 21</text>
+<text x="158.0" y="467.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">EGFR</text>
+<path d="M430.0,455.0 H475.0 Q479.0,455.0 479.0,459.0 V467.0 Q479.0,471.0 475.0,471.0 H430.0 Z" fill="#2a78d6"><title>EGFR: China 41, US 28 (59% China)</title></path>
+<text x="485.0" y="467.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">59% China</text>
+<text x="736.0" y="467.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 69</text>
+<text x="158.0" y="493.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">KRAS G12C</text>
+<path d="M430.0,481.0 H463.1 Q467.1,481.0 467.1,485.0 V493.0 Q467.1,497.0 463.1,497.0 H430.0 Z" fill="#2a78d6"><title>KRAS G12C: China 12, US 9 (57% China)</title></path>
+<text x="473.1" y="493.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">57% China</text>
+<text x="736.0" y="493.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 21</text>
+<text x="158.0" y="519.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CDK4/6</text>
+<path d="M430.0,507.0 H449.6 Q453.6,507.0 453.6,511.0 V519.0 Q453.6,523.0 449.6,523.0 H430.0 Z" fill="#2a78d6"><title>CDK4/6: China 12, US 10 (55% China)</title></path>
+<text x="459.6" y="519.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">55% China</text>
+<text x="736.0" y="519.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 22</text>
+<text x="158.0" y="545.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">PARP1</text>
+<path d="M430.0,533.0 H443.3 Q447.3,533.0 447.3,537.0 V545.0 Q447.3,549.0 443.3,549.0 H430.0 Z" fill="#2a78d6"><title>PARP1: China 8, US 7 (53% China)</title></path>
+<text x="453.3" y="545.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">53% China</text>
+<text x="736.0" y="545.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 15</text>
+<text x="158.0" y="571.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">BTK</text>
+<path d="M430.0,559.0 H430.0 Q431.5,559.0 431.5,560.5 V573.5 Q431.5,575.0 430.0,575.0 H430.0 Z" fill="#2a78d6"><title>BTK: China 8, US 8 (50% China)</title></path>
+<text x="436.0" y="571.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">even</text>
+<text x="736.0" y="571.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 16</text>
+<text x="158.0" y="597.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">BCL-2</text>
+<path d="M430.0,585.0 H418.7 Q414.7,585.0 414.7,589.0 V597.0 Q414.7,601.0 418.7,601.0 H430.0 Z" fill="#eb6834"><title>BCL-2: China 8, US 9 (47% China)</title></path>
+<text x="408.7" y="597.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">53% US</text>
+<text x="736.0" y="597.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 17</text>
+<text x="158.0" y="623.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Nectin-4</text>
+<path d="M430.0,611.0 H416.7 Q412.7,611.0 412.7,615.0 V623.0 Q412.7,627.0 416.7,627.0 H430.0 Z" fill="#eb6834"><title>Nectin-4: China 7, US 8 (47% China)</title></path>
+<text x="406.7" y="623.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">53% US</text>
+<text x="736.0" y="623.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 15</text>
+<text x="158.0" y="649.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CD3</text>
+<path d="M430.0,637.0 H415.9 Q411.9,637.0 411.9,641.0 V649.0 Q411.9,653.0 415.9,653.0 H430.0 Z" fill="#eb6834"><title>CD3: China 40, US 46 (47% China)</title></path>
+<text x="405.9" y="649.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">53% US</text>
+<text x="736.0" y="649.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 86</text>
+<text x="158.0" y="675.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CTLA-4</text>
+<path d="M430.0,663.0 H408.0 Q404.0,663.0 404.0,667.0 V675.0 Q404.0,679.0 408.0,679.0 H430.0 Z" fill="#eb6834"><title>CTLA-4: China 9, US 11 (45% China)</title></path>
+<text x="398.0" y="675.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">55% US</text>
+<text x="736.0" y="675.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 20</text>
+<text x="158.0" y="701.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">BCMA</text>
+<path d="M430.0,689.0 H390.7 Q386.7,689.0 386.7,693.0 V701.0 Q386.7,705.0 390.7,705.0 H430.0 Z" fill="#eb6834"><title>BCMA: China 10, US 14 (42% China)</title></path>
+<text x="380.7" y="701.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">58% US</text>
+<text x="736.0" y="701.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 24</text>
+<text x="158.0" y="727.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CD20</text>
+<path d="M430.0,715.0 H386.7 Q382.7,715.0 382.7,719.0 V727.0 Q382.7,731.0 386.7,731.0 H430.0 Z" fill="#eb6834"><title>CD20: China 9, US 13 (41% China)</title></path>
+<text x="376.7" y="727.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">59% US</text>
+<text x="736.0" y="727.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 22</text>
+<text x="158.0" y="753.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CDK2</text>
+<path d="M430.0,741.0 H357.5 Q353.5,741.0 353.5,745.0 V753.0 Q353.5,757.0 357.5,757.0 H430.0 Z" fill="#eb6834"><title>CDK2: China 6, US 11 (35% China)</title></path>
+<text x="347.5" y="753.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">65% US</text>
+<text x="736.0" y="753.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 17</text>
+<text x="158.0" y="779.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">PI3Kα</text>
+<path d="M430.0,767.0 H347.3 Q343.3,767.0 343.3,771.0 V779.0 Q343.3,783.0 347.3,783.0 H430.0 Z" fill="#eb6834"><title>PI3Kα: China 5, US 10 (33% China)</title></path>
+<text x="337.3" y="779.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">67% US</text>
+<text x="736.0" y="779.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 15</text>
+<text x="158.0" y="805.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">KRAS G12D</text>
+<path d="M430.0,793.0 H347.3 Q343.3,793.0 343.3,797.0 V805.0 Q343.3,809.0 347.3,809.0 H430.0 Z" fill="#eb6834"><title>KRAS G12D: China 7, US 14 (33% China)</title></path>
+<text x="337.3" y="805.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">67% US</text>
+<text x="736.0" y="805.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 21</text>
+<text x="158.0" y="831.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CD19</text>
+<path d="M430.0,819.0 H343.3 Q339.3,819.0 339.3,823.0 V831.0 Q339.3,835.0 343.3,835.0 H430.0 Z" fill="#eb6834"><title>CD19: China 14, US 29 (33% China)</title></path>
+<text x="333.3" y="831.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">67% US</text>
+<text x="736.0" y="831.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 43</text>
+<text x="158.0" y="857.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CD38</text>
+<path d="M430.0,845.0 H326.9 Q322.9,845.0 322.9,849.0 V857.0 Q322.9,861.0 326.9,861.0 H430.0 Z" fill="#eb6834"><title>CD38: China 5, US 12 (29% China)</title></path>
+<text x="316.9" y="857.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">71% US</text>
+<text x="736.0" y="857.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 17</text>
+<text x="158.0" y="883.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">PSMA</text>
+<path d="M430.0,871.0 H304.0 Q300.0,871.0 300.0,875.0 V883.0 Q300.0,887.0 304.0,887.0 H430.0 Z" fill="#eb6834"><title>PSMA: China 6, US 18 (25% China)</title></path>
+<text x="294.0" y="883.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">75% US</text>
+<text x="736.0" y="883.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 24</text>
+<text x="158.0" y="909.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">IL-2 pathway</text>
+<path d="M430.0,897.0 H278.0 Q274.0,897.0 274.0,901.0 V909.0 Q274.0,913.0 278.0,913.0 H430.0 Z" fill="#eb6834"><title>IL-2 pathway: China 5, US 20 (20% China)</title></path>
+<text x="268.0" y="909.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">80% US</text>
+<text x="736.0" y="909.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 25</text>
+<text x="158.0" y="935.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">IL-12</text>
+<path d="M430.0,923.0 H268.5 Q264.5,923.0 264.5,927.0 V935.0 Q264.5,939.0 268.5,939.0 H430.0 Z" fill="#eb6834"><title>IL-12: China 4, US 18 (18% China)</title></path>
+<text x="258.5" y="935.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">82% US</text>
+<text x="736.0" y="935.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 22</text>
+<text x="24.0" y="992.0" font-size="10.5" fill="#77756f" text-anchor="start" font-weight="400">Source: ClinicalTrials.gov, retrieved 17 Nov 2026. Industry-sponsored agents. Preliminary; not independently validated.</text>
+</svg>
