@@ -22,7 +22,7 @@ Cytokine / fusion protein,IL-2 pathway|PD-1,new target pair,2020-05,Other,Eciska
 Small molecule,PTPN2/PTPN1,new target,2020-06,US,ABBV-CLS-579,AbbVie,NCT04417465,2,0,2,,2020-06
 Cytokine / fusion protein,EGFR|TGF-β,new target pair,2020-06,US,BCA101,Bicara Therapeutics,NCT04429542,1,0,1,,2020-06
 Small molecule,CDK2|CDK4/6,new target pair,2020-06,China,BPI-1178,"Beta Pharma (Suzhou) Co., Ltd.",NCT04282031,5,3,2,2020-06,2020-12
-CAR-T / engineered cell therapy,CD70,new drug type on known target,2020-06,Other,CTX130,CRISPR Therapeutics AG,NCT04438083,6,2,2,2025-09,2021-02
+CAR-T / engineered cell therapy,CD70,new drug type on known target,2020-06,Other,CTX130,CRISPR Therapeutics AG,NCT04438083,5,1,2,2025-09,2021-02
 Cytokine / fusion protein,CD40|SIRPα,new target pair,2020-06,US,SL-172154,"Shattuck Labs, Inc.",NCT04406623,1,0,1,,2020-06
 Small molecule,CSF1R|FGFR,new target pair,2020-06,China,Simmitinib,"CSPC ZhongQi Pharmaceutical Technology Co., Ltd.",NCT04058587,1,1,0,2020-06,
 Antibody-drug conjugate,ITGB6,new target,2020-06,US,sigvotatug vedotin,"Seagen, a wholly owned subsidiary of Pfizer",NCT04389632,3,0,3,,2020-06
@@ -122,7 +122,6 @@ Monoclonal antibody,NY-ESO-1,new drug type on known target,2021-12,Other,ASP0739
 Bispecific / multispecific antibody,CD3|PD-1,new target pair,2021-12,Other,ONO-4685,"Ono Pharmaceutical Co., Ltd.",NCT05079282,1,0,0,,
 Nucleic acid (mRNA/siRNA/ASO),Claudin 18.2,new drug type on known target,2022-01,Other,BNT141,BioNTech SE,NCT04683939,1,0,0,,
 Bispecific / multispecific antibody,CD20|CD47,new target pair,2022-01,US,CC-96673,Celgene,NCT04860466,1,0,1,,2022-01
-CAR-T / engineered cell therapy,FLT3,new drug type on known target,2022-01,China,Human Derived anti-CI135 CAR-T,"Hrain Biotechnology Co., Ltd.",NCT06760260,3,1,2,2022-01,2023-03
 Small molecule,ROS1,new drug type on known target,2022-01,US,Zidesamtinib,Nuvalent Inc.,NCT05118789,3,2,1,2022-05,2022-01
 CAR-T / engineered cell therapy,CD20|CD79b,new target pair,2022-01,US,bbT369,Regeneron Pharmaceuticals,NCT05169489,1,0,1,,2022-01
 Bispecific / multispecific antibody,4-1BB|EGFR,new target pair,2022-02,US,BNA035,"Binacea Pharma, Inc.",NCT05150457,2,0,1,,2022-02
@@ -193,6 +192,7 @@ Cytokine / fusion protein,CD39|TGF-β,new target pair,2023-02,China,ES014,"Elpis
 Cytokine / fusion protein,4-1BB|CD40,new target pair,2023-02,China,IMB071703 injection,"Beijng Immunoah Pharma Tech Co., Ltd.",NCT06292858,1,1,0,2023-02,
 Antibody-drug conjugate,CD38,new drug type on known target,2023-02,US,STI-6129,"Sorrento Therapeutics, Inc.",NCT05308225,2,0,2,,2023-02
 Bispecific / multispecific antibody,CD123|CD16A,new target pair,2023-03,Other,AFM28,Affimed GmbH,NCT05817058,1,0,0,,
+CAR-T / engineered cell therapy,FLT3,new drug type on known target,2023-03,US,AMG 553,Amgen,NCT03904069,2,0,2,,2023-03
 Bispecific / multispecific antibody,4-1BB,new drug type on known target,2023-03,Other,ASP1002,"Astellas Pharma Global Development, Inc.",NCT05719558,1,0,0,,
 Small molecule,EGFR|FGFR,new target pair,2023-03,US,BBI-355,"Boundless Bio, Inc.",NCT05827614,1,0,1,,2023-03
 Bispecific / multispecific antibody,CD47|Claudin 18.2,new target pair,2023-03,US,Spevatamig,Phanes Therapeutics,NCT05482893,3,2,1,2023-05,2023-03
@@ -320,7 +320,6 @@ CAR-T / engineered cell therapy,EGFR|Mesothelin,new target pair,2025-06,US,OPB-1
 Antibody-drug conjugate,Nectin-4|TROP2,new target pair,2025-07,China,AK146D1,Akeso,NCT06929663,3,2,1,2025-07,2025-10
 Protein degrader,KRAS (other/unspecified),new drug type on known target,2025-07,Other,ASP5834,Astellas Pharma Inc,NCT07094204,2,0,1,,2025-11
 Monoclonal antibody,BCL-2,new drug type on known target,2025-07,US,Surzetoclax,AbbVie,NCT06953960,1,0,1,,2025-07
-CAR-T / engineered cell therapy,EGFR|c-MET,new target pair,2025-07,China,TQB2922 ± TAS-102,"Chia Tai Tianqing Pharmaceutical Group Nanjing Shunxin Pharmaceutical Co., Ltd.",NCT07044908,1,1,0,2025-07,
 Cancer vaccine,PRAME,new drug type on known target,2025-07,US,mRNA-4203,"Immatics US, Inc.",NCT06946225,1,0,1,,2025-07
 Bispecific / multispecific antibody,CD3|STEAP2,new target,2025-09,Other,AZD6621,AstraZeneca,NCT07192614,1,0,0,,
 Antibody-drug conjugate,VEGF/VEGFR,new drug type on known target,2025-09,China,YL242,"MediLink Therapeutics (Suzhou) Co., Ltd.",NCT07197827,1,1,0,2025-09,

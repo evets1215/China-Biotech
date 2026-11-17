@@ -45,6 +45,27 @@ CELL_NON_TARGETS = {"4-1BB", "CD28", "CD27", "CD3", "OX40", "ICOS", "IL-15", "IL
                     "PD-1", "TGF-β", "CD40", "CD16A", "NKG2D", "CCR4", "CXCR4", "IL-10", "CBL-B", "HPK1", "CD5", "CD7"}
 
 
+TOK = re.compile(r"(?<![A-Za-z0-9])(?:\[?\d{2,3}[A-Za-z]{1,2}\]?[- ]?)?([A-Za-z]{1,8}[- ]?\d{2,}[A-Za-z0-9]*(?:-[A-Za-z0-9]+)?)")
+
+
+def canonical(name, ncit_name):
+    """One key per drug: NCI Thesaurus concept if linked, else the first code-like token, else the cleaned name."""
+    if ncit_name:
+        return "N:" + ncit_name.lower()
+    m = TOK.search(name)
+    if m:
+        return "C:" + re.sub(r"[^a-z0-9]", "", m.group(1).lower())
+    return "X:" + re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def query_name(name, ncit_name):
+    """Name used to look the drug up in the registry history check."""
+    m = TOK.search(name)
+    if m:
+        return m.group(1)
+    return re.sub(r"^(?:[A-D]\d? |of |product: |optional |coformulat\w+ |comparator )", "", name, flags=re.I).strip()
+
+
 def first_sentence(text):
     return re.split(r"(?<=[a-z0-9\)])\.\s+(?=[A-Z])", text or "")[0]
 
@@ -138,7 +159,8 @@ def main():
             sc = set(a["countries"])
             country = "China" if sc and sc <= {"China"} else ("US" if "United States" in sc else "Other")
         rows.append({
-            "agent": name, "agent_id": a["agent_id"], "ncit_name": a["ncit_name"] or "", "first_start": a["first_start"],
+            "agent": name, "canon": canonical(name, a["ncit_name"]), "query_name": query_name(name, a["ncit_name"]),
+            "agent_id": a["agent_id"], "ncit_name": a["ncit_name"] or "", "first_start": a["first_start"],
             "year": a["first_start"][:4], "nct": a["attr_nct"], "sponsor": a["sponsor"], "sponsor_class": a["sponsor_class"],
             "in_cohort": int(a["sponsor_class"] == "INDUSTRY" and a["first_start"] >= START), "country": country,
             "site_countries": "|".join(a["countries"]), "modality": modality, "modality_source": m_src,
@@ -146,6 +168,36 @@ def main():
             "bispecific_adc": int(bsadc), "tumour_group": tumour, "n_trials": a["n_trials"],
             "reached_phase2_3": int(any(p in ("PHASE2", "PHASE3") for p in a["later_phase"])), "title": a["title"],
         })
+    # --- de-duplicate: one row per canonical drug, keeping the earliest record and the best annotation ---
+    groups = collections.defaultdict(list)
+    for r in rows:
+        groups[r["canon"]].append(r)
+    merged = []
+    for canon, g in groups.items():
+        g.sort(key=lambda r: r["first_start"])
+        keep = dict(g[0])
+        best = max(g, key=lambda r: (bool(r["targets"]), r["modality"] != "Unclassified", r["target_source"] == "NCI Thesaurus"))
+        for f in ("modality", "modality_source", "targets", "n_targets", "target_source", "bispecific_adc"):
+            keep[f] = best[f]
+        ind = next((r for r in g if r["sponsor_class"] == "INDUSTRY"), None)
+        if keep["sponsor_class"] != "INDUSTRY" and ind and ind["first_start"][:4] == keep["first_start"][:4]:
+            for f in ("sponsor", "sponsor_class", "country", "nct", "site_countries", "title"):
+                keep[f] = ind[f]
+        keep["n_name_variants"] = len(g)
+        keep["n_trials"] = max(int(r["n_trials"]) for r in g)
+        keep["reached_phase2_3"] = max(r["reached_phase2_3"] for r in g)
+        keep["in_cohort"] = int(keep["sponsor_class"] == "INDUSTRY" and keep["first_start"] >= START)
+        merged.append(keep)
+    dropped["duplicate name variants merged"] = len(rows) - len(merged)
+    rows = merged
+    # --- history check: registered anywhere on ClinicalTrials.gov (any phase, any disease) before 2020? ---
+    hist_path = BASE / "data/history_check.json"
+    hist = json.loads(hist_path.read_text()) if hist_path.exists() else {}
+    for r in rows:
+        r["prior_trials_before_2020"] = hist.get(r["query_name"], "")
+        if r["in_cohort"] and hist.get(r["query_name"], 0) > 0:
+            r["in_cohort"] = 0
+            dropped["older drug: registered trial before 2020 (any phase or disease)"] += 1
     rows.sort(key=lambda r: (r["first_start"], r["agent"]))
     with (BASE / "data/cohort.csv").open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows[0]))
