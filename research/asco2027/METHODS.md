@@ -99,12 +99,12 @@ collaborators, conditions, keywords, condition and intervention MeSH terms, site
 | a | Name is an imaging or carbon-14 isotope label (`IMAGING_NAME`), or is nothing but a target name (e.g. "VEGF-A") | 227 |
 | b | Conditions, MeSH terms and title of the attributed trial contain no cancer term (`ONC`) | 1,201 |
 | c | Name is not an identifiable agent: no NCI Thesaurus link, no code-like pattern (letters followed by two or more digits) and no international non-proprietary name suffix (*-mab, -tinib, -cel...*), or it is a dose/arm label | 7,655 |
-| d | Name variants of the same drug merged (5.2) | 489 rows merged |
+| d | Name variants of the same drug merged (5.2) | 477 rows merged |
 | e | Sponsor of the attributed trial is not industry, or first trial before January 2020 or after September 2026 | - |
 | f | First trial is phase 3, phase 4 or has no phase (mostly biosimilars, generics and new formulations) | 113 |
-| g | Any ClinicalTrials.gov trial before 2020, in any disease (5.3) | 160 |
+| g | Any ClinicalTrials.gov trial before 2020, in any disease (5.3) | 161 |
 
-**Study cohort: 2,971 agents.** All other agents (10,771 in total after steps a-d) stay in `data/cohort.csv` with
+**Study cohort: 2,971 agents.** All other agents (10,783 in total after steps a-d) stay in `data/cohort.csv` with
 `in_cohort = 0`; they are the history against which new classes are judged (section 6).
 
 ### 5.2 De-duplication
