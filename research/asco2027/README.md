@@ -2,6 +2,8 @@
 
 **Status: second pass (17 Nov 2026). Numbers are preliminary until China's registry is merged and the validation sample is coded.**
 
+**Full methods and how to reproduce every number: [`METHODS.md`](METHODS.md). One command: `./run_all.sh`.**
+
 ## Question
 For cancer drugs entering human trials in 2020-2026, which targets and drug types are led by China-based
 sponsors and which by US-based sponsors?
@@ -9,7 +11,7 @@ sponsors and which by US-based sponsors?
 ## Pipeline
 | Step | Script | Output |
 |---|---|---|
-| 1. Download early-phase cancer trials (Phase 1 and 1/2, start 2010+) from ClinicalTrials.gov | `scripts/fetch_ctgov.py` | `data/raw/ctgov_phase1_oncology.jsonl` (not committed; re-run to recreate) |
+| 1. Download early-phase cancer trials (Phase 1 and 1/2, start 2010+) from ClinicalTrials.gov | `scripts/fetch_ctgov.py` | `data/raw/ctgov_phase1_oncology.jsonl` (frozen copy in `data/snapshot/`) |
 | 2. Split combination regimens into agents, link to the NCI Thesaurus, find each agent's first registered trial | `scripts/build_agents.py` | `data/agents_all.json` (not committed) |
 | 3. Assign sponsor country, drug type, targets, tumour group | `scripts/classify.py`, `scripts/lexicon.py`, `scripts/sponsor_lists.py` | `data/cohort.csv` |
 | 3b. Look up each cohort agent's pre-2020 trial history, then re-run step 3 | `scripts/history_check.py` | `data/history_check.json` |
