@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
 <rect width="100%" height="100%" fill="#fcfcfb"/>
 <text x="24.0" y="34.0" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600">New investigational cancer agents entering trials, by sponsor country</text>
-<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Agents with a first registered trial in each year (n = 2,969 in total; 2026 is January-September only)</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Agents with a first registered trial in each year (n = 2,971 in total; 2026 is January-September only)</text>
 <rect x="24" y="71" width="10" height="10" rx="2" fill="#2a78d6"/>
 <text x="39.0" y="80.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400">China-based sponsors</text>
 <rect x="201.0" y="71" width="10" height="10" rx="2" fill="#eb6834"/>
@@ -26,29 +26,29 @@
 <text x="551.7" y="370.0" font-size="11" fill="#77756f" text-anchor="middle" font-weight="400">2025</text>
 <text x="650.0" y="370.0" font-size="11" fill="#77756f" text-anchor="middle" font-weight="400">2026*</text>
 <text x="650.0" y="386.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">*Jan-Sep</text>
-<polyline points="60.0,216.9 158.3,206.7 256.7,173.2 355.0,174.2 453.3,181.3 551.7,191.5" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<line x1="551.7" y1="191.5" x2="650.0" y2="235.2" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
-<circle cx="60.0" cy="216.9" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2020: 131 agents</title></circle>
+<polyline points="60.0,215.9 158.3,206.7 256.7,175.2 355.0,174.2 453.3,182.4 551.7,193.5" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="551.7" y1="193.5" x2="650.0" y2="236.2" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<circle cx="60.0" cy="215.9" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2020: 132 agents</title></circle>
 <circle cx="158.3" cy="206.7" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2021: 141 agents</title></circle>
-<circle cx="256.7" cy="173.2" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2022: 174 agents</title></circle>
+<circle cx="256.7" cy="175.2" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2022: 172 agents</title></circle>
 <circle cx="355.0" cy="174.2" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2023: 173 agents</title></circle>
-<circle cx="453.3" cy="181.3" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2024: 166 agents</title></circle>
-<circle cx="551.7" cy="191.5" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2025: 156 agents</title></circle>
-<circle cx="650.0" cy="235.2" r="4.5" fill="#fcfcfb" stroke="#eb6834" stroke-width="2"><title>US, 2026: 113 agents</title></circle>
-<text x="662.0" y="239.2" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600">US 113</text>
-<polyline points="60.0,263.6 158.3,191.5 256.7,161.0 355.0,160.0 453.3,157.0 551.7,144.8" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<line x1="551.7" y1="144.8" x2="650.0" y2="173.2" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<circle cx="453.3" cy="182.4" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2024: 165 agents</title></circle>
+<circle cx="551.7" cy="193.5" r="4.5" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>US, 2025: 154 agents</title></circle>
+<circle cx="650.0" cy="236.2" r="4.5" fill="#fcfcfb" stroke="#eb6834" stroke-width="2"><title>US, 2026: 112 agents</title></circle>
+<text x="662.0" y="240.2" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600">US 112</text>
+<polyline points="60.0,263.6 158.3,190.5 256.7,164.1 355.0,152.9 453.3,153.9 551.7,143.8" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="551.7" y1="143.8" x2="650.0" y2="172.2" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
 <circle cx="60.0" cy="263.6" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2020: 85 agents</title></circle>
-<circle cx="158.3" cy="191.5" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2021: 156 agents</title></circle>
-<circle cx="256.7" cy="161.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2022: 186 agents</title></circle>
-<circle cx="355.0" cy="160.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2023: 187 agents</title></circle>
-<circle cx="453.3" cy="157.0" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2024: 190 agents</title></circle>
-<circle cx="551.7" cy="144.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2025: 202 agents</title></circle>
-<circle cx="650.0" cy="173.2" r="4.5" fill="#fcfcfb" stroke="#2a78d6" stroke-width="2"><title>China, 2026: 174 agents</title></circle>
-<text x="662.0" y="177.2" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600">China 174</text>
-<text x="70.0" y="208.9" font-size="11" fill="#52514e" text-anchor="start" font-weight="400">131</text>
+<circle cx="158.3" cy="190.5" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2021: 157 agents</title></circle>
+<circle cx="256.7" cy="164.1" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2022: 183 agents</title></circle>
+<circle cx="355.0" cy="152.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2023: 194 agents</title></circle>
+<circle cx="453.3" cy="153.9" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2024: 193 agents</title></circle>
+<circle cx="551.7" cy="143.8" r="4.5" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>China, 2025: 203 agents</title></circle>
+<circle cx="650.0" cy="172.2" r="4.5" fill="#fcfcfb" stroke="#2a78d6" stroke-width="2"><title>China, 2026: 175 agents</title></circle>
+<text x="662.0" y="176.2" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="600">China 175</text>
+<text x="70.0" y="207.9" font-size="11" fill="#52514e" text-anchor="start" font-weight="400">132</text>
 <text x="70.0" y="279.6" font-size="11" fill="#52514e" text-anchor="start" font-weight="400">85</text>
-<text x="551.7" y="134.8" font-size="11" fill="#52514e" text-anchor="middle" font-weight="400">202</text>
-<text x="551.7" y="211.5" font-size="11" fill="#52514e" text-anchor="middle" font-weight="400">156</text>
+<text x="551.7" y="133.8" font-size="11" fill="#52514e" text-anchor="middle" font-weight="400">203</text>
+<text x="551.7" y="213.5" font-size="11" fill="#52514e" text-anchor="middle" font-weight="400">154</text>
 <text x="24.0" y="406.0" font-size="10.5" fill="#77756f" text-anchor="start" font-weight="400">Source: ClinicalTrials.gov, retrieved 17 Nov 2026. Industry-sponsored agents. Preliminary; not independently validated.</text>
 </svg>

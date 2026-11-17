@@ -16,6 +16,8 @@ else
 fi
 python3 -c "import zipfile; zipfile.ZipFile('data/raw/ncit/Thesaurus.FLAT.zip').extractall('data/raw/ncit')"
 
+# data/originator_overrides.csv (out-licensed drugs -> Chinese originator) is committed; regenerate it with
+# scripts/make_originator_overrides.py (needs PyYAML) only when the deal tracker changes.
 python3 scripts/build_agents.py      # 1. agents and their first registered trial
 python3 scripts/classify.py          # 2. first classification pass (creates the names to look up)
 python3 scripts/history_check.py     # 3. pre-2020 trial history (uses the cached data/history_check.json if present)
@@ -23,4 +25,4 @@ python3 scripts/classify.py          # 4. final classification, applying the his
 python3 scripts/analyse.py > /dev/null   # 5. results/summary.json and results/new_classes.csv
 python3 scripts/make_validation_sample.py
 python3 scripts/make_figures.py          # figures/*.svg
-sha256sum data/cohort.csv results/summary.json results/new_classes.csv results/new_classes_review.csv validation/validation_sample_150.csv
+sha256sum data/cohort.csv results/summary.json results/new_classes.csv results/new_classes_review.csv figures/*.svg validation/validation_sample_150.csv

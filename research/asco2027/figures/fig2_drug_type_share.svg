@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460" width="760" height="460" font-family='system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif'>
 <rect width="100%" height="100%" fill="#fcfcfb"/>
 <text x="24.0" y="34.0" font-size="18" fill="#0b0b0b" text-anchor="start" font-weight="600">Where each country leads, by drug type</text>
-<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Share of China-plus-US agents, 2020-Sep 2026 (excludes 427 agents with no identifiable drug type)</text>
+<text x="24.0" y="56.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="400">Share of China-plus-US agents, 2020-Sep 2026 (excludes 425 agents with no identifiable drug type)</text>
 <rect x="24" y="71" width="10" height="10" rx="2" fill="#2a78d6"/>
 <text x="39.0" y="80.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="400">China-based sponsors ahead</text>
 <rect x="244.20000000000002" y="71" width="10" height="10" rx="2" fill="#eb6834"/>
@@ -17,25 +17,25 @@
 <line x1="690.0" y1="106.0" x2="690.0" y2="398.0" stroke="#e1e0d9" stroke-width="1"/>
 <text x="690.0" y="100.0" font-size="10.5" fill="#77756f" text-anchor="middle" font-weight="400">100% China</text>
 <text x="238.0" y="129.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Antibody-drug conjugate</text>
-<path d="M470.0,117.0 H499.5 Q503.5,117.0 503.5,121.0 V129.0 Q503.5,133.0 499.5,133.0 H470.0 Z" fill="#2a78d6"><title>Antibody-drug conjugate: China 140, US 103 (58% China)</title></path>
-<text x="509.5" y="129.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">58% China</text>
-<text x="736.0" y="129.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 243</text>
+<path d="M470.0,117.0 H506.4 Q510.4,117.0 510.4,121.0 V129.0 Q510.4,133.0 506.4,133.0 H470.0 Z" fill="#2a78d6"><title>Antibody-drug conjugate: China 145, US 100 (59% China)</title></path>
+<text x="516.4" y="129.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">59% China</text>
+<text x="736.0" y="129.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 245</text>
 <text x="238.0" y="155.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Bispecific / multispecific antibody</text>
-<path d="M470.0,143.0 H492.1 Q496.1,143.0 496.1,147.0 V155.0 Q496.1,159.0 492.1,159.0 H470.0 Z" fill="#2a78d6"><title>Bispecific / multispecific antibody: China 118, US 93 (56% China)</title></path>
-<text x="502.1" y="155.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">56% China</text>
-<text x="736.0" y="155.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 211</text>
+<path d="M470.0,143.0 H496.8 Q500.8,143.0 500.8,147.0 V155.0 Q500.8,159.0 496.8,159.0 H470.0 Z" fill="#2a78d6"><title>Bispecific / multispecific antibody: China 122, US 92 (57% China)</title></path>
+<text x="506.8" y="155.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">57% China</text>
+<text x="736.0" y="155.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 214</text>
 <text x="238.0" y="181.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Monoclonal antibody</text>
-<path d="M470.0,169.0 H489.1 Q493.1,169.0 493.1,173.0 V181.0 Q493.1,185.0 489.1,185.0 H470.0 Z" fill="#2a78d6"><title>Monoclonal antibody: China 121, US 98 (55% China)</title></path>
-<text x="499.1" y="181.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">55% China</text>
-<text x="736.0" y="181.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 219</text>
+<path d="M470.0,169.0 H490.0 Q494.0,169.0 494.0,173.0 V181.0 Q494.0,185.0 490.0,185.0 H470.0 Z" fill="#2a78d6"><title>Monoclonal antibody: China 122, US 98 (55% China)</title></path>
+<text x="500.0" y="181.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">55% China</text>
+<text x="736.0" y="181.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 220</text>
 <text x="238.0" y="207.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Small molecule</text>
-<path d="M470.0,195.0 H470.4 Q474.4,195.0 474.4,199.0 V207.0 Q474.4,211.0 470.4,211.0 H470.0 Z" fill="#2a78d6"><title>Small molecule: China 328, US 315 (51% China)</title></path>
-<text x="480.4" y="207.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">51% China</text>
-<text x="736.0" y="207.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 643</text>
+<path d="M470.0,195.0 H470.8 Q474.8,195.0 474.8,199.0 V207.0 Q474.8,211.0 470.8,211.0 H470.0 Z" fill="#2a78d6"><title>Small molecule: China 329, US 315 (51% China)</title></path>
+<text x="480.8" y="207.0" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="600">51% China</text>
+<text x="736.0" y="207.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 644</text>
 <text x="238.0" y="233.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">CAR-T / engineered cell therapy</text>
-<path d="M470.0,221.0 H412.7 Q408.7,221.0 408.7,225.0 V233.0 Q408.7,237.0 412.7,237.0 H470.0 Z" fill="#eb6834"><title>CAR-T / engineered cell therapy: China 75, US 133 (36% China)</title></path>
-<text x="402.7" y="233.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">64% US</text>
-<text x="736.0" y="233.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 208</text>
+<path d="M470.0,221.0 H415.5 Q411.5,221.0 411.5,225.0 V233.0 Q411.5,237.0 415.5,237.0 H470.0 Z" fill="#eb6834"><title>CAR-T / engineered cell therapy: China 76, US 131 (37% China)</title></path>
+<text x="405.5" y="233.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">63% US</text>
+<text x="736.0" y="233.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 207</text>
 <text x="238.0" y="259.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Radioligand</text>
 <path d="M470.0,247.0 H411.9 Q407.9,247.0 407.9,251.0 V259.0 Q407.9,263.0 411.9,263.0 H470.0 Z" fill="#eb6834"><title>Radioligand: China 14, US 25 (36% China)</title></path>
 <text x="401.9" y="259.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">64% US</text>
@@ -53,9 +53,9 @@
 <text x="356.8" y="337.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">74% US</text>
 <text x="736.0" y="337.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 78</text>
 <text x="238.0" y="363.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Cancer vaccine</text>
-<path d="M470.0,351.0 H359.6 Q355.6,351.0 355.6,355.0 V363.0 Q355.6,367.0 359.6,367.0 H470.0 Z" fill="#eb6834"><title>Cancer vaccine: China 6, US 19 (24% China)</title></path>
-<text x="349.6" y="363.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">76% US</text>
-<text x="736.0" y="363.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 25</text>
+<path d="M470.0,351.0 H355.5 Q351.5,351.0 351.5,355.0 V363.0 Q351.5,367.0 355.5,367.0 H470.0 Z" fill="#eb6834"><title>Cancer vaccine: China 6, US 20 (23% China)</title></path>
+<text x="345.5" y="363.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">77% US</text>
+<text x="736.0" y="363.0" font-size="10.5" fill="#77756f" text-anchor="end" font-weight="400">n = 26</text>
 <text x="238.0" y="389.0" font-size="12" fill="#52514e" text-anchor="end" font-weight="400">Nucleic acid (mRNA/siRNA/ASO)</text>
 <path d="M470.0,377.0 H309.0 Q305.0,377.0 305.0,381.0 V389.0 Q305.0,393.0 309.0,393.0 H470.0 Z" fill="#eb6834"><title>Nucleic acid (mRNA/siRNA/ASO): China 3, US 21 (12% China)</title></path>
 <text x="299.0" y="389.0" font-size="11.5" fill="#0b0b0b" text-anchor="end" font-weight="600">88% US</text>

@@ -1,0 +1,120 @@
+alias,drug_group,drug_as_listed,originator,originator_country,licensee,deal_id,deal_announced,alias_source
+savolitinib,CN-2011-001-1,savolitinib (Orpathys),Hutchmed,China,AstraZeneca,CN-2011-001,2011-12,deal tracker
+jab3068,CN-2020-001-1,JAB-3068,Jacobio Pharmaceuticals,China,AbbVie,CN-2020-001,2020-05,deal tracker
+jab3312,CN-2020-001-2,JAB-3312,Jacobio Pharmaceuticals,China,AbbVie,CN-2020-001,2020-05,deal tracker
+aumolertinib,CN-2020-002-1,aumolertinib,Hansoh Pharma,China,EQRx,CN-2020-002,2020-07,deal tracker
+lemzoparlimab,CN-2020-003-1,lemzoparlimab (TJC4),I-Mab,China,AbbVie,CN-2020-003,2020-09-04,deal tracker
+cs1001,CN-2020-004-1,sugemalimab (CS1001),CStone Pharmaceuticals,China,EQRx,CN-2020-004,2020-10,deal tracker
+sugemalimab,CN-2020-004-1,sugemalimab (CS1001),CStone Pharmaceuticals,China,EQRx,CN-2020-004,2020-10,deal tracker
+cs1003,CN-2020-004-2,CS1003,CStone Pharmaceuticals,China,EQRx,CN-2020-004,2020-10,deal tracker
+tislelizumab,CN-2021-001-1,tislelizumab,BeiGene,China,Novartis,CN-2021-001,2021-01-11,deal tracker
+toripalimab,CN-2021-002-1,toripalimab (Loqtorzi),Junshi Biosciences,China,Coherus BioSciences,CN-2021-002,2021-02-01,deal tracker
+firmonertinib,CN-2021-003-1,firmonertinib (furmonertinib),Allist Pharmaceuticals,China,ArriVent BioPharma,CN-2021-003,2021-06,deal tracker
+furmonertinib,CN-2021-003-1,firmonertinib (furmonertinib),Allist Pharmaceuticals,China,ArriVent BioPharma,CN-2021-003,2021-06,deal tracker
+disitamab,CN-2021-005-1,disitamab vedotin (RC48),Remegen,China,Seagen,CN-2021-005,2021-08-09,deal tracker
+ociperlimab,CN-2021-006-1,ociperlimab,BeiGene,China,Novartis,CN-2021-006,2021-12-20,deal tracker
+mk2870,CN-2022-001-1,"sac-TMT (SKB264, MK-2870)",Kelun Biotech,China,Merck & Co.,CN-2022-001,2022-05-16,deal tracker
+sacituzumabtirumotecan,CN-2022-001-1,"sac-TMT (SKB264, MK-2870)",Kelun Biotech,China,Merck & Co.,CN-2022-001,2022-05-16,author's memory - verify
+skb264,CN-2022-001-1,"sac-TMT (SKB264, MK-2870)",Kelun Biotech,China,Merck & Co.,CN-2022-001,2022-05-16,deal tracker
+ak112,CN-2022-002-1,"ivonescimab (AK112, SMT112)",Akeso,China,Summit Therapeutics,CN-2022-002,2022-12-06,deal tracker
+ivonescimab,CN-2022-002-1,"ivonescimab (AK112, SMT112)",Akeso,China,Summit Therapeutics,CN-2022-002,2022-12-06,deal tracker
+smt112,CN-2022-002-1,"ivonescimab (AK112, SMT112)",Akeso,China,Summit Therapeutics,CN-2022-002,2022-12-06,deal tracker
+fruquintinib,CN-2023-001-1,fruquintinib (Fruzaqla),Hutchmed,China,Takeda,CN-2023-001,2023-01-23,deal tracker
+crb701,CN-2023-002-1,SYSA1801 (CRB-701),CSPC Pharmaceutical Group,China,Corbus Pharmaceuticals,CN-2023-002,2023-02,deal tracker
+sysa1801,CN-2023-002-1,SYSA1801 (CRB-701),CSPC Pharmaceutical Group,China,Corbus Pharmaceuticals,CN-2023-002,2023-02,deal tracker
+bnt323,CN-2023-003-1,DB-1303 (BNT323),DualityBio,China,BioNTech,CN-2023-003,2023-04-03,deal tracker
+db1303,CN-2023-003-1,DB-1303 (BNT323),DualityBio,China,BioNTech,CN-2023-003,2023-04-03,deal tracker
+trastuzumabpamirtecan,CN-2023-003-1,DB-1303 (BNT323),DualityBio,China,BioNTech,CN-2023-003,2023-04-03,author's memory - verify
+bnt324,CN-2023-003-2,DB-1311,DualityBio,China,BioNTech,CN-2023-003,2023-04-03,author's memory - verify
+db1311,CN-2023-003-2,DB-1311,DualityBio,China,BioNTech,CN-2023-003,2023-04-03,deal tracker
+hrs1167,CN-2023-004-1,HRS-1167 (+ option on SHR-A1904),Hengrui Pharma,China,Merck KGaA,CN-2023-004,2023-10,deal tracker
+m9466,CN-2023-004-1,HRS-1167 (+ option on SHR-A1904),Hengrui Pharma,China,Merck KGaA,CN-2023-004,2023-10,author's memory - verify
+bnt326,CN-2023-005-1,YL202 (BNT326),MediLink Therapeutics,China,BioNTech,CN-2023-005,2023-10,deal tracker
+yl202,CN-2023-005-1,YL202 (BNT326),MediLink Therapeutics,China,BioNTech,CN-2023-005,2023-10,deal tracker
+gsk5733584,CN-2023-006-1,HS-20089,Hansoh Pharma,China,GSK,CN-2023-006,2023-10-20,author's memory - verify
+hs20089,CN-2023-006-1,HS-20089,Hansoh Pharma,China,GSK,CN-2023-006,2023-10-20,deal tracker
+azd5004,CN-2023-007-1,ECC5004 (AZD5004),Eccogene,China,AstraZeneca,CN-2023-007,2023-11-09,deal tracker
+ecc5004,CN-2023-007-1,ECC5004 (AZD5004),Eccogene,China,AstraZeneca,CN-2023-007,2023-11-09,deal tracker
+absk021,CN-2023-008-1,pimicotinib (ABSK021),Abbisko Therapeutics,China,Merck KGaA,CN-2023-008,2023-12,deal tracker
+pimicotinib,CN-2023-008-1,pimicotinib (ABSK021),Abbisko Therapeutics,China,Merck KGaA,CN-2023-008,2023-12,deal tracker
+gsk5764227,CN-2023-010-1,HS-20093 (GSK'227),Hansoh Pharma,China,GSK,CN-2023-010,2023-12-20,author's memory - verify
+hs20093,CN-2023-010-1,HS-20093 (GSK'227),Hansoh Pharma,China,GSK,CN-2023-010,2023-12-20,deal tracker
+azd0120,CN-2023-011-1,GC012F (AZD0120),Gracell Biotechnologies,China,AstraZeneca,CN-2023-011,2023-12-26,deal tracker
+gc012f,CN-2023-011-1,GC012F (AZD0120),Gracell Biotechnologies,China,AstraZeneca,CN-2023-011,2023-12-26,deal tracker
+pro1184,CN-2024-002-1,Rina-S (PRO1184),ProfoundBio,China,Genmab,CN-2024-002,2024-04-03,deal tracker
+hrs9531,CN-2024-003-1,HRS9531,Hengrui Pharma,China,Kailera Therapeutics,CN-2024-003,2024-05-16,deal tracker
+hrs7535,CN-2024-003-2,HRS-7535,Hengrui Pharma,China,Kailera Therapeutics,CN-2024-003,2024-05-16,deal tracker
+hrs4729,CN-2024-003-3,HRS-4729,Hengrui Pharma,China,Kailera Therapeutics,CN-2024-003,2024-05-16,deal tracker
+hqp1351,CN-2024-004-1,olverembatinib (HQP1351),Ascentage Pharma,China,Takeda,CN-2024-004,2024-06-14,deal tracker
+olverembatinib,CN-2024-004-1,olverembatinib (HQP1351),Ascentage Pharma,China,Takeda,CN-2024-004,2024-06-14,deal tracker
+imm2510,CN-2024-005-1,IMM2510,ImmuneOnco,China,Instil Bio,CN-2024-005,2024-08-01,deal tracker
+imm27m,CN-2024-005-2,IMM27M,ImmuneOnco,China,Instil Bio,CN-2024-005,2024-08-01,deal tracker
+azd0780,CN-2024-006-1,YS2302018 (AZD0780 programme),CSPC Pharmaceutical Group,China,AstraZeneca,CN-2024-006,2024-10,deal tracker
+ys2302018,CN-2024-006-1,YS2302018 (AZD0780 programme),CSPC Pharmaceutical Group,China,AstraZeneca,CN-2024-006,2024-10,deal tracker
+bnt327,CN-2024-007-1,PM8002 (BNT327),Biotheus,China,BioNTech,CN-2024-007,2024-11-13,deal tracker
+pm8002,CN-2024-007-1,PM8002 (BNT327),Biotheus,China,BioNTech,CN-2024-007,2024-11-13,deal tracker
+pumitamig,CN-2024-007-1,PM8002 (BNT327),Biotheus,China,BioNTech,CN-2024-007,2024-11-13,author's memory - verify
+lm299,CN-2024-008-1,LM-299,LaNova Medicines,China,Merck & Co.,CN-2024-008,2024-11-14,deal tracker
+mk2010,CN-2024-008-1,LM-299,LaNova Medicines,China,Merck & Co.,CN-2024-008,2024-11-14,author's memory - verify
+hs10535,CN-2024-009-1,HS-10535,Hansoh Pharma,China,Merck & Co.,CN-2024-009,2024-12-18,deal tracker
+ide849,CN-2024-010-1,SHR-4849 (IDE849),Hengrui Pharma,China,IDEAYA Biosciences,CN-2024-010,2024-12-23,deal tracker
+shr4849,CN-2024-010-1,SHR-4849 (IDE849),Hengrui Pharma,China,IDEAYA Biosciences,CN-2024-010,2024-12-23,deal tracker
+ibi3009,CN-2025-001-1,IBI3009,Innovent Biologics,China,Roche,CN-2025-001,2025-01-01,deal tracker
+cnd261,CN-2025-002-1,CND261,WuXi Biologics,China,Candid Therapeutics,CN-2025-002,2025-01-06,deal tracker
+avzo1418,CN-2025-003-1,DB-1418 (AVZO-1418),DualityBio,China,Avenzo Therapeutics,CN-2025-003,2025-01-07,deal tracker
+db1418,CN-2025-003-1,DB-1418 (AVZO-1418),DualityBio,China,Avenzo Therapeutics,CN-2025-003,2025-01-07,deal tracker
+hbm9378,CN-2025-008-1,HBM9378 / SKB378,"Harbour BioMed, Kelun Biotech",China,Windward Bio,CN-2025-008,2025-01-10,deal tracker
+skb378,CN-2025-008-1,HBM9378 / SKB378,"Harbour BioMed, Kelun Biotech",China,Windward Bio,CN-2025-008,2025-01-10,deal tracker
+sim0500,CN-2025-011-1,SIM0500,Simcere Zaiming,China,AbbVie,CN-2025-011,2025-01-13,deal tracker
+mrg007,CN-2025-013-1,MRG007,Lepu Biopharma,China,ArriVent BioPharma,CN-2025-013,2025-01-21,deal tracker
+ubt251,CN-2025-017-1,UBT251,The United Laboratories International Holdings,China,Novo Nordisk,CN-2025-017,2025-03-24,deal tracker
+hrs5346,CN-2025-018-1,HRS-5346,Hengrui Pharma,China,Merck & Co.,CN-2025-018,2025-03-25,deal tracker
+shr7280,CN-2025-020-1,SHR7280,Hengrui Pharma,China,Merck KGaA,CN-2025-020,2025-04-07,deal tracker
+hxn1002,CN-2025-021-1,HXN-1002,Earendil Labs,China,Sanofi,CN-2025-021,2025-04-17,deal tracker
+hxn1003,CN-2025-021-2,HXN-1003,Earendil Labs,China,Sanofi,CN-2025-021,2025-04-17,deal tracker
+pf08634404,CN-2025-024-1,SSGJ-707,3SBio,China,Pfizer,CN-2025-024,2025-05-19,author's memory - verify
+ssgj707,CN-2025-024-1,SSGJ-707,3SBio,China,Pfizer,CN-2025-024,2025-05-19,deal tracker
+xnw27011,CN-2025-028-1,XNW27011,Evopoint Biosciences,China,Astellas Pharma,CN-2025-028,2025-05-29,deal tracker
+hs20094,CN-2025-029-1,HS-20094,Hansoh Pharma,China,Regeneron Pharmaceuticals,CN-2025-029,2025-06-02,deal tracker
+hbm7020,CN-2025-034-1,HBM7020,Harbour BioMed,China,Otsuka Pharmaceutical,CN-2025-034,2025-06-22,deal tracker
+telitacicept,CN-2025-035-1,telitacicept,Remegen,China,Vor Biopharma,CN-2025-035,2025-06-25,deal tracker
+mw1911,CN-2025-036-1,9MW1911,Mabwell (Shanghai) Bioscience,China,Calico Life Sciences,CN-2025-036,2025-06-26,deal tracker
+hrs9821,CN-2025-041-1,HRS-9821 + 11 programmes,Hengrui Pharma,China,GSK,CN-2025-041,2025-07-28,deal tracker
+syh2086,CN-2025-042-1,SYH2086,CSPC Pharmaceutical Group,China,Madrigal Pharmaceuticals,CN-2025-042,2025-07-30,deal tracker
+hrs1893,CN-2025-047-1,HRS-1893,Hengrui Pharma,China,Braveheart Bio,CN-2025-047,2025-09-04,deal tracker
+orelabrutinib,CN-2025-049-1,orelabrutinib (+2 programmes),InnoCare Pharma,China,Zenas BioPharma,CN-2025-049,2025-10-08,deal tracker
+hs20110,CN-2025-051-1,HS-20110,Hansoh Pharma,China,Roche,CN-2025-051,2025-10-17,deal tracker
+ibi363,CN-2025-052-1,IBI363,Innovent Biologics,China,Takeda,CN-2025-052,2025-10-22,deal tracker
+ibi343,CN-2025-052-2,IBI343,Innovent Biologics,China,Takeda,CN-2025-052,2025-10-22,deal tracker
+ibi3001,CN-2025-052-3,IBI3001 (option),Innovent Biologics,China,Takeda,CN-2025-052,2025-10-22,deal tracker
+qx031n,CN-2025-053-1,QX031N,Qyuns Therapeutics,China,Roche,CN-2025-053,2025-10-28,deal tracker
+gcc19cart,CN-2025-056-1,GCC19CART (LYL273),Innovative Cellular Therapeutics,China,Lyell Immunopharma,CN-2025-056,2025-11-10,deal tracker
+lyl273,CN-2025-056-1,GCC19CART (LYL273),Innovative Cellular Therapeutics,China,Lyell Immunopharma,CN-2025-056,2025-11-10,deal tracker
+yp05002,CN-2025-058-1,YP05002,YaoPharma,China,Pfizer,CN-2025-058,2025-12-09,deal tracker
+jab23e73,CN-2025-061-1,JAB-23E73,Jacobio Pharmaceuticals,China,AstraZeneca,CN-2025-061,2025-12-21,deal tracker
+alveltamig,CN-2025-065-1,ZG006 (alveltamig),Zelgen,China,AbbVie,CN-2025-065,2025-12-31,deal tracker
+zg006,CN-2025-065-1,ZG006 (alveltamig),Zelgen,China,AbbVie,CN-2025-065,2025-12-31,deal tracker
+tambotatug,CN-2026-003-1,YL201 (tambotatug pelitecan),MediLink Therapeutics,China,Roche,CN-2026-003,2026-01-08,deal tracker
+yl201,CN-2026-003-1,YL201 (tambotatug pelitecan),MediLink Therapeutics,China,Roche,CN-2026-003,2026-01-08,deal tracker
+rc148,CN-2026-004-1,RC148,Remegen,China,AbbVie,CN-2026-004,2026-01-12,deal tracker
+syh2082,CN-2026-011-1,SYH2082 + 7 programmes,CSPC Pharmaceutical Group,China,AstraZeneca,CN-2026-011,2026-01-30,deal tracker
+hbm4003,CN-2026-016-1,porustobart (HBM4003),Harbour BioMed,China,Solstice Oncology,CN-2026-016,2026-02-23,deal tracker
+porustobart,CN-2026-016-1,porustobart (HBM4003),Harbour BioMed,China,Solstice Oncology,CN-2026-016,2026-02-23,deal tracker
+atg201,CN-2026-019-1,ATG-201,Antengene,China,UCB,CN-2026-019,2026-03-03,deal tracker
+rovadicitinib,CN-2026-020-1,rovadicitinib,Sino Biopharmaceutical,China,Sanofi,CN-2026-020,2026-03-04,deal tracker
+sa030,CN-2026-026-1,SA030,SiranBio,China,GSK,CN-2026-026,2026-05-06,deal tracker
+civorebrutinib,CN-2026-030-1,civorebrutinib,Everest Medicines,China,Travere Therapeutics,CN-2026-030,2026-06-02,deal tracker
+nxp100,CN-2026-033-1,NXP100,Haisco Pharmaceutical Group,China,Nuvectis Pharma,CN-2026-033,2026-06-23,deal tracker
+nxp200,CN-2026-033-2,NXP200,Haisco Pharmaceutical Group,China,Nuvectis Pharma,CN-2026-033,2026-06-23,deal tracker
+mts128,CN-2026-037-1,MTS-128,METiS TechBio,China,Boulevard Bio,CN-2026-037,2026-06-30,deal tracker
+tqc3721,CN-2026-040-1,TQC3721 (inhaled),Sino Biopharmaceutical,China,AstraZeneca,CN-2026-040,2026-07-08,deal tracker
+sunvozertinib,CN-2026-041-1,sunvozertinib (Zegfrovy),Dizal,China,AstraZeneca,CN-2026-041,2026-07-14,deal tracker
+avr001,CN-2026-042-1,HS-20118 (AVR-001),Hansoh Pharma,China,Avere Therapeutics,CN-2026-042,2026-07-14,deal tracker
+hs20118,CN-2026-042-1,HS-20118 (AVR-001),Hansoh Pharma,China,Avere Therapeutics,CN-2026-042,2026-07-14,deal tracker
+ibi355,CN-2026-043-1,IBI355 (SP001),Innovent Biologics,China,Spero Therapeutics,CN-2026-043,2026-07-14,deal tracker
+sp001,CN-2026-043-1,IBI355 (SP001),Innovent Biologics,China,Spero Therapeutics,CN-2026-043,2026-07-14,deal tracker
+jskn016,CN-2026-044-1,JSKN016,Jiangsu Alphamab Biopharmaceuticals,China,Pathos AI,CN-2026-044,2026-08-04,deal tracker
+sim0660,CN-2026-048-1,SIM0660,Simcere Pharmaceutical,China,Roche,CN-2026-048,2026-09-01,deal tracker
+spr2015,CN-2026-054-1,SPR2015,SciBrunch Therapeutics,China,Merck & Co.,CN-2026-054,2026-09-28,deal tracker
+hrs1596,CN-2026-055-1,HRS-1596,Hengrui Pharma,China,Novo Nordisk,CN-2026-055,2026-09-29,deal tracker
+abo2203,CN-2026-057-1,ABO2203,Abogen Biosciences,China,Novartis,CN-2026-057,2026-10-02,deal tracker

@@ -139,10 +139,16 @@ for r in rows:
                 names_of[aid] |= keys
 
 by_nct = {r["nct"]: r for r in rows}
+# Long-running platform trials (e.g. I-SPY 2, started 2010) add new drugs as arms years later, which would back-date
+# those drugs to the platform's start. A trial with more than 10 agents is not used as an agent's first trial
+# unless the agent has no other trial.
+agents_per_trial = collections.Counter(nct for tl in trials_of.values() for _, nct, _, _ in tl)
+PLATFORM_MAX = 10
 agents = []
 for aid, tl in trials_of.items():
     tl.sort(key=lambda x: x[0])
-    first_start, first_nct, raw, _ = tl[0]
+    usable = [x for x in tl if agents_per_trial[x[1]] <= PLATFORM_MAX] or tl
+    first_start, first_nct, raw, _ = usable[0]
     keys = {k for k in names_of[aid] if len(k) >= 4}
     if aid in ncit:
         keys.add(norm(ncit[aid]["name"]))
@@ -156,7 +162,7 @@ for aid, tl in trials_of.items():
     # within 12 months of the agent's first appearance; otherwise to the sponsor of the first trial.
     def months(s):
         return int(s[:4]) * 12 + int(s[5:7]) if s[:4].isdigit() and s[5:7].isdigit() else 10 ** 6
-    attr = next((x for x in tl if named_in_title(x[1]) and months(x[0]) - months(first_start) <= 12), tl[0])
+    attr = next((x for x in usable if named_in_title(x[1]) and months(x[0]) - months(first_start) <= 12), usable[0])
     t = by_nct[attr[1]]
 
     texts, iv_descs = [], []
@@ -174,7 +180,7 @@ for aid, tl in trials_of.items():
     agents.append({
         "agent_id": aid, "agent": raw, "first_start": first_start, "first_nct": first_nct, "n_trials": len(tl),
         "attr_nct": attr[1], "ncit_name": n and n["name"], "ncit_def": n and n["definition"],
-        "sponsor": t["sponsor"], "sponsor_class": t["sponsor_class"], "countries": t["countries"],
+        "name_keys": sorted(keys), "sponsor": t["sponsor"], "sponsor_class": t["sponsor_class"], "countries": t["countries"],
         "phases": t["phases"], "first_phases": by_nct[first_nct]["phases"], "title": t["title"], "conditions": t["conditions"], "cond_mesh": t["cond_mesh"],
         "official_title": t["official_title"],
         "texts": list(dict.fromkeys(texts))[:40], "iv_descs": list(dict.fromkeys(iv_descs))[:5],

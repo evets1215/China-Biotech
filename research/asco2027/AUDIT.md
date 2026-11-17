@@ -120,3 +120,35 @@ only catch drugs the author recognises.
 1. A person checks `results/new_classes_review.csv` (182 rows) against company sources.
 2. A person codes `validation/validation_sample_150.csv`.
 3. China's registry is merged when the export is available.
+
+---
+
+# Version 2.1: out-licensed drugs credited to the originator (same day)
+
+**Question raised:** are Chinese molecules bought by multinationals, and trialled by the buyer, counted as Chinese?
+
+**Finding:** not reliably. Country was taken from the registered sponsor. Matching the deal tracker's named cancer
+drugs to the dataset showed 5 of 29 licensed drugs in the cohort credited to the licensee's country
+(CRB-701, AVZO-1418, MRG007, LYL273, XNW27011).
+
+**Changes**
+- `data/originator_overrides.csv` lists every drug named in the deal tracker with its code names; matching agents
+  are credited to the Chinese originator and their code names are merged (METHODS 5.4b).
+- A first attempt matched on the registry's "other names" and wrongly tagged rituximab, docetaxel, crizotinib and
+  nivolumab as Chinese-originated, because those fields can list combination partners. Matching now uses only the
+  agent's own name, code and NCI Thesaurus name. The wrong matches are gone.
+- Platform trials (more than 10 agents) are no longer used as an agent's first trial: I-SPY 2 (started 2010) had
+  back-dated ivonescimab to 2010.
+- One deal tracker entry was corrected (CStone/EQRx listed "lorlatinib-follow-on", which is not a CStone drug).
+
+**Effect**
+| Result | Version 2 | Version 2.1 |
+|---|---|---|
+| China / US agents | 1,180 / 1,054 | 1,190 / 1,049 |
+| New classes: US / China / other | 88 / 49 / 44 | 87 / 52 / 44 |
+| China share of China-plus-US firsts, 2020-22 to 2023-26 | 29% to 42% | 31% to 44% |
+| New target pairs, US vs China | 62 vs 45 | 60 vs 48 |
+
+**Still not covered:** licensed drugs that the deal tracker does not name, deals before 2025 that the tracker does
+not include, and company acquisitions outside the tracker. These all still push Chinese-origin drugs into the US or
+"other" columns, so China remains somewhat understated.

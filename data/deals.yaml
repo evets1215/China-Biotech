@@ -3275,7 +3275,7 @@
   licensee_hq: US
   licensee_type: Biotech
   deal_type: License
-  asset: sugemalimab, lorlatinib-follow-on (CS1003)
+  asset: sugemalimab (CS1001), CS1003
   target: PD-L1; PD-1
   modality: Biologics
   format: Monoclonal antibody

@@ -74,7 +74,9 @@ collaborators, conditions, keywords, condition and intervention MeSH terms, site
    characters, not purely numeric, and at most four words.
 5. **Agent identifier:** the NCI Thesaurus concept code if linked, otherwise the normalised name.
 6. **First registered trial:** the trial with the earliest start date (first-submission date if the start date is
-   missing), at month precision.
+   missing), at month precision. **Platform trials are skipped:** a trial with more than 10 agents is not used as
+   an agent's first trial unless the agent has no other trial. Long-running platform trials (e.g. I-SPY 2, started
+   2010) add drugs as new arms years later, which would otherwise back-date those drugs.
 7. **Sponsor attribution:** the agent is attributed to the sponsor of the earliest trial that names the agent in
    its brief or official title, provided that trial starts within 12 months of the agent's first trial; otherwise to
    the sponsor of the first trial. This prevents a new drug being attributed to the sponsor of a trial in which it
@@ -94,15 +96,15 @@ collaborators, conditions, keywords, condition and intervention MeSH terms, site
 
 | Step | Rule | Agents removed |
 |---|---|---|
-| a | Name is an imaging or carbon-14 isotope label (`IMAGING_NAME`), or is nothing but a target name (e.g. "VEGF-A") | 231 |
-| b | Conditions, MeSH terms and title of the attributed trial contain no cancer term (`ONC`) | 1,196 |
+| a | Name is an imaging or carbon-14 isotope label (`IMAGING_NAME`), or is nothing but a target name (e.g. "VEGF-A") | 227 |
+| b | Conditions, MeSH terms and title of the attributed trial contain no cancer term (`ONC`) | 1,201 |
 | c | Name is not an identifiable agent: no NCI Thesaurus link, no code-like pattern (letters followed by two or more digits) and no international non-proprietary name suffix (*-mab, -tinib, -cel...*), or it is a dose/arm label | 7,655 |
-| d | Name variants of the same drug merged (5.2) | 476 rows merged |
+| d | Name variants of the same drug merged (5.2) | 489 rows merged |
 | e | Sponsor of the attributed trial is not industry, or first trial before January 2020 or after September 2026 | - |
-| f | First trial is phase 3, phase 4 or has no phase (mostly biosimilars, generics and new formulations) | 111 |
-| g | Any ClinicalTrials.gov trial before 2020, in any disease (5.3) | 154 |
+| f | First trial is phase 3, phase 4 or has no phase (mostly biosimilars, generics and new formulations) | 113 |
+| g | Any ClinicalTrials.gov trial before 2020, in any disease (5.3) | 160 |
 
-**Study cohort: 2,969 agents.** All other agents (10,787 in total after steps a-d) stay in `data/cohort.csv` with
+**Study cohort: 2,971 agents.** All other agents (10,771 in total after steps a-d) stay in `data/cohort.csv` with
 `in_cohort = 0`; they are the history against which new classes are judged (section 6).
 
 ### 5.2 De-duplication
@@ -137,6 +139,29 @@ headquarters of its ultimate parent company. Rules are applied in this order:
 
 The curated lists were written by one person from general knowledge of company headquarters and have not been
 independently checked.
+
+### 5.4b Out-licensed drugs: credit to the originator (`data/originator_overrides.csv`)
+
+The registry shows who sponsored a trial, not who invented the drug. When a Chinese drug is licensed out and the
+licensee sponsors the first registered trial, rule 5.4 would credit the drug to the licensee's country. To correct
+this, every drug named in this repository's deal tracker (`data/deals.yaml`, 162 China-to-ex-China deals) is listed
+in `data/originator_overrides.csv` with its code names (87 drugs, 119 names). An agent whose own name, code or NCI
+Thesaurus name matches a listed name is:
+
+- **credited to the originator's country (China)**, whatever the registered sponsor, and
+- **merged with the drug's other listed code names** into one record.
+
+`cohort.csv` keeps both values: `country` (used in the analysis), `registry_sponsor_country`, `originator` and
+`country_basis`. In the current cohort 32 agents match; 27 were already credited to China and **5 moved to China**
+(4 from the US, 1 from another country).
+
+Limits: (1) only drugs named in the deal tracker are covered; deals that do not name the drug, and deals missing
+from the tracker (it is complete for 2025-2026 only), are not corrected; (2) fifteen licensee code names were added
+from the author's memory (`alias_source` column) and need checking; (3) acquisitions of whole companies are covered
+only where the tracker lists them.
+
+The list is built by `scripts/make_originator_overrides.py` (needs PyYAML). It is committed, so `run_all.sh` does
+not need to rebuild it.
 
 ### 5.5 Drug type (`MODALITY_RULES` in `scripts/lexicon.py`)
 
@@ -218,13 +243,14 @@ the class really was new before 2020, and the originator's country.
 
 1. **Single registry.** Trials registered only on China's registry are missing, which under-counts China-based
    sponsors.
-2. **Uneven annotation.** A target was assigned for 52% of China agents and 65% of US agents; a drug type for 73%
+2. **Uneven annotation.** A target was assigned for 53% of China agents and 64% of US agents; a drug type for 74%
    and 90%. Target and class results therefore describe a smaller share of China's agents, and China's targets
    rely more often on trial text, the weaker source.
 3. **False novelty remains possible.** If an older drug's target was not extracted, its class looks new. The
-   author's re-check of the 182 new classes found about a dozen doubtful ones (`results/new_classes_review.csv`).
-4. **Sponsor names reflect the current owner.** After an acquisition or licence the registry renames the sponsor on
-   old trials, so some agents are credited to the acquirer's country, not the originator's.
+   author's re-check of the new classes found about a dozen doubtful ones (`results/new_classes_review.csv`).
+4. **Originator credit is partial.** Out-licensed drugs named in the deal tracker are credited to their Chinese
+   originator (5.4b). Licensed or acquired drugs outside that list are still credited to the registered sponsor,
+   which understates China.
 5. **"First registered trial" is a proxy** for first-in-human.
 6. **Cohort size is an upper bound.** The same drug under two companies' code names is not merged, and renamed
    drugs are linked only when the NCI Thesaurus lists both names.
@@ -255,11 +281,15 @@ It takes about ten minutes. The output files should have these SHA-256 checksums
 
 | File | SHA-256 |
 |---|---|
-| `data/cohort.csv` | `71b2529251b83cb444fcafcee569fc433aa7a35f10f992f970d83e3926d6301a` |
-| `results/summary.json` | `e1977ff43c9c6f2186ebbb1c9b7d2698df3c7ad37b34e8953f08ca0d1ab3a382` |
-| `results/new_classes.csv` | `50a3950310b58921563d0d35da067132f173c83bef73c4b8e2d320d55d333b06` |
-| `results/new_classes_review.csv` | `e567aebfe82293548277ec887acbdaef5afd13c34102df8b59a0c88629972c1e` |
-| `validation/validation_sample_150.csv` | `b5eacefad7dea5194f7804bbc19e98706eae627be56a029b345b65d3e93f5664` |
+| `data/cohort.csv` | `b12c6c545b0574a545c77b030945ec4c3150d9093ea6e1cdabf275ebc1d5791b` |
+| `results/summary.json` | `46760a911b9747b687bd83a5408ba35b83c3105311ff68ed25c15ac2a2cb9eb9` |
+| `results/new_classes.csv` | `9db7075b022e9461484cda3f6264ec6c965db16135807e2b4e25fbd1cc0d283f` |
+| `results/new_classes_review.csv` | `ed28a96bb72c87b3d8467e81b73f4d4999481b52be76184d30198b0d496e3628` |
+| `figures/fig1_volume_by_year.svg` | `649da628a86f3c248f6b106d0ff7774e89b3bc13b77e85736b3a036563de070d` |
+| `figures/fig2_drug_type_share.svg` | `a6c85d21d6336b45f46edd04bb3f6022418ae8ae7a92469b09c9d3a31e44e282` |
+| `figures/fig3_first_to_clinic.svg` | `f629e88b76882d1a5fd12d490ed2dddff1da4e744f94fe8c648e8dbb25cc734f` |
+| `figures/fig4_target_share.svg` | `07480c099f4542fecac0fc0093cb87ec6890f0a3daf8c139def6637c4c5e5847` |
+| `validation/validation_sample_150.csv` | `df71848289cc381501f38cb79a65500e3ac2dcda3808ea8acb7d3d4ec555fcd8` |
 
 The pipeline was run twice from the frozen inputs with different Python hash seeds and gave identical checksums.
 
@@ -273,14 +303,14 @@ To repeat the study on current data instead (numbers will differ, because the re
 
 | Abstract statement | Key in `results/summary.json` |
 |---|---|
-| 2,969 agents; 1,180 China; 1,054 US | `cohort_n`, `cohort_by_country` |
+| 2,971 agents; 1,190 China; 1,049 US | `cohort_n`, `cohort_by_country` |
 | Yearly counts | `new_agents_by_year` |
 | Drug type shares | `by_modality[*].china_share_of_cn_us` |
-| Target assigned for 52% vs 65% | `coverage[*].target_identified_pct` |
-| 180 vs 140 targets; top-10 share 27% vs 37% | `target_breadth` |
-| 182 new classes; 88 US, 49 China, 44 other, 1 tie | `new_classes_primary_target_set.leader`, `.tie` |
-| 29% rising to 42% | `new_classes_primary_target_set.by_period` |
-| New targets 23 vs 4; new target pairs 62 vs 45 | `new_classes_primary_target_set.by_novelty` |
+| Target assigned for 53% vs 64% | `coverage[*].target_identified_pct` |
+| 177 vs 140 targets; top-10 share 27% vs 37% | `target_breadth` |
+| 184 new classes; 87 US, 52 China, 44 other, 1 tie | `new_classes_primary_target_set.leader`, `.tie` |
+| 31% rising to 44% | `new_classes_primary_target_set.by_period` |
+| New targets 24 vs 4; new target pairs 60 vs 48 | `new_classes_primary_target_set.by_novelty` |
 
 The list of new classes, with the first agent, sponsor and trial for each, is `results/new_classes.csv`.
 The agent-level dataset, one row per agent with every assigned value and its source, is `data/cohort.csv`.

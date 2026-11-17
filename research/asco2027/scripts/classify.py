@@ -124,7 +124,16 @@ def tidy(targets, modality):
     return t
 
 
+def load_overrides():
+    """alias -> (drug group, originator, originator country), from the deal tracker (make_originator_overrides.py)."""
+    path = BASE / "data/originator_overrides.csv"
+    if not path.exists():
+        return {}
+    return {r["alias"]: r for r in csv.DictReader(path.open(encoding="utf-8"))}
+
+
 def main():
+    overrides = load_overrides()
     agents = json.load((BASE / "data/agents_all.json").open())
     agents = [a for a in agents if a["first_start"] <= END]
     sites = collections.defaultdict(set)
@@ -177,8 +186,18 @@ def main():
         else:
             sc = set(a["countries"])
             country = "China" if sc and sc <= {"China"} else ("US" if "United States" in sc else "Other")
+        # Out-licensed drugs: credit the originator, and give every code name of the drug the same key so they merge.
+        canon = canonical(name, a["ncit_name"])
+        # Match on the agent's own name only (its registry "other names" can include combination partners).
+        norm_keys = {canon[2:], re.sub(r"[^a-z0-9]", "", name.lower()), re.sub(r"[^a-z0-9]", "", (a["ncit_name"] or "").lower())}
+        ov = next((overrides[k] for k in sorted(norm_keys) if k in overrides), None)
+        registry_country, originator, basis = country, "", "registered sponsor"
+        if ov:
+            canon = "D:" + ov["drug_group"]
+            country, originator, basis = ov["originator_country"], ov["originator"], "originator (deal " + ov["deal_id"] + ")"
         rows.append({
-            "agent": name, "canon": canonical(name, a["ncit_name"]), "query_name": query_name(name, a["ncit_name"]),
+            "agent": name, "canon": canon, "query_name": query_name(name, a["ncit_name"]),
+            "originator": originator, "country_basis": basis, "registry_sponsor_country": registry_country,
             "agent_id": a["agent_id"], "ncit_name": a["ncit_name"] or "", "first_start": a["first_start"],
             "year": a["first_start"][:4], "nct": a["attr_nct"], "sponsor": a["sponsor"], "sponsor_class": a["sponsor_class"],
             "first_phase": "|".join(a.get("first_phases") or []),
@@ -200,6 +219,8 @@ def main():
         best = max(g, key=lambda r: (bool(r["targets"]), r["modality"] != "Unclassified", r["target_source"] == "NCI Thesaurus"))
         for f in ("modality", "modality_source", "targets", "n_targets", "target_source", "bispecific_adc"):
             keep[f] = best[f]
+        if keep["originator"]:
+            keep["sponsor_class"] = "INDUSTRY"     # licensed from a company, whoever ran the first registered trial
         ind = next((r for r in g if r["sponsor_class"] == "INDUSTRY"), None)
         if keep["sponsor_class"] != "INDUSTRY" and ind and ind["first_start"][:4] == keep["first_start"][:4]:
             for f in ("sponsor", "sponsor_class", "country", "nct", "site_countries", "title"):

@@ -18,6 +18,8 @@ sponsors and which by US-based sponsors?
 | `AUDIT.md` | What the accuracy audit found in version 1 and what version 2 changed |
 | `abstract_draft.md` | Draft abstract with current numbers |
 | `run_all.sh` | Regenerates everything from the frozen inputs in `data/snapshot/` |
+| `data/originator_overrides.csv` | Out-licensed drugs from the deal tracker, credited to their Chinese originator |
+| `figures/` | Four figures (SVG and PNG) drawn from the results |
 | `data/cohort.csv` | One row per agent with country, drug type, targets and their sources |
 | `results/summary.json` | All reported numbers |
 | `results/new_classes.csv` | New target classes with first agent, sponsor and trial |
