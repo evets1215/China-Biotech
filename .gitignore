@@ -6,3 +6,7 @@ exports/
 docs/designs/
 .hallmark/
 .impeccable/
+
+# ASCO research: large downloaded inputs (re-create with the scripts)
+research/asco2027/data/raw/
+research/asco2027/data/agents_all.json

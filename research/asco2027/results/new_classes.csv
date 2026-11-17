@@ -1,0 +1,554 @@
+modality,targets,first_start,leader,first_agent,first_sponsor,n_agents,china_first,us_first,n_china,n_us,novelty
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|MUC17,2020-01,US,AMG 199,Amgen,1,,2020-01,0,1,new target
+Small molecule,CDK7|CDK9,2020-01,US,BTX-A51,Edgewood Oncology Inc.,1,,2020-01,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD16A|CD33|IL-15,2020-01,US,GTB-3550 TriKE® I,"GT Biopharma, Inc.",3,,2020-01,0,3,new combination of known targets
+Bispecific / multispecific antibody,FAP,2020-01,US,NG-641,Akamis Bio,1,,2020-01,0,1,new drug type on known target
+Bispecific / multispecific antibody,c-MET,2020-01,US,REGN5093,Regeneron Pharmaceuticals,2,,2020-01,0,2,new drug type on known target
+Bispecific / multispecific antibody,CD3|PRAME,2020-02,Other,Brenetafusp,Immunocore Ltd,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,BTK,2020-02,US,IOV-2001,"Iovance Biotherapeutics, Inc.",1,,2020-02,0,1,new drug type on known target
+Oncolytic virus,IL-2 pathway,2020-02,Other,TILT-123,TILT Biotherapeutics Ltd.,1,,,0,0,new drug type on known target
+Radioligand,HDAC,2020-02,US,[11C]Martinostat,Christine Elizabeth Edmonds,1,,2020-02,0,1,new drug type on known target
+CAR-T / engineered cell therapy,PRAME|WT1,2020-02,US,of NEXI-001 T,NexImmune Inc.,1,,2020-02,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|STEAP1,2020-03,US,AMG 509,Amgen,1,,2020-03,0,1,new combination of known targets
+Small molecule,KIF18A,2020-03,US,AMG 650,"Volastra Therapeutics, Inc.",6,2024-03,2020-03,2,4,new target
+Bispecific / multispecific antibody,CDH17,2020-03,Other,BI 905711,Boehringer Ingelheim,1,,,0,0,new target
+CAR-T / engineered cell therapy,CD16A|CD19|IL-15,2020-03,US,FT596,Fate Therapeutics,1,,2020-03,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD37,2020-03,Other,GEN3009,Genmab,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD20|CD47,2020-03,China,IMM0306,ImmuneOnco Biopharmaceuticals (Shanghai) Inc.,2,2020-03,2022-01,1,1,new combination of known targets
+Bispecific / multispecific antibody,IL-15,2020-03,Other,XmAb24306,"Genentech, Inc.",2,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD16A|EGFR,2020-04,Other,AFM24,Affimed GmbH,1,,,0,0,new combination of known targets
+Small molecule,DNA-PK|PI3Kδ,2020-04,Other,BR101801,"Boryung Pharmaceutical Co., Ltd",1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD28|IL-15,2020-04,US,CD19.CAR-aNKT cells,Baylor College of Medicine,2,,2020-04,0,2,new combination of known targets
+Cytokine / fusion protein,LAG-3|PD-L1|TIGIT,2020-04,US,CHS-388,"Coherus Oncology, Inc.",1,,2020-04,0,1,new combination of known targets
+Oncolytic virus,IL-12|PD-1,2020-04,China,T3011,ImmVira Pharma Co. Ltd,2,2020-04,,2,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|Survivin,2020-05,US,ABBV-184,AbbVie,1,,2020-05,0,1,new combination of known targets
+Cytokine / fusion protein,IL-2 pathway|PD-1,2020-05,Other,Eciskafusp Alfa,Hoffmann-La Roche,4,2022-12,2024-09,1,1,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD28|EGFR|IL-15,2020-06,US,Autologous CD19-CD8-CD28-CD3zeta-CAR-mbIL15-HER1t T Cells,M.D. Anderson Cancer Center,2,,2020-06,0,1,new combination of known targets
+Cytokine / fusion protein,EGFR|TGF-β,2020-06,US,BCA101,Bicara Therapeutics,1,,2020-06,0,1,new combination of known targets
+Small molecule,CDK2|CDK4/6,2020-06,China,BPI-1178,"Beta Pharma (Suzhou) Co., Ltd.",5,2020-06,2020-12,3,2,new combination of known targets
+CAR-T / engineered cell therapy,CD37,2020-06,US,CAR-37 T cells,"Marcela V. Maus, M.D.,Ph.D.",1,,2020-06,0,1,new drug type on known target
+CAR-T / engineered cell therapy,CD19|IL-7,2020-06,China,CD19-7×19 CAR-T,"Second Affiliated Hospital, Zhejiang University, School of Medicine",2,2020-06,,1,0,new combination of known targets
+Antibody-drug conjugate,HER2|PD-1,2020-06,China,RC48-ADC in combinaton,Peking University,1,2020-06,,1,0,new combination of known targets
+Cytokine / fusion protein,CD40|SIRPα,2020-06,US,SL-172154,"Shattuck Labs, Inc.",1,,2020-06,0,1,new combination of known targets
+Small molecule,CSF1R|FGFR,2020-06,China,Simmitinib,"CSPC ZhongQi Pharmaceutical Technology Co., Ltd.",1,2020-06,,1,0,new combination of known targets
+Oncolytic virus,CTLA-4|FLT3|IL-12,2020-06,US,TBio-6517,"Turnstone Biologics, Corp.",1,,2020-06,0,1,new combination of known targets
+Antibody-drug conjugate,ITGB6,2020-06,US,sigvotatug vedotin,"Seagen, a wholly owned subsidiary of Pfizer",3,,2020-06,0,3,new drug type on known target
+Bispecific / multispecific antibody,5T4|CD3,2020-07,Other,5T4,Genmab,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD30,2020-07,US,Anti-CD30,M.D. Anderson Cancer Center,2,,2020-07,0,2,new drug type on known target
+Bispecific / multispecific antibody,CD47|PD-L1,2020-07,China,IBI322,Innovent Biologics (Suzhou) Co. Ltd.,7,2020-07,2021-08,5,1,new combination of known targets
+Monoclonal antibody,LAG-3|TIGIT,2020-07,US,Pomalidimide,Multiple Myeloma Research Consortium,1,,2020-07,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD28|CD3|CD38|CD3ζ/TCR (generic T-cell engager),2020-07,Other,SAR442257,Sanofi,1,,,0,0,new combination of known targets
+Monoclonal antibody,HER2|TLR7/8,2020-07,US,SBT6050,Silverback Therapeutics,1,,2020-07,0,1,new combination of known targets
+Small molecule,IL-12,2020-07,China,TQ-A3334,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",1,2020-07,,1,0,new drug type on known target
+Monoclonal antibody,HLA-G,2020-07,US,TTX-080,"Tizona Therapeutics, Inc",2,,2020-07,0,1,new target
+Cancer vaccine,EGFR|HER3,2020-07,US,pING-hHER3FL,Herbert Lyerly,1,,2020-07,0,1,new combination of known targets
+Nucleic acid (mRNA/siRNA/ASO),HIF-2α,2020-08,US,ARO-HIF2,Arrowhead Pharmaceuticals,1,,2020-08,0,1,new drug type on known target
+CAR-T / engineered cell therapy,CD22|PD-L1,2020-08,China,Autologous aPD-L1 armored anti-CD22 CAR T cells,"Hebei Senlang Biotechnology Inc., Ltd.",1,2020-08,,1,0,new combination of known targets
+Antibody-drug conjugate,MUC1,2020-08,Other,BM7PE,Oslo University Hospital,2,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD27|PD-L1,2020-08,US,CDX-527,Celldex Therapeutics,1,,2020-08,0,1,new combination of known targets
+Small molecule,HPK1,2020-08,US,CFI-402411,"Treadwell Therapeutics, Inc",8,2021-03,2020-08,3,3,new drug type on known target
+Radioligand,LAG-3,2020-09,US,89Zr-DFO-REGN3767,Memorial Sloan Kettering Cancer Center,1,,2020-09,0,1,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|CD28,2020-09,US,AIC100 CAR T,"AffyImmune Therapeutics, Inc.",2,,2020-09,0,1,new combination of known targets
+Cytokine / fusion protein,IL-21|PD-1,2020-09,US,AMG 256,Amgen,1,,2020-09,0,1,new combination of known targets
+Cancer vaccine,ER (SERD/degrader),2020-09,US,ESR1 peptide vaccine,Herbert Lyerly,1,,2020-09,0,1,new drug type on known target
+Small molecule,AXL|FLT3,2020-09,China,KC1036,"Beijing Konruns Pharmaceutical Co., Ltd.",2,2020-09,,2,0,new combination of known targets
+CAR-T / engineered cell therapy,CD7,2020-09,China,RD13-01,He Huang,13,2020-09,2021-08,5,5,new target
+Protein degrader,ERK|MEK,2020-09,Other,SPYK04,Chugai Pharmaceutical,3,,2023-12,0,2,new combination of known targets
+Monoclonal antibody,TLR9,2020-09,Other,Toll-Like Receptor 9,"Amsterdam UMC, location VUmc",1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,GPRC5D,2020-09,US,of MCARH109 T,Memorial Sloan Kettering Cancer Center,5,2023-10,2020-09,3,2,new drug type on known target
+Cytokine / fusion protein,CD24,2020-10,US,CD24 Extracellular Domain-IgG1 Fc Domain Recombinant Fusion Protein CD24Fc,Tianhong Li,1,,2020-10,0,1,new target
+Cytokine / fusion protein,4-1BB|SIRPα,2020-10,Other,DSP107,Kahr Medical,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD16A|CD38|IL-15,2020-10,US,FT538,Fate Therapeutics,1,,2020-10,0,1,new combination of known targets
+Antibody-drug conjugate,ADAM9,2020-10,US,IMGC936,"ImmunoGen, Inc.",4,2025-09,2020-10,2,2,new target
+Monoclonal antibody,TREM2,2020-10,US,PY314,Ikena Oncology,2,,2020-10,0,2,new target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager),2020-10,Other,RO7293583,Hoffmann-La Roche,5,,2025-02,0,4,new combination of known targets
+CAR-T / engineered cell therapy,ALK,2020-10,Other,autologous MC2 TCR T cells,Erasmus Medical Center,2,,2025-01,0,1,new drug type on known target
+Small molecule,p53 (mutant reactivator),2020-10,US,rezatapopt,"PMV Pharmaceuticals, Inc",4,2024-07,2020-10,3,1,new target
+CAR-T / engineered cell therapy,CD33|CLL-1,2020-11,China,Anti-CD33,Wuxi People's Hospital,4,2020-11,,4,0,new combination of known targets
+CAR-T / engineered cell therapy,CD79b,2020-11,China,CD79b CAR-T Cells,Zhejiang University,2,2020-11,2023-04,1,1,new drug type on known target
+Small molecule,Aurora kinase|FLT3,2020-11,Other,EP0042,Ellipses Pharma,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|OX40,2020-11,China,FS120,invoX Pharma Limited,1,2020-11,,1,0,new combination of known targets
+Monoclonal antibody,4-1BB|CD19|CD3|PD-L1,2020-11,China,GNC-038,"Sichuan Baili Pharmaceutical Co., Ltd.",1,2020-11,,1,0,new combination of known targets
+Radioligand,KLK2,2020-11,US,JNJ-69086420,"Janssen Research & Development, LLC",1,,2020-11,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD22|CD3,2020-11,US,JNJ-75348780,"Janssen Research & Development, LLC",1,,2020-11,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|KLK2,2020-11,US,JNJ-78278343,"Janssen Research & Development, LLC",1,,2020-11,0,1,new combination of known targets
+Nucleic acid (mRNA/siRNA/ASO),BCL-2,2020-11,US,L-Bcl-2 antisense oligonucleotide,"Bio-Path Holdings, Inc.",2,,2020-11,0,2,new drug type on known target
+Small molecule,AXL|CSF1R,2020-11,Other,Q702,"Qurient Co., Ltd.",1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|WT1,2020-11,Other,RO7283420,Hoffmann-La Roche,1,,,0,0,new combination of known targets
+Monoclonal antibody,CD117|PD-1|PD-L1|RET,2020-11,Other,decitabine＋ TQB2450 ＋Anlotinib,Peking University,1,,,0,0,new combination of known targets
+Oncolytic virus,HER2,2020-12,US,CAdVEC,Baylor College of Medicine,1,,2020-12,0,1,new drug type on known target
+Antibody-drug conjugate,Claudin 18.2,2020-12,China,CMG901,Keymed Biosciences Co.Ltd,17,2020-12,2022-02,13,1,new drug type on known target
+Radioligand,FAP,2020-12,US,Copper-64 labeled   FAP-2286,Thomas Hope,33,2022-01,2020-12,22,9,new drug type on known target
+CAR-T / engineered cell therapy,NY-ESO-1|TGF-β,2020-12,US,GSK3845097,Adaptimmune,1,,2020-12,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|DLL3,2020-12,US,Gocatamig,"Harpoon Therapeutics, Inc., a subsidiary of Merck & Co., Inc. (Rahway, New Jersey USA)",2,2022-09,2020-12,1,1,new combination of known targets
+Monoclonal antibody,Galectin,2020-12,US,LYT-200,PureTech,1,,2020-12,0,1,new drug type on known target
+Small molecule,CD20,2020-12,Other,Multipeptide Vaccine,University Hospital Tuebingen,1,,,0,0,new drug type on known target
+Cytokine / fusion protein,IL-15|PD-1,2020-12,US,PF-07209960,Pfizer,5,2023-08,2020-12,2,1,new combination of known targets
+Bispecific / multispecific antibody,CD28|MUC16,2020-12,US,REGN5668,Regeneron Pharmaceuticals,1,,2020-12,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD28|EGFR,2020-12,US,REGN7075,Regeneron Pharmaceuticals,1,,2020-12,0,1,new combination of known targets
+Monoclonal antibody,TNFR2,2021-01,Other,BI-1808,BioInvent International AB,6,2022-03,2022-03,2,2,new target
+Nucleic acid (mRNA/siRNA/ASO),IL-2 pathway,2021-01,Other,BNT151,BioNTech SE,3,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,CTLA-4|PD-1,2021-01,China,Claudin18.2/6,Second Affiliated Hospital of Guangzhou Medical University,1,2021-01,,1,0,new combination of known targets
+Antibody-drug conjugate,EGFR|MUC1,2021-01,Other,M1231,"EMD Serono Research & Development Institute, Inc.",3,,2026-04,0,2,new combination of known targets
+Small molecule,ROR1,2021-01,China,ROR1,Second Affiliated Hospital of Guangzhou Medical University,1,2021-01,,1,0,new drug type on known target
+Monoclonal antibody,CD40|FLT3,2021-01,US,anti-CD40 antibody,Albert Einstein College of Medicine,1,,2021-01,0,1,new combination of known targets
+Antibody-drug conjugate,BCL-XL|EGFR,2021-02,US,ABBV-637,AbbVie,1,,2021-02,0,1,new combination of known targets
+Oncolytic virus,CTLA-4,2021-02,US,BT-001,Transgene,1,,2021-02,0,1,new drug type on known target
+Monoclonal antibody,AXL,2021-02,US,Tilvestamab,BerGenBio ASA,2,2024-11,2021-02,1,1,new drug type on known target
+CAR-T / engineered cell therapy,OX40,2021-03,China,CpG-ODN,Second Affiliated Hospital of Guangzhou Medical University,1,2021-03,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,CD19|CXCR4,2021-03,China,Modified anti-CD19 CAR T,Liqun Zou,1,2021-03,,1,0,new combination of known targets
+Bispecific / multispecific antibody,PD-L1|VEGF/VEGFR,2021-03,China,PM8002,Biotheus Inc.,5,2021-03,2025-09,4,1,new combination of known targets
+Small molecule,TEAD/YAP,2021-03,US,VT3989,"Vivace Therapeutics, Inc",9,2023-04,2021-03,3,4,new target
+Monoclonal antibody,4-1BB|CD3|EGFR|EGFRvIII|PD-L1,2021-04,China,GNC-039,"Sichuan Baili Pharmaceutical Co., Ltd.",1,2021-04,,1,0,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|PD-1,2021-04,China,IBI319,Innovent Biologics (Suzhou) Co. Ltd.,1,2021-04,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CD16A|IL-2 pathway,2021-04,US,IP FT516,"Masonic Cancer Center, University of Minnesota",1,,2021-04,0,1,new combination of known targets
+Small molecule,PKMYT1,2021-04,Other,Lunresertib,Debiopharm International SA,2,,2024-10,0,1,new target
+Cytokine / fusion protein,IL-15|IL-2 pathway,2021-04,US,NL-201,Neurogene Inc.,1,,2021-04,0,1,new combination of known targets
+Small molecule,MYC,2021-04,Other,OMO-103,Peptomyc S.L.,2,2021-12,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,PD-1|PD-L1,2021-04,China,SCG101,Peking Union Medical College Hospital,1,2021-04,,1,0,new combination of known targets
+Monoclonal antibody,CCR8,2021-05,US,BMS-986340,Bristol-Myers Squibb,13,2022-03,2021-05,5,4,new target
+Monoclonal antibody,CEACAM6,2021-05,Other,DNP002,Kumho HT Inc.,1,,,0,0,new drug type on known target
+Small molecule,SMARCA2,2021-05,US,FHD-286,Foghorn Therapeutics Inc.,2,,2021-05,0,2,new target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|ROR1,2021-05,Other,NVG-111,NovalGen Ltd.,1,,,0,0,new combination of known targets
+Protein degrader,BTK,2021-05,US,NX-2127,"Nurix Therapeutics, Inc.",8,2021-08,2021-05,3,5,new drug type on known target
+Bispecific / multispecific antibody,Claudin 18.2|PD-L1,2021-05,China,Q-1802,QureBio Ltd.,1,2021-05,,1,0,new combination of known targets
+Small molecule,CD40|FAP,2021-05,Other,RO7300490,Hoffmann-La Roche,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD19|IL-18,2021-05,US,huCART19-IL18,University of Pennsylvania,4,,2021-05,0,4,new combination of known targets
+Bispecific / multispecific antibody,PARP1|PD-1|VEGF/VEGFR,2021-06,China,AK112 medium,Akeso,1,2021-06,,1,0,new combination of known targets
+Nucleic acid (mRNA/siRNA/ASO),IL-7,2021-06,Other,BNT152,BioNTech SE,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,4-1BB|PSMA,2021-06,Other,CB307,Crescendo Biologics Ltd.,2,,2026-07,0,1,new combination of known targets
+Monoclonal antibody,GPC3,2021-06,US,Codrituzumab,Memorial Sloan Kettering Cancer Center,1,,2021-06,0,1,new drug type on known target
+Bispecific / multispecific antibody,4-1BB|Claudin 18.2,2021-06,China,TJ033721,I-Mab Biopharma US Limited,2,2021-06,,2,0,new combination of known targets
+Antibody-drug conjugate,EGFR|c-MET,2021-07,US,AZD9592,Presage Biosciences,8,2025-05,2021-07,5,2,new combination of known targets
+Bispecific / multispecific antibody,PD-1|TGF-β,2021-07,China,JS201,"Shanghai Junshi Bioscience Co., Ltd.",4,2021-07,2023-07,3,1,new combination of known targets
+CAR-T / engineered cell therapy,CLL-1,2021-07,US,KITE-222,"Kite, A Gilead Company",3,2022-08,2021-07,2,1,new drug type on known target
+CAR-T / engineered cell therapy,CD3ζ/TCR (generic T-cell engager),2021-07,Other,LAVA-051,Lava Therapeutics,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,4-1BB|FAP,2021-07,Other,RO7122290,Hoffmann-La Roche,2,,,0,0,new combination of known targets
+Protein degrader,BCL-XL,2021-08,US,DT2216,"Dialectic Therapeutics, Inc",1,,2021-08,0,1,new drug type on known target
+Cancer vaccine,HPV antigens|PD-1,2021-08,US,HPV 16 TA-CIN,Sidney Kimmel Comprehensive Cancer Center at Johns Hopkins,1,,2021-08,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD19|IL-15|OX40,2021-08,US,NKX019,"Nkarta, Inc.",1,,2021-08,0,1,new combination of known targets
+Small molecule,USP1,2021-08,Other,RO7623066,Hoffmann-La Roche,6,2024-03,2023-12,3,2,new target
+Bispecific / multispecific antibody,CD28|CD3|CD3ζ/TCR (generic T-cell engager)|HER2,2021-08,Other,SAR443216,Sanofi,1,,,0,0,new combination of known targets
+Small molecule,CD47|SIRPα,2021-08,China,TQB2928,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",1,2021-08,,1,0,new combination of known targets
+Small molecule,IKZF1/3 (CELMoD),2021-08,China,TQB3820,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",1,2021-08,,1,0,new target
+Small molecule,ATM|DNA-PK,2021-08,US,XRD-0394,XRad Therapeutics Inc,1,,2021-08,0,1,new combination of known targets
+Radioligand,B7-H3,2021-09,US,177Lu-DTPA-omburtamab,Y-mAbs Therapeutics,9,,2021-09,0,6,new drug type on known target
+Cytokine / fusion protein,PD-1|PD-L1,2021-09,US,Dupilumab,Thomas Marron,1,,2021-09,0,1,new combination of known targets
+Monoclonal antibody,4-1BB|CD3|PD-L1|ROR1,2021-09,China,GNC-035,"Sichuan Baili Pharmaceutical Co., Ltd.",1,2021-09,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,KLK2,2021-09,US,JNJ-75229414,"Janssen Research & Development, LLC",1,,2021-09,0,1,new drug type on known target
+Small molecule,CBL-B,2021-09,US,NX-1607,"Nurix Therapeutics, Inc.",2,,2021-09,0,2,new drug type on known target
+Bispecific / multispecific antibody,TIGIT,2021-10,US,AGEN1777,Agenus Inc.,1,,2021-10,0,1,new drug type on known target
+Small molecule,DGK,2021-10,Other,ASP1570,"Astellas Pharma Global Development, Inc.",7,2023-07,2022-08,1,3,new drug type on known target
+Antibody-drug conjugate,B7-H4,2021-10,Other,AZD8205,AstraZeneca,5,2022-01,2022-01,2,1,new drug type on known target
+Bispecific / multispecific antibody,CD38,2021-10,US,BHV-1100,"Biohaven Pharmaceuticals, Inc.",2,,2021-10,0,2,new drug type on known target
+Bispecific / multispecific antibody,BCMA,2021-10,US,CC-92328,Celgene,1,,2021-10,0,1,new drug type on known target
+Monoclonal antibody,MICA/B|NKG2D,2021-10,US,CLN-619,Cullinan Therapeutics Inc.,2,,2021-10,0,2,new combination of known targets
+Nucleic acid (mRNA/siRNA/ASO),KRAS G12D|pan-KRAS / pan-RAS,2021-10,US,ELI-002 2P,Elicio Therapeutics,1,,2021-10,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD20|CD47|SIRPα,2021-10,China,JMT601,Shanghai JMT-Bio Inc.,1,2021-10,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|HLA-G,2021-10,US,JNJ-78306358,"Janssen Research & Development, LLC",2,,2021-10,0,1,new target
+CAR-T / engineered cell therapy,4-1BB|CD19|CD20|CD28,2021-10,US,KITE-753,"Kite, A Gilead Company",1,,2021-10,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD40|FAP,2021-10,Other,MP0317,Molecular Partners AG,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,B7-H4|CD3,2021-10,US,PF-07260437,Pfizer,1,,2021-10,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|Claudin 18.2,2021-10,China,QLS31905,"Qilu Pharmaceutical Co., Ltd.",3,2021-10,,2,0,new combination of known targets
+Small molecule,4-1BB|Nectin-4,2021-11,Other,BT7480,BicycleTx Limited,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,FRα|PSMA,2021-11,China,CBP-1018,"Coherent Biopharma (Suzhou) Co., Ltd.",1,2021-11,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CD27|CD70,2021-11,China,CD70 CAR T-cells,Zhejiang University,2,2021-11,,2,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|FLT3,2021-11,US,CLN-049,Cullinan Therapeutics Inc.,1,,2021-11,0,1,new combination of known targets
+CAR-T / engineered cell therapy,BCMA|CD16A|CD38|IL-15,2021-11,US,FT576,Fate Therapeutics,1,,2021-11,0,1,new combination of known targets
+Small molecule,CCR8,2021-11,China,IPG7236,"Nanjing Immunophage Biotech Co., Ltd",1,2021-11,,1,0,new target
+Monoclonal antibody,CD20|CD37,2021-11,China,PSB202,Qilu Puget Sound Biotherapeutics (dba Sound Biologics),1,2021-11,,1,0,new combination of known targets
+Monoclonal antibody,CDK4/6|PD-1|PD-L1,2021-11,China,TQB3616 ＋ TQB2450,Peking University,1,2021-11,,1,0,new combination of known targets
+Radioligand,CA9,2021-12,China,68Ga-NY104,Peking Union Medical College Hospital,12,2021-12,2022-01,5,2,new drug type on known target
+Small molecule,CD3,2021-12,Other,ECT-001-CB,ExCellThera inc.,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD3|PD-1,2021-12,Other,ONO-4685,"Ono Pharmaceutical Co., Ltd.",1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD123|CD16A|NKp46,2021-12,Other,SAR443579,Sanofi,1,,,0,0,new target
+Nucleic acid (mRNA/siRNA/ASO),Claudin 18.2,2022-01,Other,BNT141,BioNTech SE,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,FLT3,2022-01,China,Human Derived anti-CI135 CAR-T,"Hrain Biotechnology Co., Ltd.",4,2022-01,2023-03,2,2,new drug type on known target
+CAR-T / engineered cell therapy,CD3ζ/TCR (generic T-cell engager)|PSMA,2022-01,Other,LAVA-1207,Lava Therapeutics,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,IL-7,2022-01,Other,NIB101,"Noile-Immune Biotech, Inc",2,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,IL-7|Mesothelin,2022-01,Other,TAK-103,Takeda,1,,,0,0,new combination of known targets
+Small molecule,ROS1,2022-01,US,Zidesamtinib,Nuvalent Inc.,3,2022-05,2022-01,2,1,new drug type on known target
+CAR-T / engineered cell therapy,CBL-B|CD20|CD79b,2022-01,US,bbT369,Regeneron Pharmaceuticals,1,,2022-01,0,1,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|EGFR,2022-02,US,BNA035,"Binacea Pharma, Inc.",1,,2022-02,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD47|HER2,2022-02,China,IMM2902,ImmuneOnco Biopharmaceuticals (Shanghai) Inc.,2,2022-02,,2,0,new combination of known targets
+Bispecific / multispecific antibody,CD19|CD28,2022-02,Other,RO7443904,Hoffmann-La Roche,1,,,0,0,new combination of known targets
+Small molecule,FLT3|TRK|c-MET,2022-02,China,TSN084,Tyligand Bioscience (Shanghai) Limited,1,2022-02,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|Claudin 6,2022-03,Other,BNT142,BioNTech SE,5,2025-03,2024-04,1,2,new combination of known targets
+CAR-T / engineered cell therapy,ROR1,2022-03,US,LYL797,"Lyell Immunopharma, Inc.",4,2022-07,2022-03,1,3,new drug type on known target
+CAR-T / engineered cell therapy,CD16A|CD33|CD38|IL-15,2022-03,China,QN-023a,"Institute of Hematology & Blood Diseases Hospital, China",1,2022-03,,1,0,new combination of known targets
+Monoclonal antibody,Nectin-4|TLR7/8,2022-03,US,SBT6290,Silverback Therapeutics,1,,2022-03,0,1,new combination of known targets
+Cytokine / fusion protein,HPV antigens|IL-12|IL-2 pathway,2022-03,US,SQZ-eAPC-HPV,SQZ Biotechnologies,1,,2022-03,0,1,new combination of known targets
+Monoclonal antibody,PD-1|TNFR2,2022-03,China,Sintilimab injectiont,"Jiangsu Simcere Biologics Co., Ltd",1,2022-03,,1,0,new target
+Bispecific / multispecific antibody,IL-15|TGF-β,2022-04,US,HCW9218,"Masonic Cancer Center, University of Minnesota",1,,2022-04,0,1,new combination of known targets
+Small molecule,HDAC|LSD1,2022-04,Other,JBI-802,Jubilant Therapeutics Inc.,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD47|Mesothelin,2022-04,Other,NI-1801,Light Chain Bioscience - Novimmune SA,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,PD-L1|TIGIT,2022-04,China,PM1022,Biotheus Inc.,3,2022-04,,3,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|EGFR|EGFRvIII,2022-04,Other,RO7428731,Hoffmann-La Roche,1,,,0,0,new combination of known targets
+Antibody-drug conjugate,ALPP,2022-04,US,SGN-ALPV,Seagen Inc.,1,,2022-04,0,1,new target
+Antibody-drug conjugate,CCR2/5|STING,2022-04,Other,TAK-500,Takeda,1,,,0,0,new combination of known targets
+Small molecule,TIM-3,2022-04,China,TQB2618 azacitidine,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",1,2022-04,,1,0,new drug type on known target
+Bispecific / multispecific antibody,4-1BB|B7-H4,2022-05,China,CLN-418,"Harbour BioMed US, Inc.",1,2022-05,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|CDH17,2022-05,China,Cabotamig,Arbele Pty Ltd,1,2022-05,,1,0,new target
+Cytokine / fusion protein,Claudin 18.2,2022-05,China,DR30303,"Zhejiang Doer Biologics Co., Ltd.",2,2022-05,,2,0,new drug type on known target
+CAR-T / engineered cell therapy,CD16A|CD38|IL-15|MICA/B|NKG2D,2022-05,US,FT536,Fate Therapeutics,1,,2022-05,0,1,new combination of known targets
+Protein degrader,STAT3,2022-05,US,KT-333,"Kymera Therapeutics, Inc.",1,,2022-05,0,1,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|CD20|CD28,2022-05,US,MB-106,Mustang Bio,1,,2022-05,0,1,new combination of known targets
+Small molecule,pan-KRAS / pan-RAS,2022-05,US,RMC-6236,"Revolution Medicines, Inc.",18,2023-08,2022-05,6,11,new drug type on known target
+Bispecific / multispecific antibody,5T4|CD3|CD3ζ/TCR (generic T-cell engager),2022-06,Other,CBA-1535,Chiome Bioscience Inc.,1,,,0,0,new combination of known targets
+Cytokine / fusion protein,IL-2 pathway|WT1,2022-06,US,CUE-102,Cue Biopharma,1,,2022-06,0,1,new combination of known targets
+CAR-T / engineered cell therapy,Claudin 6,2022-06,China,Claudin6,Second Affiliated Hospital of Guangzhou Medical University,1,2022-06,,1,0,new drug type on known target
+Monoclonal antibody,CD3,2022-06,Other,GAIA-102,Kyushu University,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,IL-15|PD-1,2022-06,China,IAP0971,"SUNHO（China）BioPharmaceutical CO., Ltd.",1,2022-06,,1,0,new combination of known targets
+Protein degrader,IKZF1/3 (CELMoD)|IRAK4,2022-06,US,KT-413,"Kymera Therapeutics, Inc.",1,,2022-06,0,1,new target
+Antibody-drug conjugate,KRAS G12D,2022-06,Other,Liposomal Irinotecan,Astellas Pharma Inc,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|GPRC5D,2022-06,US,MCARH109,Memorial Sloan Kettering Cancer Center,1,,2022-06,0,1,new combination of known targets
+Protein degrader,KRAS G12D|pan-KRAS / pan-RAS,2022-06,Other,Setidegrasib,Astellas Pharma Inc,4,,2024-12,0,2,new combination of known targets
+Antibody-drug conjugate,CD22|TLR9,2022-06,US,TAC-001,Tallac Therapeutics,1,,2022-06,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD28|Mesothelin|PD-1,2022-06,US,TC-510,TCR2 Therapeutics,1,,2022-06,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|ENPP3,2022-06,US,XmAb819,"Xencor, Inc.",2,,2022-06,0,2,new combination of known targets
+Bispecific / multispecific antibody,OX40|PD-1|PD-L1,2022-07,China,EMB-09,"Shanghai EpimAb Biotherapeutics Co., Ltd.",1,2022-07,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,PD-1,2022-07,US,IOV-4001,"Iovance Biotherapeutics, Inc.",3,,2022-07,0,2,new drug type on known target
+Small molecule,ENPP1,2022-07,US,RBS2418,"Riboscience, LLC.",3,,2022-07,0,2,new target
+Protein degrader,BET/BRD4,2022-07,China,RNK05047,"Ranok Therapeutics (Hangzhou) Co., Ltd.",2,2022-07,,1,0,new drug type on known target
+Bispecific / multispecific antibody,CD19|CD20|CD3,2022-08,China,1A46,"Chimagen Biosciences, Ltd",1,2022-08,,1,0,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|CEACAM5,2022-08,China,BGB-B167,BeiGene,2,2022-08,,2,0,new combination of known targets
+Bispecific / multispecific antibody,IL-2 pathway|PD-1,2022-08,China,IBI363,Innovent Biologics (Suzhou) Co. Ltd.,3,2022-08,2023-09,1,1,new combination of known targets
+CAR-T / engineered cell therapy,CD28|CD40|FRα,2022-08,US,ITIL-306,Instil Bio,1,,2022-08,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD20|CD3|CD79b,2022-08,US,JNJ-80948543,"Janssen Research & Development, LLC",1,,2022-08,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD19|GUCY2C,2022-08,US,LYL273,"Lyell Immunopharma, Inc.",1,,2022-08,0,1,new combination of known targets
+Antibody-drug conjugate,SIRPα,2022-08,US,Mirvetuximab,"Shattuck Labs, Inc.",1,,2022-08,0,1,new drug type on known target
+Bispecific / multispecific antibody,4-1BB|HER2,2022-08,Other,YH32367,Yuhan Corporation,1,,,0,0,new combination of known targets
+Small molecule,CD47,2022-09,Other,AUR103,Aurigene Discovery Technologies Limited,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD3|PD-L1,2022-09,China,BS-006,Zhongnan Hospital,2,2022-09,,2,0,new combination of known targets
+CAR-T / engineered cell therapy,BCMA|CXCR4,2022-09,China,CXCR4 modified anti-BCMA CAR T cells,Sichuan University,1,2022-09,,1,0,new combination of known targets
+Small molecule,KRAS G12D|pan-KRAS / pan-RAS,2022-09,China,HRS-4642,"Jiangsu HengRui Medicine Co., Ltd.",14,2022-09,2023-03,4,9,new combination of known targets
+Monoclonal antibody,CD155/PVR,2022-09,Other,NTX-1088,Nectin Therapeutics Ltd,1,,,0,0,new drug type on known target
+Monoclonal antibody,CD3ζ/TCR (generic T-cell engager)|GPC3,2022-09,Other,SAR444200,Sanofi,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD28|PD-1|PSMA|TGF-β,2022-09,US,TmPSMA-02,"Tceleron Therapeutics, Inc.",1,,2022-09,0,1,new combination of known targets
+Cancer vaccine,IDO1|PD-L1,2022-09,US,mRNA-4359,"ModernaTX, Inc.",1,,2022-09,0,1,new combination of known targets
+Small molecule,ER (SERD/degrader)|HER2,2022-10,US,AND019 PO,Kind Pharmaceuticals LLC,1,,2022-10,0,1,new combination of known targets
+Cytokine / fusion protein,CTLA-4|IL-15,2022-10,China,JK08,Salubris Biotherapeutics Inc,1,2022-10,,1,0,new combination of known targets
+Protein degrader,GSPT1,2022-10,US,MRT-2359,"Monte Rosa Therapeutics, Inc",1,,2022-10,0,1,new target
+Antibody-drug conjugate,FAP,2022-10,Other,OMTX705,Oncomatryx Biopharma S.L.,2,,,0,0,new drug type on known target
+Protein degrader,GSPT1|HER2,2022-10,Other,ORM-5029,"Orum Therapeutics USA, Inc.",1,,,0,0,new target
+Antibody-drug conjugate,PD-L1,2022-10,US,PF-08046054,"Seagen, a wholly owned subsidiary of Pfizer",8,2023-11,2022-10,6,2,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|CD38,2022-10,US,STI-1492,"Sorrento Therapeutics, Inc.",4,,2022-10,0,4,new combination of known targets
+Cytokine / fusion protein,EGFR|VEGF/VEGFR,2022-10,Other,XB2001,Centre Georges Francois Leclerc,1,,,0,0,new combination of known targets
+Radioligand,GD2,2022-11,US,177Lu-DOTA,Y-mAbs Therapeutics,2,,2022-11,0,2,new drug type on known target
+CAR-T / engineered cell therapy,ALPP|Mesothelin|PTPN2/PTPN1,2022-11,US,AB-1015,"Arsenal Biosciences, Inc.",1,,2022-11,0,1,new target
+Radioligand,CD38,2022-11,US,Actinium Ac 225-DOTA-Daratumumab,City of Hope Medical Center,3,,2022-11,0,3,new drug type on known target
+Bispecific / multispecific antibody,BCMA|CD3|CD3ζ/TCR (generic T-cell engager)|GPRC5D,2022-11,US,JNJ-79635322,"Janssen Research & Development, LLC",4,2024-02,2022-11,3,1,new combination of known targets
+Small molecule,GUCY2C,2022-11,US,Linaclotide,"University of Wisconsin, Madison",2,,2022-11,0,2,new drug type on known target
+Bispecific / multispecific antibody,CD155/PVR|PVRIG|TIGIT,2022-11,China,PM1009,Biotheus Inc.,2,2022-11,,2,0,new combination of known targets
+CAR-T / engineered cell therapy,CD20|CD22,2022-11,Other,UCART20x22,Cellectis S.A.,1,,,0,0,new combination of known targets
+Oncolytic virus,IL-15,2022-11,Other,VG2025,Virogin Biotech Canada Ltd,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,TGF-β|VEGF/VEGFR,2022-11,China,ZGGS18,"Suzhou Zelgen Biopharmaceuticals Co.,Ltd",1,2022-11,,1,0,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|5T4,2022-12,US,ALG.APV-527,Aptevo Therapeutics,2,2025-05,2022-12,1,1,new combination of known targets
+Small molecule,PLK1|TTK/MPS1,2022-12,Other,BAL0891,"SillaJen, Inc.",1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD70|IL-15,2022-12,China,CB dualCAR-NK19/70,"Second Affiliated Hospital, Zhejiang University, School of Medicine",1,2022-12,,1,0,new combination of known targets
+Protein degrader,BRAF,2022-12,US,CFT1946,"C4 Therapeutics, Inc.",1,,2022-12,0,1,new drug type on known target
+Small molecule,BET/BRD4|CBP/p300,2022-12,US,EP31670,"Epigenetix, Inc.",1,,2022-12,0,1,new combination of known targets
+Cytokine / fusion protein,TIGIT,2022-12,China,HLX53,Shanghai Henlius Biotech,1,2022-12,,1,0,new drug type on known target
+Cancer vaccine,CEACAM5|HER2,2022-12,Other,OSE2101,OSE Immunotherapeutics,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,B7-H3|CD28,2022-12,US,XmAb®808,"Xencor, Inc.",1,,2022-12,0,1,new combination of known targets
+Small molecule,AR|PSMA,2023-01,US,Apalutamide [Erleada],Beth Israel Deaconess Medical Center,2,,2023-01,0,2,new combination of known targets
+Cancer vaccine,5T4|STEAP1,2023-01,US,ChAdOx1-PCAQ,Barinthus Biotherapeutics,2,,2023-01,0,2,new combination of known targets
+Cytokine / fusion protein,IL-15|PD-L1,2023-01,US,IGM-7354,"IGM Biosciences, Inc.",3,2023-03,2023-01,1,1,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|CD228,2023-01,US,PF-08046049,"Seagen, a wholly owned subsidiary of Pfizer",1,,2023-01,0,1,new combination of known targets
+CAR-T / engineered cell therapy,IL-15|PD-1|ROR1,2023-01,US,PRGN-3007,H. Lee Moffitt Cancer Center and Research Institute,1,,2023-01,0,1,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|CD3|CD3ζ/TCR (generic T-cell engager)|DLL3,2023-01,Other,RO7616789,Hoffmann-La Roche,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,IL-2 pathway,2023-01,US,STAR0602,"Marengo Therapeutics, Inc.",1,,2023-01,0,1,new drug type on known target
+Antibody-drug conjugate,HER2|STING,2023-01,US,XMT-2056,"Day One Biopharmaceuticals, Inc.",1,,2023-01,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD70,2023-01,China,dualCAR-NK19/70,Aibin Liang，MD，Ph.D.,1,2023-01,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD19|CD22,2023-01,US,humanized anti-CD19 CAR T,Stephan Grupp MD PhD,1,,2023-01,0,1,new combination of known targets
+Bispecific / multispecific antibody,TGF-β|TIGIT,2023-02,China,AK130,Akeso,1,2023-02,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|Claudin 6,2023-02,US,AMG 794,Amgen,1,,2023-02,0,1,new combination of known targets
+Cytokine / fusion protein,CD39|TGF-β,2023-02,China,ES014,"Elpiscience (Suzhou) Biopharma, Ltd.",1,2023-02,,1,0,new combination of known targets
+Cytokine / fusion protein,4-1BB|CD40,2023-02,China,IMB071703,"Beijng Immunoah Pharma Tech Co., Ltd.",1,2023-02,,1,0,new combination of known targets
+Small molecule,AXL|RET|c-MET,2023-02,China,ST-1898,Beijing Scitech-Mq Pharmaceuticals Limited,1,2023-02,,1,0,new combination of known targets
+Monoclonal antibody,CD40|CTLA-4|PD-1|TLR9,2023-02,Other,SV-102,Williams Cancer Foundation,1,,,0,0,new combination of known targets
+Radioligand,PD-L1,2023-02,US,adnectin 18F-BMS-986192 Brain Metastases,Yale University,3,,2023-02,0,2,new drug type on known target
+Bispecific / multispecific antibody,CD123|CD16A,2023-03,Other,AFM28,Affimed GmbH,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,4-1BB,2023-03,Other,ASP1002,"Astellas Pharma Global Development, Inc.",1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,CD3ζ/TCR (generic T-cell engager)|EGFR|EGFRvIII,2023-03,US,CARv3-TEAM-E T cells,"Marcela V. Maus, M.D.,Ph.D.",1,,2023-03,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD19|TGF-β,2023-03,Other,CTX112,CRISPR Therapeutics AG,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|ROR1,2023-03,China,EMB07,"EpimAb Biotherapeutics (Suzhou)Co., Ltd.",2,2023-03,,1,0,new combination of known targets
+Small molecule,HER2|PARP1,2023-03,Other,Niraparib Product,Institut Paoli-Calmettes,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD47|Claudin 18.2,2023-03,US,Spevatamig,Phanes Therapeutics,3,2023-05,2023-03,2,1,new combination of known targets
+Radioligand,IDH1/2,2023-04,US,Hyperpolarized Carbon 13 Alpha-ketoglutarate,"Robert Bok, MD, PhD",1,,2023-04,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|EGFR,2023-04,US,JANX008,Janux Therapeutics,3,2024-01,2023-04,1,2,new combination of known targets
+Small molecule,AR|BET/BRD4,2023-04,US,JNJ-101556143,"Janssen Research & Development, LLC",1,,2023-04,0,1,new combination of known targets
+Cytokine / fusion protein,NKG2D,2023-04,Other,QEQ278,Novartis Pharmaceuticals,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD22|CD28,2023-04,US,REGN5837,Regeneron Pharmaceuticals,1,,2023-04,0,1,new combination of known targets
+Small molecule,BRAF|pan-KRAS / pan-RAS,2023-04,US,S241656,Institut de Recherches Internationales Servier,1,,2023-04,0,1,new combination of known targets
+Oncolytic virus,CTLA-4|IL-12,2023-04,US,TG6050,Transgene,1,,2023-04,0,1,new combination of known targets
+Bispecific / multispecific antibody,GARP|PD-L1|TGF-β,2023-05,China,BPB-101,"Betta Pharmaceuticals Co., Ltd.",1,2023-05,,1,0,new combination of known targets
+Monoclonal antibody,LILRB2|PD-1,2023-05,US,CDX-585,Celldex Therapeutics,1,,2023-05,0,1,new combination of known targets
+Small molecule,FAP,2023-05,US,FOG-001,"Parabilis Medicines, Inc.",1,,2023-05,0,1,new drug type on known target
+Protein degrader,MDM2,2023-05,US,KT-253,"Kymera Therapeutics, Inc.",1,,2023-05,0,1,new drug type on known target
+CAR-T / engineered cell therapy,LILRB4,2023-05,China,LILRB4 STAR-T cells,Peking University People's Hospital,1,2023-05,,1,0,new drug type on known target
+Oncolytic virus,Survivin,2023-05,US,Neural Stem Cells-expressing CRAd-S-pk7,City of Hope Medical Center,1,,2023-05,0,1,new drug type on known target
+Protein degrader,SMARCA2,2023-05,US,PRT3789,Prelude Therapeutics Incorporated,3,,2023-05,0,3,new target
+Bispecific / multispecific antibody,BCMA|CD16A|NKp46,2023-05,Other,SAR445514,Sanofi,1,,,0,0,new target
+CAR-T / engineered cell therapy,B7-H3|EGFR|HER2,2023-05,US,SC-CAR4BRAIN,Seattle Children's Hospital,1,,2023-05,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD47,2023-05,US,SC291,Sana Biotechnology,1,,2023-05,0,1,new combination of known targets
+Bispecific / multispecific antibody,EGFR|VEGF/VEGFR|c-MET,2023-05,US,TAVO412,Tavotek Biotherapeutics,1,,2023-05,0,1,new combination of known targets
+Cancer vaccine,TGF-β,2023-05,Other,TGFβ-B-15 peptide,"Inna Chen, MD",1,,,0,0,new drug type on known target
+Monoclonal antibody,PD-1|TIM-3,2023-05,China,TQB3617capsules,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",1,2023-05,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|CDH3|Mesothelin,2023-06,US,AMG 305,Amgen,1,,2023-06,0,1,new combination of known targets
+Antibody-drug conjugate,CDH3,2023-06,China,BC3195,"Biocity Biopharmaceutics Co., Ltd.",1,2023-06,,1,0,new drug type on known target
+Small molecule,WRN,2023-06,Other,HRO761,Novartis Pharmaceuticals,8,2026-05,2025-03,1,4,new target
+Bispecific / multispecific antibody,CD20|CD3|CD3ζ/TCR (generic T-cell engager),2023-06,China,MBS303,"Beijing Mabworks Biotech Co., Ltd.",2,2023-06,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,GD2|IL-15,2023-06,US,iC9.GD2.CAR.IL-15 T,UNC Lineberger Comprehensive Cancer Center,1,,2023-06,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|Claudin 18.2,2023-07,Other,AZD5863,AstraZeneca,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,EphA2,2023-07,China,TP53-EphA-2-CAR-DC,Chinese PLA General Hospital,1,2023-07,,1,0,new drug type on known target
+Monoclonal antibody,PD-1|TIGIT,2023-07,China,Tislelizumab，atezolizumab,"Base Therapeutics (Shanghai) Co., Ltd.",1,2023-07,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,KRAS neoantigen (TCR)|pan-KRAS / pan-RAS,2023-07,China,YK0901,Peking University,1,2023-07,,1,0,new target
+Bispecific / multispecific antibody,LAG-3|TIGIT,2023-07,China,ZGGS15,"Suzhou Zelgen Biopharmaceuticals Co.,Ltd",1,2023-07,,1,0,new combination of known targets
+Small molecule,PD-L1|TIGIT,2023-08,Other,AUR106,Aurigene Discovery Technologies Limited,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD19|CD28|CD3|CD3ζ/TCR (generic T-cell engager),2023-08,China,CC312,CytoCares Inc,1,2023-08,,1,0,new combination of known targets
+Bispecific / multispecific antibody,PRAME,2023-08,Other,IMA402,Immatics Biotechnologies GmbH,1,,,0,0,new drug type on known target
+Monoclonal antibody,CD24,2023-08,Other,IMM47,ImmuneOnco Biopharmaceuticals (Shanghai) Inc.,4,2023-12,2025-03,2,1,new target
+Small molecule,KRAS G12C,2023-08,US,Ladarixin,NYU Langone Health,3,2023-09,2023-08,2,1,new drug type on known target
+Oncolytic virus,IL-12|PD-1|TGF-β,2023-08,US,STI-1386,"Sorrento Therapeutics, Inc.",1,,2023-08,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD20|CD30,2023-08,China,anti-CD20,"Shanghai First Song Biotechnology Co., LTD",1,2023-08,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CTLA-4|PD-1|PD-L1,2023-08,China,cardonilizumab,Shanghai Zhongshan Hospital,1,2023-08,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD20|CD3ζ/TCR (generic T-cell engager),2023-09,China,1A46 Substance,"BioRay Pharmaceutical Co., Ltd.",1,2023-09,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CLL-1|IL-18,2023-09,US,CD371-specific,Memorial Sloan Kettering Cancer Center,2,,2023-09,0,2,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD30,2023-09,Other,GEN3017,Genmab,1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,PD-L1,2023-09,US,IMGS-001,ImmunoGenesis,1,,2023-09,0,1,new drug type on known target
+Monoclonal antibody,Mutant CALR,2023-09,US,INCA033989,Incyte Corporation,1,,2023-09,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD47|DLL3,2023-09,US,Peluntamig,Phanes Therapeutics,1,,2023-09,0,1,new combination of known targets
+Small molecule,KRAS G12C|KRAS G12D|pan-KRAS / pan-RAS,2023-09,China,YL-17231,Shanghai YingLi Pharmaceutical Co. Ltd.,4,2023-09,2024-10,1,3,new combination of known targets
+CAR-T / engineered cell therapy,CD38|CLL-1,2023-10,China,CD38 dual-target CAR-T,920th Hospital of Joint Logistics Support Force of People's Liberation Army of China,1,2023-10,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD79b,2023-10,US,CD79b-19 CAR T,"Marcela V. Maus, M.D.,Ph.D.",2,2026-06,2023-10,1,1,new combination of known targets
+Oncolytic virus,CD19,2023-10,Other,CF33-CD19,Imugene Limited,2,2024-03,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,LGR5,2023-10,Other,CNA3103: 6.75 × 10^8,Carina Biotech Limited,1,,,0,0,new drug type on known target
+Monoclonal antibody,TIM-3,2023-10,China,NB002,"Suzhou Neologics Bioscience Co., Ltd.",1,2023-10,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,PD-1|TROP2,2023-10,Other,T60c,"Cancer Institute and Hospital, Chinese Academy of Medical Sciences",1,,,0,0,new combination of known targets
+Antibody-drug conjugate,BET/BRD4|CD33,2023-11,US,ABBV-787,AbbVie,1,,2023-11,0,1,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|B7-H4|CD3ζ/TCR (generic T-cell engager),2023-11,Other,ABL103,"ABL Bio, Inc.",1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,IL-15|NY-ESO-1,2023-11,US,Allogeneic Anti-NY-ESO-1-TCR-IL-15-transduced Cord Blood-derived Natural Killer Cells,M.D. Anderson Cancer Center,2,,2023-11,0,2,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|EpCAM,2023-11,Other,BNT314,BioNTech SE,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD123|TIM-3,2023-11,China,CD123 CAR-T,Xuzhou Medical University,1,2023-11,,1,0,new combination of known targets
+Bispecific / multispecific antibody,PD-L1|TGF-β|VEGF/VEGFR,2023-11,China,DR30206,"Zhejiang Doer Biologics Co., Ltd.",1,2023-11,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD16A|CD19|CD38|IL-15,2023-11,US,FT522,Fate Therapeutics,1,,2023-11,0,1,new combination of known targets
+CAR-T / engineered cell therapy,BRAF|MEK|PD-1,2023-11,China,GC101 TIL,Shanghai Juncell Therapeutics,1,2023-11,,1,0,new combination of known targets
+Bispecific / multispecific antibody,BCMA|CD3|CD38|CD3ζ/TCR (generic T-cell engager),2023-11,Other,ISB 2001,Ichnos Sciences SA,1,,,0,0,new combination of known targets
+Small molecule,CTLA-4,2023-11,US,MT-8421,"Molecular Templates, Inc.",1,,2023-11,0,1,new drug type on known target
+Cancer vaccine,GPC3,2023-11,China,NWRD06 administered by electroporation,"Newish Technology (Beijing) Co., Ltd.",2,2023-11,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,CD3ζ/TCR (generic T-cell engager)|EGFR,2023-11,US,PF-08046052,"Seagen, a wholly owned subsidiary of Pfizer",1,,2023-11,0,1,new combination of known targets
+Nucleic acid (mRNA/siRNA/ASO),PD-1,2023-11,US,PH-762,Phio Pharmaceuticals Inc.,1,,2023-11,0,1,new drug type on known target
+Cancer vaccine,STING,2023-11,Other,STING-Dependent Activators   Loaded Autologous Leukemic Cells,"Juan C. Ramos, MD",1,,,0,0,new drug type on known target
+Antibody-drug conjugate,GPRC5D,2023-12,Other,AZD0305,AstraZeneca,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,GPC3|TGF-β,2023-12,Other,AZD5851,AstraZeneca,1,,,0,0,new combination of known targets
+Protein degrader,BCL6,2023-12,US,BMS-986458,Bristol-Myers Squibb,4,,2023-12,0,4,new target
+Cytokine / fusion protein,IL-12|IL-2 pathway,2023-12,US,CLN-617,Cullinan Therapeutics Inc.,1,,2023-12,0,1,new combination of known targets
+Cancer vaccine,IL-15|WT1,2023-12,Other,IL15-transpresenting WT1-targeted Dendritic Vaccine,"University Hospital, Antwerp",1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|Mutant CALR,2023-12,US,JNJ-88549968,"Janssen Research & Development, LLC",2,,2023-12,0,2,new combination of known targets
+Antibody-drug conjugate,LILRB4,2023-12,China,SG2918,"Hangzhou Sumgen Biotech Co., Ltd.",1,2023-12,,1,0,new drug type on known target
+Bispecific / multispecific antibody,CD73|PD-1,2024-01,China,AK131,Akeso,1,2024-01,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,BCMA|GPRC5D,2024-01,US,BMS-986453,"Juno Therapeutics, Inc., a Bristol-Myers Squibb Company",3,2025-10,2024-01,1,1,new combination of known targets
+CAR-T / engineered cell therapy,Claudin 18.2|PD-L1,2024-01,China,Dual-targeting CLDN18.2,Sichuan University,1,2024-01,,1,0,new combination of known targets
+Protein degrader,IKZF1/3 (CELMoD),2024-01,China,GLB-002,"Hangzhou GluBio Pharmaceutical Co., Ltd.",2,2024-01,2025-02,1,1,new target
+Bispecific / multispecific antibody,CD40|EpCAM,2024-01,Other,KK2269,"Kyowa Kirin Co., Ltd.",1,,,0,0,new combination of known targets
+Monoclonal antibody,VISTA,2024-01,Other,PMC-309,PharmAbcine,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,CD28|PD-1|PSMA,2024-01,US,TmPSMA-02 CAR T,University of Pennsylvania,1,,2024-01,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CA9|PSMA|TGF-β,2024-02,US,AB-2100,"Arsenal Biosciences, Inc.",1,,2024-02,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|HER2,2024-02,China,BR115,"BioRay Pharmaceutical Co., Ltd.",2,2024-02,2025-11,1,1,new combination of known targets
+CAR-T / engineered cell therapy,CLL-1|PD-1,2024-02,US,CB-012,"Caribou Biosciences, Inc.",1,,2024-02,0,1,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD33,2024-02,US,CD33KO-HSPC,University of Pennsylvania,1,,2024-02,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|Mesothelin,2024-02,US,JNJ-79032421,"Janssen Research & Development, LLC",3,,2024-02,0,2,new combination of known targets
+Small molecule,RET|TRK,2024-02,China,ND-003,"Shenzhen NewDEL Biotech, Co., Ltd",1,2024-02,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,KRAS G12D|pan-KRAS / pan-RAS,2024-02,China,NW-301D,TingBo Liang,1,2024-02,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,pan-KRAS / pan-RAS,2024-02,China,NW-301V,TingBo Liang,4,2024-02,,3,0,new drug type on known target
+Monoclonal antibody,NKG2D,2024-03,US,23ME-01473,"23andMe, Inc.",1,,2024-03,0,1,new drug type on known target
+Antibody-drug conjugate,PSMA|STEAP1,2024-03,US,ABBV-969,AbbVie,1,,2024-03,0,1,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|pan-KRAS / pan-RAS,2024-03,US,AFNT-211,"Affini-T Therapeutics, Inc.",1,,2024-03,0,1,new combination of known targets
+CAR-T / engineered cell therapy,STEAP2|TGF-β,2024-03,Other,AZD0754,AstraZeneca,1,,,0,0,new target
+Radioligand,STEAP2,2024-03,Other,AZD2287,AstraZeneca,2,,,0,0,new target
+Bispecific / multispecific antibody,CTLA-4|PD-1|VEGF/VEGFR,2024-03,China,HC010,HC Biopharma Inc.,2,2024-03,,2,0,new combination of known targets
+Bispecific / multispecific antibody,4-1BB|CD24,2024-03,China,IBD0333,"SUNHO（China）BioPharmaceutical CO., Ltd.",1,2024-03,,1,0,new target
+CAR-T / engineered cell therapy,CD16A|CD20|IL-2 pathway|NKp46,2024-03,Other,IPH6501,Innate Pharma,1,,,0,0,new target
+Bispecific / multispecific antibody,LILRB2|PD-L1,2024-03,US,SPX- 303,"SparX Biotech(Jiangsu) Co., Ltd.",1,,2024-03,0,1,new combination of known targets
+CAR-T / engineered cell therapy,Nectin-4,2024-03,China,XKDCT293,"Shenzhen Celconta Life Science Co., Ltd.",1,2024-03,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,CD19|GPRC5D,2024-03,China,of GPRC5D-CD19 CAR T,Guangdong Second Provincial General Hospital,1,2024-03,,1,0,new combination of known targets
+Antibody-drug conjugate,EpCAM,2024-04,US,CX-2051,CytomX Therapeutics,1,,2024-04,0,1,new drug type on known target
+CAR-T / engineered cell therapy,EGFR|EGFRvIII|EphA2,2024-04,US,E-SYNC T Cells,"Hideho Okada, MD, PhD",1,,2024-04,0,1,new combination of known targets
+Antibody-drug conjugate,HER3|TROP2,2024-04,China,JSKN016,"Jiangsu Alphamab Biopharmaceuticals Co., Ltd",2,2024-04,,2,0,new combination of known targets
+Oncolytic virus,CTLA-4|PD-1,2024-04,China,KD01,Tongji Hospital,1,2024-04,,1,0,new combination of known targets
+Monoclonal antibody,CD16A|ROR1,2024-04,Other,PBA-0405,Pure Biologics S.A.,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD22|CD47,2024-04,US,SC262,Sana Biotechnology,1,,2024-04,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD33|FLT3|IL-15,2024-04,US,SENTI-202,Senti Biosciences,1,,2024-04,0,1,new combination of known targets
+Protein degrader,CD33|GSPT1,2024-05,US,BMS-986497,Bristol-Myers Squibb,1,,2024-05,0,1,new target
+CAR-T / engineered cell therapy,GPC3|IL-15|IL-21,2024-05,US,CARE T,Baylor College of Medicine,1,,2024-05,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CDH17,2024-05,Other,CHM-2101 CAR-T,Chimeric Therapeutics,4,2024-07,,3,0,new target
+Monoclonal antibody,CDK4/6,2024-05,China,RP2D Of Tislelizumab,Sun Yat-Sen Memorial Hospital of Sun Yat-Sen University,1,2024-05,,1,0,new drug type on known target
+Cytokine / fusion protein,FLT3|IRAK4,2024-05,US,ZE46-0134,"Lomond Therapeutics Holdings, Inc.",2,2026-04,2024-05,1,1,new combination of known targets
+Cytokine / fusion protein,IL-15|STING,2024-06,US,ACTM-838,"Actym Therapeutics, Inc.",1,,2024-06,0,1,new combination of known targets
+Antibody-drug conjugate,CDH17,2024-06,China,AMT-676,Multitude Therapeutics Inc.,7,2024-06,2025-07,5,1,new target
+Monoclonal antibody,CD28|CD3|TROP2|c-MET,2024-06,US,MDX2001,"ModeX Therapeutics, An OPKO Health Company",1,,2024-06,0,1,new combination of known targets
+Small molecule,PKMYT1|WEE1,2024-06,US,SGR-3515,"Schrödinger, Inc.",2,,2024-06,0,2,new target
+Antibody-drug conjugate,TM4SF1,2024-07,US,AGX101,"Angiex, Inc.",1,,2024-07,0,1,new target
+Bispecific / multispecific antibody,4-1BB|GPC3,2024-07,China,BGB-B2033,BeOne Medicines,1,2024-07,,1,0,new combination of known targets
+Protein degrader,CDK4/6,2024-07,US,BTX-9341,"Biotheryx, Inc.",1,,2024-07,0,1,new drug type on known target
+Radioligand,GRPR|PSMA|SSTR2,2024-07,Other,Metoclopramide,Novartis Pharmaceuticals,3,,,0,0,new combination of known targets
+Small molecule,CD40|HPV antigens|PD-1,2024-07,US,PD-1inhibitor - LVGN 3616,University of Pennsylvania,1,,2024-07,0,1,new combination of known targets
+Radioligand,ER (SERD/degrader)|HER2,2024-07,US,RYZ101,"RayzeBio, Inc.",1,,2024-07,0,1,new combination of known targets
+Radioligand,EGFR|c-MET,2024-07,Other,[225Ac]-FPI-2068,AstraZeneca,1,,,0,0,new combination of known targets
+Small molecule,EGFR|PRMT5,2024-08,Other,JBI-778,Jubilant Therapeutics India Limited,1,,,0,0,new combination of known targets
+Antibody-drug conjugate,HER3,2024-08,China,SYS6023,"CSPC Megalith Biopharmaceutical Co.,Ltd.",2,2024-08,,2,0,new drug type on known target
+Cancer vaccine,Neoantigen (personalised)|pan-KRAS / pan-RAS,2024-09,China,ABO2102,Ruijin Hospital,1,2024-09,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD16A|MUC1,2024-09,China,BGB-B3227,BeiGene,1,2024-09,,1,0,new combination of known targets
+Protein degrader,WEE1,2024-09,US,BMS-986463,Bristol-Myers Squibb,1,,2024-09,0,1,new drug type on known target
+Antibody-drug conjugate,B7-H3|PD-L1,2024-09,China,DB-1419,DualityBio Inc.,1,2024-09,,1,0,new combination of known targets
+Antibody-drug conjugate,CD73,2024-09,China,HB0052,"Shanghai Huaota Biopharmaceutical Co., Ltd.",1,2024-09,,1,0,new drug type on known target
+Protein degrader,CDK2,2024-09,US,NKT3964,"NiKang Therapeutics, Inc.",1,,2024-09,0,1,new drug type on known target
+Small molecule,Pol θ,2024-09,Other,Olaparib 200,Repare Therapeutics,4,2024-11,,2,0,new target
+Bispecific / multispecific antibody,LILRB2,2024-09,US,PF-07826390,Pfizer,1,,2024-09,0,1,new drug type on known target
+Small molecule,EGFR|EGFRvIII,2024-09,China,WSD0922-FU,"Wayshine Biopharm, Inc.",1,2024-09,,1,0,new combination of known targets
+Cytokine / fusion protein,IL-18|PD-1,2024-10,Other,BPT567,Bright Peak Therapeutics Inc,1,,,0,0,new combination of known targets
+Antibody-drug conjugate,EGFR|TROP2,2024-10,China,DM001,"Xadcera Biopharmaceutical (Suzhou) Co., Ltd.",1,2024-10,,1,0,new combination of known targets
+Small molecule,KAT6,2024-10,US,MEN2312,"Stemline Therapeutics, Inc.",5,2025-12,2024-10,1,4,new target
+Monoclonal antibody,GPRC5D,2024-10,Other,SAR446523,Sanofi,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|HPV antigens,2024-10,Other,SCG142,SCG Cell Therapy Pte. Ltd.,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,STEAP1,2024-11,US,Anti-STEAP1 CAR T-cells,Fred Hutchinson Cancer Center,1,,2024-11,0,1,new drug type on known target
+Bispecific / multispecific antibody,NY-ESO-1,2024-11,Other,DS-2243a,Daiichi Sankyo,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,CD19|EGFR|IL-12,2024-11,US,IL-12 CAR T-lymphocytes,Roswell Park Cancer Institute,1,,2024-11,0,1,new combination of known targets
+Antibody-drug conjugate,GD2,2024-11,Other,M3554,"EMD Serono Research & Development Institute, Inc.",1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,CD70|TGF-β,2024-12,US,ADI-270,Adicet Therapeutics,1,,2024-12,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD73|LAG-3,2024-12,China,AK137,Akeso,1,2024-12,,1,0,new combination of known targets
+Antibody-drug conjugate,FGFR2b,2024-12,China,BG-C137,BeOne Medicines,3,2024-12,,3,0,new drug type on known target
+CAR-T / engineered cell therapy,CD19|IL-10|IL-15,2024-12,China,IL15 CAR-NK,"Second Affiliated Hospital, Zhejiang University, School of Medicine",2,2024-12,,2,0,new combination of known targets
+Bispecific / multispecific antibody,CD28|CD38,2024-12,US,REGN7945,Regeneron Pharmaceuticals,1,,2024-12,0,1,new combination of known targets
+Antibody-drug conjugate,B7-H3|EGFR,2025-01,China,IBI3001,Fortvita Biologics (USA)Inc.,2,2025-01,,2,0,new combination of known targets
+Radioligand,GPC3,2025-02,Other,BAY 3547926,Bayer,1,,,0,0,new drug type on known target
+Antibody-drug conjugate,EGFR|HER3|MUC1,2025-02,China,DM002,"Xadcera Biopharmaceutical (Suzhou) Co., Ltd.",1,2025-02,,1,0,new combination of known targets
+Antibody-drug conjugate,CD74|MCL-1,2025-02,Other,S227928,Servier Bio-Innovation LLC,1,,,0,0,new combination of known targets
+Radioligand,DLL3,2025-03,US,225Ac-ABD147,Abdera Therapeutics Inc.,4,,2025-03,0,1,new drug type on known target
+Radioligand,CD73,2025-03,China,68Ga-dPNE,First Affiliated Hospital of Fujian Medical University,1,2025-03,,1,0,new drug type on known target
+Monoclonal antibody,STEAP2,2025-03,Other,AZD2275,AstraZeneca,1,,,0,0,new target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|GPC3,2025-03,Other,AZD9793,AstraZeneca,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,HPV antigens|Survivin,2025-03,US,NEXI-003 T,NexImmune Inc.,1,,2025-03,0,1,new combination of known targets
+Protein degrader,CDK2|CDK4/6,2025-03,US,NKT5097 CDK2,"NiKang Therapeutics, Inc.",1,,2025-03,0,1,new combination of known targets
+Small molecule,PARP1|Telomerase,2025-03,Other,RK-582,Eiji Shinozaki,1,,,0,0,new combination of known targets
+Antibody-drug conjugate,GPC3,2025-04,US,ABBV-324,AbbVie,3,2026-08,2025-04,1,1,new drug type on known target
+CAR-T / engineered cell therapy,Claudin 18.2|Mesothelin,2025-04,China,Claudin 18.2 CAR-T,Essen Biotech,1,2025-04,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD73,2025-04,Other,GI-108,"GI Innovation, Inc.",2,,,0,0,new drug type on known target
+Cytokine / fusion protein,PD-L1|SIRPα|TGF-β,2025-04,China,HCB301,FBD Biologics Limited,1,2025-04,,1,0,new combination of known targets
+Monoclonal antibody,MUC17,2025-04,China,SSS59,"Shenyang Sunshine Pharmaceutical Co., LTD.",1,2025-04,,1,0,new target
+CAR-T / engineered cell therapy,CD28|CLL-1,2025-05,US,ARD103,"ARCE Therapeutics, Inc.",1,,2025-05,0,1,new combination of known targets
+CAR-T / engineered cell therapy,GARP|TGF-β,2025-05,US,Anti-GARP Chimeric Antigen Receptor-T Cells,Ohio State University Comprehensive Cancer Center,1,,2025-05,0,1,new combination of known targets
+Antibody-drug conjugate,Claudin 18.2|TLR7/8,2025-05,US,BDC-4182,"Bolt Biotherapeutics, Inc.",1,,2025-05,0,1,new combination of known targets
+CAR-T / engineered cell therapy,BCMA|GPRC5D|HER2,2025-05,China,CD146,Essen Biotech,1,2025-05,,1,0,new combination of known targets
+Small molecule,KRAS G12D,2025-05,China,HS-10529,"Jiangsu Hansoh Pharmaceutical Co., Ltd.",3,2025-05,,3,0,new drug type on known target
+Nucleic acid (mRNA/siRNA/ASO),PD-L1|TGF-β,2025-05,US,Trabedersen,University of Nebraska,1,,2025-05,0,1,new combination of known targets
+Bispecific / multispecific antibody,NKG2A|PD-L1,2025-05,US,XB628,Exelixis,1,,2025-05,0,1,new combination of known targets
+Small molecule,AKT|CDK4/6|ER (SERD/degrader),2025-05,China,fulvestrant ± TQB3616,"Chia Tai Tianqing Pharmaceutical Group Co., Ltd.",1,2025-05,,1,0,new combination of known targets
+Monoclonal antibody,PD-1|STAT3|XPO1,2025-05,China,tislezumab,Fudan University,1,2025-05,,1,0,new combination of known targets
+Protein degrader,PI3Kα,2025-06,US,ETX-636,Ensem Therapeutics,1,,2025-06,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|HER2|TLR7/8,2025-06,China,HF50,HighField Biopharmaceuticals Corporation,1,2025-06,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,EGFR|IL-2 pathway|Mesothelin,2025-06,US,OPB-101,"Outpace Bio, Inc.",1,,2025-06,0,1,new combination of known targets
+Monoclonal antibody,EGFR|KRAS G12D,2025-06,China,QL1203,"Qilu Pharmaceutical Co., Ltd.",1,2025-06,,1,0,new combination of known targets
+In vivo CAR,CD19,2025-06,China,STR-P004,Starna Therapeutics,1,2025-06,,1,0,new drug type on known target
+Antibody-drug conjugate,Nectin-4|TROP2,2025-07,China,AK146D1,Akeso,3,2025-07,2025-10,2,1,new combination of known targets
+Protein degrader,pan-KRAS / pan-RAS,2025-07,Other,ASP5834,Astellas Pharma Inc,2,,2025-11,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|HLA-G|PD-L1,2025-07,Other,SOA101,"Shine-On Biomedical Co., Ltd.",1,,,0,0,new target
+CAR-T / engineered cell therapy,EGFR|c-MET,2025-07,China,TAS-102 ± Bevacizumab,"Chia Tai Tianqing Pharmaceutical Group Nanjing Shunxin Pharmaceutical Co., Ltd.",2,2025-07,,2,0,new combination of known targets
+Cancer vaccine,PRAME,2025-07,US,mRNA-4203,"Immatics US, Inc.",1,,2025-07,0,1,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|CD27|CD28|FRα,2025-08,China,4SCAR-FRa,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD27|CD28|PSMA,2025-08,China,4SCAR-PSMA,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD123|CD27|CD28,2025-08,China,4SCAR123,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD19|CD27|CD28,2025-08,China,4SCAR19,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD20|CD27|CD28,2025-08,China,4SCAR20,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD22|CD27|CD28,2025-08,China,4SCAR22,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CD123|CD19|CD20|CD22|CD30|CD38|CD70,2025-08,China,4SCAR30,Shenzhen Geno-Immune Medical Institute,2,2025-08,,2,0,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|CD27|CD28|CD38,2025-08,China,4SCAR38,Shenzhen Geno-Immune Medical Institute,1,2025-08,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,IL-18|Nectin-4,2025-08,China,R-Star001,changjianhua,1,2025-08,,1,0,new combination of known targets
+Radioligand,Nectin-4,2025-08,US,[225Ac]Ac-AKY-1189,"Aktis Oncology, Inc.",2,,2025-08,0,2,new drug type on known target
+CAR-T / engineered cell therapy,4-1BB|CD33|CLL-1,2025-09,China,A-CAR028,First Affiliated Hospital of Zhejiang University,1,2025-09,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|STEAP2,2025-09,Other,AZD6621,AstraZeneca,1,,,0,0,new target
+CAR-T / engineered cell therapy,CD117,2025-09,China,CD117 CAR T,Zhejiang University,1,2025-09,,1,0,new drug type on known target
+Monoclonal antibody,BCL-2,2025-09,China,Glucocorticoid,First Affiliated Hospital of Zhejiang University,1,2025-09,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,IL-15|TGF-β,2025-09,US,TGFBR2 KO CAR27,M.D. Anderson Cancer Center,1,,2025-09,0,1,new combination of known targets
+Antibody-drug conjugate,STEAP2,2025-10,Other,AZD0516,AstraZeneca,1,,,0,0,new target
+Bispecific / multispecific antibody,CD40|MUC1,2025-10,Other,M0324,"EMD Serono Research & Development Institute, Inc.",1,,,0,0,new combination of known targets
+Bispecific / multispecific antibody,CD3ζ/TCR (generic T-cell engager),2025-10,US,NRM-823,"Normunity AccelCo, Inc.",1,,2025-10,0,1,new drug type on known target
+Radioligand,Claudin 18.2,2025-11,China,177Lu-DOTA-SNA040,SmartNuclide Biopharma,3,2025-11,,3,0,new drug type on known target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|NKG2D,2025-11,US,EVOLVE104,"EvolveImmune United, Inc",1,,2025-11,0,1,new combination of known targets
+CAR-T / engineered cell therapy,4-1BB|MICA/B|NKG2D,2025-11,US,FT836,Fate Therapeutics,1,,2025-11,0,1,new combination of known targets
+Antibody-drug conjugate,EGFR|HER2,2025-11,China,GenSci139,"Changchun GeneScience Pharmaceutical Co., Ltd.",1,2025-11,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD28|Nectin-4,2025-11,US,RNDO-564,Rondo Therapeutics,1,,2025-11,0,1,new combination of known targets
+Cancer vaccine,MICA/B,2025-11,China,SapDM275 Tumor Vaccine,The Third Xiangya Hospital of Central South University,1,2025-11,,1,0,new drug type on known target
+Antibody-drug conjugate,CCR8,2025-11,Other,TAK-188,Takeda,1,,,0,0,new target
+In vivo CAR,BCMA,2025-11,China,V001-BCMA,"Cancer Institute and Hospital, Chinese Academy of Medical Sciences",2,2025-11,,2,0,new drug type on known target
+In vivo CAR,DLL3,2025-11,China,V001-DLL3,"Cancer Institute and Hospital, Chinese Academy of Medical Sciences",1,2025-11,,1,0,new drug type on known target
+In vivo CAR,FcRH5,2025-11,China,V001-FcRH5,"Cancer Institute and Hospital, Chinese Academy of Medical Sciences",1,2025-11,,1,0,new drug type on known target
+In vivo CAR,GPRC5D,2025-11,China,V001-GPRC5D,"Cancer Institute and Hospital, Chinese Academy of Medical Sciences",1,2025-11,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,GPC3|IL-15,2025-12,US,CAR.GPC3xIL15.21 CAR T,Seattle Children's Hospital,1,,2025-12,0,1,new combination of known targets
+CAR-T / engineered cell therapy,TGF-β|pan-KRAS / pan-RAS,2025-12,China,NW-301VT,Zhejiang University,1,2025-12,,1,0,new combination of known targets
+Bispecific / multispecific antibody,PD-1,2025-12,Other,OTP-01,Ottimo Pharma Limited,1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,PSMA|TGF-β,2026-01,US,AB-3028,"Arsenal Biosciences, Inc.",1,,2026-01,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|LY6G6D,2026-01,US,CBI-1214,Cartography Biosciences,1,,2026-01,0,1,new target
+Bispecific / multispecific antibody,IL-12|PD-1,2026-01,China,IBI3026,Innovent Biologics Technology Limited (Shanghai R&D Center),1,2026-01,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|CD70,2026-01,US,INCA036873,Incyte Corporation,1,,2026-01,0,1,new combination of known targets
+Bispecific / multispecific antibody,CD79b,2026-01,US,LTZ-301,"LTZ Therapeutics, Inc.",1,,2026-01,0,1,new drug type on known target
+CAR-T / engineered cell therapy,IL-10,2026-01,Other,Meta10-TIL,"Cancer Institute and Hospital, Chinese Academy of Medical Sciences",1,,,0,0,new drug type on known target
+CAR-T / engineered cell therapy,AXL|CD73,2026-01,China,XW-LTH-03,Shanghai Zhongshan Hospital,1,2026-01,,1,0,new combination of known targets
+Antibody-drug conjugate,STING|TROP2,2026-02,Other,ASP2998,"Astellas Pharma Global Development, Inc.",1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CD70|CLL-1,2026-02,Other,CAR-ITNK targeting CD70,Tongji Hospital,1,,,0,0,new combination of known targets
+CAR-T / engineered cell therapy,CA9|CD70,2026-02,China,EB-701,Beijing Biotech,1,2026-02,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,Claudin 18.2|MUC1|Mesothelin,2026-02,China,EB-DNK101 dual-targeting CAR-NK,Beijing Biotech,2,2026-02,,2,0,new combination of known targets
+Antibody-drug conjugate,B7-H3|PTK7,2026-02,US,IDE034,IDEAYA Biosciences,1,,2026-02,0,1,new combination of known targets
+Radioligand,LRRC15,2026-02,US,LNTH2403 1,Lantheus Medical Imaging,2,,2026-02,0,2,new drug type on known target
+Cytokine / fusion protein,CD3|IL-15,2026-02,US,ONC-PluReceptor NK cells,M.D. Anderson Cancer Center,1,,2026-02,0,1,new combination of known targets
+Antibody-drug conjugate,ATR|HER2,2026-03,US,CLIO-8221,Callio Therapeutics,1,,2026-03,0,1,new combination of known targets
+CAR-T / engineered cell therapy,CD30|CD5|Mesothelin,2026-03,China,EB-CAR30-NK,Beijing Biotech,1,2026-03,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,HER2|Nectin-4,2026-03,China,EB-DT-NK-UC101,Beijing Biotech,1,2026-03,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CEACAM5|HER2,2026-03,China,EB-HC01 dual-target CARNK,Beijing Biotech,1,2026-03,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,FAP|Mesothelin,2026-03,China,EB-MF-CAR-NK-01,Beijing Biotech,1,2026-03,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,TROP2,2026-03,China,EB-NK-301,Beijing Biotech,1,2026-03,,1,0,new drug type on known target
+CAR-T / engineered cell therapy,PSCA|PSMA,2026-03,China,ETB-DualNK-01,Beijing Biotech,1,2026-03,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD28|GPRC5D,2026-03,US,REGN17372,Regeneron Pharmaceuticals,1,,2026-03,0,1,new combination of known targets
+Protein degrader,ALK,2026-03,US,TRI-611,"TRIANA Biomedicines, Inc.",1,,2026-03,0,1,new drug type on known target
+Cancer vaccine,Neoantigen (personalised)|PD-1,2026-04,China,ABO2109,"Suzhou Abogen Biosciences Co., Ltd.",1,2026-04,,1,0,new combination of known targets
+Oncolytic virus,GUCY2C,2026-04,US,Ad5.F35-hGUCY2C-PADRE vaccine,Thomas Jefferson University,1,,2026-04,0,1,new drug type on known target
+CAR-T / engineered cell therapy,BCMA|CD70,2026-04,China,CAR 70-BCMA CAR-T,The General Hospital of Western Theater Command,2,2026-04,,2,0,new combination of known targets
+In vivo CAR,CD19|CD20|CD3,2026-04,China,CT1182,"Union Hospital, Tongji Medical College, Huazhong University of Science and Technology",1,2026-04,,1,0,new combination of known targets
+Bispecific / multispecific antibody,B7-H3|CD16A|IL-15,2026-04,US,GTB-5550,"Masonic Cancer Center, University of Minnesota",1,,2026-04,0,1,new combination of known targets
+Monoclonal antibody,CD28|CD3|DLL3,2026-04,China,HLX3901,Shanghai Henlius Biotech,1,2026-04,,1,0,new combination of known targets
+Antibody-drug conjugate,B7-H3|ROR1,2026-04,US,NEOK001,"NEOK Bio, Inc.",2,,2026-04,0,2,new combination of known targets
+Radioligand,FAP|PD-1,2026-04,China,[177Lu]Lu-RTX-2358,"Union Hospital, Tongji Medical College, Huazhong University of Science and Technology",1,2026-04,,1,0,new combination of known targets
+Monoclonal antibody,CD3ζ/TCR (generic T-cell engager)|STEAP2,2026-05,Other,AZD8359,AstraZeneca,1,,,0,0,new target
+Bispecific / multispecific antibody,ALPP|CD3,2026-05,China,EMB-15,"Shanghai EpimAb Biotherapeutics Co., Ltd.",1,2026-05,,1,0,new target
+Cytokine / fusion protein,B7-H3,2026-05,China,HLX316,Shanghai Henlius Biotech,1,2026-05,,1,0,new drug type on known target
+Protein degrader,BCL-2,2026-05,US,JNJ-95804306,"Janssen Research & Development, LLC",1,,2026-05,0,1,new drug type on known target
+Nucleic acid (mRNA/siRNA/ASO),CD47,2026-05,Other,NCP-CD47 siRNA intratumorally,West China Hospital,1,,,0,0,new drug type on known target
+Bispecific / multispecific antibody,CD3ζ/TCR (generic T-cell engager)|PD-L1,2026-05,Other,TAK-505,Takeda,1,,,0,0,new combination of known targets
+Radioligand,IL-18,2026-05,US,[18F]Fluoropropyl-Trimethoprim,University of Pennsylvania,1,,2026-05,0,1,new drug type on known target
+CAR-T / engineered cell therapy,CD70|PSMA,2026-06,China,CD70 T,Shenzhen Geno-Immune Medical Institute,1,2026-06,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,KRAS G12D,2026-06,US,MSK-TCR5,Memorial Sloan Kettering Cancer Center,1,,2026-06,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|FRα,2026-06,US,NTB-928,"TeneoSeven, Inc.",1,,2026-06,0,1,new combination of known targets
+Protein degrader,HPK1,2026-07,US,ARV-6723,Arvinas Inc.,1,,2026-07,0,1,new drug type on known target
+Bispecific / multispecific antibody,PVRIG|TIGIT,2026-07,China,D3L-002,"D3 Bio (Wuxi) Co., Ltd",1,2026-07,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CA9|ENPP3,2026-07,US,LNK001,M.D. Anderson Cancer Center,1,,2026-07,0,1,new combination of known targets
+Oncolytic virus,PD-1,2026-07,China,Novel oncolytic virus Ad-TD-nsIL12（BioTTT001）,"Beijing Bio-Targeting Therapeutics Technology Co., Ltd",1,2026-07,,1,0,new drug type on known target
+Monoclonal antibody,CD3|PSMA,2026-07,China,QLF4113,"Qilu Pharmaceutical Co., Ltd.",1,2026-07,,1,0,new combination of known targets
+In vivo CAR,CD19|CD7,2026-07,China,U96,The First Affiliated Hospital of Soochow University,1,2026-07,,1,0,new target
+Antibody-drug conjugate,CDH17|Claudin 18.2,2026-07,China,VBC108,VelaVigo Bio Inc,1,2026-07,,1,0,new target
+CAR-T / engineered cell therapy,GD2|NKG2D,2026-07,US,i15.NKG2D.zeta NK,Baylor College of Medicine,1,,2026-07,0,1,new combination of known targets
+CAR-T / engineered cell therapy,DLL3|IL-18,2026-08,US,DLL3-SAVVYZ-IL18 CAR T,Memorial Sloan Kettering Cancer Center,1,,2026-08,0,1,new combination of known targets
+CAR-T / engineered cell therapy,IL-18|MUC16,2026-08,US,GB-5267 - only,Roswell Park Cancer Institute,2,,2026-08,0,2,new combination of known targets
+Bispecific / multispecific antibody,CD24|CD3,2026-08,US,ONC-783,"OncoC4, Inc.",1,,2026-08,0,1,new target
+In vivo CAR,BCMA|CD19|CD70,2026-08,China,PID23,Zhujiang Hospital,1,2026-08,,1,0,new combination of known targets
+Antibody-drug conjugate,FRα|Mesothelin,2026-08,China,VBC106,VelaVigo Bio Inc,1,2026-08,,1,0,new combination of known targets
+Antibody-drug conjugate,CDH17|EGFR,2026-08,China,VBC117,VelaVigo Bio Inc,1,2026-08,,1,0,new target
+Bispecific / multispecific antibody,CD47|EpCAM,2026-09,China,3SC009,"Shenyang Sunshine Pharmaceutical Co., LTD.",1,2026-09,,1,0,new combination of known targets
+Bispecific / multispecific antibody,CD3|CD3ζ/TCR (generic T-cell engager)|LILRB4,2026-09,China,6MW5311,"Mabwell (Shanghai) Bioscience Co., Ltd.",1,2026-09,,1,0,new combination of known targets
+Antibody-drug conjugate,CEACAM5|pan-KRAS / pan-RAS,2026-09,China,AN4035,"Adlai Nortye Biopharma Co., Ltd.",1,2026-09,,1,0,new combination of known targets
+CAR-T / engineered cell therapy,CD19|CD20|NKG2D,2026-09,China,Autologous CD19-CD20-NKG2D-nsBicephali CAR-T,Beijing Boren Hospital,1,2026-09,,1,0,new combination of known targets
+In vivo CAR,CD19|CD22|CD7,2026-09,China,CD19-Targeted In Vivo CAR-T,Liping Dou,1,2026-09,,1,0,new target
+Bispecific / multispecific antibody,Nectin-4,2026-09,US,CT-202,Context Therapeutics Inc.,1,,2026-09,0,1,new drug type on known target
+Bispecific / multispecific antibody,CD28|CD3ζ/TCR (generic T-cell engager)|PSMA,2026-09,US,JANX013,Janux Therapeutics,1,,2026-09,0,1,new combination of known targets
+Antibody-drug conjugate,CDH6|FRα,2026-09,China,TJ102,Phrontline Biopharma,1,2026-09,,1,0,new combination of known targets
+Small molecule,BCL-2|FLT3,2026-09,Other,Venetoclax in association,"University Hospital, Bordeaux",1,,,0,0,new combination of known targets
