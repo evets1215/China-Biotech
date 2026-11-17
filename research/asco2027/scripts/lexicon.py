@@ -107,7 +107,6 @@ TARGETS = {
     "LY6G6D": r"LY6G6D",
     "CD70": r"CD70",
     "AXL": r"\bAXL\b",
-    "HER2 exon20/EGFR exon20": r"exon ?20",
     "EphA2": r"EphA2",
     "ADAM9": r"ADAM9",
     "TM4SF1": r"TM4SF1",
@@ -123,7 +122,6 @@ TARGETS = {
     "NY-ESO-1": r"NY-ESO",
     "KRAS neoantigen (TCR)": r"KRAS[- ]?G12[DV][- ]specific (?:TCR|T)",
     "HPV antigens": r"HPV-?(?:16|18)?\b|human papillomavirus",
-    "Neoantigen (personalised)": r"neoantigen|neoepitope|personali[sz]ed (?:cancer )?vaccine",
     # --- haematology surface antigens ---
     "CD19": r"CD19",
     "CD20": r"CD20",
@@ -147,7 +145,8 @@ TARGETS = {
     # --- intracellular / small-molecule targets ---
     "KRAS G12C": r"G12C",
     "KRAS G12D": r"G12D",
-    "pan-KRAS / pan-RAS": r"pan-?K?RAS|RAS\(ON\)|multi-?RAS|KRAS G12V|KRAS(?! ?G12[CD])",
+    "pan-KRAS / pan-RAS": r"pan-?K?RAS|RAS\(ON\)|multi-?RAS",
+    "KRAS (other/unspecified)": r"KRAS",
     "SHP2": r"SHP-?2|PTPN11",
     "SOS1": r"SOS-?1",
     "PRMT5": r"PRMT5|MTA-cooperative",
@@ -216,7 +215,6 @@ TARGETS = {
     "XPO1": r"XPO1|CRM1",
     "DHODH": r"DHODH",
     "NAMPT": r"NAMPT",
-    "CD3ζ/TCR (generic T-cell engager)": r"T[- ]cell engager|TCE\b",
     "CXCR4": r"CXCR4",
     "CCR2/5": r"CCR[25]\b",
     "Galectin": r"galectin",

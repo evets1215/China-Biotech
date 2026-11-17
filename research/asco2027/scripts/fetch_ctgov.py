@@ -15,7 +15,7 @@ COND = ("cancer OR neoplasm OR tumor OR tumour OR carcinoma OR lymphoma OR leuke
 ADV = ("AREA[StudyType]INTERVENTIONAL AND AREA[Phase](EARLY_PHASE1 OR PHASE1) "
        "AND AREA[StartDate]RANGE[2010-01-01,MAX]")
 FIELDS = ",".join([
-    "NCTId", "BriefTitle", "OfficialTitle", "BriefSummary", "Phase", "StartDate", "StartDateType",
+    "NCTId", "BriefTitle", "OfficialTitle", "BriefSummary", "DetailedDescription", "ArmGroupDescription", "ArmGroupLabel", "Phase", "StartDate", "StartDateType",
     "OverallStatus", "EnrollmentCount", "LeadSponsorName", "LeadSponsorClass", "CollaboratorName",
     "Condition", "Keyword", "InterventionType", "InterventionName", "InterventionOtherName",
     "InterventionDescription", "LocationCountry", "StudyFirstSubmitDate", "ConditionMeshTerm",
@@ -46,6 +46,8 @@ def trim(s):
         "title": ident.get("briefTitle"),
         "official_title": ident.get("officialTitle"),
         "summary": p.get("descriptionModule", {}).get("briefSummary"),
+        "detail": p.get("descriptionModule", {}).get("detailedDescription"),
+        "arms": [" ".join(filter(None, [g.get("label"), g.get("description")])) for g in arms.get("armGroups", [])],
         "phases": design.get("phases"),
         "start": (status.get("startDateStruct") or {}).get("date"),
         "start_type": (status.get("startDateStruct") or {}).get("type"),
