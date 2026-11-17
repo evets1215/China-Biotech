@@ -8,6 +8,9 @@ Every number in `abstract_draft.md` is produced by the code in `scripts/` from t
 
 ---
 
+> **Accuracy note.** These methods reproduce the numbers exactly, but an audit (`AUDIT.md`) found that the
+> target and class assignments they produce are not reliable. Reproducible is not the same as correct.
+
 ## 1. Study design
 
 Retrospective cross-sectional analysis of public clinical trial registry records. No patient-level data were used.

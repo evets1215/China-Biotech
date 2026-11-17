@@ -1,5 +1,11 @@
 # ASCO 2027 abstract - DRAFT (preliminary numbers, not for submission)
 
+> **AUDIT WARNING (17 Nov 2026): do not use the target or "new class" numbers in this draft.**
+> An accuracy audit (`AUDIT.md`) found that the arithmetic is correct but the underlying target and class
+> assignments are not reliable: trial-text targets were wrong about half the time, at least 70 of the 366 "new
+> classes" are visibly wrong, and the trial download misses first-in-human trials that were later relabelled.
+> Volume and drug-type figures are less affected but still unvalidated.
+
 > Every number below comes from `results/summary.json` (run of 17 Nov 2026, ClinicalTrials.gov only, after de-duplication and removal of drugs with any registered trial before 2020).
 > They will change once China's registry is merged and the validation sample is coded.
 > Fields in [brackets] are still to be filled.

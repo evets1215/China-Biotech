@@ -2,6 +2,8 @@
 
 **Status: second pass (17 Nov 2026). Numbers are preliminary until China's registry is merged and the validation sample is coded.**
 
+**Read [`AUDIT.md`](AUDIT.md) first: an accuracy audit found the target and "new class" results unreliable.**
+
 **Full methods and how to reproduce every number: [`METHODS.md`](METHODS.md). One command: `./run_all.sh`.**
 
 ## Question
